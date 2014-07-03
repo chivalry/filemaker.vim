@@ -7,6 +7,20 @@ if exists("b:current_syntax")
 endif
 
 " ---------------------------------------------------
+" Local and Global Variables
+
+syntax match fmVariables "\v\$\$?[A-Za-z_.]+"
+
+highlight link fmVariables Identifier
+
+" ---------------------------------------------------
+" Convention Variables
+
+syntax match conVariables "\v_[A-Za-z_]+"
+
+highlight link conVariables Identifier
+
+" ---------------------------------------------------
 " Keywords
 
 "syntax keyword fmKeyword 
@@ -170,7 +184,7 @@ syntax keyword fmGetConstants WindowDesktopHeight WindowDesktopWidth WindowHeigh
 syntax keyword fmGetConstants WindowLeft WindowMode WindowName WindowOrientation
 syntax keyword fmGetConstants WindowStyle WindowTop WindowVisible WindowWidth WindowZoomLevel
 
-highlight link fmGetConstants Constant
+highlight link fmGetConstants Structure
 
 " ---------------------------------------------------
 " Conventional Custom Functions
@@ -178,4 +192,5 @@ highlight link fmGetConstants Constant
 syntax match fmCustomFunctions "[a-z]\+\.[A-Za-z]\+"
 
 highlight link fmCustomFunctions Function
+
 let b:current_syntax = "filemakercalc"
