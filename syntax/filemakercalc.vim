@@ -61,14 +61,6 @@ highlight link fmString String
 highlight link fmLiteral Constant
 
 " ---------------------------------------------------
-" Comments
-
-syntax match fmComment "//.*$"
-syntax region fmComment start="/\*" end="\*/"
-
-highlight link fmComment Comment
-
-" ---------------------------------------------------
 " Built-in FileMaker functions
 
 " Text functions
@@ -192,5 +184,13 @@ highlight link fmGetConstants Structure
 syntax match fmCustomFunctions "[a-z]\+\.[A-Za-z]\+"
 
 highlight link fmCustomFunctions Function
+
+" ---------------------------------------------------
+" Comments
+
+syntax match fmComment "//.*$"
+syntax region fmComment start="/\*" end="\*/"
+
+highlight link fmComment Comment
 
 let b:current_syntax = "filemakercalc"
