@@ -1,6 +1,8 @@
-" Vim Syntax File
+" Vim syntax file for FileMaker calculations
+" Last Change: 2014 Jul 3
 " Language: FileMaker Calculations
 " Maintainer: Charles Ross <chivalry@mac.com>
+" License: The MIT License
 
 if exists("b:current_syntax")
   finish
