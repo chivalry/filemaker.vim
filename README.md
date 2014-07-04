@@ -11,7 +11,7 @@ The FileMaker Vim plugin provides syntax highlighting for FileMaker calculations
 QuickCursor
 -----------
 
-QuickCursor is an OS X app that allows the editing of appliation text fields in an external text editor. For example, while I'm in the text field for a FileMaker calculation, I can press Cmd-Opt-Ctrl-V and it will open that calculation in MacVim. But this procedure has two downsides.
+QuickCursor is an OS X app that allows the editing of appliation text fields in an external text editor. For example, while I'm in the text field for a FileMaker calculation, I can press Cmd-Opt-Ctrl-V and it will open that calculation in [MacVim](https://code.google.com/p/macvim/). But this procedure has two downsides.
 
 First of all, as nice as QuickCursor is, it's no longer being supported because of its inability to work with Apple's sandbox, but my old version does seem to work with OS X Yosemite.
 
