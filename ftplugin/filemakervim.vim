@@ -7,4 +7,4 @@
 
 " Replace the ^M characters with actual cariage returns. FileMaker apparently
 " uses DOS returns within the calculation dialog by default.
-:silent! %s/\r/\r/g
+:%s/\r/\r/g

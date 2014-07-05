@@ -41,7 +41,7 @@ syntax match fm_operator "\v¶"
 syntax match fm_operator "\v≤"
 syntax match fm_operator "\v≥"
 syntax match fm_operator "\v≠"
-syntax match fm_operator "\v\^"
+syntax match fm_operator "\v^"
 syntax keyword fm_operator and or not xor
 
 highlight link fm_operator Operator
