@@ -42,12 +42,12 @@ This is currently alpha version software with many features in mind for the futu
 Installation
 ------------
 
-FileMaker Vim is compatible with [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332), so the easiest way to install it is to already have Pathogen and simply clone the `filemakervim` project into `~/.vim/bundle`.
+FileMaker Vim is compatible with [Vundle.vim](https://github.com/gmarik/Vundle.vim) and [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332). The easiest way to install is with Vundle by adding `Plugin 'git@bitbucket.org:chivalry/filemakervim.git'` to your `.vimrc` and running `:PluginInstall` from within Vim. Alternatively, if you already have Pathogen then clone the `filemakervim` project into `~/.vim/bundle`.
 
     cd ~/.vimrc/bundle
     git@bitbucket.org:chivalry/filemakervim.git
 
-If you don't use Pathogen, then you'll need to place the files manually as follows, creating the folders in `.vim` as needed.:
+If you don't use Vundle or Pathogen (and really, you should), then you'll need to place the files manually as follows, creating the folders in `.vim` as needed.:
 
     filemakervim/ftdetect/filemakervim.vim -> ~/.vim/ftdetect/filemakervim.vim
     filemakervim/ftplugin/filemakervim.vim -> ~/.vim/ftplugin/filemakervim.vim

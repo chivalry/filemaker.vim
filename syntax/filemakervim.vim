@@ -1,6 +1,6 @@
 " Vim syntax file for FileMaker calculations
-" Last Change: 2014 Jul 3
-" Version: 1.0a1
+" Last Change: 2014 Jul 4
+" Version: 1.0a2
 " Language: FileMaker Calculations
 " Maintainer: Charles Ross <chivalry@mac.com>
 " License: The MIT License
@@ -142,44 +142,51 @@ syntax keyword fmBuiltIns External
 highlight link fmBuiltIns Function
 
 " Get function constants
-syntax keyword fmGetConstants AccountExtendedPrivileges AccountName
-syntax keyword fmGetConstants AccountPrivilegeSetName ActiveFieldContents
-syntax keyword fmGetConstants ActiveFieldName ActiveFieldTableName
-syntax keyword fmGetConstants ActiveLayoutObjectName ActiveModifierKeys
-syntax keyword fmGetConstants ActivePortalRowNumber ActiveRepetitionNumber
-syntax keyword fmGetConstants ActiveSelectionSize ActiveSelectionStart
-syntax keyword fmGetConstants AllowAbortState AllowFormattingBarState
-syntax keyword fmGetConstants ApplicationLanguage ApplicationVersion
-syntax keyword fmGetConstants CalculationRepetitionNumber ConnectionAttributes
-syntax keyword fmGetConstants ConnectionState CurrentDate CurrentExtendedPrivileges
-syntax keyword fmGetConstants CurrentHostTimestamp CurrentPrivilegeSetName
-syntax keyword fmGetConstants CurrentTime CurrentTimestamp CurrentTimeUTCMilliseconds
-syntax keyword fmGetConstants CustomMenuSetName DesktopPath Device DocumentsPath
-syntax keyword fmGetConstants DocumentsPathListing EncryptionState ErrorCaptureState
-syntax keyword fmGetConstants FileMakerPath FileName FilePath FileSize FoundCount
-syntax keyword fmGetConstants HighContrastColor HighContrastState
-syntax keyword fmGetConstants HostApplicationVersion HostIPAddress HostName
-syntax keyword fmGetConstants InstalledFMPlugins LastError LastMessageChoice
-syntax keyword fmGetConstants LastODBCError LayoutAccess LayoutCount LayoutName
-syntax keyword fmGetConstants LayoutNumber LayoutTableName LayoutViewState
-syntax keyword fmGetConstants ModifiedFields MultiUserState NetworkProtocol
-syntax keyword fmGetConstants NetworkType PageNumber PersistentID PreferencesPath
-syntax keyword fmGetConstants PrinterName QuickFindText RecordAccess RecordID
-syntax keyword fmGetConstants RecordModificationCount RecordNumber RecordOpenCount
-syntax keyword fmGetConstants RecordOpenState RequestCount RequestOmitState
-syntax keyword fmGetConstants ScreenDepth ScreenHeight ScreenWidth ScriptAnimationState
-syntax keyword fmGetConstants ScriptName ScriptParameter ScriptResult SortState
-syntax keyword fmGetConstants StatusAreaState SystemDrive SystemIPAddress SystemLanguage
-syntax keyword fmGetConstants SystemNICAddress SystemPlatform SystemVersion TemporaryPath
-syntax keyword fmGetConstants TextRulerVisible TotalRecordCount TriggerCurrentPanel
-syntax keyword fmGetConstants TriggerGestureInfo TriggerKeystroke TriggerModifierKeys
-syntax keyword fmGetConstants TriggerTargetPanel UserCount UserName UseSystemFormatsState
-syntax keyword fmGetConstants UUID WindowContentHeight WindowContentWidth
-syntax keyword fmGetConstants WindowDesktopHeight WindowDesktopWidth WindowHeight
-syntax keyword fmGetConstants WindowLeft WindowMode WindowName WindowOrientation
-syntax keyword fmGetConstants WindowStyle WindowTop WindowVisible WindowWidth WindowZoomLevel
+syntax keyword fmConstants AccountExtendedPrivileges AccountName
+syntax keyword fmConstants AccountPrivilegeSetName ActiveFieldContents
+syntax keyword fmConstants ActiveFieldName ActiveFieldTableName
+syntax keyword fmConstants ActiveLayoutObjectName ActiveModifierKeys
+syntax keyword fmConstants ActivePortalRowNumber ActiveRepetitionNumber
+syntax keyword fmConstants ActiveSelectionSize ActiveSelectionStart
+syntax keyword fmConstants AllowAbortState AllowFormattingBarState
+syntax keyword fmConstants ApplicationLanguage ApplicationVersion
+syntax keyword fmConstants CalculationRepetitionNumber ConnectionAttributes
+syntax keyword fmConstants ConnectionState CurrentDate CurrentExtendedPrivileges
+syntax keyword fmConstants CurrentHostTimestamp CurrentPrivilegeSetName
+syntax keyword fmConstants CurrentTime CurrentTimestamp CurrentTimeUTCMilliseconds
+syntax keyword fmConstants CustomMenuSetName DesktopPath Device DocumentsPath
+syntax keyword fmConstants DocumentsPathListing EncryptionState ErrorCaptureState
+syntax keyword fmConstants FileMakerPath FileName FilePath FileSize FoundCount
+syntax keyword fmConstants HighContrastColor HighContrastState
+syntax keyword fmConstants HostApplicationVersion HostIPAddress HostName
+syntax keyword fmConstants InstalledFMPlugins LastError LastMessageChoice
+syntax keyword fmConstants LastODBCError LayoutAccess LayoutCount LayoutName
+syntax keyword fmConstants LayoutNumber LayoutTableName LayoutViewState
+syntax keyword fmConstants ModifiedFields MultiUserState NetworkProtocol
+syntax keyword fmConstants NetworkType PageNumber PersistentID PreferencesPath
+syntax keyword fmConstants PrinterName QuickFindText RecordAccess RecordID
+syntax keyword fmConstants RecordModificationCount RecordNumber RecordOpenCount
+syntax keyword fmConstants RecordOpenState RequestCount RequestOmitState
+syntax keyword fmConstants ScreenDepth ScreenHeight ScreenWidth ScriptAnimationState
+syntax keyword fmConstants ScriptName ScriptParameter ScriptResult SortState
+syntax keyword fmConstants StatusAreaState SystemDrive SystemIPAddress SystemLanguage
+syntax keyword fmConstants SystemNICAddress SystemPlatform SystemVersion TemporaryPath
+syntax keyword fmConstants TextRulerVisible TotalRecordCount TriggerCurrentPanel
+syntax keyword fmConstants TriggerGestureInfo TriggerKeystroke TriggerModifierKeys
+syntax keyword fmConstants TriggerTargetPanel UserCount UserName UseSystemFormatsState
+syntax keyword fmConstants UUID WindowContentHeight WindowContentWidth
+syntax keyword fmConstants WindowDesktopHeight WindowDesktopWidth WindowHeight
+syntax keyword fmConstants WindowLeft WindowMode WindowName WindowOrientation
+syntax keyword fmConstants WindowStyle WindowTop WindowVisible WindowWidth WindowZoomLevel
 
-highlight link fmGetConstants Structure
+" Text formatting function constants
+syntax keyword fmConstants Roman Greek Cyrillic CentralEurope ShiftJIS TraditionalChinese
+syntax keyword fmConstants SimplifiedChinese OEM Symbol Other Plain Bold Italic Underline
+syntax keyword fmConstants HighlightYellow Condense Extend Strikethrough SmallCaps
+syntax keyword fmConstants Superscript Subscript Uppercase Lowercase Titlecase
+syntax keyword fmConstants WordUnderline DoubleUnderline AllStyles
+
+highlight link fmConstants Structure
 
 " ---------------------------------------------------
 " Conventional Custom Functions
