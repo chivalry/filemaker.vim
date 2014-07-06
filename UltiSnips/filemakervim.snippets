@@ -6,9 +6,39 @@
 # License: The MIT License
 
 # ------------------------------------------------------------------------------
+# Python library
+global !p
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+	if len(opts) == 1:
+		return opts[0]
+	return '(' + '|'.join(opts) + ')'
+endglobal
+
+global !p
+def create_function_template(*args):
+	if len(args) == 2:
+		return args[0] + '( ${0:' + args[1] + '} )'
+	return args[1]
+endglobal
+
+snippet sample
+status $1`!p snip.rv=complete(t[1], ['new', 'incomplete', 'invalid'])`
+endsnippet
+
+snippet ar
+`!p snip.rv = create_function_template( 'Func', 'param' )`
+endsnippet
+
+# ------------------------------------------------------------------------------
 # Text functions
 
 snippet char
+Char( ${0:number} )
+endsnippet
+
+snippet cha
 Char( ${0:number} )
 endsnippet
 
@@ -16,7 +46,18 @@ snippet code
 code( ${0:text} )
 endsnippet
 
+snippet cod
+code( ${0:text} )
+endsnippet
+
 snippet exact
+Exact(
+	${1:originaltext};
+	${2:comparisontext}
+)
+endsnippet
+
+snippet exa
 Exact(
 	${1:originaltext};
 	${2:comparisontext}
@@ -37,11 +78,33 @@ FilterValues(
 )
 endsnippet
 
+snippet fil
+Filter(
+	${1:texttofilter};
+	${2:filtertext}
+)
+endsnippet
+
+snippet filv
+FilterValues(
+	${1:textToFilter};
+	${2:filterValues}
+)
+endsnippet
+
 snippet getascss
 GetAsCSS( ${0:text} )
 endsnippet
 
+snippet getc
+GetAsCss( ${0:text} )
+endsnippet
+
 snippet getasdate
+GetAsDate( ${0:text} )
+endsnippet
+
+snippet getd
 GetAsDate( ${0:text} )
 endsnippet
 
@@ -49,7 +112,15 @@ snippet getasnumber
 GetAsNumber( ${0:text} )
 endsnippet
 
+snippet getn
+GetAsNumber( ${0:text} )
+endsnippet
+
 snippet getassvg
+GetAsSVG( ${0:text} )
+endsnippet
+
+snippet gets
 GetAsSVG( ${0:text} )
 endsnippet
 
@@ -57,7 +128,15 @@ snippet getastext
 GetAsText( ${0:data} )
 endsnippet
 
+snippet gett
+GetAsText( ${0:data} )
+endsnippet
+
 snippet getastime
+GetAsTime( ${0:text} )
+endsnippet
+
+snippet geti
 GetAsTime( ${0:text} )
 endsnippet
 
@@ -65,7 +144,15 @@ snippet getastimestamp
 GetAsTimestamp( ${0:text} )
 endsnippet
 
+snippet getm
+GetAsTimestamp( ${0:text} )
+endsnippet
+
 snippet getasurlencoded
+GetAsURLEncoded( ${0:text} )
+endsnippet
+
+snippet getu
 GetAsURLEncoded( ${0:text} )
 endsnippet
 
@@ -76,7 +163,18 @@ GetValues(
 )
 endsnippet
 
+snippet getv
+GetValues(
+	${1:listOfValues};
+	${2:valueNumber}
+)
+endsnippet
+
 snippet hiragana
+Hiragana( ${0:text} )
+endsnippet
+
+snippet hir
 Hiragana( ${0:text} )
 endsnippet
 
@@ -84,7 +182,15 @@ snippet kanahankaku
 KanaHankaku( ${0:text} )
 endsnippet
 
+snippet kanah
+KanaHankaku( ${0:text} )
+endsnippet
+
 snippet kanazenkaku
+KanaZenkaku( ${0:text} )
+endsnippet
+
+snippet kanaz
 KanaZenkaku( ${0:text} )
 endsnippet
 
@@ -92,7 +198,15 @@ snippet kanjinumeral
 KanjiNumeral( ${0:text} )
 endsnippet
 
+snippet kanj
+KanjiNumeral( ${0:text} )
+endsnippet
+
 snippet katakana
+Katakana( ${0:text} )
+endsnippet
+
+snippet kata
 Katakana( ${0:text} )
 endsnippet
 
@@ -110,7 +224,21 @@ LeftValues(
 )
 endsnippet
 
+snippet leftv
+LeftValues(
+	${1:text};
+	${2:numberOfValues}
+)
+endsnippet
+
 snippet leftwords
+LeftWords(
+	${1:text};
+	${2:numberOfWords}
+)
+endsnippet
+
+snippet leftw
 LeftWords(
 	${1:text};
 	${2:numberOfWords}
@@ -121,11 +249,27 @@ snippet length
 Length( ${0:field} )
 endsnippet
 
+snippet len
+Length( ${0:field} )
+endsnippet
+
 snippet lower
 Lower( ${0:text} )
 endsnippet
 
+snippet low
+Lower( ${0:text} )
+endsnippet
+
 snippet middle
+Middle(
+	${1:text};
+	${2:start};
+	#{3:numberOfCharacters}
+)
+endsnippet
+
+snippet mid
 Middle(
 	${1:text};
 	${2:start};
@@ -141,7 +285,23 @@ MiddleValues(
 )
 endsnippet
 
+snippet midv
+MiddleValues(
+	${1:text};
+	${2:startingValue};
+	${3:numberOfValues}
+)
+endsnippet
+
 snippet middlewords
+MiddleWords(
+	${1:text};
+	${2:startingWord};
+	${3:numberOfWords}
+)
+endsnippet
+
+snippet midw
 MiddleWords(
 	${1:text};
 	${2:startingWord};
@@ -157,7 +317,22 @@ NumToJText(
 )
 endsnippet
 
+snippet numj
+NumToJText(
+	${1:number};
+	${2:separator};
+	${3:characterType}
+)
+endsnippet
+
 snippet patterncount
+PatternCount(
+	${1:text};
+	${2:searchString}
+)
+endsnippet
+
+snippet pat
 PatternCount(
 	${1:text};
 	${2:searchString}
@@ -173,7 +348,20 @@ Position(
 )
 endsnippet
 
+snippet pos
+Position(
+	${1:text};
+	${2:searchString};
+	${3:start};
+	${4:occurrence}
+)
+endsnippet
+
 snippet proper
+Proper( ${1:text} )
+endsnippet
+
+snippet pro
 Proper( ${1:text} )
 endsnippet
 
@@ -181,7 +369,20 @@ snippet quote
 Quote( ${1:text} )
 endsnippet
 
+snippet quo
+Quote( ${1:text} )
+endsnippet
+
 snippet replace
+Replace(
+	${1:text};
+	${2:start};
+	${3:numberOfCharacters};
+	${4:replacementText}
+)
+endsnippet
+
+snippet repl
 Replace(
 	${1:text};
 	${2:start};
@@ -197,7 +398,21 @@ Right(
 )
 endsnippet
 
+snippet rit
+Right(
+	${1:text};
+	${2:numberOfCharacters}
+)
+endsnippet
+
 snippet rightvalues
+RightValues(
+	${1:text};
+	${2:numberOfValues}
+)
+endsnippet
+
+snippet ritv
 RightValues(
 	${1:text};
 	${2:numberOfValues}
@@ -211,7 +426,18 @@ RightWords(
 )
 endsnippet
 
+snippet ritw
+RightWords(
+	${1:text};
+	${2:numberOfWords}
+)
+endsnippet
+
 snippet romanhankaku
+RomanHankaku( ${0:text} )
+endsnippet
+
+snippet romh
 RomanHankaku( ${0:text} )
 endsnippet
 
@@ -219,7 +445,18 @@ snippet romanzenkaku
 RomanZenkaku( ${0:text} )
 endsnippet
 
+snippet romz
+RomanZenkaku( ${0:text} )
+endsnippet
+
 snippet serialincrement
+SerialIncrement(
+	${1:text};
+	${2:incrementby)
+)
+endsnippet
+
+snippet seri
 SerialIncrement(
 	${1:text};
 	${2:incrementby)
@@ -234,16 +471,31 @@ Substitute(
 )
 endsnippet
 
+snippet sub
+Substitute(
+	${1:text};
+	${2:searchString};
+	${3:replaceString}
+)
+endsnippet
+
 snippet trim
 Trim( ${0:text} )
 endsnippet
 
-# TODO: Find a way to offer the avaiable values for the second and third parameters.
 snippet trimall
 TrimAll(
 	${1:text};
-	${2:trimSpaces};
-	${3:trimType}
+	$2`!p snip.rv = complete(t[2], ['True', 'False'])`;
+	$3`!p snip.rv = complete( t[3], ['0', '1', '2', '3'])`;
+)
+endsnippet
+
+snippet trima
+TrimAll(
+	${1:text};
+	$2`!p snip.rv = complete(t[2], ['True', 'False'])`;
+	$3`!p snip.rv = complete( t[3], ['0', '1', '2', '3'])`;
 )
 endsnippet
 
@@ -251,7 +503,15 @@ snippet upper
 Upper( ${0:text} )
 endsnippet
 
+snippet upp
+Upper( ${0:text} )
+endsnippet
+
 snippet valuecaount
+ValueCount( ${0:text} )
+endsnippet
+
+snippet valc
 ValueCount( ${0:text} )
 endsnippet
 
@@ -259,13 +519,22 @@ snippet wordcount
 WordCount( ${0:text} )
 endsnippet
 
+snippet wordc
+WordCount( ${0:text} )
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Text formatting functions
+
+
+
 # ------------------------------------------------------------------------------
 # Logical functions
 
 snippet let "The Let() function formatted for my default"
 Let(
-  [
-	  ${1:_var} = ${2:value}
+	[
+		${1:_var} = ${2:value}
 	];
 
 	${0:result}
