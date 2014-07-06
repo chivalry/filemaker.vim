@@ -1,0 +1,274 @@
+# UltiSnips snippets file for filemaker calculations
+# Last Change: 2014 Jul 5
+# Version: 2.0a1
+# Language: UltiSnips
+# Maintainer: Charles Ross <chivalry@mac.com>
+# License: The MIT License
+
+# ------------------------------------------------------------------------------
+# Text functions
+
+snippet char
+Char( ${0:number} )
+endsnippet
+
+snippet code
+code( ${0:text} )
+endsnippet
+
+snippet exact
+Exact(
+	${1:originaltext};
+	${2:comparisontext}
+)
+endsnippet
+
+snippet filter
+Filter(
+	${1:texttofilter};
+	${2:filtertext}
+)
+endsnippet
+
+snippet filterValues
+FilterValues(
+	${1:textToFilter};
+	${2:filterValues}
+)
+endsnippet
+
+snippet getascss
+GetAsCSS( ${0:text} )
+endsnippet
+
+snippet getasdate
+GetAsDate( ${0:text} )
+endsnippet
+
+snippet getasnumber
+GetAsNumber( ${0:text} )
+endsnippet
+
+snippet getassvg
+GetAsSVG( ${0:text} )
+endsnippet
+
+snippet getastext
+GetAsText( ${0:data} )
+endsnippet
+
+snippet getastime
+GetAsTime( ${0:text} )
+endsnippet
+
+snippet getastimestamp
+GetAsTimestamp( ${0:text} )
+endsnippet
+
+snippet getasurlencoded
+GetAsURLEncoded( ${0:text} )
+endsnippet
+
+snippet getvalue
+GetValues(
+	${1:listOfValues};
+	${2:valueNumber}
+)
+endsnippet
+
+snippet hiragana
+Hiragana( ${0:text} )
+endsnippet
+
+snippet kanahankaku
+KanaHankaku( ${0:text} )
+endsnippet
+
+snippet kanazenkaku
+KanaZenkaku( ${0:text} )
+endsnippet
+
+snippet kanjinumeral
+KanjiNumeral( ${0:text} )
+endsnippet
+
+snippet katakana
+Katakana( ${0:text} )
+endsnippet
+
+snippet left
+Left(
+	${1:text};
+	${2:numberOfCharacters}
+)
+endsnippet
+
+snippet leftvalues
+LeftValues(
+	${1:text};
+	${2:numberOfValues}
+)
+endsnippet
+
+snippet leftwords
+LeftWords(
+	${1:text};
+	${2:numberOfWords}
+)
+endsnippet
+
+snippet length
+Length( ${0:field} )
+endsnippet
+
+snippet lower
+Lower( ${0:text} )
+endsnippet
+
+snippet middle
+Middle(
+	${1:text};
+	${2:start};
+	#{3:numberOfCharacters}
+)
+endsnippet
+
+snippet middlevalues
+MiddleValues(
+	${1:text};
+	${2:startingValue};
+	${3:numberOfValues}
+)
+endsnippet
+
+snippet middlewords
+MiddleWords(
+	${1:text};
+	${2:startingWord};
+	${3:numberOfWords}
+)
+endsnippet
+
+snippet numtojtext
+NumToJText(
+	${1:number};
+	${2:separator};
+	${3:characterType}
+)
+endsnippet
+
+snippet patterncount
+PatternCount(
+	${1:text};
+	${2:searchString}
+)
+endsnippet
+
+snippet position
+Position(
+	${1:text};
+	${2:searchString};
+	${3:start};
+	${4:occurrence}
+)
+endsnippet
+
+snippet proper
+Proper( ${1:text} )
+endsnippet
+
+snippet quote
+Quote( ${1:text} )
+endsnippet
+
+snippet replace
+Replace(
+	${1:text};
+	${2:start};
+	${3:numberOfCharacters};
+	${4:replacementText}
+)
+endsnippet
+
+snippet right
+Right(
+	${1:text};
+	${2:numberOfCharacters}
+)
+endsnippet
+
+snippet rightvalues
+RightValues(
+	${1:text};
+	${2:numberOfValues}
+)
+endsnippet
+
+snippet rightwords
+RightWords(
+	${1:text};
+	${2:numberOfWords}
+)
+endsnippet
+
+snippet romanhankaku
+RomanHankaku( ${0:text} )
+endsnippet
+
+snippet romanzenkaku
+RomanZenkaku( ${0:text} )
+endsnippet
+
+snippet serialincrement
+SerialIncrement(
+	${1:text};
+	${2:incrementby)
+)
+endsnippet
+
+snippet substitute
+Substitute(
+	${1:text};
+	${2:searchString};
+	${3:replaceString}
+)
+endsnippet
+
+snippet trim
+Trim( ${0:text} )
+endsnippet
+
+# TODO: Find a way to offer the avaiable values for the second and third parameters.
+snippet trimall
+TrimAll(
+	${1:text};
+	${2:trimSpaces};
+	${3:trimType}
+)
+endsnippet
+
+snippet upper
+Upper( ${0:text} )
+endsnippet
+
+snippet valuecaount
+ValueCount( ${0:text} )
+endsnippet
+
+snippet wordcount
+WordCount( ${0:text} )
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Logical functions
+
+snippet let "The Let() function formatted for my default"
+Let(
+  [
+	  ${1:_var} = ${2:value}
+	];
+
+	${0:result}
+)
+endsnippet
+
