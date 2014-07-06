@@ -185,6 +185,9 @@ syntax keyword fm_constants HighlightYellow Condense Extend Strikethrough SmallC
 syntax keyword fm_constants Superscript Subscript Uppercase Lowercase Titlecase
 syntax keyword fm_constants WordUnderline DoubleUnderline AllStyles
 
+" LookupNext function constants
+syntax keyword fm_constants Lower Higher
+
 highlight link fm_constants Structure
 
 " ---------------------------------------------------

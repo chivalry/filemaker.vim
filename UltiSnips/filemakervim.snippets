@@ -1016,16 +1016,769 @@ snippet base64encode
 Base64Encode( ${0:sourceField} )
 endsnippet
 
+snippet basee
+Base64Encode( ${0:sourceField} )
+endsnippet
+
+snippet getcontainerattribute
+GetContainerAttribute(
+	${1:sourceField};
+	"$2`!p snip.rv = complete(t[2], ['filename', 'MD5', 'storageType', 'fileSize',
+		'internalSize', 'externalSize', 'externalFiles', 'width', 'height',
+		'dpiWidth', 'dpiHeight', 'transparency', 'orientation', 'created',
+		'modified', 'latitude', 'longitude', 'make', 'model', 'title', 'artist',
+		'album', 'year', 'track', 'genre', 'composer', 'coverArt', 'duration',
+		'bitRate', 'barcodeText', 'barcodeType', 'signed', 'general', 'audio',
+		'image', 'photo', 'barcode', 'signature', 'all'])`"
+)
+endsnippet
+
+snippet getca
+GetContainerAttribute(
+	${1:sourceField};
+	"$2`!p snip.rv = complete(t[2], ['filename', 'MD5', 'storageType', 'fileSize',
+		'internalSize', 'externalSize', 'externalFiles', 'width', 'height',
+		'dpiWidth', 'dpiHeight', 'transparency', 'orientation', 'created',
+		'modified', 'latitude', 'longitude', 'make', 'model', 'title', 'artist',
+		'album', 'year', 'track', 'genre', 'composer', 'coverArt', 'duration',
+		'bitRate', 'barcodeText', 'barcodeType', 'signed', 'general', 'audio',
+		'image', 'photo', 'barcode', 'signature', 'all'])`"
+)
+endsnippet
+
+snippet getheight
+GetHeight( ${0:field} )
+endsnippet
+
+snippet geth
+GetHeight( ${0:field} )
+endsnippet
+
+snippet getthumbnail
+Getthumbnail(
+	${1:field};
+	${2:width};
+	${3:height}
+)
+endsnippet
+
+snippet getth
+Getthumbnail(
+	${1:field};
+	${2:width};
+	${3:height}
+)
+endsnippet
+
+snippet getwidth
+GetWidth( ${0:field} )
+endsnippet
+
+snippet getw
+GetWidth( ${0:field} )
+endsnippet
+
+snippet verifycontainer
+VerifyContainer( ${0:field} )
+endsnippet
+
+snippet ver
+VerifyContainer( ${0:field} )
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Aggregate functions
+
+snippet average
+Average( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet avg
+Average( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet count
+Count( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet cnt
+Count( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet list
+List(
+	${1:field}${2:;
+	${3:field...}}
+)
+endsnippet
+
+snippet max
+Max( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet min
+Min( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet stdev
+StDev( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet std
+StDev( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet stdevp
+StDevP( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet stdp
+StDevP( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet sum
+Sum( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet variance
+Variance( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet var
+Variance( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet variancep
+VarianceP( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+snippet varp
+VarianceP( ${1:field}${2:; ${3:field...}} )
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Summary functions
+
+snippet getsummary
+GetSummary(
+	${1:summaryField};
+	${2:breakField}
+)
+endsnippet
+
+snippet getsum
+GetSummary(
+	${1:summaryField};
+	${2:breakField}
+)
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Repeating functions
+
+snippet extend
+Extend( ${0:non-repeatingField} )
+endsnippet
+
+snippet extd
+Extend( ${0:non-repeatingField} )
+endsnippet
+
+snippet getrepetition
+GetRepetition(
+	${1:repeatingField};
+	${2:number}
+)
+endsnippet
+
+snippet getrep
+GetRepetition(
+	${1:repeatingField};
+	${2:number}
+)
+endsnippet
+
+snippet last
+Last( ${0:field} )
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Financial functions
+
+snippet fv
+FV(
+	${1:payment};
+	${2:interestRate};
+	${3:periods}
+)
+endsnippet
+
+snippet npv
+NPV(
+	${1:payment};
+	${2:interestRate}
+)
+endsnippet
+
+snippet pmt
+PMT(
+	${1:principal};
+	${2:interestRate};
+	${3:term}
+)
+endsnippet
+
+snippet pv
+PV(
+	${1:payment};
+	${2:interestRate};
+	${3:periods}
+)
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Trigonometric functions
+
+snippet acos
+Acos( ${0:number} )
+endsnippet
+
+snippet asin
+Asin( ${0:number} )
+endsnippet
+
+snippet atan
+Atan( ${0:number} )
+endsnippet
+
+snippet cos
+Cos( ${0:angleInRadians} )
+endsnippet
+
+snippet degrees
+Degrees( ${0:angleInRadians} )
+endsnippet
+
+snippet deg
+Degrees( ${0:angleInRadians} )
+endsnippet
+
+# only for completeness sake, obviously
+snippet pi
+Pi
+endsnippet
+
+snippet radians
+Radians( ${0:angleInDegrees} )
+endsnippet
+
+snippet rad
+Radians( ${0:angleInDegrees} )
+endsnippet
+
+snippet sin
+Sin( ${0:angleInRadians} )
+endsnippet
+
+snippet tan
+Tan( ${0:angleInRadians} )
+endsnippet
+
 # ------------------------------------------------------------------------------
 # Logical functions
+
+snippet case
+Case(
+	${1:test1};
+	${2:result1}${3:;
+	...${4:;
+	${5:defaultResult}}}
+)
+endsnippet
+
+snippet choose
+Choose(
+	${1:test};
+	${2:result0}${3:;
+	${4:...}}
+)
+endsnippet
+
+snippet cho
+Choose(
+	${1:test};
+	${2:result0}${3:;
+	${4:...}}
+)
+endsnippet
+
+snippet evaluate
+Evaluate(
+	${1:expression}${2:;
+	${3:field}${4:;
+	...}}
+)
+endsnippet
+
+snippet eval
+Evaluate(
+	${1:expression}${2:;
+	${3:field}${4:;
+	...}}
+)
+endsnippet
+
+snippet evaluationerror
+EvaluationError( ${0:expression} )
+endsnippet
+
+snippet evalerr
+EvaluationError( ${0:expression} )
+endsnippet
+
+snippet executesql
+ExecuteSQL(
+	${1:sqlQuery};
+	${2:fieldSeparator};
+	${3:rowSeparator}${4:;
+	${5:arguments...}}
+)
+endsnippet
+
+snippet sql
+ExecuteSQL(
+	${1:sqlQuery};
+	${2:fieldSeparator};
+	${3:rowSeparator}${4:;
+	${5:arguments...}}
+)
+endsnippet
+
+snippet getasboolean
+GetAsBoolean( ${0:data} )
+endsnippet
+
+snippet getb
+GetAsBoolean( ${0:data} )
+endsnippet
+
+snippet getfield
+GetField( ${0:fieldName} )
+endsnippet
+
+snippet getf
+GetField( ${0:fieldName} )
+endsnippet
+
+snippet getfieldname
+GetFieldName( ${0:fieldName} )
+endsnippet
+
+snippet getfn
+GetFieldName( ${0:fieldName} )
+endsnippet
+
+snippet getlayoutobjectattribute
+GetLayoutObjectAttribute(
+	${1:objectName};
+	"$2`!p snip.rv = complete(t[2], ['objectType', 'hasFocus', 'containsFocus',
+		'isFrontPanel', 'bounds', 'left', 'right', 'top', 'bottom', 'width',
+		'height', 'rotation', 'startPoint', 'endPoint', 'source', 'content',
+		'enclosingObject', 'containedObjects', 'isobjecthidden'])`"${3:;
+	${4:repetitionNumber};
+	${5:portalRowNumber}}
+)
+endsnippet
+
+snippet getloa
+GetLayoutObjectAttribute(
+	${1:objectName};
+	"$2`!p snip.rv = complete(t[2], ['objectType', 'hasFocus', 'containsFocus',
+		'isFrontPanel', 'bounds', 'left', 'right', 'top', 'bottom', 'width',
+		'height', 'rotation', 'startPoint', 'endPoint', 'source', 'content',
+		'enclosingObject', 'containedObjects', 'isobjecthidden'])`"${3:;
+	${4:repetitionNumber};
+	${5:portalRowNumber}}
+)
+endsnippet
+
+snippet getnthrecord
+GetNthRecord(
+	${1:fieldName};
+	${2:recordNumber}
+)
+endsnippet
+
+snippet getnth
+GetNthRecord(
+	${1:fieldName};
+	${2:recordNumber}
+)
+endsnippet
+
+snippet if
+If(
+	${1:test};
+	${2:result1}${3:;
+	${4:result2}}
+)
+endsnippet
+
+snippet isempty
+IsEmpty( ${0:field} )
+endsnippet
+
+snippet ise
+IsEmpty( ${0:field} )
+endsnippet
+
+snippet isvalid
+IsValid( ${0:field} )
+endsnippet
+
+snippet isv
+IsValid( ${0:field} )
+endsnippet
+
+snippet isvalidexpression
+IsValidExpression( ${0:expression} )
+endsnippet
+
+snippet isve
+IsValidExpression( ${0:expression} )
+endsnippet
 
 snippet let "The Let() function formatted for my default"
 Let(
 	[
-		${1:_var} = ${2:value}
+		${1:_var} = ${2:value}${3:;
+		${4:_var} = ${5:value}}
 	];
 
 	${0:result}
+)
+endsnippet
+
+snippet lookup
+Lookup(
+	${1:sourceField}${2:;
+	${3:failExpression}}
+)
+endsnippet
+
+snippet look
+Lookup(
+	${1:sourceField}${2:;
+	${3:failExpression}}
+)
+endsnippet
+
+snippet lookupnext
+LookupNext(
+	${1:sourceField};
+	$2`!p snip.rv = complete(t[2], ['Lower', 'Higher'])`
+)
+endsnippet
+
+snippet lookn
+LookupNext(
+	${1:sourceField};
+	$2`!p snip.rv = complete(t[2], ['Lower', 'Higher'])`
+)
+endsnippet
+
+# For the sake of completeness
+snippet self
+Self
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Design functions
+
+# For the sake of every function having a snippet by name
+snippet databasenames
+DatabaseNames
+endsnippet
+
+snippet dbn
+DatabaseNames
+endsnippet
+
+snippet fieldbounds
+FieldBounds(
+	${1:Get( FileName )};
+	${2:layoutName};
+	${3:fieldName}
+)
+endsnippet
+
+snippet fb
+FieldBounds(
+	${1:Get( FileName )};
+	${2:layoutName};
+	${3:fieldName}
+)
+endsnippet
+
+snippet fieldcomment
+FieldComment(
+	${1:Get( FileName )};
+	${2:fieldname}
+)
+endsnippet
+
+snippet fc
+FieldComment(
+	${1:Get( FileName )};
+	${2:fieldname}
+)
+endsnippet
+
+snippet fieldids
+FieldIDs(
+	${1:Get( FileName )};
+	${2:layoutName}
+)
+endsnippet
+
+snippet fids
+FieldIDs(
+	${1:Get( FileName )};
+	${2:layoutName}
+)
+endsnippet
+
+snippet fieldnames
+FieldNames(
+	${1:Get( FileName )};
+	${2:layoutName}
+)
+endsnippet
+
+snippet fn
+FieldNames(
+	${1:Get( FileName )};
+	${2:layoutName}
+)
+endsnippet
+
+snippet fieldrepetitions
+FieldRepetitions(
+	${1:Get( FileName )};
+	${2:layoutName};
+	${3:fieldName}
+)
+endsnippet
+
+snippet frep
+FieldRepetitions(
+	${1:Get( FileName )};
+	${2:layoutName};
+	${3:fieldName}
+)
+endsnippet
+
+snippet fieldstyle
+FieldStyle(
+	${1:Get( FileName )};
+	${2:layoutName};
+	${3:fieldName}
+)
+endsnippet
+
+snippet fst
+FieldStyle(
+	${1:Get( FileName )};
+	${2:layoutName};
+	${3:fieldName}
+)
+endsnippet
+
+snippet fieldtype
+FieldType(
+	${1:Get( FileName )};
+	${2:fieldName}
+)
+endsnippet
+
+snippet fty
+FieldType(
+	${1:Get( FileName )};
+	${2:fieldName}
+)
+endsnippet
+
+snippet getnextserialvalue
+GetNextSerialValue(
+	${1:Get( FileName )};
+	${2:fieldName}
+)
+endsnippet
+
+snippet gnsv
+GetNextSerialValue(
+	${1:Get( FileName )};
+	${2:fieldName}
+)
+endsnippet
+
+snippet layoutids
+LayoutIDs( ${0:Get( FileName )} )
+endsnippet
+
+snippet lid
+LayoutIDs( ${0:Get( FileName )} )
+endsnippet
+
+snippet layoutnames
+LayoutNames( ${0:Get( FileName )} )
+endsnippet
+
+snippet lon
+LayoutNames( ${0:Get( FileName )} )
+endsnippet
+
+snippet layoutobjectnames
+LayoutObjectNames(
+	${1:Get( FileName )};
+	${2:layoutName}
+)
+endsnippet
+
+snippet loon
+LayoutObjectNames(
+	${1:Get( FileName )};
+	${2:layoutName}
+)
+endsnippet
+
+snippet relationinfo
+RelationInfo(
+	${1:Get( FileName )};
+	${2:tableOccurrenceName}
+}
+endsnippet
+
+snippet ri
+RelationInfo(
+	${1:Get( FileName )};
+	${2:tableOccurrenceName}
+}
+endsnippet
+
+snippet scriptids
+ScriptIDs( ${1:Get( FileName )} )
+endsnippet
+
+snippet sid
+ScriptIDs( ${1:Get( FileName )} )
+endsnippet
+
+snippet scriptnames
+ScriptNames( ${1:Get( FileName )} )
+endsnippet
+
+snippet sn
+ScriptIDs( ${1:Get( FileName )} )
+endsnippet
+
+snippet tableids
+TableIds( ${1:Get( FileName )} )
+endsnippet
+
+snippet tid
+TableIds( ${1:Get( FileName )} )
+endsnippet
+
+snippet tablenames
+TableNames( ${1:Get( FileName )} )
+endsnippet
+
+snippet tn
+TableNames( ${1:Get( FileName )} )
+endsnippet
+
+snippet valuelistids
+ValueListIDs( ${1:Get( FileName )} )
+endsnippet
+
+snippet vlid
+ValueListIDs( ${1:Get( FileName )} )
+endsnippet
+
+snippet valuelistitems
+ValueListItems(
+	${1:Get( FileName )};
+	${2:valueList}
+)
+endsnippet
+
+snippet vli
+ValueListItems(
+	${1:Get( FileName )};
+	${2:valueList}
+)
+endsnippet
+
+snippet valuelistnames
+ValueListNames( ${1:Get( FileName )} )
+endsnippet
+
+snippet vln
+ValueListNames( ${1:Get( FileName )} )
+endsnippet
+
+snippet windownames
+WindowNames( ${1:Get( FileName )} )
+endsnippet
+
+snippet wn
+WindowNames( ${1:Get( FileName )} )
+endsnippet
+
+snippet location
+Location(
+	${1:accuracy}${2:;
+	${3:timeout}}
+)
+endsnippet
+
+snippet loc
+Location(
+	${1:accuracy}${2:;
+	${3:timeout}}
+)
+endsnippet
+
+snippet locationvalues
+LocationValues(
+	${1:accuracy}${2:;
+	${3:timeout}}
+)
+endsnippet
+
+snippet locv
+LocationValues(
+	${1:accuracy}${2:;
+	${3:timeout}}
+)
+endsnippet
+
+# ------------------------------------------------------------------------------
+# External functions
+
+# might be left out, only useful for Pre-7 FileMaker plugins
+snippet external
+External(
+	${1:nameOfFunction};
+	${2:parameter}
+)
+endsnippet
+
+snippet ext
+External(
+	${1:nameOfFunction};
+	${2:parameter}
 )
 endsnippet
 
