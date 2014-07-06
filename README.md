@@ -29,15 +29,16 @@ Currently FileMaker Vim is sparse on features. It detects the following patterns
 - Built-in FileMaker functions
 - Custom functions that begin with a prefix and a dot (i.e., `dev.MyCustomFunction`)
 - Block and in-line comments
+- Confirmed compatibility with MacVim and command-line Vim on OS X.
 
-This is currently alpha version software with many features in mind for the future. Among the planned future features:
+This is currently beta version software with many features in mind for the future. Among the planned future features:
 
 - Recognition of any calculation variable (i.e., no need to prepend an underscore)
 - Recognition of any custom or external function (i.e., no need to prepend a code followed by a dot)
 - Integration with one or more of the TextMate-like snippet plugins for Vim, probably [UltiSnips](https://github.com/sirver/ultisnips) to start
 - Addition of an indent file that first uses my own preferences for indenting FileMaker calcs and later allows the user to set their own preferences
 - Addition of a doc file to provide in-Vim help
-- Confirmation of Windows compatibility, so far this has only been tested with MacVim and the command-line version of Vim
+- Confirmation of Windows compatibility
 
 Installation
 ------------
@@ -45,9 +46,9 @@ Installation
 FileMaker Vim is compatible with [Vundle.vim](https://github.com/gmarik/Vundle.vim) and [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332). The easiest way to install is with Vundle by adding `Plugin 'git@bitbucket.org:chivalry/filemakervim.git'` to your `.vimrc` and running `:PluginInstall` from within Vim. Alternatively, if you already have Pathogen then clone the `filemakervim` project into `~/.vim/bundle`.
 
     cd ~/.vimrc/bundle
-    git@bitbucket.org:chivalry/filemakervim.git
+    git clone git@bitbucket.org:chivalry/filemakervim.git
 
-If you don't use Vundle or Pathogen (and really, you should), then you'll need to place the files manually as follows, creating the folders in `.vim` as needed.:
+If you don't use Vundle or Pathogen (and really, you should, Vim's native plugin management is non-existant), then you'll need to place the files manually as follows, creating the folders in `.vim` as needed.:
 
     filemakervim/ftdetect/filemakervim.vim -> ~/.vim/ftdetect/filemakervim.vim
     filemakervim/ftplugin/filemakervim.vim -> ~/.vim/ftplugin/filemakervim.vim

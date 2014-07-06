@@ -1,6 +1,6 @@
 " Vim ftdetect file for FileMaker calculations
-" Last Change: 2014 Jul 4
-" Version: 1.0a2
+" Last Change: 2014 Jul 5
+" Version: 1.0b1
 " Language: FileMaker Calculations
 " Maintainer: Charles Ross <chivalry@mac.com>
 " License: The MIT License
