@@ -526,7 +526,495 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Text formatting functions
 
+snippet rgb
+RBG(
+	${1:red};
+	${2:green};
+	${3:blue}
+)
+endsnippet
 
+snippet textcolor
+TextColor(
+	${1:text};
+	${2:RGB(
+		${3:red};
+		${4:green};
+		${5:blue}
+	)}
+)
+endsnippet
+
+snippet textc
+TextColor(
+	${1:text};
+	${2:RGB(
+		${3:red};
+		${4:green};
+		${5:blue}
+	)}
+)
+endsnippet
+
+snippet textcolorremove
+TextColorRemove(
+	${1:text}${2:;
+	${3:RGB(
+		${4:red};
+		${5:green};
+		${6:blue}
+	)}}
+)
+endsnippet
+
+snippet textcr
+TextColorRemove(
+	${1:text}${2:;
+	${3:RGB(
+		${4:red};
+		${5:green};
+		${6:blue}
+	)}}
+)
+endsnippet
+
+snippet textfont
+TextFont(
+	${1:text};
+	${2:fontName}${3:;
+	$4`!p snip.rv = complete(t[4], ['Roman', 'Greek', 'Cyrillic', 'CentralEurope',
+		'ShiftJIS', 'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
+		'Other'])`}
+)
+endsnippet
+
+snippet textf
+TextFont(
+	${1:text};
+	${2:fontName}${3:;
+	$4`!p snip.rv = complete(t[4], ['Roman', 'Greek', 'Cyrillic', 'CentralEurope',
+		'ShiftJIS', 'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
+		'Other'])`}
+)
+endsnippet
+
+snippet textfontremove
+TextFontRemove(
+	${1:text}${2:;
+	${3:fontToRemove};
+	$4`!p snip.rv = complete(t[4], ['Roman', 'Greek', 'Cyrillic', 'CentralEurope',
+		'ShiftJIS', 'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
+		'Other'])`}
+)
+endsnippet
+
+snippet textfr
+TextFontRemove(
+	${1:text}${2:;
+	${3:fontToRemove};
+	$4`!p snip.rv = complete(t[4], ['Roman', 'Greek', 'Cyrillic', 'CentralEurope',
+		'ShiftJIS', 'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
+		'Other'])`}
+)
+endsnippet
+
+snippet textsize
+TextSize(
+	${1:text};
+	${2:fontSize}
+)
+endsnippet
+
+snippet texts
+TextSize(
+	${1:text};
+	${2:fontSize}
+)
+endsnippet
+
+snippet textsizeremove
+TextSizeRemove(
+	${1:text}${2:;
+	${3:sizeToRemove}}
+)
+endsnippet
+
+snippet textsr
+TextSizeRemove(
+	${1:text}${2:;
+	${3:sizeToRemove}}
+)
+endsnippet
+
+snippet textstyleadd
+TextStyleAdd(
+	${1:text};
+	$2`!p snip.rv = complete(t[2], ['Plain', 'Bold', 'Italic', 'Underline',
+		'HighlightYellow', 'Condense', 'Extend', 'Strikethrough', 'SmallCaps',
+		'Superscript', 'Subscript', 'Uppercase', 'Lowercase', 'Titlecase',
+		'WordUnderline', 'DoubleUnderline', 'AllStyles'])`
+)
+endsnippet
+
+snippet textsta
+TextStyleAdd(
+	${1:text};
+	$2`!p snip.rv = complete(t[2], ['Plain', 'Bold', 'Italic', 'Underline',
+		'HighlightYellow', 'Condense', 'Extend', 'Strikethrough', 'SmallCaps',
+		'Superscript', 'Subscript', 'Uppercase', 'Lowercase', 'Titlecase',
+		'WordUnderline', 'DoubleUnderline', 'AllStyles'])`
+)
+endsnippet
+
+snippet textstyleremove
+TextStyleRemove(
+	${1:text};
+	$2`!p snip.rv = complete(t[2], ['Plain', 'Bold', 'Italic', 'Underline',
+		'HighlightYellow', 'Condense', 'Extend', 'Strikethrough', 'SmallCaps',
+		'Superscript', 'Subscript', 'Uppercase', 'Lowercase', 'Titlecase',
+		'WordUnderline', 'DoubleUnderline', 'AllStyles'])`
+)
+endsnippet
+
+snippet textstr
+TextStyleRemove(
+	${1:text};
+	$2`!p snip.rv = complete(t[2], ['Plain', 'Bold', 'Italic', 'Underline',
+		'HighlightYellow', 'Condense', 'Extend', 'Strikethrough', 'SmallCaps',
+		'Superscript', 'Subscript', 'Uppercase', 'Lowercase', 'Titlecase',
+		'WordUnderline', 'DoubleUnderline', 'AllStyles'])`
+)
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Number functions
+
+snippet abs
+Abs( ${0:number} )
+endsnippet
+
+snippet ceiling
+Ceiling( ${0:number} )
+endsnippet
+
+snippet ceil
+Ceiling( ${0:number} )
+endsnippet
+
+snippet combination
+Combination(
+	${1:setSize};
+	${2:numberOfChoices}
+)
+endsnippet
+
+snippet comb
+Combination(
+	${1:setSize};
+	${2:numberOfChoices}
+)
+endsnippet
+
+snippet div
+Div(
+	${1:number};
+	${2:divisor}
+)
+endsnippet
+
+snippet exp
+Exp( ${0:number} )
+endsnippet
+
+snippet factorial
+Factorial(
+	${1:number}${2:;
+	${3:numberOfFactors}}
+}
+endsnippet
+
+snippet fact
+Factorial(
+	${1:number}${2:;
+	${3:numberOfFactors}}
+}
+endsnippet
+
+snippet floor
+Floor( ${0:number} )
+endsnippet
+
+snippet flo
+Floor( ${0:number} )
+endsnippet
+
+snippet int
+Int( ${0:number} )
+endsnippet
+
+snippet lg
+Lg( ${0:number} )
+endsnippet
+
+snippet ln
+Ln( ${0:number} )
+endsnippet
+
+snippet log
+Log( ${0:number} )
+endsnippet
+
+snippet mod
+Mod(
+	${1:number};
+	${2:divisor}
+)
+endsnippet
+
+snippet rand
+Random
+endsnippet
+
+snippet round
+Round(
+	${1:number};
+	${2:precision}
+)
+endsnippet
+
+snippet setprecision
+SetPrecision(
+	${1:expression};
+	${2:precision}
+)
+endsnippet
+
+snippet setp
+SetPrecision(
+	${1:expression};
+	${2:precision}
+)
+endsnippet
+
+snippet sign
+Sign( ${0:number} )
+endsnippet
+
+snippet sqrt
+Sqrt( ${0:number} )
+endsnippet
+
+snippet truncate
+Truncate(
+	${1:number};
+	${2:precision}
+)
+endsnippet
+
+snippet trunc
+Truncate(
+	${1:number};
+	${2:precision}
+)
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Date functions
+
+snippet date
+Date(
+	${1:month};
+	${2:day};
+	${3:year}
+)
+endsnippet
+
+snippet day
+Day( ${0:date} )
+endsnippet
+
+snippet dayname
+DayName( ${0:date} )
+endsnippet
+
+snippet dayn
+DayName( ${0:date} )
+endsnippet
+
+snippet daynamej
+DayNameJ( ${0:date} )
+endsnippet
+
+snippet daynj
+DayNameJ( ${0:date} )
+endsnippet
+
+snippet dayofweek
+DayOfWeek( ${0:date} )
+endsnippet
+
+snippet dow
+DayOfWeek( ${0:date} )
+endsnippet
+
+snippet dayofyear
+DayOfYear( ${0:date} )
+endsnippet
+
+snippet doy
+DayOfYear( ${0:date} )
+endsnippet
+
+snippet month
+Month( ${0:date} )
+endsnippet
+
+snippet mon
+Month( ${0:date} )
+endsnippet
+
+snippet monthname
+MonthName( ${0:date} )
+endsnippet
+
+snippet monn
+MonthName( ${0:date} )
+endsnippet
+
+snippet monthnamej
+MonthNameJ( ${0:date} )
+endsnippet
+
+snippet monnj
+MonthNameJ( ${0:date} )
+endsnippet
+
+snippet weekofyear
+WeekOfYear( ${0:date} )
+endsnippet
+
+snippet woy
+WeekOfYear( ${0:date} )
+endsnippet
+
+snippet weekofyearfiscal
+WeekOfYearFiscal( ${0:date} )
+endsnippet
+
+snippet woyf
+WeekOfYearFiscal( ${0:date} )
+endsnippet
+
+snippet year
+Year( ${0:date} )
+endsnippet
+
+snippet yr
+Year( ${0:date} )
+endsnippet
+
+snippet yearname
+YearName(
+	${1:date};
+	$2`!p snip.rv = complete( t[2], ['0', '1', '2'])`
+)
+endsnippet
+
+snippet yrn
+YearName(
+	${1:date};
+	$2`!p snip.rv = complete( t[2], ['0', '1', '2'])`
+)
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Time functions
+
+snippet hour
+Hour( ${0:time} )
+endsnippet
+
+snippet hr
+Hour( ${0:time} )
+endsnippet
+
+snippet minute
+Minute( ${0:time} )
+endsnippet
+
+snippet min
+Minute( ${0:time} )
+endsnippet
+
+snippet seconds
+Seconds( ${0:time} )
+endsnippet
+
+snippet secs
+Seconds( ${0:time} )
+endsnippet
+
+snippet time
+Time(
+	${1:hours};
+	${2:minutes};
+	${3:seconds}
+)
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Timestamp functions
+
+snippet timestamp
+Timestamp(
+	${1::Date(
+		${2:day};
+		${3:month};
+		${4:year}
+	)};
+	${5::Time(
+		${6:hours};
+		${7:minutes};
+		${8:seconds}
+	)}
+)
+endsnippet
+
+snippet ts
+Timestamp(
+	${1::Date(
+		${2:day};
+		${3:month};
+		${4:year}
+	)};
+	${5::Time(
+		${6:hours};
+		${7:minutes};
+		${8:seconds}
+	)}
+)
+endsnippet
+
+# ------------------------------------------------------------------------------
+# Container functions
+
+snippet base64decode
+Base64Decode(
+	${1:text}${2:;
+	${3:fileNameWithExtension}}
+)
+endsnippet
+
+snippet based
+Base64Decode(
+	${1:text}${2:;
+	${3:fileNameWithExtension}}
+)
+endsnippet
+
+snippet base64encode
+Base64Encode( ${0:sourceField} )
+endsnippet
 
 # ------------------------------------------------------------------------------
 # Logical functions
