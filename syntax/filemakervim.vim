@@ -24,11 +24,6 @@ syntax match convention_variables "\v_[A-Za-z_]+"
 highlight link convention_variables Identifier
 
 " ---------------------------------------------------
-" Keywords
-
-"syntax keyword fmKeyword 
-
-" ---------------------------------------------------
 " Operators
 
 syntax match fm_operator "\v\*"
@@ -38,7 +33,11 @@ syntax match fm_operator "\v-"
 syntax match fm_operator "\v\="
 syntax match fm_operator "\v\&"
 syntax match fm_operator "\v¶"
+syntax match fm_operator "\v\<\="
+syntax match fm_operator "\v\<"
 syntax match fm_operator "\v≤"
+syntax match fm_operator "\v\>\="
+syntax match fm_operator "\v\>"
 syntax match fm_operator "\v≥"
 syntax match fm_operator "\v≠"
 syntax match fm_operator "\v\^"
