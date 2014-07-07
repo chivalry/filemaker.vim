@@ -27,7 +27,7 @@ endglobal
 # --------------------------------------
 global !p
 def add_space():
-	return ' ' if snip.opt( 'g:FMVAddSpaceAfterFunction', True ) else ''
+	return ' ' if snip.opt( 'g:FMVAddSpaceAfterFunction', False ) else ''
 endglobal
 
 # --------------------------------------
@@ -1136,24 +1136,20 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "layoutids|lid" "LayoutIDs" r
 snippet layoutids" "LayoutIDs"
-LayoutIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+LayoutIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 snippet lid "LayoutIDs"
-LayoutIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+LayoutIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 # snippet "layoutnames|lon" "LayoutNames" r
 snippet layoutnames "LayoutNames"
-LayoutNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+LayoutNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
-snippet ln "LayoutNames"
-LayoutNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+snippet lon "LayoutNames"
+LayoutNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 snippet "layoutobjectnames|loon" "LayoutObjectNames" r
@@ -1180,42 +1176,35 @@ RelationInfo`!p snip.rv = open_paren()`
 endsnippet
 
 snippet "scriptids|sid" "ScriptIDs" r
-ScriptIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+ScriptIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 # snippet "scriptnames|sn" "ScriptNames" r
 snippet scriptnames "ScriptNames"
-ScriptNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+ScriptNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 snippet sn "ScriptNames"
-ScriptNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+ScriptNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 snippet "tableids|tid" "TableIDs" r
-TableIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+TableIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 # snippet "tablenames|tn" "TableNames" r
 snippet tablenames "TableNames"
-TableNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+TableNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 snippet tn "TableNames"
-TableNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+TableNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 snippet "valuelistids|vid" "ValidListIDs" r
-ValueListIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+ValueListIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 snippet "valuelistitems|vli" "ValueListItems" r
@@ -1226,20 +1215,17 @@ ValueListItems`!p snip.rv = open_paren()`
 endsnippet
 
 snippet "valuelistnames|vln" "ValueListNames" r
-ValueListNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+ValueListNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 # snippet "windownames|wn" "WindowNames" r
 snippet windownames "WindowNames"
-WindowNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+WindowNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 snippet wn "WindowNames"
-WindowNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
-snip.rv = close_paren()`)
+WindowNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
 endsnippet
 
 snippet "loc(ation)?" "Location" r
@@ -1435,7 +1421,7 @@ Get`!p snip.rv = open_paren()`CurrentTimestamp`!p
 snip.rv = close_paren()`
 endsnippet
 
-snippet getctutcm "Get( CurrentTimeUTCMilliseconds )"
+snippet getutc "Get( CurrentTimeUTCMilliseconds )"
 Get`!p snip.rv = open_paren()`CurrentTimeUTCMilliseconds`!p
 snip.rv = close_paren()`
 endsnippet
@@ -1540,7 +1526,7 @@ Get`!p snip.rv = open_paren()`LastMessageChoice`!p
 snip.rv = close_paren()`
 endsnippet
 
-snippet getlodbce "Get( LastODBCError )"
+snippet getloe "Get( LastODBCError )"
 Get`!p snip.rv = open_paren()`LastODBCError`!p
 snip.rv = close_paren()`
 endsnippet
@@ -1585,7 +1571,7 @@ Get`!p snip.rv = open_paren()`MultiUserState`!p
 snip.rv = close_paren()`
 endsnippet
 
-snippet getnp "Get( Network Protocol )"
+snippet getnp "Get( NetworkProtocol )"
 Get`!p snip.rv = open_paren()`NetworkProtocol`!p
 snip.rv = close_paren()`
 endsnippet
@@ -1719,7 +1705,7 @@ Get`!p snip.rv = open_paren()`SystemLanguage`!p
 snip.rv = close_paren()`
 endsnippet
 
-snippet getsnica "Get( SystemNICAddress )"
+snippet getsna "Get( SystemNICAddress )"
 Get`!p snip.rv = open_paren()`SystemNICAddress`!p
 snip.rv = close_paren()`
 endsnippet
