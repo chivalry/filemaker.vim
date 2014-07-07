@@ -1,7 +1,7 @@
 # UltiSnips snippets file for filemaker calculations
-# Last Change: 2014 Jul 5
-# Version: 2.0a1
-# Language: UltiSnips
+# Last Change: 2014 Jul 7
+# Version: 1.0
+# Language: UltiSnips/Python
 # Maintainer: Charles Ross <chivalry@mac.com>
 # License: The MIT License
 
@@ -9,7 +9,7 @@
 # Python library
 
 global !p
-def complete(t, opts):
+def complete( t, opts ):
 	if t:
 #		non_t = []
 #		for m in opts:
@@ -24,6 +24,21 @@ def complete(t, opts):
 	return '(' + '|'.join(opts) + ')'
 endglobal
 
+# --------------------------------------
+global !p
+def func_open_paren():
+	before = ' ' if snip.opt( 'g:FMVAddSpaceAfterFunction', False ) else ''
+	after  = ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True  ) else ''
+	return before + '(' + after
+endglobal
+
+global !p
+def func_close_paren():
+	before = ' ' if snip.opt( 'g.FMVPadSpacesWithinParens', True ) else ''
+	return before + ')'
+endglobal
+
+# --------------------------------------
 global !p
 def font_scripts():
 	return ['Roman', 'Greek', 'Cyrillic', 'CentralEurope', 'ShiftJIS',
@@ -31,6 +46,7 @@ def font_scripts():
 					'Other']
 endglobal
 
+# --------------------------------------
 global !p
 def font_styles():
 	return ['Plain', 'Bold', 'Italic', 'Underline', 'HighlightYellow', 'Condense',
@@ -39,6 +55,9 @@ def font_styles():
 					'DoubleUnderline', 'AllStyles']
 endglobal
 
+# --------------------------------------
+# Not used but kept as a reminder to not forget about hopes for this kind of
+# feature
 global !p
 def create_function_template(*args):
 	if len(args) == 2:
@@ -46,19 +65,20 @@ def create_function_template(*args):
 	return args[1]
 endglobal
 
-snippet sample
-status $1`!p snip.rv=complete(t[1], ['new', 'incomplete', 'invalid'])`
-endsnippet
-
 snippet ar
 `!p snip.rv = create_function_template( 'Func', 'param' )`
+endsnippet
+
+# --------------------------------------
+snippet sample
+status $1`!p snip.rv=complete(t[1], ['new', 'incomplete', 'invalid'])`
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Text functions
 
 snippet "char?" "Char" r
-Char( ${0:number} )
+Char`!p snip.rv = func_open_paren()`${0:number}`!p snip.rv = func_close_paren()`
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
@@ -297,8 +317,8 @@ endsnippet
 snippet "trima(ll)?" "TrimAll" r
 TrimAll(
 	${1:text};
-	$2`!p snip.rv = complete(t[2], ['True', 'False'])`;
-	$3`!p snip.rv = complete( t[3], ['0', '1', '2', '3'])`;
+	$2`!p snip.rv = complete( t[2], ['True', 'False'] )`;
+	$3`!p snip.rv = complete( t[3], ['0', '1', '2', '3'] )`;
 )
 endsnippet
 
@@ -351,7 +371,7 @@ snippet "textf(ont)?" "TextFont" r
 TextFont(
 	${1:text};
 	${2:fontName}${3:;
-	$4`!p snip.rv = complete(t[4], font_scripts())`}
+	$4`!p snip.rv = complete( t[4], font_scripts() )`}
 )
 endsnippet
 
@@ -359,7 +379,7 @@ snippet "textfontremove|textfr" "TextFontRemove" r
 TextFontRemove(
 	${1:text}${2:;
 	${3:fontToRemove};
-	$4`!p snip.rv = complete(t[4], font_scripts())`}
+	$4`!p snip.rv = complete( t[4], font_scripts() )`}
 )
 endsnippet
 
@@ -380,14 +400,14 @@ endsnippet
 snippet "textstyleadd|textsta" "TextStyleAdd" r
 TextStyleAdd(
 	${1:text};
-	$2`!p snip.rv = complete(t[2], font_styles())`
+	$2`!p snip.rv = complete( t[2], font_styles() )`
 )
 endsnippet
 
 snippet "textstyleremove|textstr" "TextStyleRemove" r
 TextStyleRemove(
 	${1:text};
-	$2`!p snip.rv = complete(t[2], font_styles())`
+	$2`!p snip.rv = complete( t[2], font_styles() )`
 )
 endsnippet
 
@@ -551,7 +571,7 @@ endsnippet
 snippet "yearname|yrn" "YearName" r
 YearName(
 	${1:date};
-	$2`!p snip.rv = complete( t[2], ['0', '1', '2'])`
+	$2`!p snip.rv = complete( t[2], ['0', '1', '2'] )`
 )
 endsnippet
 
@@ -629,13 +649,13 @@ endsnippet
 snippet "getcontainerattribute|getcatt" "GetContainerAttribute" r
 GetContainerAttribute(
 	${1:sourceField};
-	${2:"$3`!p snip.rv = complete(t[3], ['filename', 'MD5', 'storageType',
+	${2:"$3`!p snip.rv = complete( t[3], ['filename', 'MD5', 'storageType',
 		'fileSize', 'internalSize', 'externalSize', 'externalFiles', 'width',
 		'height', 'dpiWidth', 'dpiHeight', 'transparency', 'orientation', 'created',
 		'modified', 'latitude', 'longitude', 'make', 'model', 'title', 'artist',
 		'album', 'year', 'track', 'genre', 'composer', 'coverArt', 'duration',
 		'bitRate', 'barcodeText', 'barcodeType', 'signed', 'general', 'audio',
-		'image', 'photo', 'barcode', 'signature', 'all'])`"}
+		'image', 'photo', 'barcode', 'signature', 'all'] )`"}
 )
 endsnippet
 
@@ -864,10 +884,10 @@ endsnippet
 snippet "getlayoutobjectattribute|getloa" "GetLayoutObjectAttribute" r
 GetLayoutObjectAttribute(
 	${1:objectName};
-	"$2`!p snip.rv = complete(t[2], ['objectType', 'hasFocus', 'containsFocus',
+	"$2`!p snip.rv = complete( t[2], ['objectType', 'hasFocus', 'containsFocus',
 		'isFrontPanel', 'bounds', 'left', 'right', 'top', 'bottom', 'width',
 		'height', 'rotation', 'startPoint', 'endPoint', 'source', 'content',
-		'enclosingObject', 'containedObjects', 'isobjecthidden'])`"${3:;
+		'enclosingObject', 'containedObjects', 'isobjecthidden'] )`"${3:;
 	${4:repetitionNumber};
 	${5:portalRowNumber}}
 )
@@ -921,7 +941,7 @@ endsnippet
 snippet "lookupnext|lookn" "LookupNext" r
 LookupNext(
 	${1:sourceField};
-	$2`!p snip.rv = complete(t[2], ['Lower', 'Higher'])`
+	$2`!p snip.rv = complete( t[2], ['Lower', 'Higher'] )`
 )
 endsnippet
 
@@ -1135,7 +1155,7 @@ endsnippet
 # Get functions
 
 snippet get
-Get( $0`!p snip.rv=complete(t[0], ['AccountExtendedPrivileges', 'AccountName',
+Get( $0`!p snip.rv=complete( t[0], ['AccountExtendedPrivileges', 'AccountName',
 	'AccountPrivilegeSetName', 'ActiveFieldContents', 'ActiveFieldName',
 	'ActiveFieldTableName', 'ActiveLayoutObjectName', 'ActiveModifierKeys',
 	'ActivePortalRowNumber', 'ActiveRepetitionNumber', 'ActiveSelectionSize',
@@ -1164,7 +1184,7 @@ Get( $0`!p snip.rv=complete(t[0], ['AccountExtendedPrivileges', 'AccountName',
 	'WindowContentHeight', 'WindowContentWidth', 'WindowDesktopHeight',
 	'WindowDesktopWidth', 'WindowHeight', 'WindowLeft', 'WindowMode', 'WindowName',
 	'WindowOrientation', 'WindowStyle', 'WindowVisible', 'WindowWidth',
-	'WindowZoomLevel'])` )
+	'WindowZoomLevel'] )` )
 endsnippet
 
 snippet getaep "Get( AccountExtendedPrivileges )"
