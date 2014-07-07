@@ -26,16 +26,37 @@ endglobal
 
 # --------------------------------------
 global !p
-def func_open_paren():
-	before = ' ' if snip.opt( 'g:FMVAddSpaceAfterFunction', False ) else ''
-	after  = ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True  ) else ''
-	return before + '(' + after
+def add_space():
+	return ' ' if snip.opt( 'g:FMVAddSpaceAfterFunction', False ) else ''
 endglobal
 
+# --------------------------------------
 global !p
-def func_close_paren():
-	before = ' ' if snip.opt( 'g.FMVPadSpacesWithinParens', True ) else ''
-	return before + ')'
+def pad_spaces():
+	return ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True ) else ''
+endglobal
+
+# --------------------------------------
+global !p
+def open_paren():
+	return add_space() + '(' + pad_spaces()
+endglobal
+
+# --------------------------------------
+global !p
+def close_paren():
+	return pad_spaces() + ')'
+endglobal
+
+# --------------------------------------
+global !p
+def get_filename():
+	if snip.opt( 'g:FMVFillInGetFileName', True ):
+		open_paren = add_space() + '(' + pad_spaces()
+		close_paren = pad_spaces() + ')'
+		return 'Get' + open_paren + 'fileName' + close_paren
+	else:
+		return 'fileName'
 endglobal
 
 # --------------------------------------
@@ -85,7 +106,8 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "code?" "Code" r
 snippet code "Code"
-Code( ${0:text} )
+Code`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 snippet cod "Code"
 Code( ${0:text} )
@@ -1155,7 +1177,7 @@ endsnippet
 # Get functions
 
 snippet get
-Get( $0`!p snip.rv=complete( t[0], ['AccountExtendedPrivileges', 'AccountName',
+Get( $1`!p snip.rv = complete( t[1], ['AccountExtendedPrivileges', 'AccountName',
 	'AccountPrivilegeSetName', 'ActiveFieldContents', 'ActiveFieldName',
 	'ActiveFieldTableName', 'ActiveLayoutObjectName', 'ActiveModifierKeys',
 	'ActivePortalRowNumber', 'ActiveRepetitionNumber', 'ActiveSelectionSize',
