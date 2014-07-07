@@ -1,11 +1,3 @@
-<!--
-Readme file for FileMaker Vim
-Last Change: 2014 Jul 7
-Version 1.0
-Language: Markdown
-Maintainer: Charles Ross <chivalry@mac.com>
-License: The MIT LIcense
--->
 FileMaker Vim
 =============
 
