@@ -7,6 +7,7 @@
 
 # ------------------------------------------------------------------------------
 # Python library
+
 global !p
 def complete(t, opts):
 	if t:
@@ -60,11 +61,16 @@ snippet "char?" "Char" r
 Char( ${0:number} )
 endsnippet
 
-snippet "code?" "Code" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "code?" "Code" r
+snippet code "Code"
+Code( ${0:text} )
+endsnippet
+snippet cod "Code"
 Code( ${0:text} )
 endsnippet
 
-# TODO: Remove conflict with Get( CurrentTime ) trigger
 snippet "exa(ct)?" "Exact" r
 Exact(
 	${1:originaltext};
@@ -94,12 +100,10 @@ snippet "getasdate|getd" "GetAsDate" r
 GetAsDate( ${0:text} )
 endsnippet
 
-# TODO: Remove conflict with TableNames trigger
 snippet "getasnumber|getn" "GetAsNumber" r
 GetAsNumber( ${0:text} )
 endsnippet
 
-# TODO: Remove conflict with Timestamp
 snippet "getassvg|gets" "GetAsSVG" r
 GetAsSVG( ${0:text} )
 endsnippet
@@ -112,7 +116,6 @@ snippet "getastime|geti" "GetAsTime" r
 GetAsTime( ${0:text} )
 endsnippet
 
-# TODO: Remove conflict with Timestamp
 snippet "getastimestamp|getm" "GetAsTimestamp" r
 GetAsTimestamp( ${0:text} )
 endsnippet
@@ -227,11 +230,11 @@ Position(
 endsnippet
 
 snippet "pro(per)?" "Proper" r
-Proper( ${1:text} )
+Proper( ${0:text} )
 endsnippet
 
 snippet "quo(te)?" "Quote" r
-Quote( ${1:text} )
+Quote( ${0:text} )
 endsnippet
 
 snippet "repl(ace)?" "Replace" r
@@ -272,7 +275,6 @@ snippet "romanzenkaku|romz" "RomanZenkaku" r
 RomanZenkaku( ${0:text} )
 endsnippet
 
-# TODO: Reolve conflict with RelationInfo
 snippet "serialincrement|seri" "SerialIncrement" r
 SerialIncrement(
 	${1:text};
@@ -304,12 +306,10 @@ snippet "upp(er)?" "Upper" r
 Upper( ${0:text} )
 endsnippet
 
-# TODO: Resolve conflict with Count
 snippet "valuecount|valc" "ValueCount" r
 ValueCount( ${0:text} )
 endsnippet
 
-# TODO: Resolve conflict with Count
 snippet "wordc(ount)?" "WordCount" r
 WordCount( ${0:text} )
 endsnippet
@@ -363,7 +363,6 @@ TextFontRemove(
 )
 endsnippet
 
-# TODO: Resolve conflict with Timestamp
 snippet "texts(ize)?" "TextSize" r
 TextSize(
 	${1:text};
@@ -421,7 +420,6 @@ snippet exp "Exp"
 Exp( ${0:number} )
 endsnippet
 
-# TODO: Resolve conflict with Get( CurrentTime )
 snippet "fact(orial)?" "Factorial" r
 Factorial(
 	${1:number}${2:;
@@ -516,7 +514,6 @@ snippet "dayofweek|dow" "DayOfWeek" r
 DayOfWeek( ${0:date} )
 endsnippet
 
-# TODO: Resolve conflict with Year
 snippet "dayofyear|doy" "DayOfYear" r
 DayOfYear( ${0:date} )
 endsnippet
@@ -541,7 +538,13 @@ snippet "weekofyearfiscal|woyf" "WeekOfYearFiscal" r
 WeekOfYearFiscal( ${0:date} )
 endsnippet
 
-snippet "year|yr" "Year" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "year|yr" "Year" r
+snippet year "Year"
+Year( ${0:date} )
+endsnippet
+snippet yr "Year"
 Year( ${0:date} )
 endsnippet
 
@@ -578,7 +581,10 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Timestamp functions
 
-snippet "timestamp|ts" "TimeStamp" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "timestamp|ts" "Timestamp" r
+snippet timestamp "Timestamp"
 Timestamp(
 	${1::Date(
 		${2:day};
@@ -592,11 +598,23 @@ Timestamp(
 	)}
 )
 endsnippet
-
+snippet ts "Timestamp"
+Timestamp(
+	${1::Date(
+		${2:day};
+		${3:month};
+		${4:year}
+	)};
+	${5::Time(
+		${6:hours};
+		${7:minutes};
+		${8:seconds}
+	)}
+)
+endsnippet
 # ------------------------------------------------------------------------------
 # Container functions
 
-# TODO: Resolve conflict with Code
 snippet "base64decode|based" "Base64Decode" r
 Base64Decode(
 	${1:text}${2:;
@@ -604,7 +622,6 @@ Base64Decode(
 )
 endsnippet
 
-# TODO: Resolve conflict with Code
 snippet "base64encode|basee" "Base64Encode" r
 Base64Encode( ${0:sourceField} )
 endsnippet
@@ -649,7 +666,13 @@ snippet "average|avg" "Average" r
 Average( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet "count|cnt" "Count" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "count|cnt" "Count" r
+snippet count "Count"
+Count( ${1:field}${2:; ${3:field...}} )
+endsnippet
+snippet cnt "Count"
 Count( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
@@ -834,7 +857,6 @@ snippet "getf(ield)?" "GetField" r
 GetField( ${0:fieldName} )
 endsnippet
 
-# TODO: Resolve conflicts with Get( FileName ) and FieldNames
 snippet "getfieldname|getfn" "GetFieldName" r
 GetFieldName( ${0:fieldName} )
 endsnippet
@@ -870,7 +892,6 @@ snippet "ise(mpty)?" "IsEmpty" r
 IsEmpty( ${0:field} )
 endsnippet
 
-# TODO: Resolve conflict with LayoutIDs
 snippet "isv(alid)?" "IsValid" r
 IsValid( ${0:field} )
 endsnippet
@@ -920,7 +941,16 @@ FieldBounds(
 )
 endsnippet
 
-snippet "fieldcomment|fc" "FieldComment" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "fieldcomment|fc" "FieldComment" r
+snippet fieldcomment "FieldComment"
+FieldComment(
+	${1:Get( FileName )};
+	${2:fieldname}
+)
+endsnippet
+snippet fc "FieldComment"
 FieldComment(
 	${1:Get( FileName )};
 	${2:fieldname}
@@ -934,7 +964,16 @@ FieldIDs(
 )
 endsnippet
 
-snippet "fieldnames|fn" "FieldNames" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "fieldnames|fn" "FieldNames" r
+snippet fieldnames "FieldNames"
+FieldNames(
+	${1:Get( FileName )};
+	${2:layoutName}
+)
+endsnippet
+snippet fn "FieldNames"
 FieldNames(
 	${1:Get( FileName )};
 	${2:layoutName}
@@ -971,11 +1010,23 @@ GetNextSerialValue(
 )
 endsnippet
 
-snippet "layoutids|lid" "LayoutIDs" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "layoutids|lid" "LayoutIDs" r
+snippet layoutids" "LayoutIDs"
+LayoutIDs( ${0:Get( FileName )} )
+endsnippet
+snippet lid "LayoutIDs"
 LayoutIDs( ${0:Get( FileName )} )
 endsnippet
 
-snippet "layoutnames|lon" "LayoutNames" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "layoutnames|lon" "LayoutNames" r
+snippet layoutnames "LayoutNames"
+LayoutNames( ${0:Get( FileName )} )
+endsnippet
+snippet ln "LayoutNames"
 LayoutNames( ${0:Get( FileName )} )
 endsnippet
 
@@ -986,7 +1037,16 @@ LayoutObjectNames(
 )
 endsnippet
 
-snippet "relationinfo|ri" "RelationInfo" r
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "relationinfo|ri" "RelationInfo" r
+snippet relationinfo "RelationInfo"
+RelationInfo(
+	${1:Get( FileName )};
+	${2:tableOccurrenceName}
+}
+endsnippet
+snippet ri "RelationInfo"
 RelationInfo(
 	${1:Get( FileName )};
 	${2:tableOccurrenceName}
@@ -994,23 +1054,35 @@ RelationInfo(
 endsnippet
 
 snippet "scriptids|sid" "ScriptIDs" r
-ScriptIDs( ${1:Get( FileName )} )
+ScriptIDs( ${0:Get( FileName )} )
 endsnippet
 
-snippet "scriptnames|sn" "ScriptNames" r
-ScriptNames( ${1:Get( FileName )} )
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "scriptnames|sn" "ScriptNames" r
+snippet scriptnames "ScriptNames"
+ScriptNames( ${0:Get( FileName )} )
+endsnippet
+snippet sn "ScriptNames"
+ScriptNames( ${0:Get( FileName )} )
 endsnippet
 
 snippet "tableids|tid" "TableIDs" r
-TableIDs( ${1:Get( FileName )} )
+TableIDs( ${0:Get( FileName )} )
 endsnippet
 
-snippet "tablenames|tn" "TableNames" r
-TableNames( ${1:Get( FileName )} )
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "tablenames|tn" "TableNames" r
+snippet tablenames "TableNames"
+TableNames( ${0:Get( FileName )} )
+endsnippet
+snippet tn "TableNames"
+TableNames( ${0:Get( FileName )} )
 endsnippet
 
 snippet "valuelistids|vid" "ValidListIDs" r
-ValueListIDs( ${1:Get( FileName )} )
+ValueListIDs( ${0:Get( FileName )} )
 endsnippet
 
 snippet "valuelistitems|vli" "ValueListItems" r
@@ -1021,11 +1093,17 @@ ValueListItems(
 endsnippet
 
 snippet "valuelistnames|vln" "ValueListNames" r
-ValueListNames( ${1:Get( FileName )} )
+ValueListNames( ${0:Get( FileName )} )
 endsnippet
 
-snippet "windownames|wn" "WindowNames" r
-WindowNames( ${1:Get( FileName )} )
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+# snippet "windownames|wn" "WindowNames" r
+snippet windownames "WindowNames"
+WindowNames( ${0:Get( FileName )} )
+endsnippet
+snippet wn "WindowNames"
+WindowNames( ${0:Get( FileName )} )
 endsnippet
 
 snippet "loc(ation)?" "Location" r
@@ -1057,7 +1135,7 @@ endsnippet
 # Get functions
 
 snippet get
-Get( $1`!p snip.rv=complete(t[1], ['AccountExtendedPrivileges', 'AccountName',
+Get( $0`!p snip.rv=complete(t[0], ['AccountExtendedPrivileges', 'AccountName',
 	'AccountPrivilegeSetName', 'ActiveFieldContents', 'ActiveFieldName',
 	'ActiveFieldTableName', 'ActiveLayoutObjectName', 'ActiveModifierKeys',
 	'ActivePortalRowNumber', 'ActiveRepetitionNumber', 'ActiveSelectionSize',
@@ -1097,27 +1175,22 @@ snippet getan "Get( AccountName )"
 Get( AccountName )
 endsnippet
 
-# TODO: Resolve conflict with ScriptNames
 snippet getapsn "Get( AccountPrivilegeSetName )"
 Get( AccountPrivilegeSetName )
 endsnippet
 
-# TODO: Resolve conflict with FieldComment
 snippet getafc "Get( ActiveFieldContents )"
 Get( ActiveFieldContents )
 endsnippet
 
-# TODO: Resolve conflict with FieldNames
 snippet getafn "Get( ActiveFieldName )"
 Get( ActiveFieldName )
 endsnippet
 
-# TODO: Resolve conflict with TableNames
 snippet getaftn "Get( ActiveFieldTableName )"
 Get( ActiveFieldTableName )
 endsnippet
 
-# TODO: Resolve conflict with LayoutNames
 snippet getalon "Get( ActiveLayoutObjectName )"
 Get( ActiveLayoutObjectName )
 endsnippet
@@ -1182,16 +1255,20 @@ snippet getcht "Get( CurrentHostTimestamp )"
 Get( CurrentHostTimestamp )
 endsnippet
 
-# TODO: Resolve conflict with ScriptNames
 snippet getcpsn "Get( CurrentPrivilegeSetName )"
 Get( CurrentPrivilegeSetName )
 endsnippet
 
-snippet "(get)?ct" "Get( CurrentTime )" rw
+# TODO: Find a way to get a single version of this to work without conflicting
+#       with other triggers that end in the same characters.
+#snippet "getct|ct" "Get( CurrentTime )" rw
+snippet getct "Get( CurrentTime )"
+Get( CurrentTime )
+endsnippet
+snippet ct "Get( CurrentTime )"
 Get( CurrentTime )
 endsnippet
 
-# TODO: Resolve conflict with Timestamp
 snippet "(get)?cts" "Get( CurrentTimestamp )" r
 Get( CurrentTimestamp )
 endsnippet
@@ -1200,7 +1277,6 @@ snippet getctutcm "Get( CurrentTimeUTCMilliseconds )"
 Get( CurrentTimeUTCMilliseconds )
 endsnippet
 
-# TODO: Resolve conflict with ScriptNames
 snippet getcmsn "Get( CustomMenuSetName )"
 Get( CustomMenuSetName )
 endsnippet
@@ -1233,8 +1309,7 @@ snippet getfmp "Get( FileMakerPath )"
 Get( FileMakerPath )
 endsnippet
 
-# TODO: Resolve conflict with FieldNames and GetFieldName
-snippet getfn "Get( FileName )"
+snippet getfln "Get( FileName )"
 Get( FileName )
 endsnippet
 
@@ -1246,7 +1321,6 @@ snippet getfs "Get( FileSize )"
 Get( FileSize )
 endsnippet
 
-# TODO: Resolve conflict with FieldComment
 snippet getfc "Get( FoundCount )"
 Get( FoundCount )
 endsnippet
@@ -1303,7 +1377,6 @@ snippet getlnu "Get( LayoutNumber )"
 Get( LayoutNumber )
 endsnippet
 
-# TODO: Resolve conflict with TableNames
 snippet getltn "Get( LayoutTableName )"
 Get( LayoutTableName )
 endsnippet
@@ -1328,7 +1401,6 @@ snippet getnt "Get( NetworkType )"
 Get( NetworkType )
 endsnippet
 
-# TODO: Resolve conflict with Get( PrinterName )
 snippet getpn "Get( PageNumber )"
 Get( PageNumber )
 endsnippet
@@ -1341,7 +1413,7 @@ snippet getpp "Get( PreferencesPath )"
 Get( PreferencesPath )
 endsnippet
 
-snippet getpn "Get( PrinterName )"
+snippet getprn "Get( PrinterName )"
 Get( PrinterName )
 endsnippet
 
@@ -1369,7 +1441,6 @@ snippet getroc "Get( RecordOpenCount )"
 Get( RecordOpenCount )
 endsnippet
 
-# TODO: Resolve conflict with Get( RequestOmitState )
 snippet getros "Get( RecordOpenState )"
 Get( RecordOpenState )
 endsnippet
@@ -1378,12 +1449,10 @@ snippet getrqc "Get( RequestCount )"
 Get( RequestCount )
 endsnippet
 
-# TODO: Resolve conflict with Get( RecordOpenState )
-snippet getros "Get( RequestOmitState )"
+snippet getrqos "Get( RequestOmitState )"
 Get( RequestOmitState )
 endsnippet
 
-# TODO: Resolve conflict with Get( SystemDrive )
 snippet getsd "Get( ScreenDepth )"
 Get( ScreenDepth )
 endsnippet
@@ -1396,17 +1465,14 @@ snippet getsw "Get( ScreenWidth )"
 Get( ScreenWidth )
 endsnippet
 
-# TODO: Resolve conflict with Get( StatusAreaState )
 snippet getsas "Get( ScriptAnimationState )"
 Get( ScriptAnimationState )
 endsnippet
 
-# TODO: Resolve conflict with ScriptNames
 snippet getsn "Get( ScriptName )"
 Get( ScriptName )
 endsnippet
 
-# TODO: Resolve conflict with Get( SystemPlatform )
 snippet getsp "Get( ScriptParameter )"
 Get( ScriptParameter )
 endsnippet
@@ -1419,13 +1485,11 @@ snippet getss "Get( SortState )"
 Get( SortState )
 endsnippet
 
-# TODO: Resolve conflict with Get( ScriptAnimationState )
-snippet getsas "Get( StatusAreaState )"
+snippet getsars "Get( StatusAreaState )"
 Get( StatusAreaState )
 endsnippet
 
-# TODO: Resolve conflict with Get( ScreenDepth )
-snippet getsd "Get( SystemDrive )"
+snippet getsdv "Get( SystemDrive )"
 Get( SystemDrive )
 endsnippet
 
@@ -1441,8 +1505,7 @@ snippet getsnica "Get( SystemNICAddress )"
 Get( SystemNICAddress )
 endsnippet
 
-# TODO: Resolve conflict with Get( ScriptParameter )
-snippet getsp "Get( SystenPlatform )"
+snippet getspl "Get( SystenPlatform )"
 Get( SystemPlatform )
 endsnippet
 
@@ -1526,7 +1589,6 @@ snippet getwm "Get( WindowMode )"
 Get( WindowMode )
 endsnippet
 
-# TODO: Resolve conflict with WindowNames
 snippet getwn "Get( WindowName )"
 Get( WindowName )
 endsnippet
