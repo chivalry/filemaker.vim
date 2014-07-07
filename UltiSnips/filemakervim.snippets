@@ -27,7 +27,7 @@ endglobal
 # --------------------------------------
 global !p
 def add_space():
-	return ' ' if snip.opt( 'g:FMVAddSpaceAfterFunction', False ) else ''
+	return ' ' if snip.opt( 'g:FMVAddSpaceAfterFunction', True ) else ''
 endglobal
 
 # --------------------------------------
@@ -116,21 +116,21 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "exa(ct)?" "Exact" r
-Exact(
+Exact`!p snip.rv = open_paren()`
 	${1:originaltext};
 	${2:comparisontext}
 )
 endsnippet
 
 snippet "fil(ter)?" "Filter" r
-Filter(
+Filter`!p snip.rv = open_paren()`
 	${1:texttofilter};
 	${2:filtertext}
 )
 endsnippet
 
 snippet "filtervalues|filv" "FilterValues" r
-FilterValues(
+FilterValues`!p snip.rv = open_paren()`
 	${1:textToFilter};
 	${2:filterValues}
 )
@@ -177,7 +177,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "getvalue|getv" "GetValues" r
-GetValue(
+GetValue`!p snip.rv = open_paren()`
 	${1:listOfValues};
 	${2:valueNumber}
 )
@@ -209,21 +209,21 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "left?" "Left" r
-Left(
+Left`!p snip.rv = open_paren()`
 	${1:text};
 	${2:numberOfCharacters}
 )
 endsnippet
 
 snippet "leftv(alues)?" "LeftValues" r
-LeftValues(
+LeftValues`!p snip.rv = open_paren()`
 	${1:text};
 	${2:numberOfValues}
 )
 endsnippet
 
 snippet "leftw(ords)?" "LeftWords" r
-LeftWords(
+LeftWords`!p snip.rv = open_paren()`
 	${1:text};
 	${2:numberOfWords}
 )
@@ -240,7 +240,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "mid(dle)?" "Middle" r
-Middle(
+Middle`!p snip.rv = open_paren()`
 	${1:text};
 	${2:start};
 	${3:numberOfCharacters}
@@ -248,7 +248,7 @@ Middle(
 endsnippet
 
 snippet "middlevalues|midv" "MiddleValues" r
-MiddleValues(
+MiddleValues`!p snip.rv = open_paren()`
 	${1:text};
 	${2:startingValue};
 	${3:numberOfValues}
@@ -256,7 +256,7 @@ MiddleValues(
 endsnippet
 
 snippet "middlewords|midw" "MiddleWords" r
-MiddleWords(
+MiddleWords`!p snip.rv = open_paren()`
 	${1:text};
 	${2:startingWord};
 	${3:numberOfWords}
@@ -264,7 +264,7 @@ MiddleWords(
 endsnippet
 
 snippet "numtojtext|numj" "NumToJText" r
-NumToJText(
+NumToJText`!p snip.rv = open_paren()`
 	${1:number};
 	${2:separator};
 	${3:characterType}
@@ -273,14 +273,14 @@ endsnippet
 
 # TOTO: Resolve conflict with Count
 snippet "pat(terncount)?" "PatternCount" r
-PatternCount(
+PatternCount`!p snip.rv = open_paren()`
 	${1:text};
 	${2:searchString}
 )
 endsnippet
 
 snippet "pos(ition)?" "Position" r
-Position(
+Position`!p snip.rv = open_paren()`
 	${1:text};
 	${2:searchString};
 	${3:start};
@@ -299,7 +299,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "repl(ace)?" "Replace" r
-Replace(
+Replace`!p snip.rv = open_paren()`
 	${1:text};
 	${2:start};
 	${3:numberOfCharacters};
@@ -308,21 +308,21 @@ Replace(
 endsnippet
 
 snippet "right|rit" "Right" r
-Right(
+Right`!p snip.rv = open_paren()`
 	${1:text};
 	${2:numberOfCharacters}
 )
 endsnippet
 
 snippet "rightvalues|ritv" "RightValues" r
-RightValues(
+RightValues`!p snip.rv = open_paren()`
 	${1:text};
 	${2:numberOfValues}
 )
 endsnippet
 
 snippet "rightwords|ritw" "RightWords" r
-RightWords(
+RightWords`!p snip.rv = open_paren()`
 	${1:text};
 	${2:numberOfWords}
 )
@@ -339,14 +339,14 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "serialincrement|seri" "SerialIncrement" r
-SerialIncrement(
+SerialIncrement`!p snip.rv = open_paren()`
 	${1:text};
 	${2:incrementBy}
 )
 endsnippet
 
 snippet "sub(stitute)?" "Substitute" r
-Substitute(
+Substitute`!p snip.rv = open_paren()`
 	${1:text};
 	${2:searchString};
 	${3:replaceString}
@@ -359,7 +359,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "trima(ll)?" "TrimAll" r
-TrimAll(
+TrimAll`!p snip.rv = open_paren()`
 	${1:text};
 	$2`!p snip.rv = complete( t[2], ['True', 'False'] )`;
 	$3`!p snip.rv = complete( t[3], ['0', '1', '2', '3'] )`;
@@ -385,7 +385,7 @@ endsnippet
 # Text formatting functions
 
 snippet rgb "RGB"
-RBG(
+RBG`!p snip.rv = open_paren()`
 	${1:red};
 	${2:green};
 	${3:blue}
@@ -393,9 +393,9 @@ RBG(
 endsnippet
 
 snippet "textc(olor)?" "TextColor" r
-TextColor(
+TextColor`!p snip.rv = open_paren()`
 	${1:text};
-	${2:RGB(
+	${2:RGB`!p snip.rv = open_paren()`
 		${3:red};
 		${4:green};
 		${5:blue}
@@ -404,9 +404,9 @@ TextColor(
 endsnippet
 
 snippet "textcolorremove|textcr" "TextColorRemove" r
-TextColorRemove(
+TextColorRemove`!p snip.rv = open_paren()`
 	${1:text}${2:;
-	${3:RGB(
+	${3:RGB`!p snip.rv = open_paren()`
 		${4:red};
 		${5:green};
 		${6:blue}
@@ -415,7 +415,7 @@ TextColorRemove(
 endsnippet
 
 snippet "textf(ont)?" "TextFont" r
-TextFont(
+TextFont`!p snip.rv = open_paren()`
 	${1:text};
 	${2:fontName}${3:;
 	$4`!p snip.rv = complete( t[4], font_scripts() )`}
@@ -423,7 +423,7 @@ TextFont(
 endsnippet
 
 snippet "textfontremove|textfr" "TextFontRemove" r
-TextFontRemove(
+TextFontRemove`!p snip.rv = open_paren()`
 	${1:text}${2:;
 	${3:fontToRemove};
 	$4`!p snip.rv = complete( t[4], font_scripts() )`}
@@ -431,28 +431,28 @@ TextFontRemove(
 endsnippet
 
 snippet "texts(ize)?" "TextSize" r
-TextSize(
+TextSize`!p snip.rv = open_paren()`
 	${1:text};
 	${2:fontSize}
 )
 endsnippet
 
 snippet "textsizeremove|textsr" "TextSizeRemove" r
-TextSizeRemove(
+TextSizeRemove`!p snip.rv = open_paren()`
 	${1:text}${2:;
 	${3:sizeToRemove}}
 )
 endsnippet
 
 snippet "textstyleadd|textsta" "TextStyleAdd" r
-TextStyleAdd(
+TextStyleAdd`!p snip.rv = open_paren()`
 	${1:text};
 	$2`!p snip.rv = complete( t[2], font_styles() )`
 )
 endsnippet
 
 snippet "textstyleremove|textstr" "TextStyleRemove" r
-TextStyleRemove(
+TextStyleRemove`!p snip.rv = open_paren()`
 	${1:text};
 	$2`!p snip.rv = complete( t[2], font_styles() )`
 )
@@ -472,14 +472,14 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "comb(ination)?" "Combination" r
-Combination(
+Combination`!p snip.rv = open_paren()`
 	${1:setSize};
 	${2:numberOfChoices}
 )
 endsnippet
 
 snippet div "Div"
-Div(
+Div`!p snip.rv = open_paren()`
 	${1:number};
 	${2:divisor}
 )
@@ -491,7 +491,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "fact(orial)?" "Factorial" r
-Factorial(
+Factorial`!p snip.rv = open_paren()`
 	${1:number}${2:;
 	${3:numberOfFactors}}
 }
@@ -523,7 +523,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet mod "Mod"
-Mod(
+Mod`!p snip.rv = open_paren()`
 	${1:number};
 	${2:divisor}
 )
@@ -534,14 +534,14 @@ Random
 endsnippet
 
 snippet "rou(nd)?" "Round" r
-Round(
+Round`!p snip.rv = open_paren()`
 	${1:number};
 	${2:precision}
 )
 endsnippet
 
 snippet "setp(recision)?" "SetPrecision" r
-SetPrecision(
+SetPrecision`!p snip.rv = open_paren()`
 	${1:expression};
 	${2:precision}
 )
@@ -558,7 +558,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "trunc(ate)?" "Truncate" r
-Truncate(
+Truncate`!p snip.rv = open_paren()`
 	${1:number};
 	${2:precision}
 )
@@ -568,7 +568,7 @@ endsnippet
 # Date functions
 
 snippet date "Date"
-Date(
+Date`!p snip.rv = open_paren()`
 	${1:month};
 	${2:day};
 	${3:year}
@@ -628,14 +628,16 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "year|yr" "Year" r
 snippet year "Year"
-Year( ${0:date} )
+Year`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 snippet yr "Year"
-Year( ${0:date} )
+Year`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "yearname|yrn" "YearName" r
-YearName(
+YearName`!p snip.rv = open_paren()`
 	${1:date};
 	$2`!p snip.rv = complete( t[2], ['0', '1', '2'] )`
 )
@@ -660,7 +662,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet time
-Time(
+Time`!p snip.rv = open_paren()`
 	${1:hours};
 	${2:minutes};
 	${3:seconds}
@@ -674,13 +676,13 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "timestamp|ts" "Timestamp" r
 snippet timestamp "Timestamp"
-Timestamp(
-	${1::Date(
+Timestamp`!p snip.rv = open_paren()`
+	${1::Date`!p snip.rv = open_paren()`
 		${2:day};
 		${3:month};
 		${4:year}
 	)};
-	${5::Time(
+	${5::Time`!p snip.rv = open_paren()`
 		${6:hours};
 		${7:minutes};
 		${8:seconds}
@@ -688,13 +690,13 @@ Timestamp(
 )
 endsnippet
 snippet ts "Timestamp"
-Timestamp(
-	${1::Date(
+Timestamp`!p snip.rv = open_paren()`
+	${1::Date`!p snip.rv = open_paren()`
 		${2:day};
 		${3:month};
 		${4:year}
 	)};
-	${5::Time(
+	${5::Time`!p snip.rv = open_paren()`
 		${6:hours};
 		${7:minutes};
 		${8:seconds}
@@ -705,18 +707,19 @@ endsnippet
 # Container functions
 
 snippet "base64decode|based" "Base64Decode" r
-Base64Decode(
+Base64Decode`!p snip.rv = open_paren()`
 	${1:text}${2:;
 	${3:fileNameWithExtension}}
 )
 endsnippet
 
 snippet "base64encode|basee" "Base64Encode" r
-Base64Encode( ${0:sourceField} )
+Base64Encode`!p snip.rv = open_paren()`${0:sourceField}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getcontainerattribute|getcatt" "GetContainerAttribute" r
-GetContainerAttribute(
+GetContainerAttribute`!p snip.rv = open_paren()`
 	${1:sourceField};
 	${2:"$3`!p snip.rv = complete( t[3], ['filename', 'MD5', 'storageType',
 		'fileSize', 'internalSize', 'externalSize', 'externalFiles', 'width',
@@ -734,7 +737,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "getth(umbnail)?" "GetThumbnail" r
-GetThumbnail(
+GetThumbnail`!p snip.rv = open_paren()`
 	${1:field};
 	${2:width};
 	${3:height}
@@ -763,14 +766,16 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "count|cnt" "Count" r
 snippet count "Count"
-Count( ${1:field}${2:; ${3:field...}} )
+Count`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 snippet cnt "Count"
-Count( ${1:field}${2:; ${3:field...}} )
+Count`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet list "List"
-List(
+List`!p snip.rv = open_paren()`
 	${1:field}${2:;
 	${3:field...}}
 )
@@ -815,7 +820,7 @@ endsnippet
 # Summary functions
 
 snippet "getsum(mary)?" "GetSummary" r
-GetSummary(
+GetSummary`!p snip.rv = open_paren()`
 	${1:summaryField};
 	${2:breakField}
 )
@@ -825,11 +830,12 @@ endsnippet
 # Repeating functions
 
 snippet "extend|extd" "Extend" r
-Extend( ${0:non-repeatingField} )
+Extend`!p snip.rv = open_paren()`${0:non-repeatingField}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getrep(etition)?" "GetRepetition" r
-GetRepetition(
+GetRepetition`!p snip.rv = open_paren()`
 	${1:repeatingField};
 	${2:number}
 )
@@ -844,7 +850,7 @@ endsnippet
 # Financial functions
 
 snippet fv "FV"
-FV(
+FV`!p snip.rv = open_paren()`
 	${1:payment};
 	${2:interestRate};
 	${3:periods}
@@ -852,14 +858,14 @@ FV(
 endsnippet
 
 snippet npv "NPV"
-NPV(
+NPV`!p snip.rv = open_paren()`
 	${1:payment};
 	${2:interestRate}
 )
 endsnippet
 
 snippet pmt "PMT"
-PMT(
+PMT`!p snip.rv = open_paren()`
 	${1:principal};
 	${2:interestRate};
 	${3:term}
@@ -867,7 +873,7 @@ PMT(
 endsnippet
 
 snippet pv "PV"
-PV(
+PV`!p snip.rv = open_paren()`
 	${1:payment};
 	${2:interestRate};
 	${3:periods}
@@ -921,7 +927,7 @@ endsnippet
 # Logical functions
 
 snippet case "Case"
-Case(
+Case`!p snip.rv = open_paren()`
 	${1:test1};
 	${2:result1}${3:;
 	...${4:;
@@ -930,7 +936,7 @@ Case(
 endsnippet
 
 snippet "cho(ose)?" "Choose" r
-Choose(
+Choose`!p snip.rv = open_paren()`
 	${1:test};
 	${2:result0}${3:;
 	${4:...}}
@@ -938,7 +944,7 @@ Choose(
 endsnippet
 
 snippet "eval(uate)?" "Evaluate" r
-Evaluate(
+Evaluate`!p snip.rv = open_paren()`
 	${1:expression}${2:;
 	${3:field}${4:;
 	...}}
@@ -951,7 +957,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(execute)?sql" "ExecuteSQL" r
-ExecuteSQL(
+ExecuteSQL`!p snip.rv = open_paren()`
 	${1:sqlQuery};
 	${2:fieldSeparator};
 	${3:rowSeparator}${4:;
@@ -975,7 +981,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "getlayoutobjectattribute|getloa" "GetLayoutObjectAttribute" r
-GetLayoutObjectAttribute(
+GetLayoutObjectAttribute`!p snip.rv = open_paren()`
 	${1:objectName};
 	"$2`!p snip.rv = complete( t[2], ['objectType', 'hasFocus', 'containsFocus',
 		'isFrontPanel', 'bounds', 'left', 'right', 'top', 'bottom', 'width',
@@ -987,14 +993,14 @@ GetLayoutObjectAttribute(
 endsnippet
 
 snippet "getnth(record)?" "GetNthRecord" r
-GetNthRecord(
+GetNthRecord`!p snip.rv = open_paren()`
 	${1:fieldName};
 	${2:recordNumber}
 )
 endsnippet
 
 snippet if
-If(
+If`!p snip.rv = open_paren()`
 	${1:test};
 	${2:result1}${3:;
 	${4:result2}}
@@ -1017,7 +1023,7 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet let "Let"
-Let(
+Let`!p snip.rv = open_paren()`
 	[
 		${1:_var} = ${2:value}${3:;
 		${4:_var} = ${5:value}}
@@ -1028,14 +1034,14 @@ Let(
 endsnippet
 
 snippet "look(up)?" "Lookup" r
-Lookup(
+Lookup`!p snip.rv = open_paren()`
 	${1:sourceField}${2:;
 	${3:failExpression}}
 )
 endsnippet
 
 snippet "lookupnext|lookn" "LookupNext" r
-LookupNext(
+LookupNext`!p snip.rv = open_paren()`
 	${1:sourceField};
 	$2`!p snip.rv = complete( t[2], ['Lower', 'Higher'] )`
 )
@@ -1050,7 +1056,7 @@ DatabaseNames
 endsnippet
 
 snippet "fieldbounds|fb" "FieldBounds" r
-FieldBounds(
+FieldBounds`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:layoutName};
 	${3:fieldName}
@@ -1061,20 +1067,20 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "fieldcomment|fc" "FieldComment" r
 snippet fieldcomment "FieldComment"
-FieldComment(
+FieldComment`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:fieldname}
 )
 endsnippet
 snippet fc "FieldComment"
-FieldComment(
+FieldComment`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:fieldname}
 )
 endsnippet
 
 snippet "fieldids|fid" "FieldIDs" r
-FieldIDs(
+FieldIDs`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:layoutName}
 )
@@ -1084,20 +1090,20 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "fieldnames|fn" "FieldNames" r
 snippet fieldnames "FieldNames"
-FieldNames(
+FieldNames`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:layoutName}
 )
 endsnippet
 snippet fn "FieldNames"
-FieldNames(
+FieldNames`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:layoutName}
 )
 endsnippet
 
 snippet "fieldrepetitions|frep" "FieldRepetitions" r
-FieldRepetitions(
+FieldRepetitions`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:layoutName};
 	${3:fieldName}
@@ -1105,7 +1111,7 @@ FieldRepetitions(
 endsnippet
 
 snippet "fieldstyle|fst" "FieldStyle" r
-FieldStyle(
+FieldStyle`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:layoutName};
 	${3:fieldName}
@@ -1113,14 +1119,14 @@ FieldStyle(
 endsnippet
 
 snippet "fieldtype|fty" "FieldType" r
-FieldType(
+FieldType`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:fieldName}
 )
 endsnippet
 
 snippet "getnextserialvalue|gnsv" "GetNextSerialValue" r
-GetNextSerialValue(
+GetNextSerialValue`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:fieldName}
 )
@@ -1151,7 +1157,7 @@ snip.rv = close_paren()`)
 endsnippet
 
 snippet "layoutobjectnames|loon" "LayoutObjectNames" r
-LayoutObjectNames(
+LayoutObjectNames`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:layoutName}
 )
@@ -1161,13 +1167,13 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "relationinfo|ri" "RelationInfo" r
 snippet relationinfo "RelationInfo"
-RelationInfo(
+RelationInfo`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:tableOccurrenceName}
 }
 endsnippet
 snippet ri "RelationInfo"
-RelationInfo(
+RelationInfo`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:tableOccurrenceName}
 }
@@ -1213,7 +1219,7 @@ snip.rv = close_paren()`)
 endsnippet
 
 snippet "valuelistitems|vli" "ValueListItems" r
-ValueListItems(
+ValueListItems`!p snip.rv = open_paren()`
 	${1:Get( FileName )};
 	${2:valueList}
 )
@@ -1237,14 +1243,14 @@ snip.rv = close_paren()`)
 endsnippet
 
 snippet "loc(ation)?" "Location" r
-Location(
+Location`!p snip.rv = open_paren()`
 	${1:accuracy}${2:;
 	${3:timeout}}
 )
 endsnippet
 
 snippet "locationvalues|locv" "LocationValues" r
-LocationValues(
+LocationValues`!p snip.rv = open_paren()`
 	${1:accuracy}${2:;
 	${3:timeout}}
 )
@@ -1255,7 +1261,7 @@ endsnippet
 
 # might be left out, only useful for Pre-7 FileMaker plugins
 snippet "external" "External" r
-External(
+External`!p snip.rv = open_paren()`
 	${1:nameOfFunction};
 	${2:parameter}
 )
@@ -1265,7 +1271,7 @@ endsnippet
 # Get functions
 
 snippet get
-Get( $1`!p snip.rv = complete( t[1], ['AccountExtendedPrivileges', 'AccountName',
+Get`!p snip.rv = open_paren()`$1`!p snip.rv = complete( t[1], ['AccountExtendedPrivileges', 'AccountName',
 	'AccountPrivilegeSetName', 'ActiveFieldContents', 'ActiveFieldName',
 	'ActiveFieldTableName', 'ActiveLayoutObjectName', 'ActiveModifierKeys',
 	'ActivePortalRowNumber', 'ActiveRepetitionNumber', 'ActiveSelectionSize',
@@ -1294,7 +1300,7 @@ Get( $1`!p snip.rv = complete( t[1], ['AccountExtendedPrivileges', 'AccountName'
 	'WindowContentHeight', 'WindowContentWidth', 'WindowDesktopHeight',
 	'WindowDesktopWidth', 'WindowHeight', 'WindowLeft', 'WindowMode', 'WindowName',
 	'WindowOrientation', 'WindowStyle', 'WindowVisible', 'WindowWidth',
-	'WindowZoomLevel'] )` )
+	'WindowZoomLevel'] )``!p snip.rv = close_paren()`
 endsnippet
 
 snippet getaep "Get( AccountExtendedPrivileges )"
