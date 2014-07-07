@@ -20,9 +20,9 @@ Just about everyone looking at this project probably knows FileMaker but may be 
 
 Vim won out for two reasons: extensibility and open source. I've honestly never seen software that can be customized to the extent that Vim can. If you don't like how Vim behaves, you can generally change it, and there are hundreds of plugins available that allow you to simply plug some text files in and get even more functionality.
 
-And because it's open source, the likelihood of it becoming abandonware is slim, especially given its popularity among programmers. The [#vim IRC channel](http://vim.wikia.com/wiki/Vim_on_Freenode) consistently has hundreds of users online ready to answer any questions. And should Vim itself become stagnant, there are already [ports](http://neovim.org) of it in development.
+And because it's open source, the likelihood of it becoming abandonware is slim, especially given its popularity among programmers. The [\#vim IRC channel](http://vim.wikia.com/wiki/Vim_on_Freenode) consistently has hundreds of users online ready to answer any questions. And should Vim itself become stagnant, there are already [ports](http://neovim.org) of it in development.
 
-Of course, there's the final reason, which is that once you become proficient in Vim, editing text is unbelievably fast. If you give it a try, you'll become amazed at how much you can acomplish in strikingly few keystrokes.
+Of course, there's the final reason, which is that once you become proficient in Vim, editing text is unbelievably fast. If you give it a try, you'll become amazed at how much you can acomplish in strikingly few keystrokes. Don't let Vim's reputation for having a steep learning curve disuade you. I can tell you from experience the return on time investment will be amply repaid.
 
 QuickCursor
 -----------
@@ -51,6 +51,8 @@ If you don't use Vundle or Pathogen (and really, you should, Vim's native plugin
 
 Perhaps in the future I'll look into an installer script to do this automatically. If you're using FileMaker and Vim on Windows, place the files in the analogous `vimfiles` folder (I think).
 
+To take full advantage of FileMaker Vim you'll need [UltiSnips](https://github.com/sirver/ultisnips) in addition to Vim. With Vundle, the installation of UltiSnips is just as easy as it is for FileMaker Vim.
+
 Features
 --------
 
@@ -65,7 +67,7 @@ FileMaker Vim has two main features. First of all, it (generally) detects the fo
 - Block and in-line comments
 - Confirmed compatibility with MacVim and command-line Vim on OS X.
 
-The second major feature is snippet support using [UltiSnips](https://github.com/sirver/ultisnips). You don't need UltiSnips to use FileMaker Vim, but you'll definately want it. It allows the typing of triggers followed by a trigger key (generally `tab`) and fills in a snippet based on the trigger. For example, if I type `mid<tab>` I get the following:
+The second major feature is snippet support using UltiSnips. You don't need UltiSnips to use FileMaker Vim, but you'll definately want it. It allows the typing of triggers followed by a trigger key (generally `tab`) and fills in a snippet based on the trigger. Although a textual description won't due the feature justics (see the vidos linked to on the UltiSnips page) as an example, if I type `mid<tab>` I get the following:
 
     Middle( 
       text;
@@ -87,14 +89,14 @@ Once you wheedle the list down to a single possible parameter, that's all FileMa
 
 All of the functions that take a list of possible parameters, such as `TextFont`, `TextStyleAdd`, and `GetContainerAttribute`, include this feature.
 
-A final nicety is that functions that the design functions that take a file name as a parameter, which is almost always going to be `Get( FileName )`, fill that in for you automatically. As an example, `fn<tab>` expands to:
+Another nicety is that the design functions that take a file name as a parameter, which is almost always going to be `Get( FileName )`, fill that in for you automatically. As an example, `fn<tab>` expands to:
 
     FieldNames(
       Get( FileName );
       layoutName
     )
 
-If this turns out to be a feature some don't prefer, an override setting might be provided in the future.
+If this turns out to be a feature some don't prefer, an override setting might be provided in the future. But given that the text `Get( FileName )` are highlighted in the resulting expansion and you can immediately type over them, I don't see a downside yet.
 
 The last snippet feature is that some functions, those which often take the same other functions as parameters, have those sub-functions filled in by default. For example, `ts<tab>` expands to:
 
@@ -129,7 +131,7 @@ Function formatting is also a convention affected by FileMaker Vim. I generally 
 - Parameters are indented by two spaces more than their function.
 - There's no space between a function name and the opening parenthesis.
 - There's a space between the parentheses and the parameters.
-- There's no space between a parameter and it's following semicolon.
+- There's no space between a parameter and its following semicolon.
 - When multiple parameters appear on a single line there's a space between the semicolon and the next parameter.
 
 FileMaker Vim, by default, follows these conventions strictly. I'll admit that this isn't always the best option for readibility (which is the purpose of my general conventions), but for an early version it was easiest to use the same conventions across the board.
@@ -139,7 +141,7 @@ Some customization is possible, however, and I plan to include more down the roa
     set g:FMVAddSpaceAfterFunction=1 " places a space between a function name and the opening parenthsis
     set g:FMVPadSpacesWithinParens=0 " does not place a space between parentheses and parameters
 
-Additional planned override settings in the future include the ability to have all functions expand to a single line, or have a list of functions that should expand to a single line and others that should expand as they currently do.
+Additional planned override settings in the future include the ability to have all functions expand to a single line, or have a list of functions that should expand to a single line and others that should expand as they currently do, and perhaps even the option to set a `Let` template for function variables.
 
 Future Enhancements
 -------------------
@@ -149,20 +151,21 @@ This is version 1, and it does most of what I set out to do to make it useful, b
 - Recognition of any calculation variable (i.e., no need to prepend an underscore)
 - Recognition of any custom or external function (i.e., no need to prepend a code followed by a dot)
 - Addition of an indent file that allows for automatic formatting of calculations
-- Ability to customize triggers without having to edit the original file
+- Ability to customize triggers without having to edit the original snippets file
 - Ability to provide variable triggers for fuctions such as `Case` and `Substitute`
 - Integrated function documentation
 - Addition of this readme's information and more in a Vim help file
 - Integration with other Vim plugins, such as [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-- Optional inclusion of FileMaker plugin external functions
+- Optional inclusion of popular FileMaker plugin external functions
 - Optional inclusion of a standard library of custom function snippets
 - Ability to use snippets with case-insensitivity
 - Are FileMaker functions language-dependent? If so, multiple language support
+- Syntax recognition for languages commonly embedded within FileMaker strings (SQL, Groovy, PHP, JavaScript, AppleScript)
 
 Snippet Triggers
 ----------------
 
-Every included function (except the `Get` function's parameters and `DatabaseNames`, for which such a snippet is pretty useless) has a snippet that is the same as the function's name in lower-case letters. So you know right away that the trigger for `RightValues` is `rightvalues`, but most have abbreviated but unique triggers. Although UltiSnips supports duplicate triggers, using them seriously reduces the time savings, so if a function has a trigger, that trigger is unique. When selecting between competing functions I tried to make the most common function the one with the most obvious trigger.
+Every included function (except the `Get` function's parameters and `DatabaseNames`, for which such a snippet is pretty useless) has a snippet that is the same as the function's name in lower-case letters. So you know right away that the trigger for `RightValues` is `rightvalues`, but most have abbreviated but unique triggers (`ritv` in this case). Although UltiSnips supports duplicate triggers, using them seriously reduces the time savings, so if a function has a trigger, that trigger is unique. When selecting between competing functions I tried to make the most common function the one with the most obvious trigger.
 
 The triggers for `Get` functions are generally `get` followed by the letters in the words making up the parameter, such as `getfp` for `Get( FilePath )`, but using that technique does result in some duplicates. When that's the case I tried to use the default on the more common function and added a logical letter to the alternative.
 
