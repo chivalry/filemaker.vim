@@ -10,10 +10,32 @@
 global !p
 def complete(t, opts):
 	if t:
+#		non_t = []
+#		for m in opts:
+#			if m.startswith(t):
+#				non_t.append(m[len(t):])
+#		opts = non_t
 		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+		
 	if len(opts) == 1:
 		return opts[0]
+
 	return '(' + '|'.join(opts) + ')'
+endglobal
+
+global !p
+def font_scripts():
+	return ['Roman', 'Greek', 'Cyrillic', 'CentralEurope', 'ShiftJIS',
+					'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
+					'Other']
+endglobal
+
+global !p
+def font_styles():
+	return ['Plain', 'Bold', 'Italic', 'Underline', 'HighlightYellow', 'Condense',
+					'Extend', 'Strikethrough', 'SmallCaps', 'Superscript', 'Subscript',
+					'Uppercase', 'Lowercase', 'Titlecase', 'WordUnderline',
+					'DoubleUnderline', 'AllStyles']
 endglobal
 
 global !p
@@ -34,234 +56,124 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Text functions
 
-snippet char
+snippet "char?" "Char" r
 Char( ${0:number} )
 endsnippet
 
-snippet cha
-Char( ${0:number} )
+snippet "code?" "Code" r
+Code( ${0:text} )
 endsnippet
 
-snippet code
-code( ${0:text} )
-endsnippet
-
-snippet cod
-code( ${0:text} )
-endsnippet
-
-snippet exact
+snippet "exa(ct)?" "Exact" r
 Exact(
 	${1:originaltext};
 	${2:comparisontext}
 )
 endsnippet
 
-snippet exa
-Exact(
-	${1:originaltext};
-	${2:comparisontext}
-)
-endsnippet
-
-snippet filter
+snippet "filt?e?r?" "Filter" r
 Filter(
 	${1:texttofilter};
 	${2:filtertext}
 )
 endsnippet
 
-snippet filterValues
+snippet "filterValues|filv" "FilterValues" r
 FilterValues(
 	${1:textToFilter};
 	${2:filterValues}
 )
 endsnippet
 
-snippet fil
-Filter(
-	${1:texttofilter};
-	${2:filtertext}
-)
-endsnippet
-
-snippet filv
-FilterValues(
-	${1:textToFilter};
-	${2:filterValues}
-)
-endsnippet
-
-snippet getascss
+snippet "getascss|getc" "GetAsCSS" r
 GetAsCSS( ${0:text} )
 endsnippet
 
-snippet getc
-GetAsCss( ${0:text} )
-endsnippet
-
-snippet getasdate
+snippet "getasdate|getd" "GetAsDate" r
 GetAsDate( ${0:text} )
 endsnippet
 
-snippet getd
-GetAsDate( ${0:text} )
-endsnippet
-
-snippet getasnumber
+snippet "getasnumber|getn" "GetAsNumber" r
 GetAsNumber( ${0:text} )
 endsnippet
 
-snippet getn
-GetAsNumber( ${0:text} )
-endsnippet
-
-snippet getassvg
+snippet "getassvg|gets" "GetAsSVG" r
 GetAsSVG( ${0:text} )
 endsnippet
 
-snippet gets
-GetAsSVG( ${0:text} )
-endsnippet
-
-snippet getastext
+snippet "getastext|gett" "GetAsText" r
 GetAsText( ${0:data} )
 endsnippet
 
-snippet gett
-GetAsText( ${0:data} )
-endsnippet
-
-snippet getastime
+snippet "getastime|geti" "GetAsTime" r
 GetAsTime( ${0:text} )
 endsnippet
 
-snippet geti
-GetAsTime( ${0:text} )
-endsnippet
-
-snippet getastimestamp
+snippet "getastimestamp|getm" "GetAsTimestamp" r
 GetAsTimestamp( ${0:text} )
 endsnippet
 
-snippet getm
-GetAsTimestamp( ${0:text} )
-endsnippet
-
-snippet getasurlencoded
+snippet "getasurlencoded|getu" "GetAsURLEncoded" r
 GetAsURLEncoded( ${0:text} )
 endsnippet
 
-snippet getu
-GetAsURLEncoded( ${0:text} )
-endsnippet
-
-snippet getvalue
+snippet "getvalue|getv" "GetValues" r
 GetValues(
 	${1:listOfValues};
 	${2:valueNumber}
 )
 endsnippet
 
-snippet getv
-GetValues(
-	${1:listOfValues};
-	${2:valueNumber}
-)
-endsnippet
-
-snippet hiragana
+snippet "hir(agana)?" "Hiragana" r
 Hiragana( ${0:text} )
 endsnippet
 
-snippet hir
-Hiragana( ${0:text} )
-endsnippet
-
-snippet kanahankaku
+snippet "kanah(ankaku)?" "Kanahankaku" r
 KanaHankaku( ${0:text} )
 endsnippet
 
-snippet kanah
-KanaHankaku( ${0:text} )
-endsnippet
-
-snippet kanazenkaku
+snippet "kanaz(enkaku)?" "Kanazenkaku" r
 KanaZenkaku( ${0:text} )
 endsnippet
 
-snippet kanaz
-KanaZenkaku( ${0:text} )
-endsnippet
-
-snippet kanjinumeral
+snippet "kanj(inumeral)?" "KanjiNumeral" r
 KanjiNumeral( ${0:text} )
 endsnippet
 
-snippet kanj
-KanjiNumeral( ${0:text} )
-endsnippet
-
-snippet katakana
+snippet "kata(kana)?" "Katakana" r
 Katakana( ${0:text} )
 endsnippet
 
-snippet kata
-Katakana( ${0:text} )
-endsnippet
-
-snippet left
+snippet "left?" "Left" r
 Left(
 	${1:text};
 	${2:numberOfCharacters}
 )
 endsnippet
 
-snippet leftvalues
+snippet "leftv(alues)?" "LeftValues" r
 LeftValues(
 	${1:text};
 	${2:numberOfValues}
 )
 endsnippet
 
-snippet leftv
-LeftValues(
-	${1:text};
-	${2:numberOfValues}
-)
-endsnippet
-
-snippet leftwords
+snippet "leftw(ords)?" "LeftWords" r
 LeftWords(
 	${1:text};
 	${2:numberOfWords}
 )
 endsnippet
 
-snippet leftw
-LeftWords(
-	${1:text};
-	${2:numberOfWords}
-)
-endsnippet
-
-snippet length
+snippet "leng(th)?" "Length" r
 Length( ${0:field} )
 endsnippet
 
-snippet len
-Length( ${0:field} )
-endsnippet
-
-snippet lower
+snippet "low(er)?" "Lower" r
 Lower( ${0:text} )
 endsnippet
 
-snippet low
-Lower( ${0:text} )
-endsnippet
-
-snippet middle
+snippet "mid(dle)?" "Middle" r
 Middle(
 	${1:text};
 	${2:start};
@@ -269,15 +181,7 @@ Middle(
 )
 endsnippet
 
-snippet mid
-Middle(
-	${1:text};
-	${2:start};
-	#{3:numberOfCharacters}
-)
-endsnippet
-
-snippet middlevalues
+snippet "middlevalues|midv" "MiddleValues" r
 MiddleValues(
 	${1:text};
 	${2:startingValue};
@@ -285,15 +189,7 @@ MiddleValues(
 )
 endsnippet
 
-snippet midv
-MiddleValues(
-	${1:text};
-	${2:startingValue};
-	${3:numberOfValues}
-)
-endsnippet
-
-snippet middlewords
+snippet "middlewords|midw" "MiddleWords" r
 MiddleWords(
 	${1:text};
 	${2:startingWord};
@@ -301,15 +197,7 @@ MiddleWords(
 )
 endsnippet
 
-snippet midw
-MiddleWords(
-	${1:text};
-	${2:startingWord};
-	${3:numberOfWords}
-)
-endsnippet
-
-snippet numtojtext
+snippet "numtojtext|numj" "NumToJText" r
 NumToJText(
 	${1:number};
 	${2:separator};
@@ -317,29 +205,14 @@ NumToJText(
 )
 endsnippet
 
-snippet numj
-NumToJText(
-	${1:number};
-	${2:separator};
-	${3:characterType}
-)
-endsnippet
-
-snippet patterncount
+snippet "pat(terncount)?" "PatternCount" r
 PatternCount(
 	${1:text};
 	${2:searchString}
 )
 endsnippet
 
-snippet pat
-PatternCount(
-	${1:text};
-	${2:searchString}
-)
-endsnippet
-
-snippet position
+snippet "pos(ition)?" "Position" r
 Position(
 	${1:text};
 	${2:searchString};
@@ -348,32 +221,15 @@ Position(
 )
 endsnippet
 
-snippet pos
-Position(
-	${1:text};
-	${2:searchString};
-	${3:start};
-	${4:occurrence}
-)
-endsnippet
-
-snippet proper
+snippet "pro(per)?" "Proper" r
 Proper( ${1:text} )
 endsnippet
 
-snippet pro
-Proper( ${1:text} )
-endsnippet
-
-snippet quote
+snippet "quo(te)?" "Quote" r
 Quote( ${1:text} )
 endsnippet
 
-snippet quo
-Quote( ${1:text} )
-endsnippet
-
-snippet replace
+snippet "repl(ace)?" "Replace" r
 Replace(
 	${1:text};
 	${2:start};
@@ -382,88 +238,43 @@ Replace(
 )
 endsnippet
 
-snippet repl
-Replace(
-	${1:text};
-	${2:start};
-	${3:numberOfCharacters};
-	${4:replacementText}
-)
-endsnippet
-
-snippet right
+snippet "right|rit" "Right" r
 Right(
 	${1:text};
 	${2:numberOfCharacters}
 )
 endsnippet
 
-snippet rit
-Right(
-	${1:text};
-	${2:numberOfCharacters}
-)
-endsnippet
-
-snippet rightvalues
+snippet "rightvalues|ritv" "RightValues" r
 RightValues(
 	${1:text};
 	${2:numberOfValues}
 )
 endsnippet
 
-snippet ritv
-RightValues(
-	${1:text};
-	${2:numberOfValues}
-)
-endsnippet
-
-snippet rightwords
+snippet "rightwords|ritw" "RightWords" r
 RightWords(
 	${1:text};
 	${2:numberOfWords}
 )
 endsnippet
 
-snippet ritw
-RightWords(
-	${1:text};
-	${2:numberOfWords}
-)
-endsnippet
-
-snippet romanhankaku
+snippet "romanhankaku|romh" "RomanHankaku" r
 RomanHankaku( ${0:text} )
 endsnippet
 
-snippet romh
-RomanHankaku( ${0:text} )
-endsnippet
-
-snippet romanzenkaku
+snippet "romanzenkaku|romz" "RomanZenkaku" r
 RomanZenkaku( ${0:text} )
 endsnippet
 
-snippet romz
-RomanZenkaku( ${0:text} )
-endsnippet
-
-snippet serialincrement
+snippet "serialincrement|seri" "SerialIncrement" r
 SerialIncrement(
 	${1:text};
 	${2:incrementby)
 )
 endsnippet
 
-snippet seri
-SerialIncrement(
-	${1:text};
-	${2:incrementby)
-)
-endsnippet
-
-snippet substitute
+snippet "sub(stitute)?" "Substitute" r
 Substitute(
 	${1:text};
 	${2:searchString};
@@ -471,19 +282,11 @@ Substitute(
 )
 endsnippet
 
-snippet sub
-Substitute(
-	${1:text};
-	${2:searchString};
-	${3:replaceString}
-)
-endsnippet
-
-snippet trim
+snippet trim "Trim"
 Trim( ${0:text} )
 endsnippet
 
-snippet trimall
+snippet "trima(ll)?" "TrimAll" r
 TrimAll(
 	${1:text};
 	$2`!p snip.rv = complete(t[2], ['True', 'False'])`;
@@ -491,42 +294,22 @@ TrimAll(
 )
 endsnippet
 
-snippet trima
-TrimAll(
-	${1:text};
-	$2`!p snip.rv = complete(t[2], ['True', 'False'])`;
-	$3`!p snip.rv = complete( t[3], ['0', '1', '2', '3'])`;
-)
-endsnippet
-
-snippet upper
+snippet "upp(er)?" "Upper" r
 Upper( ${0:text} )
 endsnippet
 
-snippet upp
-Upper( ${0:text} )
-endsnippet
-
-snippet valuecaount
+snippet "valuecaount|valc" "ValueCount" r
 ValueCount( ${0:text} )
 endsnippet
 
-snippet valc
-ValueCount( ${0:text} )
-endsnippet
-
-snippet wordcount
-WordCount( ${0:text} )
-endsnippet
-
-snippet wordc
+snippet "wordc(ount)?" "WordCount" r
 WordCount( ${0:text} )
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Text formatting functions
 
-snippet rgb
+snippet rgb "RGB"
 RBG(
 	${1:red};
 	${2:green};
@@ -534,7 +317,7 @@ RBG(
 )
 endsnippet
 
-snippet textcolor
+snippet "textc(olor)?" "TextColor" r
 TextColor(
 	${1:text};
 	${2:RGB(
@@ -545,18 +328,7 @@ TextColor(
 )
 endsnippet
 
-snippet textc
-TextColor(
-	${1:text};
-	${2:RGB(
-		${3:red};
-		${4:green};
-		${5:blue}
-	)}
-)
-endsnippet
-
-snippet textcolorremove
+snippet "textcolorremove|textcr" "TextColorRemove" r
 TextColorRemove(
 	${1:text}${2:;
 	${3:RGB(
@@ -567,251 +339,140 @@ TextColorRemove(
 )
 endsnippet
 
-snippet textcr
-TextColorRemove(
-	${1:text}${2:;
-	${3:RGB(
-		${4:red};
-		${5:green};
-		${6:blue}
-	)}}
-)
-endsnippet
-
-snippet textfont
+snippet "textf(ont)?" "TextFont" r
 TextFont(
 	${1:text};
 	${2:fontName}${3:;
-	$4`!p snip.rv = complete(t[4], ['Roman', 'Greek', 'Cyrillic', 'CentralEurope',
-		'ShiftJIS', 'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
-		'Other'])`}
+	$4`!p snip.rv = complete(t[4], font_scripts())`}
 )
 endsnippet
 
-snippet textf
-TextFont(
-	${1:text};
-	${2:fontName}${3:;
-	$4`!p snip.rv = complete(t[4], ['Roman', 'Greek', 'Cyrillic', 'CentralEurope',
-		'ShiftJIS', 'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
-		'Other'])`}
-)
-endsnippet
-
-snippet textfontremove
+snippet "textfontremove|textfr" "TextFontRemove" r
 TextFontRemove(
 	${1:text}${2:;
 	${3:fontToRemove};
-	$4`!p snip.rv = complete(t[4], ['Roman', 'Greek', 'Cyrillic', 'CentralEurope',
-		'ShiftJIS', 'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
-		'Other'])`}
+	$4`!p snip.rv = complete(t[4], font_scripts())`}
 )
 endsnippet
 
-snippet textfr
-TextFontRemove(
-	${1:text}${2:;
-	${3:fontToRemove};
-	$4`!p snip.rv = complete(t[4], ['Roman', 'Greek', 'Cyrillic', 'CentralEurope',
-		'ShiftJIS', 'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
-		'Other'])`}
-)
-endsnippet
-
-snippet textsize
+snippet "texts(ize)?" "TextSize" r
 TextSize(
 	${1:text};
 	${2:fontSize}
 )
 endsnippet
 
-snippet texts
-TextSize(
-	${1:text};
-	${2:fontSize}
-)
-endsnippet
-
-snippet textsizeremove
+snippet "textsizeremove|textsr" "TextSizeRemove" r
 TextSizeRemove(
 	${1:text}${2:;
 	${3:sizeToRemove}}
 )
 endsnippet
 
-snippet textsr
-TextSizeRemove(
-	${1:text}${2:;
-	${3:sizeToRemove}}
-)
-endsnippet
-
-snippet textstyleadd
+snippet "textstyleadd|textsta" "TextStyleAdd" r
 TextStyleAdd(
 	${1:text};
-	$2`!p snip.rv = complete(t[2], ['Plain', 'Bold', 'Italic', 'Underline',
-		'HighlightYellow', 'Condense', 'Extend', 'Strikethrough', 'SmallCaps',
-		'Superscript', 'Subscript', 'Uppercase', 'Lowercase', 'Titlecase',
-		'WordUnderline', 'DoubleUnderline', 'AllStyles'])`
+	$2`!p snip.rv = complete(t[2], font_styles())`
 )
 endsnippet
 
-snippet textsta
-TextStyleAdd(
-	${1:text};
-	$2`!p snip.rv = complete(t[2], ['Plain', 'Bold', 'Italic', 'Underline',
-		'HighlightYellow', 'Condense', 'Extend', 'Strikethrough', 'SmallCaps',
-		'Superscript', 'Subscript', 'Uppercase', 'Lowercase', 'Titlecase',
-		'WordUnderline', 'DoubleUnderline', 'AllStyles'])`
-)
-endsnippet
-
-snippet textstyleremove
+snippet "textstyleremove|textstr" "TextStyleRemove" r
 TextStyleRemove(
 	${1:text};
-	$2`!p snip.rv = complete(t[2], ['Plain', 'Bold', 'Italic', 'Underline',
-		'HighlightYellow', 'Condense', 'Extend', 'Strikethrough', 'SmallCaps',
-		'Superscript', 'Subscript', 'Uppercase', 'Lowercase', 'Titlecase',
-		'WordUnderline', 'DoubleUnderline', 'AllStyles'])`
-)
-endsnippet
-
-snippet textstr
-TextStyleRemove(
-	${1:text};
-	$2`!p snip.rv = complete(t[2], ['Plain', 'Bold', 'Italic', 'Underline',
-		'HighlightYellow', 'Condense', 'Extend', 'Strikethrough', 'SmallCaps',
-		'Superscript', 'Subscript', 'Uppercase', 'Lowercase', 'Titlecase',
-		'WordUnderline', 'DoubleUnderline', 'AllStyles'])`
+	$2`!p snip.rv = complete(t[2], font_styles())`
 )
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Number functions
 
-snippet abs
+snippet abs "Abs"
 Abs( ${0:number} )
 endsnippet
 
-snippet ceiling
+snippet "ceil(ing)?" "Ceiling" r
 Ceiling( ${0:number} )
 endsnippet
 
-snippet ceil
-Ceiling( ${0:number} )
-endsnippet
-
-snippet combination
+snippet "comb(ination)?" "Combination" r
 Combination(
 	${1:setSize};
 	${2:numberOfChoices}
 )
 endsnippet
 
-snippet comb
-Combination(
-	${1:setSize};
-	${2:numberOfChoices}
-)
-endsnippet
-
-snippet div
+snippet div "Div"
 Div(
 	${1:number};
 	${2:divisor}
 )
 endsnippet
 
-snippet exp
+snippet exp "Exp"
 Exp( ${0:number} )
 endsnippet
 
-snippet factorial
+snippet "fact(orial)?" "Factorial" r
 Factorial(
 	${1:number}${2:;
 	${3:numberOfFactors}}
 }
 endsnippet
 
-snippet fact
-Factorial(
-	${1:number}${2:;
-	${3:numberOfFactors}}
-}
-endsnippet
-
-snippet floor
+snippet "flo(or)?" "Floor" r
 Floor( ${0:number} )
 endsnippet
 
-snippet flo
-Floor( ${0:number} )
-endsnippet
-
-snippet int
+snippet int "Int"
 Int( ${0:number} )
 endsnippet
 
-snippet lg
+snippet lg "Lg"
 Lg( ${0:number} )
 endsnippet
 
-snippet ln
+snippet ln "Ln"
 Ln( ${0:number} )
 endsnippet
 
-snippet log
+snippet log "Log"
 Log( ${0:number} )
 endsnippet
 
-snippet mod
+snippet mod "Mod"
 Mod(
 	${1:number};
 	${2:divisor}
 )
 endsnippet
 
-snippet rand
+snippet "rand(om)?" "Random" r
 Random
 endsnippet
 
-snippet round
+snippet "rou(nd)?" "Round" r
 Round(
 	${1:number};
 	${2:precision}
 )
 endsnippet
 
-snippet setprecision
+snippet "setp(recision)?" "SetPrecision" r
 SetPrecision(
 	${1:expression};
 	${2:precision}
 )
 endsnippet
 
-snippet setp
-SetPrecision(
-	${1:expression};
-	${2:precision}
-)
-endsnippet
-
-snippet sign
+snippet sign "Sign"
 Sign( ${0:number} )
 endsnippet
 
-snippet sqrt
+snippet sqrt "Sqrt"
 Sqrt( ${0:number} )
 endsnippet
 
-snippet truncate
-Truncate(
-	${1:number};
-	${2:precision}
-)
-endsnippet
-
-snippet trunc
+snippet "trunc(ate)" "Truncate" r
 Truncate(
 	${1:number};
 	${2:precision}
@@ -821,7 +482,7 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Date functions
 
-snippet date
+snippet date "Date"
 Date(
 	${1:month};
 	${2:day};
@@ -829,98 +490,51 @@ Date(
 )
 endsnippet
 
-snippet day
+snippet day "Day"
 Day( ${0:date} )
 endsnippet
 
-snippet dayname
+snippet "dayn(ame)" "DayName" r
 DayName( ${0:date} )
 endsnippet
 
-snippet dayn
-DayName( ${0:date} )
-endsnippet
-
-snippet daynamej
+snippet "daynamej|daynj" "DayNameJ" r
 DayNameJ( ${0:date} )
 endsnippet
 
-snippet daynj
-DayNameJ( ${0:date} )
-endsnippet
-
-snippet dayofweek
+snippet "dayofweek|dow" "DayOfWeek" r
 DayOfWeek( ${0:date} )
 endsnippet
 
-snippet dow
-DayOfWeek( ${0:date} )
-endsnippet
-
-snippet dayofyear
+snippet "dayofyear|doy" "DayOfYear" r
 DayOfYear( ${0:date} )
 endsnippet
 
-snippet doy
-DayOfYear( ${0:date} )
-endsnippet
-
-snippet month
+snippet "mon(th)?" "Month" r
 Month( ${0:date} )
 endsnippet
 
-snippet mon
-Month( ${0:date} )
-endsnippet
-
-snippet monthname
+snippet "monthname|monn" "MonthName" r
 MonthName( ${0:date} )
 endsnippet
 
-snippet monn
-MonthName( ${0:date} )
-endsnippet
-
-snippet monthnamej
+snippet "monthnamej|monnj" "MonthNameJ" r
 MonthNameJ( ${0:date} )
 endsnippet
 
-snippet monnj
-MonthNameJ( ${0:date} )
-endsnippet
-
-snippet weekofyear
+snippet "weekofyear|woy" "WeekOfYear" r
 WeekOfYear( ${0:date} )
 endsnippet
 
-snippet woy
-WeekOfYear( ${0:date} )
-endsnippet
-
-snippet weekofyearfiscal
+snippet "weekofyearfiscal|woyf" "WeekOfYearFiscal" r
 WeekOfYearFiscal( ${0:date} )
 endsnippet
 
-snippet woyf
-WeekOfYearFiscal( ${0:date} )
-endsnippet
-
-snippet year
+snippet "year|yr" "Year" r
 Year( ${0:date} )
 endsnippet
 
-snippet yr
-Year( ${0:date} )
-endsnippet
-
-snippet yearname
-YearName(
-	${1:date};
-	$2`!p snip.rv = complete( t[2], ['0', '1', '2'])`
-)
-endsnippet
-
-snippet yrn
+snippet "yearname|yrn" "YearName" r
 YearName(
 	${1:date};
 	$2`!p snip.rv = complete( t[2], ['0', '1', '2'])`
@@ -930,27 +544,15 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Time functions
 
-snippet hour
+snippet "hour|hr" "Hour" r
 Hour( ${0:time} )
 endsnippet
 
-snippet hr
-Hour( ${0:time} )
-endsnippet
-
-snippet minute
+snippet "min(ute?)" "Minute" r
 Minute( ${0:time} )
 endsnippet
 
-snippet min
-Minute( ${0:time} )
-endsnippet
-
-snippet seconds
-Seconds( ${0:time} )
-endsnippet
-
-snippet secs
+snippet "seconds|secs" "Seconds" r
 Seconds( ${0:time} )
 endsnippet
 
@@ -965,22 +567,7 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Timestamp functions
 
-snippet timestamp
-Timestamp(
-	${1::Date(
-		${2:day};
-		${3:month};
-		${4:year}
-	)};
-	${5::Time(
-		${6:hours};
-		${7:minutes};
-		${8:seconds}
-	)}
-)
-endsnippet
-
-snippet ts
+snippet "timestamp|ts" "TimeStamp" r
 Timestamp(
 	${1::Date(
 		${2:day};
@@ -998,175 +585,100 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Container functions
 
-snippet base64decode
+snippet "base64decode|based" "Base64Decode" r
 Base64Decode(
 	${1:text}${2:;
 	${3:fileNameWithExtension}}
 )
 endsnippet
 
-snippet based
-Base64Decode(
-	${1:text}${2:;
-	${3:fileNameWithExtension}}
-)
-endsnippet
-
-snippet base64encode
+snippet "base64encode|basee" "Base64Encode" r
 Base64Encode( ${0:sourceField} )
 endsnippet
 
-snippet basee
-Base64Encode( ${0:sourceField} )
-endsnippet
-
-snippet getcontainerattribute
+snippet "getcontainerattribute|getcatt" "GetContainerAttribute" r
 GetContainerAttribute(
 	${1:sourceField};
-	"$2`!p snip.rv = complete(t[2], ['filename', 'MD5', 'storageType', 'fileSize',
-		'internalSize', 'externalSize', 'externalFiles', 'width', 'height',
-		'dpiWidth', 'dpiHeight', 'transparency', 'orientation', 'created',
+	${2:"$3`!p snip.rv = complete(t[3], ['filename', 'MD5', 'storageType',
+		'fileSize', 'internalSize', 'externalSize', 'externalFiles', 'width',
+		'height', 'dpiWidth', 'dpiHeight', 'transparency', 'orientation', 'created',
 		'modified', 'latitude', 'longitude', 'make', 'model', 'title', 'artist',
 		'album', 'year', 'track', 'genre', 'composer', 'coverArt', 'duration',
 		'bitRate', 'barcodeText', 'barcodeType', 'signed', 'general', 'audio',
-		'image', 'photo', 'barcode', 'signature', 'all'])`"
+		'image', 'photo', 'barcode', 'signature', 'all'])`"}
 )
 endsnippet
 
-snippet getca
-GetContainerAttribute(
-	${1:sourceField};
-	"$2`!p snip.rv = complete(t[2], ['filename', 'MD5', 'storageType', 'fileSize',
-		'internalSize', 'externalSize', 'externalFiles', 'width', 'height',
-		'dpiWidth', 'dpiHeight', 'transparency', 'orientation', 'created',
-		'modified', 'latitude', 'longitude', 'make', 'model', 'title', 'artist',
-		'album', 'year', 'track', 'genre', 'composer', 'coverArt', 'duration',
-		'bitRate', 'barcodeText', 'barcodeType', 'signed', 'general', 'audio',
-		'image', 'photo', 'barcode', 'signature', 'all'])`"
-)
-endsnippet
-
-snippet getheight
+snippet "geth(eight)?" "GetHeight" r
 GetHeight( ${0:field} )
 endsnippet
 
-snippet geth
-GetHeight( ${0:field} )
-endsnippet
-
-snippet getthumbnail
-Getthumbnail(
+snippet "getth(umbnail)?" "GetThumbnail" r
+GetThumbnail(
 	${1:field};
 	${2:width};
 	${3:height}
 )
 endsnippet
 
-snippet getth
-Getthumbnail(
-	${1:field};
-	${2:width};
-	${3:height}
-)
-endsnippet
-
-snippet getwidth
+snippet "getw(idth)?" "GetWidth" r
 GetWidth( ${0:field} )
 endsnippet
 
-snippet getw
-GetWidth( ${0:field} )
-endsnippet
-
-snippet verifycontainer
-VerifyContainer( ${0:field} )
-endsnippet
-
-snippet ver
+snippet "ver(ifycontainer)?" "VerifyContainer" r
 VerifyContainer( ${0:field} )
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Aggregate functions
 
-snippet average
+snippet "average|avg" "Average" r
 Average( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet avg
-Average( ${1:field}${2:; ${3:field...}} )
-endsnippet
-
-snippet count
+snippet "count|cnt" "Count" r
 Count( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet cnt
-Count( ${1:field}${2:; ${3:field...}} )
-endsnippet
-
-snippet list
+snippet list "List"
 List(
 	${1:field}${2:;
 	${3:field...}}
 )
 endsnippet
 
-snippet max
+snippet max "Max"
 Max( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet min
+snippet min "Min"
 Min( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet stdev
+snippet "std(ev)?" "StDev" r
 StDev( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet std
-StDev( ${1:field}${2:; ${3:field...}} )
-endsnippet
-
-snippet stdevp
+snippet "stdevp|stdp" "StDevP" r
 StDevP( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet stdp
-StDevP( ${1:field}${2:; ${3:field...}} )
-endsnippet
-
-snippet sum
+snippet sum "Sum"
 Sum( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet variance
+snippet "var(iance)?" "Variance" r
 Variance( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
-snippet var
-Variance( ${1:field}${2:; ${3:field...}} )
-endsnippet
-
-snippet variancep
-VarianceP( ${1:field}${2:; ${3:field...}} )
-endsnippet
-
-snippet varp
+snippet "variancep|varp" "VarianceP" r
 VarianceP( ${1:field}${2:; ${3:field...}} )
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Summary functions
 
-snippet getsummary
-GetSummary(
-	${1:summaryField};
-	${2:breakField}
-)
-endsnippet
-
-snippet getsum
+snippet "getsum(mary)?" "GetSummary" r
 GetSummary(
 	${1:summaryField};
 	${2:breakField}
@@ -1176,36 +688,25 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Repeating functions
 
-snippet extend
+snippet "extend|extd" "Extend" r
 Extend( ${0:non-repeatingField} )
 endsnippet
 
-snippet extd
-Extend( ${0:non-repeatingField} )
-endsnippet
-
-snippet getrepetition
+snippet "getrep(etition)?" "GetRepetition" r
 GetRepetition(
 	${1:repeatingField};
 	${2:number}
 )
 endsnippet
 
-snippet getrep
-GetRepetition(
-	${1:repeatingField};
-	${2:number}
-)
-endsnippet
-
-snippet last
+snippet last "Last"
 Last( ${0:field} )
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Financial functions
 
-snippet fv
+snippet fv "FV"
 FV(
 	${1:payment};
 	${2:interestRate};
@@ -1213,14 +714,14 @@ FV(
 )
 endsnippet
 
-snippet npv
+snippet npv "NPV"
 NPV(
 	${1:payment};
 	${2:interestRate}
 )
 endsnippet
 
-snippet pmt
+snippet pmt "PMT"
 PMT(
 	${1:principal};
 	${2:interestRate};
@@ -1228,7 +729,7 @@ PMT(
 )
 endsnippet
 
-snippet pv
+snippet pv "PV"
 PV(
 	${1:payment};
 	${2:interestRate};
@@ -1239,55 +740,42 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Trigonometric functions
 
-snippet acos
+snippet acos "Acos"
 Acos( ${0:number} )
 endsnippet
 
-snippet asin
+snippet asin "Asin"
 Asin( ${0:number} )
 endsnippet
 
-snippet atan
+snippet atan "Atan"
 Atan( ${0:number} )
 endsnippet
 
-snippet cos
+snippet cos "Cos"
 Cos( ${0:angleInRadians} )
 endsnippet
 
-snippet degrees
+snippet "deg(rees)?" "Degrees" r
 Degrees( ${0:angleInRadians} )
 endsnippet
 
-snippet deg
-Degrees( ${0:angleInRadians} )
-endsnippet
-
-# only for completeness sake, obviously
-snippet pi
-Pi
-endsnippet
-
-snippet radians
+snippet "rad(ians)?" "Radians" r
 Radians( ${0:angleInDegrees} )
 endsnippet
 
-snippet rad
-Radians( ${0:angleInDegrees} )
-endsnippet
-
-snippet sin
+snippet sin "Sin"
 Sin( ${0:angleInRadians} )
 endsnippet
 
-snippet tan
+snippet tan "Tan"
 Tan( ${0:angleInRadians} )
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Logical functions
 
-snippet case
+snippet case "Case"
 Case(
 	${1:test1};
 	${2:result1}${3:;
@@ -1296,7 +784,7 @@ Case(
 )
 endsnippet
 
-snippet choose
+snippet "cho(ose)?" "Choose" r
 Choose(
 	${1:test};
 	${2:result0}${3:;
@@ -1304,15 +792,7 @@ Choose(
 )
 endsnippet
 
-snippet cho
-Choose(
-	${1:test};
-	${2:result0}${3:;
-	${4:...}}
-)
-endsnippet
-
-snippet evaluate
+snippet "eval(uate)?" "Evaluate" r
 Evaluate(
 	${1:expression}${2:;
 	${3:field}${4:;
@@ -1320,23 +800,11 @@ Evaluate(
 )
 endsnippet
 
-snippet eval
-Evaluate(
-	${1:expression}${2:;
-	${3:field}${4:;
-	...}}
-)
-endsnippet
-
-snippet evaluationerror
+snippet "evaluationerror|evalerr" "EvaluationError" r
 EvaluationError( ${0:expression} )
 endsnippet
 
-snippet evalerr
-EvaluationError( ${0:expression} )
-endsnippet
-
-snippet executesql
+snippet "(execute)?sql" "ExecuteSQL" r
 ExecuteSQL(
 	${1:sqlQuery};
 	${2:fieldSeparator};
@@ -1345,40 +813,19 @@ ExecuteSQL(
 )
 endsnippet
 
-snippet sql
-ExecuteSQL(
-	${1:sqlQuery};
-	${2:fieldSeparator};
-	${3:rowSeparator}${4:;
-	${5:arguments...}}
-)
-endsnippet
-
-snippet getasboolean
+snippet "getasboolean|getb" "GetAsBoolean" r
 GetAsBoolean( ${0:data} )
 endsnippet
 
-snippet getb
-GetAsBoolean( ${0:data} )
-endsnippet
-
-snippet getfield
+snippet "getf(ield)?" "GetField" r
 GetField( ${0:fieldName} )
 endsnippet
 
-snippet getf
-GetField( ${0:fieldName} )
-endsnippet
-
-snippet getfieldname
+snippet "getfieldname|getfn" "GetFieldName" r
 GetFieldName( ${0:fieldName} )
 endsnippet
 
-snippet getfn
-GetFieldName( ${0:fieldName} )
-endsnippet
-
-snippet getlayoutobjectattribute
+snippet "getlayoutobjectattribute|getloa" "GetLayoutObjectAttribute" r
 GetLayoutObjectAttribute(
 	${1:objectName};
 	"$2`!p snip.rv = complete(t[2], ['objectType', 'hasFocus', 'containsFocus',
@@ -1390,26 +837,7 @@ GetLayoutObjectAttribute(
 )
 endsnippet
 
-snippet getloa
-GetLayoutObjectAttribute(
-	${1:objectName};
-	"$2`!p snip.rv = complete(t[2], ['objectType', 'hasFocus', 'containsFocus',
-		'isFrontPanel', 'bounds', 'left', 'right', 'top', 'bottom', 'width',
-		'height', 'rotation', 'startPoint', 'endPoint', 'source', 'content',
-		'enclosingObject', 'containedObjects', 'isobjecthidden'])`"${3:;
-	${4:repetitionNumber};
-	${5:portalRowNumber}}
-)
-endsnippet
-
-snippet getnthrecord
-GetNthRecord(
-	${1:fieldName};
-	${2:recordNumber}
-)
-endsnippet
-
-snippet getnth
+snippet "getnth(record)?" "GetNthRecord" r
 GetNthRecord(
 	${1:fieldName};
 	${2:recordNumber}
@@ -1424,31 +852,19 @@ If(
 )
 endsnippet
 
-snippet isempty
+snippet "ise(mpty)?" "IsEmpty" r
 IsEmpty( ${0:field} )
 endsnippet
 
-snippet ise
-IsEmpty( ${0:field} )
-endsnippet
-
-snippet isvalid
+snippet "isv(alid)?" "IsValid" r
 IsValid( ${0:field} )
 endsnippet
 
-snippet isv
-IsValid( ${0:field} )
-endsnippet
-
-snippet isvalidexpression
+snippet "isvalidexpression|isve" "IsValidExpression" r
 IsValidExpression( ${0:expression} )
 endsnippet
 
-snippet isve
-IsValidExpression( ${0:expression} )
-endsnippet
-
-snippet let "The Let() function formatted for my default"
+snippet let "Let"
 Let(
 	[
 		${1:_var} = ${2:value}${3:;
@@ -1459,52 +875,29 @@ Let(
 )
 endsnippet
 
-snippet lookup
+snippet "look(up)?" "Lookup" r
 Lookup(
 	${1:sourceField}${2:;
 	${3:failExpression}}
 )
 endsnippet
 
-snippet look
-Lookup(
-	${1:sourceField}${2:;
-	${3:failExpression}}
-)
-endsnippet
-
-snippet lookupnext
+snippet "lookupnext|lookn" "LookupNext" r
 LookupNext(
 	${1:sourceField};
 	$2`!p snip.rv = complete(t[2], ['Lower', 'Higher'])`
 )
-endsnippet
-
-snippet lookn
-LookupNext(
-	${1:sourceField};
-	$2`!p snip.rv = complete(t[2], ['Lower', 'Higher'])`
-)
-endsnippet
-
-# For the sake of completeness
-snippet self
-Self
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Design functions
 
 # For the sake of every function having a snippet by name
-snippet databasenames
+snippet dbn "DatabaseNames"
 DatabaseNames
 endsnippet
 
-snippet dbn
-DatabaseNames
-endsnippet
-
-snippet fieldbounds
+snippet "fieldbounds|fb" "FieldBounds" r
 FieldBounds(
 	${1:Get( FileName )};
 	${2:layoutName};
@@ -1512,57 +905,28 @@ FieldBounds(
 )
 endsnippet
 
-snippet fb
-FieldBounds(
-	${1:Get( FileName )};
-	${2:layoutName};
-	${3:fieldName}
-)
-endsnippet
-
-snippet fieldcomment
+snippet "fieldcomment|fc" "FieldComment" r
 FieldComment(
 	${1:Get( FileName )};
 	${2:fieldname}
 )
 endsnippet
 
-snippet fc
-FieldComment(
-	${1:Get( FileName )};
-	${2:fieldname}
-)
-endsnippet
-
-snippet fieldids
+snippet "fieldids|fid" "FieldIDs" r
 FieldIDs(
 	${1:Get( FileName )};
 	${2:layoutName}
 )
 endsnippet
 
-snippet fids
-FieldIDs(
-	${1:Get( FileName )};
-	${2:layoutName}
-)
-endsnippet
-
-snippet fieldnames
+snippet "fieldnames|fn" "FieldNames" r
 FieldNames(
 	${1:Get( FileName )};
 	${2:layoutName}
 )
 endsnippet
 
-snippet fn
-FieldNames(
-	${1:Get( FileName )};
-	${2:layoutName}
-)
-endsnippet
-
-snippet fieldrepetitions
+snippet "fieldrepetitions|frep" "FieldRepetitions" r
 FieldRepetitions(
 	${1:Get( FileName )};
 	${2:layoutName};
@@ -1570,15 +934,7 @@ FieldRepetitions(
 )
 endsnippet
 
-snippet frep
-FieldRepetitions(
-	${1:Get( FileName )};
-	${2:layoutName};
-	${3:fieldName}
-)
-endsnippet
-
-snippet fieldstyle
+snippet "fieldstyle|fst" "FieldStyle" r
 FieldStyle(
 	${1:Get( FileName )};
 	${2:layoutName};
@@ -1586,178 +942,85 @@ FieldStyle(
 )
 endsnippet
 
-snippet fst
-FieldStyle(
-	${1:Get( FileName )};
-	${2:layoutName};
-	${3:fieldName}
-)
-endsnippet
-
-snippet fieldtype
+snippet "fieldtype|fty" "FieldType" r
 FieldType(
 	${1:Get( FileName )};
 	${2:fieldName}
 )
 endsnippet
 
-snippet fty
-FieldType(
-	${1:Get( FileName )};
-	${2:fieldName}
-)
-endsnippet
-
-snippet getnextserialvalue
+snippet "getnextserialvalue|gnsv" "GetNextSerialValue" r
 GetNextSerialValue(
 	${1:Get( FileName )};
 	${2:fieldName}
 )
 endsnippet
 
-snippet gnsv
-GetNextSerialValue(
-	${1:Get( FileName )};
-	${2:fieldName}
-)
-endsnippet
-
-snippet layoutids
+snippet "layoutids|lid" "LayoutIDs" r
 LayoutIDs( ${0:Get( FileName )} )
 endsnippet
 
-snippet lid
-LayoutIDs( ${0:Get( FileName )} )
-endsnippet
-
-snippet layoutnames
+snippet "layoutnames|lon" "LayoutNames" r
 LayoutNames( ${0:Get( FileName )} )
 endsnippet
 
-snippet lon
-LayoutNames( ${0:Get( FileName )} )
-endsnippet
-
-snippet layoutobjectnames
+snippet "layoutobjectnames|loon" "LayoutObjectNames" r
 LayoutObjectNames(
 	${1:Get( FileName )};
 	${2:layoutName}
 )
 endsnippet
 
-snippet loon
-LayoutObjectNames(
-	${1:Get( FileName )};
-	${2:layoutName}
-)
-endsnippet
-
-snippet relationinfo
+snippet "relationinfo|ri" "RelationInfo" r
 RelationInfo(
 	${1:Get( FileName )};
 	${2:tableOccurrenceName}
 }
 endsnippet
 
-snippet ri
-RelationInfo(
-	${1:Get( FileName )};
-	${2:tableOccurrenceName}
-}
-endsnippet
-
-snippet scriptids
+snippet "scriptids|sid" "ScriptIDs" r
 ScriptIDs( ${1:Get( FileName )} )
 endsnippet
 
-snippet sid
+snippet "scriptnames|sn" "ScriptNames" r
 ScriptIDs( ${1:Get( FileName )} )
 endsnippet
 
-snippet scriptnames
-ScriptNames( ${1:Get( FileName )} )
+snippet "tableids|tid" "TableIDs" r
+TableIDs( ${1:Get( FileName )} )
 endsnippet
 
-snippet sn
-ScriptIDs( ${1:Get( FileName )} )
-endsnippet
-
-snippet tableids
-TableIds( ${1:Get( FileName )} )
-endsnippet
-
-snippet tid
-TableIds( ${1:Get( FileName )} )
-endsnippet
-
-snippet tablenames
+snippet "tablenames|tn" "TableNames" r
 TableNames( ${1:Get( FileName )} )
 endsnippet
 
-snippet tn
-TableNames( ${1:Get( FileName )} )
-endsnippet
-
-snippet valuelistids
+snippet "valuelistids|vlid" "ValidListIDs" r
 ValueListIDs( ${1:Get( FileName )} )
 endsnippet
 
-snippet vlid
-ValueListIDs( ${1:Get( FileName )} )
-endsnippet
-
-snippet valuelistitems
+snippet "valuelistitems|vli" "ValueListItems" r
 ValueListItems(
 	${1:Get( FileName )};
 	${2:valueList}
 )
 endsnippet
 
-snippet vli
-ValueListItems(
-	${1:Get( FileName )};
-	${2:valueList}
-)
-endsnippet
-
-snippet valuelistnames
+snippet "valuelistnames|vln" "ValueListNames" r
 ValueListNames( ${1:Get( FileName )} )
 endsnippet
 
-snippet vln
-ValueListNames( ${1:Get( FileName )} )
-endsnippet
-
-snippet windownames
+snippet "windownames|wn" "WindowNames" r
 WindowNames( ${1:Get( FileName )} )
 endsnippet
 
-snippet wn
-WindowNames( ${1:Get( FileName )} )
-endsnippet
-
-snippet location
+snippet "loc(ation)?" "Location" r
 Location(
 	${1:accuracy}${2:;
 	${3:timeout}}
 )
 endsnippet
 
-snippet loc
-Location(
-	${1:accuracy}${2:;
-	${3:timeout}}
-)
-endsnippet
-
-snippet locationvalues
-LocationValues(
-	${1:accuracy}${2:;
-	${3:timeout}}
-)
-endsnippet
-
-snippet locv
+snippet "locationvalues|locv" "LocationValues" r
 LocationValues(
 	${1:accuracy}${2:;
 	${3:timeout}}
@@ -1768,17 +1031,497 @@ endsnippet
 # External functions
 
 # might be left out, only useful for Pre-7 FileMaker plugins
-snippet external
+snippet "ext(ernal)?" "External" r
 External(
 	${1:nameOfFunction};
 	${2:parameter}
 )
 endsnippet
 
-snippet ext
-External(
-	${1:nameOfFunction};
-	${2:parameter}
-)
+# ------------------------------------------------------------------------------
+# Get functions
+
+snippet get
+Get( $1`!p snip.rv=complete(t[1], ['AccountExtendedPrivileges', 'AccountName',
+	'AccountPrivilegeSetName', 'ActiveFieldContents', 'ActiveFieldName',
+	'ActiveFieldTableName', 'ActiveLayoutObjectName', 'ActiveModifierKeys',
+	'ActivePortalRowNumber', 'ActiveRepetitionNumber', 'ActiveSelectionSize',
+	'ActiveSelectionStart', 'AllowAbortState', 'AllowFormattingBarState',
+	'ApplicationLanguage', 'ApplicationVersion', 'CalculationRepetitionNumber',
+	'ConnectionAttributes', 'ConnectionState', 'CurrentDate',
+	'CurrentExtendedPrivileges', 'CurrentHostTimestamp', 'CurrentPrivilegeSetName',
+	'CurrentTime', 'CurrentTimestamp', 'CurrentTimeUTCMilliseconds',
+	'CustomMenuSetName', 'DesktopPath', 'Device', 'DocumentsPath',
+	'DocumentsPathListing', 'EncryptionState', 'ErrorCaptureState', 'FileName',
+	'FilePath', 'FileSize', 'FoundCount', 'HighContrastColor', 'HighContrastState',
+	'HostApplicationVersion', 'HostIPAddress', 'HostName', 'InstalledFMPlugins',
+	'LastError', 'LastMessageChoice', 'LastODBCError', 'LayoutAccess',
+	'LayoutCount', 'LayoutName', 'LayoutNumber', 'LayoutTableName',
+	'LayoutViewState', 'ModifiedFields', 'MultiUserState', 'NetworkProtocol',
+	'NetworkType', 'PageNumber', 'PersistentID', 'PreferencesPath', 'PrinterName',
+	'QuickFindText', 'RecordAccess', 'RecordID', 'RecordModificationCount',
+	'RecordNumber', 'RecordOpenCount', 'RecordOpenState', 'RequestCount',
+	'RequestOmitState', 'ScreenDepth', 'ScreenHeight', 'ScreenWidth',
+	'ScriptAnimationState', 'ScriptName', 'ScriptParameter', 'ScriptResult',
+	'SortState', 'StatusAreaState', 'SystemDrive', 'SystemIPAddress',
+	'SystemLanguage', 'SystemNICAddress', 'SystemPlatform', 'SystemVersion',
+	'TemporaryPath', 'TextRulerVisible', 'TotalRecordCount', 'TriggerCurrentPanel',
+	'TriggerGestureInfo', 'TriggerKeystroke', 'TriggerModifierKeys',
+	'TriggerTargetPanel', 'UserCount', 'UserName', 'UseSystemFormatsState', 'UUID',
+	'WindowContentHeight', 'WindowContentWidth', 'WindowDesktopHeight',
+	'WindowDesktopWidth', 'WindowHeight', 'WindowLeft', 'WindowMode', 'WindowName',
+	'WindowOrientation', 'WindowStyle', 'WindowVisible', 'WindowWidth',
+	'WindowZoomLevel'])` )
 endsnippet
 
+snippet getaep "Get( AccountExtendedPrivileges )"
+Get( AccountExtendedPrivileges )
+endsnippet
+
+snippet getan "Get( AccountName )"
+Get( AccountName )
+endsnippet
+
+snippet getapsn "Get( AccountPrivilegeSetName )"
+Get( AccountPrivilegeSetName )
+endsnippet
+
+snippet getafc "Get( ActiveFieldContents )"
+Get( ActiveFieldContents )
+endsnippet
+
+snippet getafn "Get( ActiveFieldName )"
+Get( ActiveFieldName )
+endsnippet
+
+snippet getaftn "Get( ActiveFieldTableName )"
+Get( ActiveFieldTableName )
+endsnippet
+
+snippet getalon "Get( ActiveLayoutObjectName )"
+Get( ActiveLayoutObjectName )
+endsnippet
+
+snippet getamk "Get( ActiveModifierKeys )"
+Get( ActiveModifierKeys )
+endsnippet
+
+snippet getaprn "Get( ActivePortalRowNumber )"
+Get( ActivePortalRowNumber )
+endsnippet
+
+snippet getarn "Get( ActiveRepetitionNumber )"
+Get( ActiveRepetitionNumber )
+endsnippet
+
+snippet getass "Get( ActiveSelectionSize )"
+Get( ActiveSelectionSize )
+endsnippet
+
+snippet getasst "Get( ActiveSelectionStart )"
+Get( ActiveSelectionStart )
+endsnippet
+
+snippet getaas "Get( AllowAbortState )"
+Get( AllowAbortState )
+endsnippet
+
+snippet getafbs "Get( AllowFormattingBarState )"
+Get( AllowFormattingBarState )
+endsnippet
+
+snippet getal "Get( ApplicationLanguage )"
+Get( ApplicationLanguage )
+endsnippet
+
+snippet getav "Get( ApplicationVersion )"
+Get( ApplicationVersion )
+endsnippet
+
+snippet getcrn "Get( CalculationRepetitionNumber )"
+Get( CalculationRepetitionNumber )
+endsnippet
+
+snippet getca "Get( ConnectionAttributes )"
+Get( ConnectionAttributes )
+endsnippet
+
+snippet getcs "Get( ConnectionState )"
+Get( ConnectionState )
+endsnippet
+
+snippet getcd "Get( CurrentDate )"
+Get( CurrentDate )
+endsnippet
+
+snippet cd "Get( CurrentDate )"
+Get( CurrentDate )
+endsnippet
+
+snippet getcep "Get( CurrentExtendedPrivileges )"
+Get( CurrentExtendedPrivileges )
+endsnippet
+
+snippet getcht "Get( CurrentHostTimestamp )"
+Get( CurrentHostTimestamp )
+endsnippet
+
+snippet getcpsn "Get( CurrentPrivilegeSetName )"
+Get( CurrentPrivilegeSetName )
+endsnippet
+
+snippet "getct|ct" "Get( CurrentTime )" r
+Get( CurrentTime )
+endsnippet
+
+snippet getcts "Get( CurrentTimestamp )"
+Get( CurrentTimestamp )
+endsnippet
+
+snippet cts "Get( CurrentTimestamp )"
+Get( CurrentTimestamp )
+endsnippet
+
+snippet ctum "Get( CurrentTimeUTCMilliseconds )"
+Get( CurrentTimeUTCMilliseconds )
+endsnippet
+
+snippet getcmsn "Get( CustomMenuSetName )"
+Get( CustomMenuSetName )
+endsnippet
+
+snippet getdp "Get( DesktopPath )"
+Get( DesktopPath )
+endsnippet
+
+snippet getdv "Get( Device )"
+Get( Device )
+endsnippet
+
+snippet getdocp "Get( DocumentsPath )"
+Get( DocumentsPath )
+endsnippet
+
+snippet getdpl "Get( DocumentsPathListing )"
+Get( DocumentsPathListing )
+endsnippet
+
+snippet getes "Get( EncryptionState )"
+Get( EncryptionState )
+endsnippet
+
+snippet geters "Get( ErrorCaptureState )"
+Get( ErrorCaptureState )
+endsnippet
+
+snippet getfmp "Get( FileMakerPath )"
+Get( FileMakerPath )
+endsnippet
+
+snippet getfn "Get( FileName )"
+Get( FileName )
+endsnippet
+
+snippet getfp "Get( FilePath )"
+Get( FilePath )
+endsnippet
+
+snippet getfs "Get( FileSize )"
+Get( FileSize )
+endsnippet
+
+snippet getfc "Get( FoundCount )"
+Get( FoundCount )
+endsnippet
+
+snippet gethcc "Get( HighContrastColor )"
+Get( HighContrastColor )
+endsnippet
+
+snippet gethcs "Get( HighContrastState )"
+Get( HighContrastState )
+endsnippet
+
+snippet gethav "Get( HostApplicationVersion )"
+Get( HostApplicationVersion )
+endsnippet
+
+snippet gethipa "Get( HostIPAddress )"
+Get( HostIPAddress )
+endsnippet
+
+snippet getnh "Get( HostName )"
+Get( HostName )
+endsnippet
+
+snippet getifmp "Get( InstalledFMPlugins )"
+Get( InstalledFMPlugins )
+endsnippet
+
+snippet getle "Get( LastError )"
+Get( LastError )
+endsnippet
+
+snippet getlmc "Get( LastMessageChoice )"
+Get( LastMessageChoice )
+endsnippet
+
+snippet getlocbee "Get( LastODBCError )"
+Get( LastODBCError )
+endsnippet
+
+snippet getla "Get( LayoutAccess )"
+Get( LayoutAccess )
+endsnippet
+
+snippet getlc "Get( LayoutCount )"
+Get( LayoutCount )
+endsnippet
+
+snippet getln "Get( LayoutName )"
+Get( LayoutName )
+endsnippet
+
+snippet getlnu "Get( LayoutNumber )"
+Get( LayoutNumber )
+endsnippet
+
+snippet getltn "Get( LayoutTableName )"
+Get( LayoutTableName )
+endsnippet
+
+snippet getlvs "Get( LayoutViewState )"
+Get( LayoutViewState )
+endsnippet
+
+snippet getmf "Get( ModifiedFields )"
+Get( ModifiedFields )
+endsnippet
+
+snippet getmus "Get( MultiUserState )"
+Get( MultiUserState )
+endsnippet
+
+snippet getnp "Get( Network Protocol )"
+Get( Network Protocol )
+endsnippet
+
+snippet getnt "Get( NetworkType )"
+Get( NetworkType )
+endsnippet
+
+snippet getpn "Get( PageNumber )"
+Get( PageNumber )
+endsnippet
+
+snippet getpid "Get( PersistentID )"
+Get( PersistentID )
+endsnippet
+
+snippet getpp "Get( PreferencesPath )"
+Get( PreferencesPath )
+endsnippet
+
+snippet getpn "Get( PrinterName )"
+Get( PrinterName )
+endsnippet
+
+snippet getqft "Get( QuickFindText )"
+Get( QuickFindText )
+endsnippet
+
+snippet getra "Get( RecordAccess )"
+Get( RecordAccess )
+endsnippet
+
+snippet getrid "Get( RecordID )"
+Get( RecordID )
+endsnippet
+
+snippet getrmc "Get( RecordModificationCount )"
+Get( RecordModificationCount )
+endsnippet
+
+snippet getrn "Get( RecordNumber )"
+Get( RecordNumber )
+endsnippet
+
+snippet getroc "Get( RecordOpenCount )"
+Get( RecordOpenCount )
+endsnippet
+
+snippet getros "Get( RecordOpenState )"
+Get( RecordOpenState )
+endsnippet
+
+snippet getrqc "Get( RequestCount )"
+Get( RequestCount )
+endsnippet
+
+snippet getros "Get( RequestOmitState )"
+Get( RequestOmitState )
+endsnippet
+
+snippet getsd "Get( ScreenDepth )"
+Get( ScreenDepth )
+endsnippet
+
+snippet getsh "Get( ScreenHeight )"
+Get( ScreenHeight )
+endsnippet
+
+snippet getsw "Get( ScreenWidth )"
+Get( ScreenWidth )
+endsnippet
+
+snippet getsas "Get( ScriptAnimationState )"
+Get( ScriptAnimationState )
+endsnippet
+
+snippet getsn "Get( ScriptName )"
+Get( ScriptName )
+endsnippet
+
+snippet getsp "Get( ScriptParameter )"
+Get( ScriptParameter )
+endsnippet
+
+snippet getsr "Get( ScriptResult )"
+Get( ScriptResult )
+endsnippet
+
+snippet getss "Get( SortState )"
+Get( SortState )
+endsnippet
+
+snippet getsas "Get( StatusAreaState )"
+Get( StatusAreaState )
+endsnippet
+
+snippet getsd "Get( SystemDrive )"
+Get( SystemDrive )
+endsnippet
+
+snippet getsipa "Get( SystemIPAddress )"
+Get( SystemIPAddress )
+endsnippet
+
+snippet getsl "Get( SystemLanguage )"
+Get( SystemLanguage )
+endsnippet
+
+snippet getsnica "Get( SystemNICAddress )"
+Get( SystemNICAddress )
+endsnippet
+
+snippet getsp "Get( SystenPlatform )"
+Get( SystenPlatform )
+endsnippet
+
+snippet getsv "Get( SystemVersion )"
+Get( SystemVersion )
+endsnippet
+
+snippet gettp "Get( TemporaryPath )"
+Get( TemporaryPath )
+endsnippet
+
+snippet gettrv "Get( TextRulerVisible )"
+Get( TextRulerVisible )
+endsnippet
+
+snippet gettrc "Get( TotalRecordCount )"
+Get( TotalRecordCount )
+endsnippet
+
+snippet gettcp "Get( TriggerCurrentPanel )"
+Get( TriggerCurrentPanel )
+endsnippet
+
+snippet gettgi "Get( TriggerGestureInfo )"
+Get( TriggerGestureInfo )
+endsnippet
+
+snippet gettk "Get( TriggerKeystroke )"
+Get( TriggerKeystroke )
+endsnippet
+
+snippet gettmk "Get( TriggerModifierKeys )"
+Get( TriggerModifierKeys )
+endsnippet
+
+snippet getttp "Get( TriggerTargetPanel )"
+Get( TriggerTargetPanel )
+endsnippet
+
+snippet getuc "Get( UserCount )"
+Get( UserCount )
+endsnippet
+
+snippet getun "Get( UserName )"
+Get( UserName )
+endsnippet
+
+snippet getusfs "Get( UseSystemFormatState )"
+Get( UseSystemFormatState )
+endsnippet
+
+snippet "getuu(id)?" "Get( UUID )" r
+Get( UUID )
+endsnippet
+
+snippet getwch "Get( WindowContentHeight )"
+Get( WindowContentHeight )
+endsnippet
+
+snippet getwcw "Get( WindowContentWidth )"
+Get( WindowContentWidth )
+endsnippet
+
+snippet getwdh "Get( WindowDesktopHeight )"
+Get( WindowDesktopHeight )
+endsnippet
+
+snippet getwdw "Get( WindowDesktopWidth )"
+Get( WindowDesktopWidth )
+endsnippet
+
+snippet getwh "Get( WindowHeight )"
+Get( WindowHeight )
+endsnippet
+
+snippet getwl "Get( WindowLeft )"
+Get( WindowLeft )
+endsnippet
+
+snippet getwm "Get( WindowMode )"
+Get( WindowMode )
+endsnippet
+
+snippet getwn "Get( WindowName )"
+Get( WindowName )
+endsnippet
+
+snippet getwo "Get( WindowOrientation )"
+Get( WindowOrientation )
+endsnippet
+
+snippet getws "Get( WindowStyle )"
+Get( WindowStyle )
+endsnippet
+
+snippet getwt "Get( WindowTop )"
+Get( WindowTop )
+endsnippet
+
+snippet getwv "Get( WindowVisible )"
+Get( WindowVisible )
+endsnippet
+
+snippet getww "Get( WindowWidth )"
+Get( WindowWidth )
+endsnippet
+
+snippet getwzl "Get( WindowZoomLevel )"
+Get( WindowZoomLevel )
+endsnippet
