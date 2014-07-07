@@ -64,6 +64,7 @@ snippet "code?" "Code" r
 Code( ${0:text} )
 endsnippet
 
+# TODO: Remove conflict with Get( CurrentTime ) trigger
 snippet "exa(ct)?" "Exact" r
 Exact(
 	${1:originaltext};
@@ -71,14 +72,14 @@ Exact(
 )
 endsnippet
 
-snippet "filt?e?r?" "Filter" r
+snippet "fil(ter)?" "Filter" r
 Filter(
 	${1:texttofilter};
 	${2:filtertext}
 )
 endsnippet
 
-snippet "filterValues|filv" "FilterValues" r
+snippet "filtervalues|filv" "FilterValues" r
 FilterValues(
 	${1:textToFilter};
 	${2:filterValues}
@@ -93,10 +94,12 @@ snippet "getasdate|getd" "GetAsDate" r
 GetAsDate( ${0:text} )
 endsnippet
 
+# TODO: Remove conflict with TableNames trigger
 snippet "getasnumber|getn" "GetAsNumber" r
 GetAsNumber( ${0:text} )
 endsnippet
 
+# TODO: Remove conflict with Timestamp
 snippet "getassvg|gets" "GetAsSVG" r
 GetAsSVG( ${0:text} )
 endsnippet
@@ -109,6 +112,7 @@ snippet "getastime|geti" "GetAsTime" r
 GetAsTime( ${0:text} )
 endsnippet
 
+# TODO: Remove conflict with Timestamp
 snippet "getastimestamp|getm" "GetAsTimestamp" r
 GetAsTimestamp( ${0:text} )
 endsnippet
@@ -118,7 +122,7 @@ GetAsURLEncoded( ${0:text} )
 endsnippet
 
 snippet "getvalue|getv" "GetValues" r
-GetValues(
+GetValue(
 	${1:listOfValues};
 	${2:valueNumber}
 )
@@ -165,7 +169,7 @@ LeftWords(
 )
 endsnippet
 
-snippet "leng(th)?" "Length" r
+snippet "len(gth)?" "Length" r
 Length( ${0:field} )
 endsnippet
 
@@ -177,7 +181,7 @@ snippet "mid(dle)?" "Middle" r
 Middle(
 	${1:text};
 	${2:start};
-	#{3:numberOfCharacters}
+	${3:numberOfCharacters}
 )
 endsnippet
 
@@ -205,6 +209,7 @@ NumToJText(
 )
 endsnippet
 
+# TOTO: Resolve conflict with Count
 snippet "pat(terncount)?" "PatternCount" r
 PatternCount(
 	${1:text};
@@ -267,10 +272,11 @@ snippet "romanzenkaku|romz" "RomanZenkaku" r
 RomanZenkaku( ${0:text} )
 endsnippet
 
+# TODO: Reolve conflict with RelationInfo
 snippet "serialincrement|seri" "SerialIncrement" r
 SerialIncrement(
 	${1:text};
-	${2:incrementby)
+	${2:incrementBy}
 )
 endsnippet
 
@@ -298,10 +304,12 @@ snippet "upp(er)?" "Upper" r
 Upper( ${0:text} )
 endsnippet
 
-snippet "valuecaount|valc" "ValueCount" r
+# TODO: Resolve conflict with Count
+snippet "valuecount|valc" "ValueCount" r
 ValueCount( ${0:text} )
 endsnippet
 
+# TODO: Resolve conflict with Count
 snippet "wordc(ount)?" "WordCount" r
 WordCount( ${0:text} )
 endsnippet
@@ -355,6 +363,7 @@ TextFontRemove(
 )
 endsnippet
 
+# TODO: Resolve conflict with Timestamp
 snippet "texts(ize)?" "TextSize" r
 TextSize(
 	${1:text};
@@ -412,6 +421,7 @@ snippet exp "Exp"
 Exp( ${0:number} )
 endsnippet
 
+# TODO: Resolve conflict with Get( CurrentTime )
 snippet "fact(orial)?" "Factorial" r
 Factorial(
 	${1:number}${2:;
@@ -446,7 +456,7 @@ Mod(
 )
 endsnippet
 
-snippet "rand(om)?" "Random" r
+snippet rand "Random"
 Random
 endsnippet
 
@@ -472,7 +482,7 @@ snippet sqrt "Sqrt"
 Sqrt( ${0:number} )
 endsnippet
 
-snippet "trunc(ate)" "Truncate" r
+snippet "trunc(ate)?" "Truncate" r
 Truncate(
 	${1:number};
 	${2:precision}
@@ -494,7 +504,7 @@ snippet day "Day"
 Day( ${0:date} )
 endsnippet
 
-snippet "dayn(ame)" "DayName" r
+snippet "dayn(ame)?" "DayName" r
 DayName( ${0:date} )
 endsnippet
 
@@ -506,6 +516,7 @@ snippet "dayofweek|dow" "DayOfWeek" r
 DayOfWeek( ${0:date} )
 endsnippet
 
+# TODO: Resolve conflict with Year
 snippet "dayofyear|doy" "DayOfYear" r
 DayOfYear( ${0:date} )
 endsnippet
@@ -548,7 +559,7 @@ snippet "hour|hr" "Hour" r
 Hour( ${0:time} )
 endsnippet
 
-snippet "min(ute?)" "Minute" r
+snippet "minu(te)?" "Minute" r
 Minute( ${0:time} )
 endsnippet
 
@@ -585,6 +596,7 @@ endsnippet
 # ------------------------------------------------------------------------------
 # Container functions
 
+# TODO: Resolve conflict with Code
 snippet "base64decode|based" "Base64Decode" r
 Base64Decode(
 	${1:text}${2:;
@@ -592,6 +604,7 @@ Base64Decode(
 )
 endsnippet
 
+# TODO: Resolve conflict with Code
 snippet "base64encode|basee" "Base64Encode" r
 Base64Encode( ${0:sourceField} )
 endsnippet
@@ -821,6 +834,7 @@ snippet "getf(ield)?" "GetField" r
 GetField( ${0:fieldName} )
 endsnippet
 
+# TODO: Resolve conflicts with Get( FileName ) and FieldNames
 snippet "getfieldname|getfn" "GetFieldName" r
 GetFieldName( ${0:fieldName} )
 endsnippet
@@ -856,6 +870,7 @@ snippet "ise(mpty)?" "IsEmpty" r
 IsEmpty( ${0:field} )
 endsnippet
 
+# TODO: Resolve conflict with LayoutIDs
 snippet "isv(alid)?" "IsValid" r
 IsValid( ${0:field} )
 endsnippet
@@ -983,7 +998,7 @@ ScriptIDs( ${1:Get( FileName )} )
 endsnippet
 
 snippet "scriptnames|sn" "ScriptNames" r
-ScriptIDs( ${1:Get( FileName )} )
+ScriptNames( ${1:Get( FileName )} )
 endsnippet
 
 snippet "tableids|tid" "TableIDs" r
@@ -994,7 +1009,7 @@ snippet "tablenames|tn" "TableNames" r
 TableNames( ${1:Get( FileName )} )
 endsnippet
 
-snippet "valuelistids|vlid" "ValidListIDs" r
+snippet "valuelistids|vid" "ValidListIDs" r
 ValueListIDs( ${1:Get( FileName )} )
 endsnippet
 
@@ -1031,7 +1046,7 @@ endsnippet
 # External functions
 
 # might be left out, only useful for Pre-7 FileMaker plugins
-snippet "ext(ernal)?" "External" r
+snippet "external" "External" r
 External(
 	${1:nameOfFunction};
 	${2:parameter}
@@ -1082,22 +1097,27 @@ snippet getan "Get( AccountName )"
 Get( AccountName )
 endsnippet
 
+# TODO: Resolve conflict with ScriptNames
 snippet getapsn "Get( AccountPrivilegeSetName )"
 Get( AccountPrivilegeSetName )
 endsnippet
 
+# TODO: Resolve conflict with FieldComment
 snippet getafc "Get( ActiveFieldContents )"
 Get( ActiveFieldContents )
 endsnippet
 
+# TODO: Resolve conflict with FieldNames
 snippet getafn "Get( ActiveFieldName )"
 Get( ActiveFieldName )
 endsnippet
 
+# TODO: Resolve conflict with TableNames
 snippet getaftn "Get( ActiveFieldTableName )"
 Get( ActiveFieldTableName )
 endsnippet
 
+# TODO: Resolve conflict with LayoutNames
 snippet getalon "Get( ActiveLayoutObjectName )"
 Get( ActiveLayoutObjectName )
 endsnippet
@@ -1150,11 +1170,7 @@ snippet getcs "Get( ConnectionState )"
 Get( ConnectionState )
 endsnippet
 
-snippet getcd "Get( CurrentDate )"
-Get( CurrentDate )
-endsnippet
-
-snippet cd "Get( CurrentDate )"
+snippet "(get)?cd" "Get( CurrentDate )" r
 Get( CurrentDate )
 endsnippet
 
@@ -1166,26 +1182,25 @@ snippet getcht "Get( CurrentHostTimestamp )"
 Get( CurrentHostTimestamp )
 endsnippet
 
+# TODO: Resolve conflict with ScriptNames
 snippet getcpsn "Get( CurrentPrivilegeSetName )"
 Get( CurrentPrivilegeSetName )
 endsnippet
 
-snippet "getct|ct" "Get( CurrentTime )" r
+snippet "(get)?ct" "Get( CurrentTime )" rw
 Get( CurrentTime )
 endsnippet
 
-snippet getcts "Get( CurrentTimestamp )"
+# TODO: Resolve conflict with Timestamp
+snippet "(get)?cts" "Get( CurrentTimestamp )" r
 Get( CurrentTimestamp )
 endsnippet
 
-snippet cts "Get( CurrentTimestamp )"
-Get( CurrentTimestamp )
-endsnippet
-
-snippet ctum "Get( CurrentTimeUTCMilliseconds )"
+snippet getctutcm "Get( CurrentTimeUTCMilliseconds )"
 Get( CurrentTimeUTCMilliseconds )
 endsnippet
 
+# TODO: Resolve conflict with ScriptNames
 snippet getcmsn "Get( CustomMenuSetName )"
 Get( CustomMenuSetName )
 endsnippet
@@ -1218,6 +1233,7 @@ snippet getfmp "Get( FileMakerPath )"
 Get( FileMakerPath )
 endsnippet
 
+# TODO: Resolve conflict with FieldNames and GetFieldName
 snippet getfn "Get( FileName )"
 Get( FileName )
 endsnippet
@@ -1230,6 +1246,7 @@ snippet getfs "Get( FileSize )"
 Get( FileSize )
 endsnippet
 
+# TODO: Resolve conflict with FieldComment
 snippet getfc "Get( FoundCount )"
 Get( FoundCount )
 endsnippet
@@ -1250,7 +1267,7 @@ snippet gethipa "Get( HostIPAddress )"
 Get( HostIPAddress )
 endsnippet
 
-snippet getnh "Get( HostName )"
+snippet gethn "Get( HostName )"
 Get( HostName )
 endsnippet
 
@@ -1266,7 +1283,7 @@ snippet getlmc "Get( LastMessageChoice )"
 Get( LastMessageChoice )
 endsnippet
 
-snippet getlocbee "Get( LastODBCError )"
+snippet getlodbce "Get( LastODBCError )"
 Get( LastODBCError )
 endsnippet
 
@@ -1286,6 +1303,7 @@ snippet getlnu "Get( LayoutNumber )"
 Get( LayoutNumber )
 endsnippet
 
+# TODO: Resolve conflict with TableNames
 snippet getltn "Get( LayoutTableName )"
 Get( LayoutTableName )
 endsnippet
@@ -1303,13 +1321,14 @@ Get( MultiUserState )
 endsnippet
 
 snippet getnp "Get( Network Protocol )"
-Get( Network Protocol )
+Get( NetworkProtocol )
 endsnippet
 
 snippet getnt "Get( NetworkType )"
 Get( NetworkType )
 endsnippet
 
+# TODO: Resolve conflict with Get( PrinterName )
 snippet getpn "Get( PageNumber )"
 Get( PageNumber )
 endsnippet
@@ -1350,6 +1369,7 @@ snippet getroc "Get( RecordOpenCount )"
 Get( RecordOpenCount )
 endsnippet
 
+# TODO: Resolve conflict with Get( RequestOmitState )
 snippet getros "Get( RecordOpenState )"
 Get( RecordOpenState )
 endsnippet
@@ -1358,10 +1378,12 @@ snippet getrqc "Get( RequestCount )"
 Get( RequestCount )
 endsnippet
 
+# TODO: Resolve conflict with Get( RecordOpenState )
 snippet getros "Get( RequestOmitState )"
 Get( RequestOmitState )
 endsnippet
 
+# TODO: Resolve conflict with Get( SystemDrive )
 snippet getsd "Get( ScreenDepth )"
 Get( ScreenDepth )
 endsnippet
@@ -1374,14 +1396,17 @@ snippet getsw "Get( ScreenWidth )"
 Get( ScreenWidth )
 endsnippet
 
+# TODO: Resolve conflict with Get( StatusAreaState )
 snippet getsas "Get( ScriptAnimationState )"
 Get( ScriptAnimationState )
 endsnippet
 
+# TODO: Resolve conflict with ScriptNames
 snippet getsn "Get( ScriptName )"
 Get( ScriptName )
 endsnippet
 
+# TODO: Resolve conflict with Get( SystemPlatform )
 snippet getsp "Get( ScriptParameter )"
 Get( ScriptParameter )
 endsnippet
@@ -1394,10 +1419,12 @@ snippet getss "Get( SortState )"
 Get( SortState )
 endsnippet
 
+# TODO: Resolve conflict with Get( ScriptAnimationState )
 snippet getsas "Get( StatusAreaState )"
 Get( StatusAreaState )
 endsnippet
 
+# TODO: Resolve conflict with Get( ScreenDepth )
 snippet getsd "Get( SystemDrive )"
 Get( SystemDrive )
 endsnippet
@@ -1414,8 +1441,9 @@ snippet getsnica "Get( SystemNICAddress )"
 Get( SystemNICAddress )
 endsnippet
 
+# TODO: Resolve conflict with Get( ScriptParameter )
 snippet getsp "Get( SystenPlatform )"
-Get( SystenPlatform )
+Get( SystemPlatform )
 endsnippet
 
 snippet getsv "Get( SystemVersion )"
@@ -1462,8 +1490,8 @@ snippet getun "Get( UserName )"
 Get( UserName )
 endsnippet
 
-snippet getusfs "Get( UseSystemFormatState )"
-Get( UseSystemFormatState )
+snippet getusfs "Get( UseSystemFormatsState )"
+Get( UseSystemFormatsState )
 endsnippet
 
 snippet "getuu(id)?" "Get( UUID )" r
@@ -1498,6 +1526,7 @@ snippet getwm "Get( WindowMode )"
 Get( WindowMode )
 endsnippet
 
+# TODO: Resolve conflict with WindowNames
 snippet getwn "Get( WindowName )"
 Get( WindowName )
 endsnippet
