@@ -87,7 +87,8 @@ syntax keyword fm_built_ins Log Mod Random Round SetPrecision Sign Sqrt Truncate
 
 " Date functions
 syntax keyword fm_built_ins Date Day DayName DayNameJ DayOfWeek DayOfYear Month
-syntax keyword fm_built_ins MonthName MonthNameJ WeekOfYear Year YearName
+syntax keyword fm_built_ins MonthName MonthNameJ WeekOfYear WeekOfYearFiscal Year
+syntax keyword fm_built_ins YearName
 
 " Time functions
 syntax keyword fm_built_ins Hour Minute Seconds Time

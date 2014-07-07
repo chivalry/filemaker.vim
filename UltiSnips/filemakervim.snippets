@@ -99,7 +99,8 @@ endsnippet
 # Text functions
 
 snippet "char?" "Char" r
-Char`!p snip.rv = func_open_paren()`${0:number}`!p snip.rv = func_close_paren()`
+Char`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
@@ -110,7 +111,8 @@ Code`!p snip.rv = open_paren()`${0:text}`!p
 snip.rv = close_paren()`
 endsnippet
 snippet cod "Code"
-Code( ${0:text} )
+Code`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "exa(ct)?" "Exact" r
@@ -135,35 +137,43 @@ FilterValues(
 endsnippet
 
 snippet "getascss|getc" "GetAsCSS" r
-GetAsCSS( ${0:text} )
+GetAsCSS`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getasdate|getd" "GetAsDate" r
-GetAsDate( ${0:text} )
+GetAsDate`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getasnumber|getn" "GetAsNumber" r
-GetAsNumber( ${0:text} )
+GetAsNumber`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getassvg|gets" "GetAsSVG" r
-GetAsSVG( ${0:text} )
+GetAsSVG`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getastext|gett" "GetAsText" r
-GetAsText( ${0:data} )
+GetAsText`!p snip.rv = open_paren()`${0:data}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getastime|geti" "GetAsTime" r
-GetAsTime( ${0:text} )
+GetAsTime`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getastimestamp|getm" "GetAsTimestamp" r
-GetAsTimestamp( ${0:text} )
+GetAsTimestamp`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getasurlencoded|getu" "GetAsURLEncoded" r
-GetAsURLEncoded( ${0:text} )
+GetAsURLEncoded`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getvalue|getv" "GetValues" r
@@ -174,23 +184,28 @@ GetValue(
 endsnippet
 
 snippet "hir(agana)?" "Hiragana" r
-Hiragana( ${0:text} )
+Hiragana`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "kanah(ankaku)?" "Kanahankaku" r
-KanaHankaku( ${0:text} )
+KanaHankaku`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "kanaz(enkaku)?" "Kanazenkaku" r
-KanaZenkaku( ${0:text} )
+KanaZenkaku`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "kanj(inumeral)?" "KanjiNumeral" r
-KanjiNumeral( ${0:text} )
+KanjiNumeral`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "kata(kana)?" "Katakana" r
-Katakana( ${0:text} )
+Katakana`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "left?" "Left" r
@@ -215,11 +230,13 @@ LeftWords(
 endsnippet
 
 snippet "len(gth)?" "Length" r
-Length( ${0:field} )
+Length`!p snip.rv = open_paren()`${0:field}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "low(er)?" "Lower" r
-Lower( ${0:text} )
+Lower`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "mid(dle)?" "Middle" r
@@ -272,11 +289,13 @@ Position(
 endsnippet
 
 snippet "pro(per)?" "Proper" r
-Proper( ${0:text} )
+Proper`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "quo(te)?" "Quote" r
-Quote( ${0:text} )
+Quote`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "repl(ace)?" "Replace" r
@@ -310,11 +329,13 @@ RightWords(
 endsnippet
 
 snippet "romanhankaku|romh" "RomanHankaku" r
-RomanHankaku( ${0:text} )
+RomanHankaku`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "romanzenkaku|romz" "RomanZenkaku" r
-RomanZenkaku( ${0:text} )
+RomanZenkaku`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "serialincrement|seri" "SerialIncrement" r
@@ -333,7 +354,8 @@ Substitute(
 endsnippet
 
 snippet trim "Trim"
-Trim( ${0:text} )
+Trim`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "trima(ll)?" "TrimAll" r
@@ -345,15 +367,18 @@ TrimAll(
 endsnippet
 
 snippet "upp(er)?" "Upper" r
-Upper( ${0:text} )
+Upper`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "valuecount|valc" "ValueCount" r
-ValueCount( ${0:text} )
+ValueCount`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "wordc(ount)?" "WordCount" r
-WordCount( ${0:text} )
+WordCount`!p snip.rv = open_paren()`${0:text}`!p
+snip.rv = close_paren()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -437,11 +462,13 @@ endsnippet
 # Number functions
 
 snippet abs "Abs"
-Abs( ${0:number} )
+Abs`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "ceil(ing)?" "Ceiling" r
-Ceiling( ${0:number} )
+Ceiling`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "comb(ination)?" "Combination" r
@@ -459,7 +486,8 @@ Div(
 endsnippet
 
 snippet exp "Exp"
-Exp( ${0:number} )
+Exp`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "fact(orial)?" "Factorial" r
@@ -470,23 +498,28 @@ Factorial(
 endsnippet
 
 snippet "flo(or)?" "Floor" r
-Floor( ${0:number} )
+Floor`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet int "Int"
-Int( ${0:number} )
+Int`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet lg "Lg"
-Lg( ${0:number} )
+Lg`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet ln "Ln"
-Ln( ${0:number} )
+Ln`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet log "Log"
-Log( ${0:number} )
+Log`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet mod "Mod"
@@ -515,11 +548,13 @@ SetPrecision(
 endsnippet
 
 snippet sign "Sign"
-Sign( ${0:number} )
+Sign`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet sqrt "Sqrt"
-Sqrt( ${0:number} )
+Sqrt`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "trunc(ate)?" "Truncate" r
@@ -541,39 +576,48 @@ Date(
 endsnippet
 
 snippet day "Day"
-Day( ${0:date} )
+Day`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "dayn(ame)?" "DayName" r
-DayName( ${0:date} )
+DayName`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "daynamej|daynj" "DayNameJ" r
-DayNameJ( ${0:date} )
+DayNameJ`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "dayofweek|dow" "DayOfWeek" r
-DayOfWeek( ${0:date} )
+DayOfWeek`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "dayofyear|doy" "DayOfYear" r
-DayOfYear( ${0:date} )
+DayOfYear`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "mon(th)?" "Month" r
-Month( ${0:date} )
+Month`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "monthname|monn" "MonthName" r
-MonthName( ${0:date} )
+MonthName`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "monthnamej|monnj" "MonthNameJ" r
-MonthNameJ( ${0:date} )
+MonthNameJ`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "weekofyear|woy" "WeekOfYear" r
-WeekOfYear( ${0:date} )
+WeekOfYear`!p snip.rv = open_paren()`${0:date}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "weekofyearfiscal|woyf" "WeekOfYearFiscal" r
@@ -601,15 +645,18 @@ endsnippet
 # Time functions
 
 snippet "hour|hr" "Hour" r
-Hour( ${0:time} )
+Hour`!p snip.rv = open_paren()`${0:time}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "minu(te)?" "Minute" r
-Minute( ${0:time} )
+Minute`!p snip.rv = open_paren()`${0:time}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "seconds|secs" "Seconds" r
-Seconds( ${0:time} )
+Seconds`!p snip.rv = open_paren()`${0:time}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet time
@@ -682,7 +729,8 @@ GetContainerAttribute(
 endsnippet
 
 snippet "geth(eight)?" "GetHeight" r
-GetHeight( ${0:field} )
+GetHeight`!p snip.rv = open_paren()`${0:field}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getth(umbnail)?" "GetThumbnail" r
@@ -694,18 +742,21 @@ GetThumbnail(
 endsnippet
 
 snippet "getw(idth)?" "GetWidth" r
-GetWidth( ${0:field} )
+GetWidth`!p snip.rv = open_paren()`${0:field}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "ver(ifycontainer)?" "VerifyContainer" r
-VerifyContainer( ${0:field} )
+VerifyContainer`!p snip.rv = open_paren()`${0:field}`!p
+snip.rv = close_paren()`
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Aggregate functions
 
 snippet "average|avg" "Average" r
-Average( ${1:field}${2:; ${3:field...}} )
+Average`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
@@ -726,31 +777,38 @@ List(
 endsnippet
 
 snippet max "Max"
-Max( ${1:field}${2:; ${3:field...}} )
+Max`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet min "Min"
-Min( ${1:field}${2:; ${3:field...}} )
+Min`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "std(ev)?" "StDev" r
-StDev( ${1:field}${2:; ${3:field...}} )
+StDev`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "stdevp|stdp" "StDevP" r
-StDevP( ${1:field}${2:; ${3:field...}} )
+StDevP`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet sum "Sum"
-Sum( ${1:field}${2:; ${3:field...}} )
+Sum`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "var(iance)?" "Variance" r
-Variance( ${1:field}${2:; ${3:field...}} )
+Variance`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "variancep|varp" "VarianceP" r
-VarianceP( ${1:field}${2:; ${3:field...}} )
+VarianceP`!p snip.rv = open_paren()`${1:field}${2:; ${3:field...}}`!p
+snip.rv = close_paren()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -778,7 +836,8 @@ GetRepetition(
 endsnippet
 
 snippet last "Last"
-Last( ${0:field} )
+Last`!p snip.rv = open_paren()`${0:field}`!p
+snip.rv = close_paren()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -819,35 +878,43 @@ endsnippet
 # Trigonometric functions
 
 snippet acos "Acos"
-Acos( ${0:number} )
+Acos`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet asin "Asin"
-Asin( ${0:number} )
+Asin`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet atan "Atan"
-Atan( ${0:number} )
+Atan`!p snip.rv = open_paren()`${0:number}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet cos "Cos"
-Cos( ${0:angleInRadians} )
+Cos`!p snip.rv = open_paren()`${0:angleInRadians}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "deg(rees)?" "Degrees" r
-Degrees( ${0:angleInRadians} )
+Degrees`!p snip.rv = open_paren()`${0:angleInRadians}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "rad(ians)?" "Radians" r
-Radians( ${0:angleInDegrees} )
+Radians`!p snip.rv = open_paren()`${0:angleInDegrees}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet sin "Sin"
-Sin( ${0:angleInRadians} )
+Sin`!p snip.rv = open_paren()`${0:angleInRadians}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet tan "Tan"
-Tan( ${0:angleInRadians} )
+Tan`!p snip.rv = open_paren()`${0:angleInRadians}`!p
+snip.rv = close_paren()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -879,7 +946,8 @@ Evaluate(
 endsnippet
 
 snippet "evaluationerror|evalerr" "EvaluationError" r
-EvaluationError( ${0:expression} )
+EvaluationError`!p snip.rv = open_paren()`${0:expression}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "(execute)?sql" "ExecuteSQL" r
@@ -892,15 +960,18 @@ ExecuteSQL(
 endsnippet
 
 snippet "getasboolean|getb" "GetAsBoolean" r
-GetAsBoolean( ${0:data} )
+GetAsBoolean`!p snip.rv = open_paren()`${0:data}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getf(ield)?" "GetField" r
-GetField( ${0:fieldName} )
+GetField`!p snip.rv = open_paren()`${0:fieldName}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getfieldname|getfn" "GetFieldName" r
-GetFieldName( ${0:fieldName} )
+GetFieldName`!p snip.rv = open_paren()`${0:fieldName}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getlayoutobjectattribute|getloa" "GetLayoutObjectAttribute" r
@@ -931,15 +1002,18 @@ If(
 endsnippet
 
 snippet "ise(mpty)?" "IsEmpty" r
-IsEmpty( ${0:field} )
+IsEmpty`!p snip.rv = open_paren()`${0:field}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "isv(alid)?" "IsValid" r
-IsValid( ${0:field} )
+IsValid`!p snip.rv = open_paren()`${0:field}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "isvalidexpression|isve" "IsValidExpression" r
-IsValidExpression( ${0:expression} )
+IsValidExpression`!p snip.rv = open_paren()`${0:expression}`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet let "Let"
@@ -1056,20 +1130,24 @@ endsnippet
 #       with other triggers that end in the same characters.
 # snippet "layoutids|lid" "LayoutIDs" r
 snippet layoutids" "LayoutIDs"
-LayoutIDs( ${0:Get( FileName )} )
+LayoutIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 snippet lid "LayoutIDs"
-LayoutIDs( ${0:Get( FileName )} )
+LayoutIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 # snippet "layoutnames|lon" "LayoutNames" r
 snippet layoutnames "LayoutNames"
-LayoutNames( ${0:Get( FileName )} )
+LayoutNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 snippet ln "LayoutNames"
-LayoutNames( ${0:Get( FileName )} )
+LayoutNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 snippet "layoutobjectnames|loon" "LayoutObjectNames" r
@@ -1096,35 +1174,42 @@ RelationInfo(
 endsnippet
 
 snippet "scriptids|sid" "ScriptIDs" r
-ScriptIDs( ${0:Get( FileName )} )
+ScriptIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 # snippet "scriptnames|sn" "ScriptNames" r
 snippet scriptnames "ScriptNames"
-ScriptNames( ${0:Get( FileName )} )
+ScriptNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 snippet sn "ScriptNames"
-ScriptNames( ${0:Get( FileName )} )
+ScriptNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 snippet "tableids|tid" "TableIDs" r
-TableIDs( ${0:Get( FileName )} )
+TableIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 # snippet "tablenames|tn" "TableNames" r
 snippet tablenames "TableNames"
-TableNames( ${0:Get( FileName )} )
+TableNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 snippet tn "TableNames"
-TableNames( ${0:Get( FileName )} )
+TableNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 snippet "valuelistids|vid" "ValidListIDs" r
-ValueListIDs( ${0:Get( FileName )} )
+ValueListIDs`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 snippet "valuelistitems|vli" "ValueListItems" r
@@ -1135,17 +1220,20 @@ ValueListItems(
 endsnippet
 
 snippet "valuelistnames|vln" "ValueListNames" r
-ValueListNames( ${0:Get( FileName )} )
+ValueListNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 # snippet "windownames|wn" "WindowNames" r
 snippet windownames "WindowNames"
-WindowNames( ${0:Get( FileName )} )
+WindowNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 snippet wn "WindowNames"
-WindowNames( ${0:Get( FileName )} )
+WindowNames`!p snip.rv = open_paren()`${0:Get( FileName  `!p
+snip.rv = close_paren()`)
 endsnippet
 
 snippet "loc(ation)?" "Location" r
@@ -1210,265 +1298,330 @@ Get( $1`!p snip.rv = complete( t[1], ['AccountExtendedPrivileges', 'AccountName'
 endsnippet
 
 snippet getaep "Get( AccountExtendedPrivileges )"
-Get( AccountExtendedPrivileges )
+Get`!p snip.rv = open_paren()`AccountExtendedPrivileges`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getan "Get( AccountName )"
-Get( AccountName )
+Get`!p snip.rv = open_paren()`AccountName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getapsn "Get( AccountPrivilegeSetName )"
-Get( AccountPrivilegeSetName )
+Get`!p snip.rv = open_paren()`AccountPrivilegeSetName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getafc "Get( ActiveFieldContents )"
-Get( ActiveFieldContents )
+Get`!p snip.rv = open_paren()`ActiveFieldContents`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getafn "Get( ActiveFieldName )"
-Get( ActiveFieldName )
+Get`!p snip.rv = open_paren()`ActiveFieldName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getaftn "Get( ActiveFieldTableName )"
-Get( ActiveFieldTableName )
+Get`!p snip.rv = open_paren()`ActiveFieldTableName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getalon "Get( ActiveLayoutObjectName )"
-Get( ActiveLayoutObjectName )
+Get`!p snip.rv = open_paren()`ActiveLayoutObjectName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getamk "Get( ActiveModifierKeys )"
-Get( ActiveModifierKeys )
+Get`!p snip.rv = open_paren()`ActiveModifierKeys`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getaprn "Get( ActivePortalRowNumber )"
-Get( ActivePortalRowNumber )
+Get`!p snip.rv = open_paren()`ActivePortalRowNumber`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getarn "Get( ActiveRepetitionNumber )"
-Get( ActiveRepetitionNumber )
+Get`!p snip.rv = open_paren()`ActiveRepetitionNumber`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getass "Get( ActiveSelectionSize )"
-Get( ActiveSelectionSize )
+Get`!p snip.rv = open_paren()`ActiveSelectionSize`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getasst "Get( ActiveSelectionStart )"
-Get( ActiveSelectionStart )
+Get`!p snip.rv = open_paren()`ActiveSelectionStart`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getaas "Get( AllowAbortState )"
-Get( AllowAbortState )
+Get`!p snip.rv = open_paren()`AllowAbortState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getafbs "Get( AllowFormattingBarState )"
-Get( AllowFormattingBarState )
+Get`!p snip.rv = open_paren()`AllowFormattingBarState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getal "Get( ApplicationLanguage )"
-Get( ApplicationLanguage )
+Get`!p snip.rv = open_paren()`ApplicationLanguage`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getav "Get( ApplicationVersion )"
-Get( ApplicationVersion )
+Get`!p snip.rv = open_paren()`ApplicationVersion`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getcrn "Get( CalculationRepetitionNumber )"
-Get( CalculationRepetitionNumber )
+Get`!p snip.rv = open_paren()`CalculationRepetitionNumber`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getca "Get( ConnectionAttributes )"
-Get( ConnectionAttributes )
+Get`!p snip.rv = open_paren()`ConnectionAttributes`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getcs "Get( ConnectionState )"
-Get( ConnectionState )
+Get`!p snip.rv = open_paren()`ConnectionState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "(get)?cd" "Get( CurrentDate )" r
-Get( CurrentDate )
+Get`!p snip.rv = open_paren()`CurrentDate`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getcep "Get( CurrentExtendedPrivileges )"
-Get( CurrentExtendedPrivileges )
+Get`!p snip.rv = open_paren()`CurrentExtendedPrivileges`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getcht "Get( CurrentHostTimestamp )"
-Get( CurrentHostTimestamp )
+Get`!p snip.rv = open_paren()`CurrentHostTimestamp`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getcpsn "Get( CurrentPrivilegeSetName )"
-Get( CurrentPrivilegeSetName )
+Get`!p snip.rv = open_paren()`CurrentPrivilegeSetName`!p
+snip.rv = close_paren()`
 endsnippet
 
 # TODO: Find a way to get a single version of this to work without conflicting
 #       with other triggers that end in the same characters.
 #snippet "getct|ct" "Get( CurrentTime )" rw
 snippet getct "Get( CurrentTime )"
-Get( CurrentTime )
+Get`!p snip.rv = open_paren()`CurrentTime`!p
+snip.rv = close_paren()`
 endsnippet
 snippet ct "Get( CurrentTime )"
-Get( CurrentTime )
+Get`!p snip.rv = open_paren()`CurrentTime`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "(get)?cts" "Get( CurrentTimestamp )" r
-Get( CurrentTimestamp )
+Get`!p snip.rv = open_paren()`CurrentTimestamp`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getctutcm "Get( CurrentTimeUTCMilliseconds )"
-Get( CurrentTimeUTCMilliseconds )
+Get`!p snip.rv = open_paren()`CurrentTimeUTCMilliseconds`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getcmsn "Get( CustomMenuSetName )"
-Get( CustomMenuSetName )
+Get`!p snip.rv = open_paren()`CustomMenuSetName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getdp "Get( DesktopPath )"
-Get( DesktopPath )
+Get`!p snip.rv = open_paren()`DesktopPath`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getdv "Get( Device )"
-Get( Device )
+Get`!p snip.rv = open_paren()`Device`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getdocp "Get( DocumentsPath )"
-Get( DocumentsPath )
+Get`!p snip.rv = open_paren()`DocumentsPath`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getdpl "Get( DocumentsPathListing )"
-Get( DocumentsPathListing )
+Get`!p snip.rv = open_paren()`DocumentsPathListing`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getes "Get( EncryptionState )"
-Get( EncryptionState )
+Get`!p snip.rv = open_paren()`EncryptionState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet geters "Get( ErrorCaptureState )"
-Get( ErrorCaptureState )
+Get`!p snip.rv = open_paren()`ErrorCaptureState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getfmp "Get( FileMakerPath )"
-Get( FileMakerPath )
+Get`!p snip.rv = open_paren()`FileMakerPath`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getfln "Get( FileName )"
-Get( FileName )
+Get`!p snip.rv = open_paren()`FileName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getfp "Get( FilePath )"
-Get( FilePath )
+Get`!p snip.rv = open_paren()`FilePath`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getfs "Get( FileSize )"
-Get( FileSize )
+Get`!p snip.rv = open_paren()`FileSize`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getfc "Get( FoundCount )"
-Get( FoundCount )
+Get`!p snip.rv = open_paren()`FoundCount`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gethcc "Get( HighContrastColor )"
-Get( HighContrastColor )
+Get`!p snip.rv = open_paren()`HighContrastColor`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gethcs "Get( HighContrastState )"
-Get( HighContrastState )
+Get`!p snip.rv = open_paren()`HighContrastState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gethav "Get( HostApplicationVersion )"
-Get( HostApplicationVersion )
+Get`!p snip.rv = open_paren()`HostApplicationVersion`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gethipa "Get( HostIPAddress )"
-Get( HostIPAddress )
+Get`!p snip.rv = open_paren()`HostIPAddress`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gethn "Get( HostName )"
-Get( HostName )
+Get`!p snip.rv = open_paren()`HostName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getifmp "Get( InstalledFMPlugins )"
-Get( InstalledFMPlugins )
+Get`!p snip.rv = open_paren()`InstalledFMPlugins`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getle "Get( LastError )"
-Get( LastError )
+Get`!p snip.rv = open_paren()`LastError`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getlmc "Get( LastMessageChoice )"
-Get( LastMessageChoice )
+Get`!p snip.rv = open_paren()`LastMessageChoice`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getlodbce "Get( LastODBCError )"
-Get( LastODBCError )
+Get`!p snip.rv = open_paren()`LastODBCError`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getla "Get( LayoutAccess )"
-Get( LayoutAccess )
+Get`!p snip.rv = open_paren()`LayoutAccess`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getlc "Get( LayoutCount )"
-Get( LayoutCount )
+Get`!p snip.rv = open_paren()`LayoutCount`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getln "Get( LayoutName )"
-Get( LayoutName )
+Get`!p snip.rv = open_paren()`LayoutName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getlnu "Get( LayoutNumber )"
-Get( LayoutNumber )
+Get`!p snip.rv = open_paren()`LayoutNumber`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getltn "Get( LayoutTableName )"
-Get( LayoutTableName )
+Get`!p snip.rv = open_paren()`LayoutTableName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getlvs "Get( LayoutViewState )"
-Get( LayoutViewState )
+Get`!p snip.rv = open_paren()`LayoutViewState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getmf "Get( ModifiedFields )"
-Get( ModifiedFields )
+Get`!p snip.rv = open_paren()`ModifiedFields`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getmus "Get( MultiUserState )"
-Get( MultiUserState )
+Get`!p snip.rv = open_paren()`MultiUserState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getnp "Get( Network Protocol )"
-Get( NetworkProtocol )
+Get`!p snip.rv = open_paren()`NetworkProtocol`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getnt "Get( NetworkType )"
-Get( NetworkType )
+Get`!p snip.rv = open_paren()`NetworkType`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getpn "Get( PageNumber )"
-Get( PageNumber )
+Get`!p snip.rv = open_paren()`PageNumber`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getpid "Get( PersistentID )"
-Get( PersistentID )
+Get`!p snip.rv = open_paren()`PersistentID`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getpp "Get( PreferencesPath )"
-Get( PreferencesPath )
+Get`!p snip.rv = open_paren()`PreferencesPath`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getprn "Get( PrinterName )"
-Get( PrinterName )
+Get`!p snip.rv = open_paren()`PrinterName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getqft "Get( QuickFindText )"
-Get( QuickFindText )
+Get`!p snip.rv = open_paren()`QuickFindText`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getra "Get( RecordAccess )"
-Get( RecordAccess )
+Get`!p snip.rv = open_paren()`RecordAccess`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getrid "Get( RecordID )"
-Get( RecordID )
+Get`!p snip.rv = open_paren()`RecordID`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getrmc "Get( RecordModificationCount )"
@@ -1476,185 +1629,231 @@ Get( RecordModificationCount )
 endsnippet
 
 snippet getrn "Get( RecordNumber )"
-Get( RecordNumber )
+Get`!p snip.rv = open_paren()`RecordNumber`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getroc "Get( RecordOpenCount )"
-Get( RecordOpenCount )
+Get`!p snip.rv = open_paren()`RecordOpenCount`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getros "Get( RecordOpenState )"
-Get( RecordOpenState )
+Get`!p snip.rv = open_paren()`RecordOpenState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getrqc "Get( RequestCount )"
-Get( RequestCount )
+Get`!p snip.rv = open_paren()`RequestCount`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getrqos "Get( RequestOmitState )"
-Get( RequestOmitState )
+Get`!p snip.rv = open_paren()`RequestOmitState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsd "Get( ScreenDepth )"
-Get( ScreenDepth )
+Get`!p snip.rv = open_paren()`ScreenDepth`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsh "Get( ScreenHeight )"
-Get( ScreenHeight )
+Get`!p snip.rv = open_paren()`ScreenHeight`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsw "Get( ScreenWidth )"
-Get( ScreenWidth )
+Get`!p snip.rv = open_paren()`ScreenWidth`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsas "Get( ScriptAnimationState )"
-Get( ScriptAnimationState )
+Get`!p snip.rv = open_paren()`ScriptAnimationState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsn "Get( ScriptName )"
-Get( ScriptName )
+Get`!p snip.rv = open_paren()`ScriptName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsp "Get( ScriptParameter )"
-Get( ScriptParameter )
+Get`!p snip.rv = open_paren()`ScriptParameter`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsr "Get( ScriptResult )"
-Get( ScriptResult )
+Get`!p snip.rv = open_paren()`ScriptResult`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getss "Get( SortState )"
-Get( SortState )
+Get`!p snip.rv = open_paren()`SortState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsars "Get( StatusAreaState )"
-Get( StatusAreaState )
+Get`!p snip.rv = open_paren()`StatusAreaState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsdv "Get( SystemDrive )"
-Get( SystemDrive )
+Get`!p snip.rv = open_paren()`SystemDrive`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsipa "Get( SystemIPAddress )"
-Get( SystemIPAddress )
+Get`!p snip.rv = open_paren()`SystemIPAddress`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsl "Get( SystemLanguage )"
-Get( SystemLanguage )
+Get`!p snip.rv = open_paren()`SystemLanguage`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsnica "Get( SystemNICAddress )"
-Get( SystemNICAddress )
+Get`!p snip.rv = open_paren()`SystemNICAddress`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getspl "Get( SystenPlatform )"
-Get( SystemPlatform )
+Get`!p snip.rv = open_paren()`SystemPlatform`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getsv "Get( SystemVersion )"
-Get( SystemVersion )
+Get`!p snip.rv = open_paren()`SystemVersion`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gettp "Get( TemporaryPath )"
-Get( TemporaryPath )
+Get`!p snip.rv = open_paren()`TemporaryPath`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gettrv "Get( TextRulerVisible )"
-Get( TextRulerVisible )
+Get`!p snip.rv = open_paren()`TextRulerVisible`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gettrc "Get( TotalRecordCount )"
-Get( TotalRecordCount )
+Get`!p snip.rv = open_paren()`TotalRecordCount`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gettcp "Get( TriggerCurrentPanel )"
-Get( TriggerCurrentPanel )
+Get`!p snip.rv = open_paren()`TriggerCurrentPanel`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gettgi "Get( TriggerGestureInfo )"
-Get( TriggerGestureInfo )
+Get`!p snip.rv = open_paren()`TriggerGestureInfo`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gettk "Get( TriggerKeystroke )"
-Get( TriggerKeystroke )
+Get`!p snip.rv = open_paren()`TriggerKeystroke`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet gettmk "Get( TriggerModifierKeys )"
-Get( TriggerModifierKeys )
+Get`!p snip.rv = open_paren()`TriggerModifierKeys`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getttp "Get( TriggerTargetPanel )"
-Get( TriggerTargetPanel )
+Get`!p snip.rv = open_paren()`TriggerTargetPanel`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getuc "Get( UserCount )"
-Get( UserCount )
+Get`!p snip.rv = open_paren()`UserCount`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getun "Get( UserName )"
-Get( UserName )
+Get`!p snip.rv = open_paren()`UserName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getusfs "Get( UseSystemFormatsState )"
-Get( UseSystemFormatsState )
+Get`!p snip.rv = open_paren()`UseSystemFormatsState`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "getuu(id)?" "Get( UUID )" r
-Get( UUID )
+Get`!p snip.rv = open_paren()`UUID`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwch "Get( WindowContentHeight )"
-Get( WindowContentHeight )
+Get`!p snip.rv = open_paren()`WindowContentHeight`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwcw "Get( WindowContentWidth )"
-Get( WindowContentWidth )
+Get`!p snip.rv = open_paren()`WindowContentWidth`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwdh "Get( WindowDesktopHeight )"
-Get( WindowDesktopHeight )
+Get`!p snip.rv = open_paren()`WindowDesktopHeight`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwdw "Get( WindowDesktopWidth )"
-Get( WindowDesktopWidth )
+Get`!p snip.rv = open_paren()`WindowDesktopWidth`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwh "Get( WindowHeight )"
-Get( WindowHeight )
+Get`!p snip.rv = open_paren()`WindowHeight`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwl "Get( WindowLeft )"
-Get( WindowLeft )
+Get`!p snip.rv = open_paren()`WindowLeft`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwm "Get( WindowMode )"
-Get( WindowMode )
+Get`!p snip.rv = open_paren()`WindowMode`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwn "Get( WindowName )"
-Get( WindowName )
+Get`!p snip.rv = open_paren()`WindowName`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwo "Get( WindowOrientation )"
-Get( WindowOrientation )
+Get`!p snip.rv = open_paren()`WindowOrientation`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getws "Get( WindowStyle )"
-Get( WindowStyle )
+Get`!p snip.rv = open_paren()`WindowStyle`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwt "Get( WindowTop )"
-Get( WindowTop )
+Get`!p snip.rv = open_paren()`WindowTop`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwv "Get( WindowVisible )"
-Get( WindowVisible )
+Get`!p snip.rv = open_paren()`WindowVisible`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getww "Get( WindowWidth )"
-Get( WindowWidth )
+Get`!p snip.rv = open_paren()`WindowWidth`!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet getwzl "Get( WindowZoomLevel )"
-Get( WindowZoomLevel )
+Get`!p snip.rv = open_paren()`WindowZoomLevel`!p
+snip.rv = close_paren()`
 endsnippet
