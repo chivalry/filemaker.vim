@@ -3,7 +3,7 @@ FileMaker Vim
 
 Combining [FileMaker](http://www.filemaker.com) with [Vim](http://www.vim.org) may seem like an odd coupling, but I use both every day, and have been getting more and more atuned to the "Vim" way of doing things. Years ago, when I was using [TextMate](https://macromates.com) I wrote a [bundle](https://code.google.com/p/filemaker-textmate-bundle/) for it that made for easier FileMaker calculation editing in TextMate. This project has the same goal for Vim.
 
-The FileMaker Vim plugin provides syntax highlighting for FileMaker calculations to be edited in Vim. It detects the filetype for the extensions `.filemaker`, `.fmcalc` and `.fm` and also recognizes FileMaker calcs that have been opened using the [QuickCursor](https://github.com/jessegrosjean/quickcursor) app on OS X.
+The FileMaker Vim plugin provides syntax highlighting and snippet support for FileMaker calculations to be edited in Vim. It detects the filetype for the extensions `.filemaker`, `.fmcalc` and `.fm` and also recognizes FileMaker calcs that have been opened using the [QuickCursor](https://github.com/jessegrosjean/quickcursor) app on OS X.
 
 Why Vim
 -------
