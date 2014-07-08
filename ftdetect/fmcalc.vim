@@ -5,4 +5,4 @@
 " Maintainer: Charles Ross <chivalry@mac.com>
 " License: The MIT License
 
-autocmd BufNewFile,BufRead filemaker*.txt,*.filemaker,*.fmcalc,*.fm set filetype=filemakervim
+autocmd BufNewFile,BufRead filemaker*.txt,*.filemaker,*.fmcalc,*.fm set filetype=fmcalc

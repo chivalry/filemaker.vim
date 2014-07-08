@@ -206,4 +206,4 @@ syntax region fm_comment start="/\*" end="\*/"
 
 highlight link fm_comment Comment
 
-let b:current_syntax = "filemakercalc"
+let b:current_syntax = "fmcalc"
