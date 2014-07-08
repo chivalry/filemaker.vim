@@ -12,14 +12,14 @@ endif
 " ---------------------------------------------------
 " Local and Global Variables
 
-syntax match fm_variables "\v\$\$?[A-Za-z_.]+"
+syntax match fm_variables "\v\${1,2}[^(\s≤≥<>≠=^/*\-+,)]+"
 
 highlight link fm_variables Identifier
 
 " ---------------------------------------------------
 " Convention Variables
 
-syntax match convention_variables "\v_[A-Za-z_]+"
+syntax match convention_variables "\v[_~][A-Za-z_]+"
 
 highlight link convention_variables Identifier
 
