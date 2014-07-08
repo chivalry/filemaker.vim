@@ -1,3 +1,5 @@
+Official project home is now at [GitHub](https://github.com/chivalry/filemaker.vim).
+
 filemaker.vim
 =============
 
@@ -30,10 +32,10 @@ My point is, QuickCursor is one of the pieces that will make your editing of Fil
 Installation
 ------------
 
-filemaker.vim is compatible with [Vundle.vim](https://github.com/gmarik/Vundle.vim) and [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332). The easiest way to install is with Vundle by adding `Plugin 'git@bitbucket.org:chivalry/filemakervim.git'` to your `.vimrc` and running `:PluginInstall` from within Vim. Alternatively, if you already have Pathogen then clone the `filemakervim` project into `~/.vim/bundle`.
+filemaker.vim is compatible with [Vundle.vim](https://github.com/gmarik/Vundle.vim) and [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332). The easiest way to install is with Vundle by adding `Plugin 'chivalry/filemaker.vim'` to your `.vimrc` and running `:PluginInstall` from within Vim. Alternatively, if you already have Pathogen then clone the `filemakervim` project into `~/.vim/bundle`.
 
     cd ~/.vimrc/bundle
-    git clone git@bitbucket.org:chivalry/filemakervim.git
+    git clone https://github.com/chivalry/filemaker.vim.git
 
 If you don't use Vundle or Pathogen (and really, you should, Vim's native plugin management is non-existant), then you'll need to place the files manually as follows, creating the folders in `.vim` as needed.:
 
