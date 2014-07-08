@@ -1,9 +1,9 @@
-FileMaker Vim
+filemaker.vim
 =============
 
 Combining [FileMaker](http://www.filemaker.com) with [Vim](http://www.vim.org) may seem like an odd coupling, but I use both every day, and have been getting more and more atuned to the "Vim" way of doing things. Years ago, when I was using [TextMate](https://macromates.com) I wrote a [bundle](https://code.google.com/p/filemaker-textmate-bundle/) for it that made for easier FileMaker calculation editing in TextMate. This project has the same goal for Vim.
 
-The FileMaker Vim plugin provides syntax highlighting and snippet support for FileMaker calculations to be edited in Vim. It detects the filetype for the extensions `.filemaker`, `.fmcalc` and `.fm` and also recognizes FileMaker calcs that have been opened using the [QuickCursor](https://github.com/jessegrosjean/quickcursor) app on OS X.
+The filemaker.vim plugin provides syntax highlighting and snippet support for FileMaker calculations to be edited in Vim. It detects the filetype for the extensions `.filemaker`, `.fmcalc` and `.fm` and also recognizes FileMaker calcs that have been opened using the [QuickCursor](https://github.com/jessegrosjean/quickcursor) app on OS X.
 
 Why Vim
 -------
@@ -30,7 +30,7 @@ My point is, QuickCursor is one of the pieces that will make your editing of Fil
 Installation
 ------------
 
-FileMaker Vim is compatible with [Vundle.vim](https://github.com/gmarik/Vundle.vim) and [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332). The easiest way to install is with Vundle by adding `Plugin 'git@bitbucket.org:chivalry/filemakervim.git'` to your `.vimrc` and running `:PluginInstall` from within Vim. Alternatively, if you already have Pathogen then clone the `filemakervim` project into `~/.vim/bundle`.
+filemaker.vim is compatible with [Vundle.vim](https://github.com/gmarik/Vundle.vim) and [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332). The easiest way to install is with Vundle by adding `Plugin 'git@bitbucket.org:chivalry/filemakervim.git'` to your `.vimrc` and running `:PluginInstall` from within Vim. Alternatively, if you already have Pathogen then clone the `filemakervim` project into `~/.vim/bundle`.
 
     cd ~/.vimrc/bundle
     git clone git@bitbucket.org:chivalry/filemakervim.git
@@ -43,12 +43,12 @@ If you don't use Vundle or Pathogen (and really, you should, Vim's native plugin
 
 Perhaps in the future I'll look into an installer script to do this automatically. If you're using FileMaker and Vim on Windows, place the files in the analogous `vimfiles` folder (I think).
 
-To take full advantage of FileMaker Vim you'll need [UltiSnips](https://github.com/sirver/ultisnips) in addition to Vim. With Vundle, the installation of UltiSnips is just as easy as it is for FileMaker Vim.
+To take full advantage of filemaker.vim you'll need [UltiSnips](https://github.com/sirver/ultisnips) in addition to Vim. With Vundle, the installation of UltiSnips is just as easy as it is for filemaker.vim.
 
 Features
 --------
 
-FileMaker Vim has two main features. First of all, it (generally) detects the following patterns for syntax highlighting:
+filemaker.vim has two main features. First of all, it (generally) detects the following patterns for syntax highlighting:
 
 - Local and global variables
 - Calculation variables that begin with an underscore (i.e., `_variable`)
@@ -59,7 +59,7 @@ FileMaker Vim has two main features. First of all, it (generally) detects the fo
 - Block and in-line comments
 - Confirmed compatibility with MacVim and command-line Vim on OS X.
 
-The second major feature is snippet support using UltiSnips. You don't need UltiSnips to use FileMaker Vim, but you'll definately want it. It allows the typing of triggers followed by a trigger key (generally `tab`) and fills in a snippet based on the trigger. Although a textual description won't due the feature justics (see the vidos linked to on the UltiSnips page) as an example, if I type `mid<tab>` I get the following:
+The second major feature is snippet support using UltiSnips. You don't need UltiSnips to use filemaker.vim, but you'll definately want it. It allows the typing of triggers followed by a trigger key (generally `tab`) and fills in a snippet based on the trigger. Although a textual description won't due the feature justics (see the vidos linked to on the UltiSnips page) as an example, if I type `mid<tab>` I get the following:
 
     Middle( 
       text;
@@ -67,9 +67,9 @@ The second major feature is snippet support using UltiSnips. You don't need Ulti
       numberOfCharacters
     )
 
-The word `text` is highlighted for me so that I can enter the first parameter. Pressing `Ctrl-B` then takes me to the `start` parameter, where I can type over the template text for it and press `Ctrl-B` again to get to the third parameter, enter it, press `Ctrl-B` one more time and it takes me outside the function. FileMaker Vim has entries for every FileMaker function there is (OK, `Pi` doesn't have a snippet, but even `External` is included, which it probably doesn't really need anymore), including all of the `Get` functions with mnemonic abbreviations such as `getfc` for `Get( FoundCount )`. But FileMaker Vim is even smarter than that.
+The word `text` is highlighted for me so that I can enter the first parameter. Pressing `Ctrl-B` then takes me to the `start` parameter, where I can type over the template text for it and press `Ctrl-B` again to get to the third parameter, enter it, press `Ctrl-B` one more time and it takes me outside the function. filemaker.vim has entries for every FileMaker function there is (OK, `Pi` doesn't have a snippet, but even `External` is included, which it probably doesn't really need anymore), including all of the `Get` functions with mnemonic abbreviations such as `getfc` for `Get( FoundCount )`. But filemaker.vim is even smarter than that.
 
-UltiSnips includes Python interpolation, which means that we can use Python code to provide even more intelligence to our snippets. A major example in FileMaker Vim is the `Get` function. Typing `get<tab>` inserts the following:
+UltiSnips includes Python interpolation, which means that we can use Python code to provide even more intelligence to our snippets. A major example in filemaker.vim is the `Get` function. Typing `get<tab>` inserts the following:
 
     Get( (AccountExtendedPrivileges|AccountName|AccountPrivilegeSetName|ActiveFieldContents|ActiveFieldName|ActiveFieldTableName|ActiveLayoutObjectName|ActiveModifierKeys|ActivePortalRowNumber|ActiveRepetitionNumber|ActiveSelectionSize|ActiveSelectionStart|AllowAbortState|AllowFormattingBarState|ApplicationLanguage|ApplicationVersion|CalculationRepetitionNumber|ConnectionAttributes|ConnectionState|CurrentDate|CurrentExtendedPrivileges|CurrentHostTimestamp|CurrentPrivilegeSetName|CurrentTime|CurrentTimestamp|CurrentTimeUTCMilliseconds|CustomMenuSetName|DesktopPath|Device|DocumentsPath|DocumentsPathListing|EncryptionState|ErrorCaptureState|FileName|FilePath|FileSize|FoundCount|HighContrastColor|HighContrastState|HostApplicationVersion|HostIPAddress|HostName|InstalledFMPlugins|LastError|LastMessageChoice|LastODBCError|LayoutAccess|LayoutCount|LayoutName|LayoutNumber|LayoutTableName|LayoutViewState|ModifiedFields|MultiUserState|NetworkProtocol|NetworkType|PageNumber|PersistentID|PreferencesPath|PrinterName|QuickFindText|RecordAccess|RecordID|RecordModificationCount|RecordNumber|RecordOpenCount|RecordOpenState|RequestCount|RequestOmitState|ScreenDepth|ScreenHeight|ScreenWidth|ScriptAnimationState|ScriptName|ScriptParameter|ScriptResult|SortState|StatusAreaState|SystemDrive|SystemIPAddress|SystemLanguage|SystemNICAddress|SystemPlatform|SystemVersion|TemporaryPath|TextRulerVisible|TotalRecordCount|TriggerCurrentPanel|TriggerGestureInfo|TriggerKeystroke|TriggerModifierKeys|TriggerTargetPanel|UserCount|UserName|UseSystemFormatsState|UUID|WindowContentHeight|WindowContentWidth|WindowDesktopHeight|WindowDesktopWidth|WindowHeight|WindowLeft|WindowMode|WindowName|WindowOrientation|WindowStyle|WindowVisible|WindowWidth|WindowZoomLevel) )
 
@@ -77,7 +77,7 @@ That's every parameter that `Get` accepts. The snippet places you at the beginni
 
     Get( Accou(ntExtendedPrivileges|ntName|ntPrivilegeSetName) )
 
-Once you wheedle the list down to a single possible parameter, that's all FileMaker Vim provides, and `Ctrl-B`ing takes you outside the function.
+Once you wheedle the list down to a single possible parameter, that's all filemaker.vim provides, and `Ctrl-B`ing takes you outside the function.
 
 All of the functions that take a list of possible parameters, such as `TextFont`, `TextStyleAdd`, and `GetContainerAttribute`, include this feature.
 
@@ -110,13 +110,13 @@ However, the top-level parameters are tabstops for the snippet, so the initial j
 Formatting and Conventions
 --------------------------
 
-FileMaker calculation formatting conventions are notoriously divergent and at this point FileMaker Vim uses mine. This expresses itself in how the snippets are inserted and in what variables and custom functions it recognizes in the syntax highlighting.
+FileMaker calculation formatting conventions are notoriously divergent and at this point filemaker.vim uses mine. This expresses itself in how the snippets are inserted and in what variables and custom functions it recognizes in the syntax highlighting.
 
-Syntax highlighting uses regular expressions to match text to language tokens, and honestly I'm no regex expert. For years, however, I've used the convention of beginning my calculation variables with an underscore and my custom functions with a three or four letter code followed by a dot. Recognizing these is much easier than recognizing anything FileMaker would accept, so for the time being that's what FileMaker Vim does.
+Syntax highlighting uses regular expressions to match text to language tokens, and honestly I'm no regex expert. For years, however, I've used the convention of beginning my calculation variables with an underscore and my custom functions with a three or four letter code followed by a dot. Recognizing these is much easier than recognizing anything FileMaker would accept, so for the time being that's what filemaker.vim does.
 
 If you don't use this convention the rest of the syntax highlighting will still work and prove useful. If someone out there *is* a regex expert and would like to assist on this front, the help would be very welcome.
 
-Function formatting is also a convention affected by FileMaker Vim. I generally format functions with the following rules:
+Function formatting is also a convention affected by filemaker.vim. I generally format functions with the following rules:
 
 - Single parameter functions appear on a single line.
 - Mult-parameter functions generally have each of their parameters on their own line.
@@ -126,7 +126,7 @@ Function formatting is also a convention affected by FileMaker Vim. I generally 
 - There's no space between a parameter and its following semicolon.
 - When multiple parameters appear on a single line there's a space between the semicolon and the next parameter.
 
-FileMaker Vim, by default, follows these conventions strictly. I'll admit that this isn't always the best option for readibility (which is the purpose of my general conventions), but for an early version it was easiest to use the same conventions across the board.
+filemaker.vim, by default, follows these conventions strictly. I'll admit that this isn't always the best option for readibility (which is the purpose of my general conventions), but for an early version it was easiest to use the same conventions across the board.
 
 Some customization is possible, however, and I plan to include more down the road. For the time being you can override two of the defaults by setting global variables within your `.vimrc` file. 
 
@@ -161,7 +161,7 @@ Every included function (except the `Get` function's parameters and `DatabaseNam
 
 The triggers for `Get` functions are generally `get` followed by the letters in the words making up the parameter, such as `getfp` for `Get( FilePath )`, but using that technique does result in some duplicates. When that's the case I tried to use the default on the more common function and added a logical letter to the alternative.
 
-With that in mind, here's the list of every snippet included in FileMaker Vim.
+With that in mind, here's the list of every snippet included in filemaker.vim.
 
 #### Text Functions
 
