@@ -163,6 +163,8 @@ Every included function (except the `Get` function's parameters and `DatabaseNam
 
 The triggers for `Get` functions are generally `get` followed by the letters in the words making up the parameter, such as `getfp` for `Get( FilePath )`, but using that technique does result in some duplicates. When that's the case I tried to use the default on the more common function and added a logical letter to the alternative.
 
+Finally, triggers are *generally* case-insenstive. In other words, `getv`, `Getv`, and `GETV` are all triggers for the `GetValue` function.
+
 With that in mind, here's the list of every snippet included in filemaker.vim.
 
 #### Text Functions
