@@ -9,15 +9,20 @@ if exists("b:current_syntax")
   finish
 endif
 
+" Add the tilde to the keyword characters
+set iskeyword+=126
+
 " ---------------------------------------------------
 " Local and Global Variables
 
-syntax match fm_variables "\v\${1,2}[^(\s≤≥<>≠=^/*\-+,)]+"
+" TODO: Find more accurate regular expression.
+syntax match fm_variables "\v\${1,2}[^ ]+"
 
 " ---------------------------------------------------
 " Convention Variables
 
-syntax match convention_variables "\v<[_~][^(\s≤≥<>≠=^/*\-+,)]+"
+" TODO: Find more accurate regular expression.
+syntax match convention_variables "\v<[_~][^ ]+"
 
 " ---------------------------------------------------
 " Operators
