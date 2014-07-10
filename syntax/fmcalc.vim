@@ -12,16 +12,12 @@ endif
 " ---------------------------------------------------
 " Local and Global Variables
 
-syntax match fm_variables "\v\${1,2}[^(\s≤≥<>≠=^/*\-+,)]+"
-
-highlight link fm_variables Identifier
+syntax match fm_variables "\v\${1,2}[^ ]+"
 
 " ---------------------------------------------------
 " Convention Variables
 
-syntax match convention_variables "\v<[_~][A-Za-z_]+"
-
-highlight link convention_variables Identifier
+syntax match convention_variables "\v[_~][^ ]+"
 
 " ---------------------------------------------------
 " Operators
@@ -43,8 +39,6 @@ syntax match fm_operator "\v≠"
 syntax match fm_operator "\v\^"
 syntax keyword fm_operator and or not xor
 
-highlight link fm_operator Operator
-
 " ---------------------------------------------------
 " Literals
 
@@ -58,9 +52,6 @@ syntax match fm_literal "[-+]\d\+" " contained display
 " Floating point number with decimal.
 syntax match fm_literal "\d\+\.\d*" " contained display
 syntax match fm_literal "[-+]\d\+\.\d*" " contained display
-
-highlight link fm_string String
-highlight link fm_literal Constant
 
 " ---------------------------------------------------
 " Built-in FileMaker functions
@@ -139,8 +130,6 @@ syntax keyword fm_built_ins Location LocationValues
 " External functions
 syntax keyword fm_built_ins External
 
-highlight link fm_built_ins Function
-
 " Get function constants
 syntax keyword fm_constants AccountExtendedPrivileges AccountName
 syntax keyword fm_constants AccountPrivilegeSetName ActiveFieldContents
@@ -189,14 +178,10 @@ syntax keyword fm_constants WordUnderline DoubleUnderline AllStyles
 " LookupNext function constants
 syntax keyword fm_constants Lower Higher
 
-highlight link fm_constants Structure
-
 " ---------------------------------------------------
 " Conventional Custom Functions
 
 syntax match fm_convention_custom_functions "[a-z]\+\.[A-Za-z]\+"
-
-highlight link fm_convention_custom_functions Function
 
 " ---------------------------------------------------
 " Comments
@@ -204,6 +189,14 @@ highlight link fm_convention_custom_functions Function
 syntax match fm_comment "//.*$"
 syntax region fm_comment start="/\*" end="\*/"
 
+highlight link fm_variables Identifier
+highlight link convention_variables Special
+highlight link fm_operator Operator
+highlight link fm_string String
+highlight link fm_literal Constant
+highlight link fm_built_ins Function
+highlight link fm_constants Structure
+highlight link fm_convention_custom_functions Function
 highlight link fm_comment Comment
 
 let b:current_syntax = "fmcalc"
