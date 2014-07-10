@@ -152,7 +152,6 @@ This is version 1, and it does most of what I set out to do to make it useful, b
 - Integration with other Vim plugins, such as [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 - Optional inclusion of popular FileMaker plugin external functions
 - Optional inclusion of a standard library of custom function snippets
-- Ability to use snippets with case-insensitivity
 - Are FileMaker functions language-dependent? If so, multiple language support
 - Syntax recognition for languages commonly embedded within FileMaker strings (SQL, Groovy, PHP, JavaScript, AppleScript)
 
