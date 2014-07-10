@@ -5,8 +5,3 @@
 " Maintainer: Charles Ross <chivalry@mac.com>
 " License: The MIT License
 
-" FileMaker calcs should use hard indents
-setlocal noexpandtab
-setlocal autoindent
-setlocal tabstop=4
-setlocal shiftwidth=4

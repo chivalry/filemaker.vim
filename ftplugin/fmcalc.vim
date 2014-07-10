@@ -11,3 +11,7 @@
 
 " Retab to desired tab settings
 :silent! %retab!
+
+" FileMaker calcs should use hard indents
+setlocal noexpandtab
+setlocal autoindent
