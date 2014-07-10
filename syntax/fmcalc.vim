@@ -12,12 +12,12 @@ endif
 " ---------------------------------------------------
 " Local and Global Variables
 
-syntax match fm_variables "\v\${1,2}[^ ]+"
+syntax match fm_variables "\v\${1,2}[^(\s≤≥<>≠=^/*\-+,)]+"
 
 " ---------------------------------------------------
 " Convention Variables
 
-syntax match convention_variables "\v<[_~][^ ]+"
+syntax match convention_variables "\v<[_~][^(\s≤≥<>≠=^/*\-+,)]+"
 
 " ---------------------------------------------------
 " Operators
