@@ -15,13 +15,15 @@ set iskeyword+=126
 " ---------------------------------------------------
 " Local and Global Variables
 
-" TODO: Find more accurate regular expression.
+" TODO: Find more accurate regular expression
+" TODO: Find a way to abstract repeated sub regexes
 syntax match fm_variables "\v\${1,2}[^ ]+"
 
 " ---------------------------------------------------
 " Convention Variables
 
 " TODO: Find more accurate regular expression.
+" TODO: Find a way to abstract repeated sub regexes
 syntax match convention_variables "\v<[_~][^ ]+"
 
 " ---------------------------------------------------
