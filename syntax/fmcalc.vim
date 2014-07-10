@@ -17,7 +17,7 @@ syntax match fm_variables "\v\${1,2}[^ ]+"
 " ---------------------------------------------------
 " Convention Variables
 
-syntax match convention_variables "\v[_~][^ ]+"
+syntax match convention_variables "\v<[_~][^ ]+"
 
 " ---------------------------------------------------
 " Operators
@@ -189,8 +189,11 @@ syntax match fm_convention_custom_functions "[a-z]\+\.[A-Za-z]\+"
 syntax match fm_comment "//.*$"
 syntax region fm_comment start="/\*" end="\*/"
 
+" ---------------------------------------------------
+" Links
+
 highlight link fm_variables Identifier
-highlight link convention_variables Special
+highlight link convention_variables Identifier
 highlight link fm_operator Operator
 highlight link fm_string String
 highlight link fm_literal Constant
