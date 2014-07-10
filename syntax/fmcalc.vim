@@ -200,7 +200,7 @@ syntax region fm_comment start="/\*" end="\*/"
 " Links
 
 highlight link fm_variables Identifier
-highlight link convention_variables Identifier
+highlight link convention_variables Special
 highlight link fm_operator Operator
 highlight link fm_string String
 highlight link fm_literal Constant
