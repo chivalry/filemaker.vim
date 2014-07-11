@@ -26,14 +26,28 @@ endglobal
 
 # --------------------------------------
 global !p
+ADD_SPACE_AFTER_FUNCTION		= 'g:FMVAddSpaceAfterFunction'
+PAD_SPACES_WITHIN_PARENS		= 'g:FMVPadSpacesWitinParens'
+SEPARATE_PARAMS_WITH_SPACE	= 'g:FMVSeparateParamsWithSpace'
+FILL_IN_GET_FILENAME				= 'g:FMVFillInGetFileName'
+endglobal
+
+# --------------------------------------
+global !p
 def add_space():
-	return ' ' if snip.opt( 'g:FMVAddSpaceAfterFunction', False ) else ''
+	if snip.opt( ADD_SPACE_AFTER_FUNCTION, False ):
+		return ' '
+	else:
+		return ''
 endglobal
 
 # --------------------------------------
 global !p
 def pad_spaces():
-	return ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True ) else ''
+	if snip.opt( PAD_SPACES_WITHIN_PARENS, True ):
+		return ' '
+	else:
+		return ''
 endglobal
 
 # --------------------------------------
@@ -46,6 +60,13 @@ endglobal
 global !p
 def close_paren():
 	return pad_spaces() + ')'
+endglobal
+
+# --------------------------------------
+global !p
+def first_separator():
+	space = ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True ) else ''
+	return '(' + (space if snip.opt( 'g:FMVSeparateParmsWithSpace', True ) else '\n' )
 endglobal
 
 # --------------------------------------
@@ -63,18 +84,11 @@ endglobal
 
 # --------------------------------------
 global !p
-def first_separator():
-	space = ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True ) else ''
-	return '(' + (space if snip.opt( 'g:FMVSeparateParmsWithSpace', True ) else '\n' )
-endglobal
-
-# --------------------------------------
-global !p
 def get_filename():
-	if snip.opt( 'g:FMVFillInGetFileName', True ):
+	if snip.opt( FILL_IN_GET_FILENAME, True ):
 		open_paren = add_space() + '(' + pad_spaces()
 		close_paren = pad_spaces() + ')'
-		return 'Get' + open_paren + 'fileName' + close_paren
+		return 'Get' + open_paren + 'FileName' + close_paren
 	else:
 		return 'fileName'
 endglobal
@@ -1040,7 +1054,7 @@ endsnippet
 
 snippet "(?i)\b(fieldbounds|fb)" "FieldBounds" r
 FieldBounds`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:layoutName};
 	${3:fieldName}
 )
@@ -1048,28 +1062,28 @@ endsnippet
 
 snippet "(?i)\b(fieldcomment|fc)" "FieldComment" r
 FieldComment`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:fieldname}
 )
 endsnippet
 
 snippet "(?i)\b(fieldids|fid)" "FieldIDs" r
 FieldIDs`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:layoutName}
 )
 endsnippet
 
 snippet "(?i)\b(fieldnames|fn)" "FieldNames" r
 FieldNames`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:layoutName}
 )
 endsnippet
 
 snippet "(?i)\b(fieldrepetitions|frep)" "FieldRepetitions" r
 FieldRepetitions`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:layoutName};
 	${3:fieldName}
 )
@@ -1077,7 +1091,7 @@ endsnippet
 
 snippet "(?i)\b(fieldstyle|fst)" "FieldStyle" r
 FieldStyle`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:layoutName};
 	${3:fieldName}
 )
@@ -1085,73 +1099,73 @@ endsnippet
 
 snippet "(?i)\b(fieldtype|fty)" "FieldType" r
 FieldType`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:fieldName}
 )
 endsnippet
 
 snippet "(?i)\b(getnextserialvalue|gnsv)" "GetNextSerialValue" r
 GetNextSerialValue`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:fieldName}
 )
 endsnippet
 
 snippet "(?i)\b(layoutids|lid)" "LayoutIDs" r
-LayoutIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
+LayoutIDs`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(layoutnames|lon)" "LayoutNames" r
-LayoutNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
+LayoutNames`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(layoutobjectnames|loon)" "LayoutObjectNames" r
 LayoutObjectNames`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:layoutName}
 )
 endsnippet
 
 snippet "(?i)\b(relationinfo|ri)" "RelationInfo" r
 RelationInfo`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:tableOccurrenceName}
 }
 endsnippet
 
 snippet "(?i)\b(scriptids|sid)" "ScriptIDs" r
-ScriptIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
+ScriptIDs`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(scriptnames|sn)" "ScriptNames" r
-ScriptNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
+ScriptNames`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(tableids|tid)" "TableIDs" r
-TableIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
+TableIDs`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(tablenames|tn)" "TableNames" r
-TableNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
+TableNames`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(valuelistids|vid)" "ValidListIDs" r
-ValueListIDs`!p snip.rv = open_paren()`${0:Get( FileName )} )
+ValueListIDs`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(valuelistitems|vli)" "ValueListItems" r
 ValueListItems`!p snip.rv = open_paren()`
-	${1:Get( FileName )};
+	${1:`!p snip.rv = get_filename()`};
 	${2:valueList}
 )
 endsnippet
 
 snippet "(?i)\b(valuelistnames|vln)" "ValueListNames" r
-ValueListNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
+ValueListNames`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(windownames|wn)" "WindowNames" r
-WindowNames`!p snip.rv = open_paren()`${0:Get( FileName )} )
+WindowNames`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\bloc(ation)?" "Location" r
