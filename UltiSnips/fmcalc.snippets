@@ -27,24 +27,29 @@ endglobal
 # --------------------------------------
 global !p
 ADD_SPACE_AFTER_FUNCTION		= 'g:FMVAddSpaceAfterFunction'
+ADD_SPACE_DEFAULT						= False
+
 PAD_SPACES_WITHIN_PARENS		= 'g:FMVPadSpacesWitinParens'
+PAD_SPACES_DEFAULT					= True
+
 SEPARATE_PARAMS_WITH_SPACE	= 'g:FMVSeparateParamsWithSpace'
+SEPARATE_PARAMS_DEFAULT			= False
+
 FILL_IN_GET_FILENAME				= 'g:FMVFillInGetFileName'
+FILL_GET_DEFAULT						= True
 endglobal
 
 # --------------------------------------
 global !p
 def add_space():
-	if snip.opt( ADD_SPACE_AFTER_FUNCTION, False ):
-		return ' '
-	else:
+	if snip.opt( ADD_SPACE_AFTER_FUNCTION, ADD_SPACE_DEFAULT ):
 		return ''
 endglobal
 
 # --------------------------------------
 global !p
 def pad_spaces():
-	if snip.opt( PAD_SPACES_WITHIN_PARENS, True ):
+	if snip.opt( PAD_SPACES_WITHIN_PARENS, PAD_SPACES_DEFAULT ):
 		return ' '
 	else:
 		return ''
@@ -65,27 +70,44 @@ endglobal
 # --------------------------------------
 global !p
 def first_separator():
-	space = ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True ) else ''
-	return '(' + (space if snip.opt( 'g:FMVSeparateParmsWithSpace', True ) else '\n' )
-endglobal
-
-# --------------------------------------
-global !p
-def param_separator():
-	return ' ' if snip.opt( 'g:FMVSeparateParamsWithSpace', False ) else '\n\t'
+	if snip.opt( PAD_SPACES_WITHIN_PARENS, PAD_SPACES_DEFAULT ):
+		space = ' '
+	else:
+		space = ''
+	
+	if snip.opt( SEPARATE_PARAMS_WITH_SPACE, SEPARATE_PARAMS_DEFAULT ):
+		return '(' + space
+	else:
+		return '(' + '\n\t'
 endglobal
 
 # --------------------------------------
 global !p
 def last_separator():
-	space = ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True ) else ''
-	return (space if snip.opt( 'g:FMVSeparateParamsWithSpace', True ) else '\n' ) + ')'
+	if snip.opt( PAD_SPACES_WITHIN_PARENS, PAD_SPACES_DEFAULT ):
+		space = ' '
+	else:
+		space = ''
+	
+	if snip.opt( SEPARATE_PARAMS_WITH_SPACE, SEPARATE_PARAMS_DEFAULT ):
+		return space + ')'
+	else:
+		return '\n' + ')'
+endglobal
+
+# --------------------------------------
+global !p
+def param_separator():
+	if snip.opt( SEPARATE_PARAMS_WITH_SPACE, SEPARATE_PARAMS_DEFAULT ):
+		return ' '
+	else:
+		return '\n\t'
 endglobal
 
 # --------------------------------------
 global !p
 def get_filename():
-	if snip.opt( FILL_IN_GET_FILENAME, True ):
+	if snip.opt( FILL_IN_GET_FILENAME, FILL_GET_DEFAULT ):
 		open_paren = add_space() + '(' + pad_spaces()
 		close_paren = pad_spaces() + ')'
 		return 'Get' + open_paren + 'FileName' + close_paren
@@ -143,24 +165,21 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bexa(ct)?" "Exact" r
-Exact(
-	${1:originalText};
-	${2:comparisonText}
-}
+Exact`!p snip.rv = first_separator()`${1:originalText};`!p
+snip.rv = param_separator()`${2:comparisonText}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bfil(ter)?" "Filter" r
-Filter`!p snip.rv = open_paren()`
-	${1:texttofilter};
-	${2:filtertext}
-)
+Filter`!p snip.rv = first_separator()`${1:texttofilter};`!p
+snip.rv = param_separator()`${2:filtertext}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(filtervalues|filv)" "FilterValues" r
-FilterValues`!p snip.rv = open_paren()`
-	${1:textToFilter};
-	${2:filterValues}
-)
+FilterValues`!p snip.rv = first_separator()`${1:textToFilter};`!p
+snip.rv = param_separator()`${2:filterValues}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(getascss|getc)" "GetAsCSS" r
@@ -204,10 +223,9 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\b(getvalue|getv)" "GetValues" r
-GetValue`!p snip.rv = open_paren()`
-	${1:listOfValues};
-	${2:valueNumber}
-)
+GetValue`!p snip.rv = first_separator()`${1:listOfValues};`!p
+snip.rv = param_separator()`${2:valueNumber}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bhir(agana)?" "Hiragana" r
@@ -236,24 +254,21 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bleft?" "Left" r
-Left`!p snip.rv = open_paren()`
-	${1:text};
-	${2:numberOfCharacters}
-)
+Left`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:numberOfCharacters}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bleftv(alues)?" "LeftValues" r
-LeftValues`!p snip.rv = open_paren()`
-	${1:text};
-	${2:numberOfValues}
-)
+LeftValues`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:numberOfValues}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bleftw(ords)?" "LeftWords" r
-LeftWords`!p snip.rv = open_paren()`
-	${1:text};
-	${2:numberOfWords}
-)
+LeftWords`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:numberOfWords}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\blen(gth)?" "Length" r
@@ -267,52 +282,46 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bmid(dle)?" "Middle" r
-Middle`!p snip.rv = open_paren()`
-	${1:text};
-	${2:start};
-	${3:numberOfCharacters}
-)
+Middle`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:start};`!p
+snip.rv = param_separator()`${3:numberOfCharacters}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(middlevalues|midv)" "MiddleValues" r
-MiddleValues`!p snip.rv = open_paren()`
-	${1:text};
-	${2:startingValue};
-	${3:numberOfValues}
-)
+MiddleValues`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:startingValue};`!p
+snip.rv = param_separator()`${3:numberOfValues}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(middlewords|midw)" "MiddleWords" r
-MiddleWords`!p snip.rv = open_paren()`
-	${1:text};
-	${2:startingWord};
-	${3:numberOfWords}
-)
+MiddleWords`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:startingWord};`!p
+snip.rv = param_separator()`${3:numberOfWords}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(numtojtext|numj)" "NumToJText" r
-NumToJText`!p snip.rv = open_paren()`
-	${1:number};
-	${2:separator};
-	${3:characterType}
-)
+NumToJText`!p snip.rv = first_separator()`${1:number};`!p
+snip.rv = param_separator()`${2:separator};`!p
+snip.rv = param_separator()`${3:characterType}`!p
+snip.rv = last_separator()`
 endsnippet
 
 # TOTO: Resolve conflict with Count
 snippet "(?i)\bpat(terncount)?" "PatternCount" r
-PatternCount`!p snip.rv = open_paren()`
-	${1:text};
-	${2:searchString}
-)
+PatternCount`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:searchString}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bpos(ition)?" "Position" r
-Position`!p snip.rv = open_paren()`
-	${1:text};
-	${2:searchString};
-	${3:start};
-	${4:occurrence}
-)
+Position`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:searchString};`!p
+snip.rv = param_separator()`${3:start};`!p
+snip.rv = param_separator()`${4:occurrence}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bpro(per)?" "Proper" r
@@ -326,33 +335,29 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\brepl(ace)?" "Replace" r
-Replace`!p snip.rv = open_paren()`
-	${1:text};
-	${2:start};
-	${3:numberOfCharacters};
-	${4:replacementText}
-)
+Replace`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:start};`!p
+snip.rv = param_separator()`${3:numberOfCharacters};`!p
+snip.rv = param_separator()`${4:replacementText}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bright|\brit" "Right" r
-Right`!p snip.rv = open_paren()`
-	${1:text};
-	${2:numberOfCharacters}
-)
+Right`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:numberOfCharacters}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(rightvalues|ritv)" "RightValues" r
-RightValues`!p snip.rv = open_paren()`
-	${1:text};
-	${2:numberOfValues}
-)
+RightValues`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:numberOfValues}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(rightwords|ritw)" "RightWords" r
-RightWords`!p snip.rv = open_paren()`
-	${1:text};
-	${2:numberOfWords}
-)
+RightWords`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:numberOfWords}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(romanhankaku|romh)" "RomanHankaku" r
@@ -366,18 +371,16 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\b(serialincrement|seri)" "SerialIncrement" r
-SerialIncrement`!p snip.rv = open_paren()`
-	${1:text};
-	${2:incrementBy}
-)
+SerialIncrement`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:incrementBy}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bsub(stitute)?" "Substitute" r
-Substitute`!p snip.rv = open_paren()`
-	${1:text};
-	${2:searchString};
-	${3:replaceString}
-)
+Substitute`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:searchString};`!p
+snip.rv = param_separator()`${3:replaceString}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\btrim" "Trim" r
@@ -386,11 +389,10 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\btrima(ll)?" "TrimAll" r
-TrimAll`!p snip.rv = open_paren()`
-	${1:text};
-	$2`!p snip.rv = complete( t[2], ['True', 'False'] )`;
-	$3`!p snip.rv = complete( t[3], ['0', '1', '2', '3'] )`;
-)
+TrimAll`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`$2`!p snip.rv = complete( t[2], ['True', 'False'] )`;`!p
+snip.rv = param_separator()`$3`!p snip.rv = complete( t[3], ['0', '1', '2', '3'] )`;`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bupp(er)?" "Upper" r
@@ -412,11 +414,10 @@ endsnippet
 # Text formatting functions
 
 snippet "(?i)\brgb" "RGB" r
-RBG`!p snip.rv = open_paren()`
-	${1:red};
-	${2:green};
-	${3:blue}
-)
+RBG`!p snip.rv = first_separator()`${1:red};`!p
+snip.rv = param_separator()`${2:green};`!p
+snip.rv = param_separator()`${3:blue}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\btextc(olor)?" "TextColor" r
@@ -442,26 +443,23 @@ TextColorRemove`!p snip.rv = open_paren()`
 endsnippet
 
 snippet "(?i)\btextf(ont)?" "TextFont" r
-TextFont`!p snip.rv = open_paren()`
-	${1:text};
-	${2:fontName}${3:;
-	$4`!p snip.rv = complete( t[4], font_scripts() )`}
-)
+TextFont`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:fontName}${3:;`!p
+snip.rv = param_separator()`$4`!p snip.rv = complete( t[4], font_scripts() )`}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(textfontremove|textfr)" "TextFontRemove" r
-TextFontRemove`!p snip.rv = open_paren()`
-	${1:text}${2:;
-	${3:fontToRemove};
-	$4`!p snip.rv = complete( t[4], font_scripts() )`}
-)
+TextFontRemove`!p snip.rv = first_separator()`${1:text}${2:;`!p
+snip.rv = param_separator()`${3:fontToRemove};`!p
+snip.rv = param_separator()`$4`!p snip.rv = complete( t[4], font_scripts() )`}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\btexts(ize)?" "TextSize" r
-TextSize`!p snip.rv = open_paren()`
-	${1:text};
-	${2:fontSize}
-)
+TextSize`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:fontSize}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(textsizeremove|textsr)" "TextSizeRemove" r
