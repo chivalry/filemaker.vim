@@ -1,4 +1,4 @@
-*FileMakerVim.txt*	For Vim version 7.3 or later	Last change: 2014 Jul 11
+*filemakervim.txt*	For Vim version 7.3 or later	Last change: 2014 Jul 11
 
              Vim Plugin for Working with FileMaker Calculations~
 
@@ -30,10 +30,26 @@ calculations to be edited in Vim. It detects the filetype for the extentions
 filemaker, fmcalc, fm and fmfn. It also recognizes FileMaker calcs that have
 been opened using the QuickCursor app on OS X (|FileMakerVim-quickcursor|).
 
+The following features are supported:
+
+- Syntax highlighting of the following:
+	- Local and global variables
+	- FileMaker operators (i.e., +, -, &, etc.)
+	- String and number literals
+	- Built-in FileMaker functions
+	- Built-in FileMaker constants (such as Get function parameters)
+	- Block and in-line comments
+	- Calculation variables that begin with an underscore or tilde (i.e., _foo
+		or ~bar)
+	- Custom functions that begin with a prepended code and dot (i.e.,
+		code.CustomFunction( param )).
+- With the installation of UltiSnips, intelligent snippet insertion for all of
+	the built-in FileMaker functions.
+
 																*FileMakerVim-requirements* *FMV-requirements*
 1.1 Requirements
 
-Currently there are two main feature sets including with filemaker.vim: syntax
+Currently there are two main feature sets included with filemaker.vim: syntax
 highlighting and snippets. Syntax highlight only requires a copy of Vim and
 installing the filemaker.vim plugin.
 
@@ -147,8 +163,97 @@ Then again run the following command in Vim:>
 3. Settings
 										*FileMakerVim-defaultconventions* *FMV-defaultconventions*
 3.1 Default Conventions
+
+Conventions in FileMaker are notoriously varried. By default the snippets
+included with filemaker.vim conform to very specific conventions for
+formatting FileMaker calculations. These include the following:
+
+	- No space between a function name and its opening parenthsis.
+	- A space between the opening and closing parenthses and the nearest
+		parameter.
+	- Functions with a single parameter are inserted on a single line.
+	- Functions with multiple parameters are (generally) placed with each
+		parameter on its own line.
+	
+Note the word "generally" above. Some functions often take a single parameter
+but can take multiple parameters, especially the Aggregate (|FMV-aggregate|)
+functions, such as Count (|FMV-count|). These multi-parameter functions are
+placed on a single line with their optional parameters included as optional
+tab stops.
+
 							*FileMakerVim-overridingconventions* *FMV-overridingconventions*
 3.2 Overriding Conventions
+
+Most of the conventions above can be overridden by setting global variables in
+your .vimrc file.
+
+																									*g:FMVAddSpaceAfterFunction*
+g:FMVAddSpaceAfterFunction			Defaults to false (0). If set to true (1) a
+																space will appear between function names and
+																their opening parenthsis.  For example, by
+																default functions are inserted with the
+																following format:>
+
+																Func( param )
+
+																By setting this variable to 1, functions will
+																be inserted with the following format:>
+
+																Funct ( param )
+
+																									*g:FMVPadSpacesWithinParens*
+g:FMVPadSpacesWithinParens			Defaults to true (1). If set to false (0),
+																there will be no space between a function's
+																parentheses and its parameters. For example,
+																by default functions are inserted with the
+																following format:>
+
+																Func( param )
+
+																If this variable is set to 0, functions will
+																be inserted with the following format:>
+
+																Func(param)
+
+																							*g:FMVSeparateParamsWithSpace*
+g:FMVSeparateParamsWithSpace		Defaults to false (0). If set to true (1),
+																multi-parameter functions will have all of
+																their parameters appear on the same line. For
+																example, by default multi-parameter functions
+																are inserted with the following format:>
+
+																Func(
+																	param1;
+																	param2;
+																)
+
+																If this variable is set to 1, functions will
+																be inserted with the following format:>
+
+																Func( param1; param2 )
+
+																Note that this does not yet apply to the Let
+																(|FMV-let|) function.
+
+																										*g:FMVFillInGetFileName*
+g:FMVFillInGetFileName					Defaults to true (1). If set to false (0),
+																functions that can take a Get( FileName )
+																(|FMV-filename|) value as one of their
+																parameters will get a generic parameter
+																placeholder instead. For example, where such a
+																function could take Get( FileMake ) as a
+																paremter, such a function would have the
+																following format by default:>
+
+																Func( Get( FileName ) )
+
+																with the Get( FileName ) portion being a
+																snippet tab stop. If this variable is set to
+																0, such a function would have the following
+																format:>
+
+																Func( fileName )
+
 																				*FileMakerVim-triggers* *FMV-triggers*
 3.3 Triggers
 																					*FileMakerVim-helping* *FMV-helping*
