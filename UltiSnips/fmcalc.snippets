@@ -28,21 +28,43 @@ endglobal
 
 # --------------------------------------
 global !p
+# A single place to store global setting names and their default values.
+
+# The setting for placing a space between a function call and its opening
+#   parenthsis. By default functions are of the form `Func( param )`. If
+#   ADD_SPACE_AFTER_FUNCTION is true, functions take the form of
+#   `Func ( param )`.
 ADD_SPACE_AFTER_FUNCTION		= 'g:FMVAddSpaceAfterFunction'
 ADD_SPACE_DEFAULT						= False
 
+# The setting for placing a space between a function's parenses and its
+#   first and last parameter. By default functions are of the form
+#   `Func( param1 )`. If PAD_SPACES_WITHIN_PARENS is false, functions take
+#   the form `Func(param1)`.
 PAD_SPACES_WITHIN_PARENS		= 'g:FMVPadSpacesWitinParens'
 PAD_SPACES_DEFAULT					= True
 
+# The setting and default for placing each parameter of a multi-parameter function on its own line. By default mult-parameter functions are of the form:
+#    Func(
+#      param1;
+#      param2
+#    )
+# If SEPARATE_PARAMS_WITH_SPACE is true, functions take the form of:
+#    Func( param1; param2 )
 SEPARATE_PARAMS_WITH_SPACE	= 'g:FMVSeparateParamsWithSpace'
 SEPARATE_PARAMS_DEFAULT			= True
 
+# The setting and default for inserting `Get( FileName )` as a function parameter
+#   when appropriate. By default such functions are of the form
+#   `Func( Get( FileName ) )`. If FILL_IN_GET_FILENAME is false, such functions
+#   take the form `Func( fileName )`.
 FILL_IN_GET_FILENAME				= 'g:FMVFillInGetFileName'
 FILL_GET_DEFAULT						= True
 endglobal
 
 # --------------------------------------
 global !p
+# Return a space or empty string based on the user's settings.
 def add_space():
 	if snip.opt( ADD_SPACE_AFTER_FUNCTION, ADD_SPACE_DEFAULT ):
 		return ' '
@@ -52,6 +74,7 @@ endglobal
 
 # --------------------------------------
 global !p
+# Return a space or empty string based on the user's settings.
 def pad_spaces():
 	if snip.opt( PAD_SPACES_WITHIN_PARENS, PAD_SPACES_DEFAULT ):
 		return ' '
@@ -61,18 +84,22 @@ endglobal
 
 # --------------------------------------
 global !p
+# Returns the format of a function's opening parenthsis based on user settings.
 def open_paren():
 	return add_space() + '(' + pad_spaces()
 endglobal
 
 # --------------------------------------
 global !p
+# Returns the format of a function's closing parenthsis based on user settings.
 def close_paren():
 	return pad_spaces() + ')'
 endglobal
 
 # --------------------------------------
 global !p
+# Returns the format of a multi-parameter function's opening parenthsis based on
+#   user settings.
 def first_separator():
 	if snip.opt( PAD_SPACES_WITHIN_PARENS, PAD_SPACES_DEFAULT ):
 		space = ' '
@@ -87,6 +114,8 @@ endglobal
 
 # --------------------------------------
 global !p
+# Returns the format of a multi-parameter function's closing parenthsis based on
+#   user settings.
 def last_separator():
 	if snip.opt( PAD_SPACES_WITHIN_PARENS, PAD_SPACES_DEFAULT ):
 		space = ' '
@@ -101,6 +130,8 @@ endglobal
 
 # --------------------------------------
 global !p
+# Returns the format of a multi-parameter function's spacing between parameters
+#   based on user settings.
 def param_separator():
 	if snip.opt( SEPARATE_PARAMS_WITH_SPACE, SEPARATE_PARAMS_DEFAULT ):
 		return ' '
@@ -110,6 +141,8 @@ endglobal
 
 # --------------------------------------
 global !p
+# Returns the appropriate parameter of functions that could take `Get( FileName )`
+#   as a parameter, based on user settings.
 def get_filename():
 	if snip.opt( FILL_IN_GET_FILENAME, FILL_GET_DEFAULT ):
 		open_paren = add_space() + '(' + pad_spaces()
@@ -121,6 +154,7 @@ endglobal
 
 # --------------------------------------
 global !p
+# The optional values for the `TextFont` and `TextFontRemove` functions.
 def font_scripts():
 	return ['Roman', 'Greek', 'Cyrillic', 'CentralEurope', 'ShiftJIS',
 					'TraditionalChinese', 'SimplifiedChinese', 'OEM', 'Symbol',
@@ -129,6 +163,7 @@ endglobal
 
 # --------------------------------------
 global !p
+# The optional values for the `TextStyleAdd` and `TextStyleRemove` functions.`
 def font_styles():
 	return ['Plain', 'Bold', 'Italic', 'Underline', 'HighlightYellow', 'Condense',
 					'Extend', 'Strikethrough', 'SmallCaps', 'Superscript', 'Subscript',
@@ -138,6 +173,7 @@ endglobal
 
 # --------------------------------------
 global !p
+# The optional values for the `GetContainerAttribute` function.`
 def container_attribs():
 	return ['filename', 'MD5', 'storageType', 'fileSize', 'internalSize',
 		'externalSize', 'externalFiles', 'width', 'height', 'dpiWidth', 'dpiHeight',
@@ -149,6 +185,7 @@ endglobal
 
 # --------------------------------------
 global !p
+# The optional values for the `GetLayoutObjectAttribute` function.
 def layout_obj_attribs():
 	return ['objectType', 'hasFocus', 'containsFocus', 'isFrontPanel', 'bounds',
 		'left', 'right', 'top', 'bottom', 'width', 'height', 'rotation',
@@ -158,6 +195,7 @@ endglobal
 
 # --------------------------------------
 global !p
+# The optional values for the `Get` function.
 def get_func_params():
 	return ['AccountExtendedPrivileges', 'AccountName', 'AccountPrivilegeSetName',
 		'ActiveFieldContents', 'ActiveFieldName', 'ActiveFieldTableName',
