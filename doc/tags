@@ -30,7 +30,6 @@ FileMakerVim-triggers	filemakervim.txt	/*FileMakerVim-triggers*
 FileMakerVim-ultisnips	filemakervim.txt	/*FileMakerVim-ultisnips*
 FileMakerVim-ultisnips-install	filemakervim.txt	/*FileMakerVim-ultisnips-install*
 FileMakerVim-vundle	filemakervim.txt	/*FileMakerVim-vundle*
-filemakervim.txt	filemakervim.txt	/*filemakervim.txt*
 g:FMVAddSpaceAfterFunction	filemakervim.txt	/*g:FMVAddSpaceAfterFunction*
 g:FMVFillInGetFileName	filemakervim.txt	/*g:FMVFillInGetFileName*
 g:FMVPadSpacesWithinParens	filemakervim.txt	/*g:FMVPadSpacesWithinParens*

@@ -1,28 +1,28 @@
-*filemakervim.txt*	For Vim version 7.3 or later	Last change: 2014 Jul 11
+*filemakervim.txt	For Vim version 7.3 or later	Last change: 2014 Jul 11
 
-             Vim Plugin for Working with FileMaker Calculations~
+	 Vim Plugin for Working with FileMaker Calculations~
 
-filemaker.vim															*FileMakerVim* *FMV*
+filemaker.vim					*FileMakerVim* *FMV*
 
-1. Description                            |FileMakerVim-description|
-	1.1 Requirements                        |FileMakerVim-requirements|
-	1.1.1 UltiSnips                         |FileMakerVim-ultisnips|
-	1.1.2 QuickCursor                       |FileMakerVim-quickcursor|
-	1.2 Acknowledgments                     |FileMakerVim-acknowledgments|
-2. Installation                           |FileMakerVim-installnupdate|
-	2.1 Vundle                              |FileMakerVim-vundle|
-	2.2 UltiSnips														|FileMakerVim-ultisnips-install|
-	2.3 filemaker.vim												|FileMakerVim-install|
-3. Settings                               |FileMakerVim-settings|
-	3.1 Default Conventions                 |FileMakerVim-defaultconventions|
-	3.2 Overriding Conventions              |FileMakerVim-overridingconventions|
-	3.3 Triggers                            |FileMakerVim-triggers|
-4. Helping Out                            |FileMakerVim-helping|
-5. Contact                                |FileMakerVim-contact|
-6. Contributors                           |FileMakerVim-contribtors|
+1. Description				|FileMakerVim-description|
+	1.1 Requirements		|FileMakerVim-requirements|
+	1.1.1 UltiSnips			|FileMakerVim-ultisnips|
+	1.1.2 QuickCursor		|FileMakerVim-quickcursor|
+	1.2 Acknowledgments		|FileMakerVim-acknowledgments|
+2. Installation				|FileMakerVim-installnupdate|
+	2.1 Vundle			|FileMakerVim-vundle|
+	2.2 UltiSnips			|FileMakerVim-ultisnips-install|
+	2.3 filemaker.vim		|FileMakerVim-install|
+3. Settings				|FileMakerVim-settings|
+	3.1 Default Conventions		|FileMakerVim-defaultconventions|
+	3.2 Overriding Conventions	|FileMakerVim-overridingconventions|
+	3.3 Triggers			|FileMakerVim-triggers|
+4. Helping Out				|FileMakerVim-helping|
+5. Contact				|FileMakerVim-contact|
+6. Contributors				|FileMakerVim-contribtors|
 
-==============================================================================
-																	*FileMakerVim-description* *FMV-description*
+================================================================================
+				*FileMakerVim-description* *FMV-description*
 1. Description
 
 filemaker.com provides syntax highlighting and snippet support for FileMaker
@@ -39,14 +39,14 @@ The following features are supported:
 	- Built-in FileMaker functions
 	- Built-in FileMaker constants (such as Get function parameters)
 	- Block and in-line comments
-	- Calculation variables that begin with an underscore or tilde (i.e., _foo
-		or ~bar)
+	- Calculation variables that begin with an underscore or tilde (i.e.,
+	  _foo or ~bar)
 	- Custom functions that begin with a prepended code and dot (i.e.,
 		code.CustomFunction( param )).
 - With the installation of UltiSnips, intelligent snippet insertion for all of
 	the built-in FileMaker functions.
 
-																*FileMakerVim-requirements* *FMV-requirements*
+				*FileMakerVim-requirements* *FMV-requirements*
 1.1 Requirements
 
 Currently there are two main feature sets included with filemaker.vim: syntax
@@ -58,7 +58,7 @@ Vim 7.4 and command-line Vim 7.4 running within a terminal on Mac OS X. It
 will probably work with Vim 7 or above on any platform suppored, but no
 testing of this has been performed.
 
-																			*FileMakerVim-ultisnips* *FMV-ultisnips*
+					*FileMakerVim-ultisnips* *FMV-ultisnips*
 1.1.1 Ultisnips
 
 UltiSnips is a snippet system inspired by the snippets feature from TextMate.
@@ -66,7 +66,7 @@ Using the snippets feature requires UltiSnips, which you can get for free from
 https://github.com/SirVer/ultisnips. See the installation instructions below
 for additional details.
 
-																	*FileMakerVim-quickcursor* *FMV-quickcursor*
+				*FileMakerVim-quickcursor* *FMV-quickcursor*
 1.1.2 QuickCursor
 
 QuickCursor is in no way required for using filemaker.vim, but if you're using
@@ -89,8 +89,8 @@ replacing QuickCursor with custom-built routines built with Keyboard Maestro
 (http://www.keyboardmaestro.com,
 http://rocketink.net/2013/05/quickcursor-keyboard-maestro.html).
 
-==============================================================================
-														*FileMakerVim-installnupdate* *FMV-installnupdate*
+================================================================================
+				*FileMakerVim-installnupdate* *FMV-installnupdate*
 2. Installation and Updating
 
 Since it's far more likely that anyone interested in filemaker.vim knows
@@ -102,7 +102,7 @@ without git, but such a procedure is not yet covered here.
 You can get MacVim at https://code.google.com/p/macvim/ and gvim for Windows
 at ftp://ftp.vim.org/pub/vim/pc/gvim74.exe.
 
-																						*FileMakerVim-vundle* *FMV-vundle*
+					  *FileMakerVim-vundle* *FMV-vundle*
 2.3 Vundle
 
 Vundle is the recommended method for installing filemaker.vim. You can find
@@ -115,8 +115,8 @@ https://github.com/gmarik/Vundle.vim. Here's the quick version:
 
 	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-	4. Create a .vimrc file in your home directory and add the following lines
-	to it>
+	4. Create a .vimrc file in your home directory and add the following
+	lines to it>
 
 	set runtimepath+=~/.vim/bundle/Vundle.vim
 	call vundle#begin()
@@ -126,14 +126,14 @@ https://github.com/gmarik/Vundle.vim. Here's the quick version:
 	
 	5. Quick Vim if it's already running and relaunch it.
 
-											*FileMakerVim-ultisnips-install* *FMV-ultisnips-install*
+			*FileMakerVim-ultisnips-install* *FMV-ultisnips-install*
 2.4 UltiSnips
 
 Now that Vundle is installed, installing UltiSnips is very easy. In your
 .vimrc file, after the first call to Plugin, add the following lines:>
 
-  Plugin 'SirVer/ultisnips'
-  Plugin 'honza/vim-snippets'
+	Plugin 'SirVer/ultisnips'
+	Plugin 'honza/vim-snippets'
 
 The second one is completely optional, but will add many useful snippets for
 other languages (C, PHP, JavaScript, etc.) as well as snippets for writing
@@ -144,7 +144,7 @@ Vim:>
 
 	:PluginInstall
 
-																					*FileMakerVim-install* *FMV-insall*
+					*FileMakerVim-install* *FMV-insall*
 2.5 filemaker.vim
 
 Installing filemaker.vim is just like installing UltiSnips. Add this line to
@@ -157,11 +157,12 @@ Then again run the following command in Vim:>
 
 	:PluginInstall
 
-==============================================================================
+================================================================================
 
-																				*FileMakerVim-settings* *FMV-settings*
+					*FileMakerVim-settings* *FMV-settings*
 3. Settings
-										*FileMakerVim-defaultconventions* *FMV-defaultconventions*
+
+			*FileMakerVim-defaultconventions* *FMV-defaultconventions*
 3.1 Default Conventions
 
 Conventions in FileMaker are notoriously varried. By default the snippets
@@ -257,15 +258,15 @@ g:FMVFillInGetFileName					Defaults to true (1). If set to false (0),
 																				*FileMakerVim-triggers* *FMV-triggers*
 3.3 Triggers
 																					*FileMakerVim-helping* *FMV-helping*
-==============================================================================
+================================================================================
 
 4. Helping Out
 																					*FileMakerVim-contact* *FMV-contact*
-==============================================================================
+================================================================================
 
 5. Contact
 																*FileMakerVim-contributors* *FMV-contributors*
-==============================================================================
+================================================================================
 
 6. Contributors
 
