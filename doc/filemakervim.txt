@@ -1,0 +1,65 @@
+*FileMakerVim.txt*	For Vim version 7.3 or later	Last change: 2014 Jul 11
+
+             Vim Plugin for Working with FileMaker Calculations~
+
+FileMakerVim															*FileMakerVim* *FMV*
+
+1. Description                            |FileMakerVim-description|
+	1.1 Requirements                        |FileMakerVim-requirements|
+	1.1.1 UltiSnips                         |FileMakerVim-ultisnips|
+	1.1.2 QuickCursor                       |FileMakerVim-quickcursor|
+	1.2 Acknowledgments                     |FileMakerVim-acknowledgments|
+2. Installation and Updating              |FileMakerVim-installnupdate|
+3. Settings                               |FileMakerVim-settings|
+	3.1 Default Conventions                 |FileMakerVim-defaultconventions|
+	3.2 Overriding Conventions              |FileMakerVim-overridingconventions|
+	3.3 Triggers                            |FileMakerVim-triggers|
+4. Helping Out                            |FileMakerVim-helping|
+5. Contact                                |FileMakerVim-contact|
+6. Contributors                           |FileMakerVim-contribtors|
+
+==============================================================================
+																	*FileMakerVim-description* *FMV-description*
+1. Description
+
+FileMakerVim provides syntax highlighting and snippet support for FileMaker
+calculations to be edited in Vim. It detects the filetype for the extentions
+filemaker, fmcalc, fm and fmfn. It also recognizes FileMaker calcs that have
+been opened using the QuickCursor app on OS X (|FileMakerVim-quickcursor|).
+
+																*FileMakerVim-requirements* *FMV-requirements*
+1.1 Requirements
+																			*FileMakerVim-ultisnips* *FMV-ultisnips*
+1.1.1 Ultisnips
+																	*FileMakerVim-quickcursor* *FMV-quickcursor*
+1.1.2 QuickCursor
+													*FileMakerVim-acknowledgments* *FMV-acknowledgments*
+1.2 Acknowledgments
+														*FileMakerVim-installnupdate* *FMV-installnupdate*
+==============================================================================
+
+2. Installation and Updating
+																				*FileMakerVim-settings* *FMV-settings*
+==============================================================================
+
+3. Settings
+										*FileMakerVim-defaultconventions* *FMV-defaultconventions*
+3.1 Default Conventions
+							*FileMakerVim-overridingconventions* *FMV-overridingconventions*
+3.2 Overriding Conventions
+																				*FileMakerVim-triggers* *FMV-triggers*
+3.3 Triggers
+																					*FileMakerVim-helping* *FMV-helping*
+==============================================================================
+
+4. Helping Out
+																					*FileMakerVim-contact* *FMV-contact*
+==============================================================================
+
+5. Contact
+																*FileMakerVim-contributors* *FMV-contributors*
+==============================================================================
+
+6. Contributors
+
+vim:tw=80:ts=8:ft=help:norl:
