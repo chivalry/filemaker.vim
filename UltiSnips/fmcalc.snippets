@@ -16,7 +16,7 @@ def complete( t, opts ):
 #			if m.startswith(t):
 #				non_t.append(m[len(t):])
 #		opts = non_t
-		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+		opts = [ m[len(t):] for m in opts if m.lower().startswith(t.lower()) ]
 		
 	if len(opts) == 1:
 		return opts[0]
@@ -51,19 +51,21 @@ endglobal
 # --------------------------------------
 global !p
 def param_separator():
-	return ' ' if snip.opt( 'g:FMVSeparateParamsWithSpace', True ) else '\n\t'
+	return ' ' if snip.opt( 'g:FMVSeparateParamsWithSpace', False ) else '\n\t'
 endglobal
 
 # --------------------------------------
 global !p
 def last_separator():
-	return (' ' if snip.opt( 'g:FMVSeparateParamsWithSpace', True ) else '\n' ) + ')'
+	space = ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True ) else ''
+	return (space if snip.opt( 'g:FMVSeparateParamsWithSpace', True ) else '\n' ) + ')'
 endglobal
 
 # --------------------------------------
 global !p
 def first_separator():
-	return '(' + (' ' if snip.opt( 'g:FMVSeparateParmsWithSpace', True ) else '\n' )
+	space = ' ' if snip.opt( 'g:FMVPadSpacesWithinParens', True ) else ''
+	return '(' + (space if snip.opt( 'g:FMVSeparateParmsWithSpace', True ) else '\n' )
 endglobal
 
 # --------------------------------------
@@ -127,9 +129,10 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bexa(ct)?" "Exact" r
-Exact`!p snip.rv = open_paren()`${1:originaltext};`!p
-snip.rv = param_separator()`${2:comparisontext}`!p
-snip.rv = last_separator()`
+Exact(
+	${1:originalText};
+	${2:comparisonText}
+}
 endsnippet
 
 snippet "(?i)\bfil(ter)?" "Filter" r
