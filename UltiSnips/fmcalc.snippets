@@ -11,6 +11,8 @@
 global !p
 def complete( t, opts ):
 	if t:
+#   The next five lines are for reference, translating the following line into
+#		a standard for loop.
 #		non_t = []
 #		for m in opts:
 #			if m.startswith(t):
@@ -33,7 +35,7 @@ PAD_SPACES_WITHIN_PARENS		= 'g:FMVPadSpacesWitinParens'
 PAD_SPACES_DEFAULT					= True
 
 SEPARATE_PARAMS_WITH_SPACE	= 'g:FMVSeparateParamsWithSpace'
-SEPARATE_PARAMS_DEFAULT			= False
+SEPARATE_PARAMS_DEFAULT			= True
 
 FILL_IN_GET_FILENAME				= 'g:FMVFillInGetFileName'
 FILL_GET_DEFAULT						= True
@@ -43,6 +45,8 @@ endglobal
 global !p
 def add_space():
 	if snip.opt( ADD_SPACE_AFTER_FUNCTION, ADD_SPACE_DEFAULT ):
+		return ' '
+	else:
 		return ''
 endglobal
 
@@ -130,6 +134,62 @@ def font_styles():
 					'Extend', 'Strikethrough', 'SmallCaps', 'Superscript', 'Subscript',
 					'Uppercase', 'Lowercase', 'Titlecase', 'WordUnderline',
 					'DoubleUnderline', 'AllStyles']
+endglobal
+
+# --------------------------------------
+global !p
+def container_attribs():
+	return ['filename', 'MD5', 'storageType', 'fileSize', 'internalSize',
+		'externalSize', 'externalFiles', 'width', 'height', 'dpiWidth', 'dpiHeight',
+		'transparency', 'orientation', 'created', 'modified', 'latitude', 'longitude',
+		'make', 'model', 'title', 'artist', 'album', 'year', 'track', 'genre',
+		'composer', 'coverArt', 'duration', 'bitRate', 'barcodeText', 'barcodeType',
+		'signed', 'general', 'audio', 'image', 'photo', 'barcode', 'signature', 'all']
+endglobal
+
+# --------------------------------------
+global !p
+def layout_obj_attribs():
+	return ['objectType', 'hasFocus', 'containsFocus', 'isFrontPanel', 'bounds',
+		'left', 'right', 'top', 'bottom', 'width', 'height', 'rotation',
+		'startPoint', 'endPoint', 'source', 'content', 'enclosingObject',
+		'containedObjects', 'isobjecthidden']
+endglobal
+
+# --------------------------------------
+global !p
+def get_func_params():
+	return ['AccountExtendedPrivileges', 'AccountName', 'AccountPrivilegeSetName',
+		'ActiveFieldContents', 'ActiveFieldName', 'ActiveFieldTableName',
+		'ActiveLayoutObjectName', 'ActiveModifierKeys', 'ActivePortalRowNumber',
+		'ActiveRepetitionNumber', 'ActiveSelectionSize', 'ActiveSelectionStart',
+		'AllowAbortState', 'AllowFormattingBarState', 'ApplicationLanguage',
+		'ApplicationVersion', 'CalculationRepetitionNumber', 'ConnectionAttributes',
+		'ConnectionState', 'CurrentDate', 'CurrentExtendedPrivileges',
+		'CurrentHostTimestamp', 'CurrentPrivilegeSetName', 'CurrentTime',
+		'CurrentTimestamp', 'CurrentTimeUTCMilliseconds', 'CustomMenuSetName',
+		'DesktopPath', 'Device', 'DocumentsPath', 'DocumentsPathListing',
+		'EncryptionState', 'ErrorCaptureState', 'FileName', 'FilePath', 'FileSize',
+		'FoundCount', 'HighContrastColor', 'HighContrastState',
+		'HostApplicationVersion', 'HostIPAddress', 'HostName', 'InstalledFMPlugins',
+		'LastError', 'LastMessageChoice', 'LastODBCError', 'LayoutAccess',
+		'LayoutCount', 'LayoutName', 'LayoutNumber', 'LayoutTableName',
+		'LayoutViewState', 'ModifiedFields', 'MultiUserState', 'NetworkProtocol',
+		'NetworkType', 'PageNumber', 'PersistentID', 'PreferencesPath',
+		'PrinterName', 'QuickFindText', 'RecordAccess', 'RecordID',
+		'RecordModificationCount', 'RecordNumber', 'RecordOpenCount',
+		'RecordOpenState', 'RequestCount', 'RequestOmitState', 'ScreenDepth',
+		'ScreenHeight', 'ScreenWidth', 'ScriptAnimationState', 'ScriptName',
+		'ScriptParameter', 'ScriptResult', 'SortState', 'StatusAreaState',
+		'SystemDrive', 'SystemIPAddress', 'SystemLanguage', 'SystemNICAddress',
+		'SystemPlatform', 'SystemVersion', 'TemporaryPath', 'TextRulerVisible',
+		'TotalRecordCount', 'TriggerCurrentPanel', 'TriggerGestureInfo',
+		'TriggerKeystroke', 'TriggerModifierKeys', 'TriggerTargetPanel', 'UserCount',
+		'UserName', 'UseSystemFormatsState', 'UUID', 'WindowContentHeight',
+		'WindowContentWidth', 'WindowDesktopHeight', 'WindowDesktopWidth',
+		'WindowHeight', 'WindowLeft', 'WindowMode', 'WindowName',
+		'WindowOrientation', 'WindowStyle', 'WindowVisible', 'WindowWidth',
+		'WindowZoomLevel']
 endglobal
 
 # --------------------------------------
@@ -463,24 +523,21 @@ snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(textsizeremove|textsr)" "TextSizeRemove" r
-TextSizeRemove`!p snip.rv = open_paren()`
-	${1:text}${2:;
-	${3:sizeToRemove}}
-)
+TextSizeRemove`!p snip.rv = first_separator()`${1:text}${2:;`!p
+snip.rv = param_separator()`${3:sizeToRemove}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(textstyleadd|textsta)" "TextStyleAdd" r
-TextStyleAdd`!p snip.rv = open_paren()`
-	${1:text};
-	$2`!p snip.rv = complete( t[2], font_styles() )`
-)
+TextStyleAdd`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`$2`!p snip.rv = complete( t[2], font_styles() )``!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(textstyleremove|textstr)" "TextStyleRemove" r
-TextStyleRemove`!p snip.rv = open_paren()`
-	${1:text};
-	$2`!p snip.rv = complete( t[2], font_styles() )`
-)
+TextStyleRemove`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`$2`!p snip.rv = complete( t[2], font_styles() )``!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -497,17 +554,15 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bcomb(ination)?" "Combination" r
-Combination`!p snip.rv = open_paren()`
-	${1:setSize};
-	${2:numberOfChoices}
-)
+Combination`!p snip.rv = first_separator()`${1:setSize};`!p
+snip.rv = param_separator()`${2:numberOfChoices}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bdiv" "Div" r
-Div`!p snip.rv = open_paren()`
-	${1:number};
-	${2:divisor}
-)
+Div`!p snip.rv = first_separator()`${1:number};`!p
+snip.rv = param_separator()`${2:divisor}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bexp" "Exp" r
@@ -516,10 +571,9 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bfact(orial)?" "Factorial" r
-Factorial`!p snip.rv = open_paren()`
-	${1:number}${2:;
-	${3:numberOfFactors}}
-}
+Factorial`!p snip.rv = first_separator()`${1:number}${2:;`!p
+snip.rv = param_separator()`${3:numberOfFactors}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bflo(or)?" "Floor" r
@@ -548,10 +602,9 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bmod" "Mod" r
-Mod`!p snip.rv = open_paren()`
-	${1:number};
-	${2:divisor}
-)
+Mod`!p snip.rv = first_separator()`${1:number};`!p
+snip.rv = param_separator()`${2:divisor}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\brand" "Random" r
@@ -559,17 +612,15 @@ Random
 endsnippet
 
 snippet "(?i)\brou(nd)?" "Round" r
-Round`!p snip.rv = open_paren()`
-	${1:number};
-	${2:precision}
-)
+Round`!p snip.rv = first_separator()`${1:number};`!p
+snip.rv = param_separator()`${2:precision}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bsetp(recision)?" "SetPrecision" r
-SetPrecision`!p snip.rv = open_paren()`
-	${1:expression};
-	${2:precision}
-)
+SetPrecision`!p snip.rv = first_separator()`${1:expression};`!p
+snip.rv = param_separator()`${2:precision}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bsign" "Sign" r
@@ -583,21 +634,19 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\btrunc(ate)?" "Truncate" r
-Truncate`!p snip.rv = open_paren()`
-	${1:number};
-	${2:precision}
-)
+Truncate`!p snip.rv = first_separator()`${1:number};`!p
+snip.rv = param_separator()`${2:precision}`!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Date functions
 
 snippet "(?i)\bdate" "Date" r
-Date`!p snip.rv = open_paren()`
-	${1:month};
-	${2:day};
-	${3:year}
-)
+Date`!p snip.rv = first_separator()`${1:month};`!p
+snip.rv = param_separator()`${2:day};`!p
+snip.rv = param_separator()`${3:year}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bday" "Day" r
@@ -655,10 +704,9 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\b(yearname|yrn)" "YearName" r
-YearName`!p snip.rv = open_paren()`
-	${1:date};
-	$2`!p snip.rv = complete( t[2], ['0', '1', '2'] )`
-)
+YearName`!p snip.rv = first_separator()`${1:date};`!p
+snip.rv = param_separator()`$2`!p snip.rv = complete( t[2], ['0', '1', '2'] )``!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -680,11 +728,10 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\btime" "Time" r
-Time`!p snip.rv = open_paren()`
-	${1:hours};
-	${2:minutes};
-	${3:seconds}
-)
+Time`!p snip.rv = first_separator()`${1:hours};`!p
+snip.rv = param_separator()`${2:minutes};`!p
+snip.rv = param_separator()`${3:seconds}`!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -709,10 +756,9 @@ endsnippet
 # Container functions
 
 snippet "(?i)\b(base64decode|based)" "Base64Decode" r
-Base64Decode`!p snip.rv = open_paren()`
-	${1:text}${2:;
-	${3:fileNameWithExtension}}
-)
+Base64Decode`!p snip.rv = first_separator()`${1:text}${2:;`!p
+snip.rv = param_separator()`${3:fileNameWithExtension}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(base64encode|basee)" "Base64Encode" r
@@ -721,16 +767,10 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\b(getcontainerattribute|getcatt)" "GetContainerAttribute" r
-GetContainerAttribute`!p snip.rv = open_paren()`
-	${1:sourceField};
-	${2:"$3`!p snip.rv = complete( t[3], ['filename', 'MD5', 'storageType',
-		'fileSize', 'internalSize', 'externalSize', 'externalFiles', 'width',
-		'height', 'dpiWidth', 'dpiHeight', 'transparency', 'orientation', 'created',
-		'modified', 'latitude', 'longitude', 'make', 'model', 'title', 'artist',
-		'album', 'year', 'track', 'genre', 'composer', 'coverArt', 'duration',
-		'bitRate', 'barcodeText', 'barcodeType', 'signed', 'general', 'audio',
-		'image', 'photo', 'barcode', 'signature', 'all'] )`"}
-)
+GetContainerAttribute`!p snip.rv = first_separator()`${1:sourceField};`!p
+snip.rv = param_separator()`${2:"$3`!p
+snip.rv = complete( t[3], container_attribs() )`"}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bgeth(eight)?" "GetHeight" r
@@ -739,11 +779,10 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bgetth(umbnail)?" "GetThumbnail" r
-GetThumbnail`!p snip.rv = open_paren()`
-	${1:field};
-	${2:width};
-	${3:height}
-)
+GetThumbnail`!p snip.rv = first_separator()`${1:field};`!p
+snip.rv = param_separator()`${2:width};`!p
+snip.rv = param_separator()`${3:height}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bgetw(idth)?" "GetWidth" r
@@ -815,10 +854,9 @@ endsnippet
 # Summary functions
 
 snippet "(?i)\bgetsum(mary)?" "GetSummary" r
-GetSummary`!p snip.rv = open_paren()`
-	${1:summaryField};
-	${2:breakField}
-)
+GetSummary`!p snip.rv = first_separator()`${1:summaryField};`!p
+snip.rv = param_separator()`${2:breakField}`!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -830,10 +868,9 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bgetrep(etition)?" "GetRepetition" r
-GetRepetition`!p snip.rv = open_paren()`
-	${1:repeatingField};
-	${2:number}
-)
+GetRepetition`!p snip.rv = first_separator()`${1:repeatingField};`!p
+snip.rv = param_separator()`${2:number}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\blast" "Last" r
@@ -845,34 +882,30 @@ endsnippet
 # Financial functions
 
 snippet "(?i)\bfv" "FV" r
-FV`!p snip.rv = open_paren()`
-	${1:payment};
-	${2:interestRate};
-	${3:periods}
-)
+FV`!p snip.rv = first_separator()`${1:payment};`!p
+snip.rv = param_separator()`${2:interestRate};`!p
+snip.rv = param_separator()`${3:periods}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bnpv" "NPV" r
-NPV`!p snip.rv = open_paren()`
-	${1:payment};
-	${2:interestRate}
-)
+NPV`!p snip.rv = first_separator()`${1:payment};`!p
+snip.rv = param_separator()`${2:interestRate}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bpmt" "PMT" r
-PMT`!p snip.rv = open_paren()`
-	${1:principal};
-	${2:interestRate};
-	${3:term}
-)
+PMT`!p snip.rv = first_separator()`${1:principal};`!p
+snip.rv = param_separator()`${2:interestRate};`!p
+snip.rv = param_separator()`${3:term}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bpv" "PV" r
-PV`!p snip.rv = open_paren()`
-	${1:payment};
-	${2:interestRate};
-	${3:periods}
-)
+PV`!p snip.rv = first_separator()`${1:payment};`!p
+snip.rv = param_separator()`${2:interestRate};`!p
+snip.rv = param_separator()`${3:periods}`!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -922,28 +955,25 @@ endsnippet
 # Logical functions
 
 snippet "(?i)\bcase" "Case" r
-Case`!p snip.rv = open_paren()`
-	${1:test1};
-	${2:result1}${3:${4:;
-	...}${5:;
-	${6:defaultResult}}}
-)
+Case`!p snip.rv = first_separator()`${1:test1};`!p
+snip.rv = param_separator()`${2:result1}${3:${4:;`!p
+snip.rv = param_separator()`...}${5:;`!p
+snip.rv = param_separator()`${6:defaultResult}}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bcho(ose)?" "Choose" r
-Choose`!p snip.rv = open_paren()`
-	${1:test};
-	${2:result0}${3:;
-	${4:...}}
-)
+Choose`!p snip.rv = first_separator()`${1:test};`!p
+snip.rv = param_separator()`${2:result0}${3:;`!p
+snip.rv = param_separator()`${4:...}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\beval(uate)?" "Evaluate" r
-Evaluate`!p snip.rv = open_paren()`
-	${1:expression}${2:;
-	${3:field}${4:;
-	...}}
-)
+Evaluate`!p snip.rv = first_separator()`${1:expression}${2:;`!p
+snip.rv = param_separator()`${3:field}${4:;`!p
+snip.rv = param_separator()`...}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(evaluationerror|evalerr)" "EvaluationError" r
@@ -952,12 +982,11 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\b(execute)?sql" "ExecuteSQL" r
-ExecuteSQL`!p snip.rv = open_paren()`
-	${1:sqlQuery};
-	${2:fieldSeparator};
-	${3:rowSeparator}${4:;
-	${5:arguments...}}
-)
+ExecuteSQL`!p snip.rv = first_separator()`${1:sqlQuery};`!p
+snip.rv = param_separator()`${2:fieldSeparator};`!p
+snip.rv = param_separator()`${3:rowSeparator}${4:;`!p
+snip.rv = param_separator()`${5:arguments...}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(getasboolean|getb)" "GetAsBoolean" r
@@ -976,30 +1005,25 @@ snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\b(getlayoutobjectattribute|getloa)" "GetLayoutObjectAttribute" r
-GetLayoutObjectAttribute`!p snip.rv = open_paren()`
-	${1:objectName};
-	"$2`!p snip.rv = complete( t[2], ['objectType', 'hasFocus', 'containsFocus',
-		'isFrontPanel', 'bounds', 'left', 'right', 'top', 'bottom', 'width',
-		'height', 'rotation', 'startPoint', 'endPoint', 'source', 'content',
-		'enclosingObject', 'containedObjects', 'isobjecthidden'] )`"${3:;
-	${4:repetitionNumber};
-	${5:portalRowNumber}}
-)
+GetLayoutObjectAttribute`!p snip.rv = first_separator()`${1:objectName};`!p
+snip.rv = param_separator()`"$2`!p
+snip.rv = complete( t[2], layout_obj_attribs() )`"${3:;`!p
+snip.rv = param_separator()`${4:repetitionNumber};`!p
+snip.rv = param_separator()`${5:portalRowNumber}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bgetnth(record)?" "GetNthRecord" r
-GetNthRecord`!p snip.rv = open_paren()`
-	${1:fieldName};
-	${2:recordNumber}
-)
+GetNthRecord`!p snip.rv = first_separator()`${1:fieldName};`!p
+snip.rv = param_separator()`${2:recordNumber}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bif" "If" r
-If`!p snip.rv = open_paren()`
-	${1:test};
-	${2:result1}${3:;
-	${4:result2}}
-)
+If`!p snip.rv = first_separator()`${1:test};`!p
+snip.rv = param_separator()`${2:result1}${3:;`!p
+snip.rv = param_separator()`${4:result2}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\bise(mpty)?" "IsEmpty" r
@@ -1029,17 +1053,15 @@ Let`!p snip.rv = open_paren()`
 endsnippet
 
 snippet "(?i)\blook(up)?" "Lookup" r
-Lookup`!p snip.rv = open_paren()`
-	${1:sourceField}${2:;
-	${3:failExpression}}
-)
+Lookup`!p snip.rv = first_separator()`${1:sourceField}${2:;`!p
+snip.rv = param_separator()`${3:failExpression}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(lookupnext|lookn)" "LookupNext" r
-LookupNext`!p snip.rv = open_paren()`
-	${1:sourceField};
-	$2`!p snip.rv = complete( t[2], ['Lower', 'Higher'] )`
-)
+LookupNext`!p snip.rv = first_separator()`${1:sourceField};`!p
+snip.rv = param_separator()`$2`!p snip.rv = complete( t[2], ['Lower', 'Higher'] )``!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -1051,62 +1073,54 @@ DatabaseNames
 endsnippet
 
 snippet "(?i)\b(fieldbounds|fb)" "FieldBounds" r
-FieldBounds`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:layoutName};
-	${3:fieldName}
-)
+FieldBounds`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:layoutName};`!p
+snip.rv = param_separator()`${3:fieldName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(fieldcomment|fc)" "FieldComment" r
-FieldComment`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:fieldname}
-)
+FieldComment`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:fieldname}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(fieldids|fid)" "FieldIDs" r
-FieldIDs`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:layoutName}
-)
+FieldIDs`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:layoutName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(fieldnames|fn)" "FieldNames" r
-FieldNames`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:layoutName}
-)
+FieldNames`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:layoutName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(fieldrepetitions|frep)" "FieldRepetitions" r
-FieldRepetitions`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:layoutName};
-	${3:fieldName}
-)
+FieldRepetitions`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:layoutName};`!p
+snip.rv = param_separator()`${3:fieldName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(fieldstyle|fst)" "FieldStyle" r
-FieldStyle`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:layoutName};
-	${3:fieldName}
-)
+FieldStyle`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:layoutName};`!p
+snip.rv = param_separator()`${3:fieldName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(fieldtype|fty)" "FieldType" r
-FieldType`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:fieldName}
-)
+FieldType`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:fieldName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(getnextserialvalue|gnsv)" "GetNextSerialValue" r
-GetNextSerialValue`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:fieldName}
-)
+GetNextSerialValue`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:fieldName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(layoutids|lid)" "LayoutIDs" r
@@ -1118,17 +1132,15 @@ LayoutNames`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(layoutobjectnames|loon)" "LayoutObjectNames" r
-LayoutObjectNames`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:layoutName}
-)
+LayoutObjectNames`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:layoutName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(relationinfo|ri)" "RelationInfo" r
-RelationInfo`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:tableOccurrenceName}
-}
+RelationInfo`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:tableOccurrenceName}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(scriptids|sid)" "ScriptIDs" r
@@ -1152,10 +1164,9 @@ ValueListIDs`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\b(valuelistitems|vli)" "ValueListItems" r
-ValueListItems`!p snip.rv = open_paren()`
-	${1:`!p snip.rv = get_filename()`};
-	${2:valueList}
-)
+ValueListItems`!p snip.rv = first_separator()`${1:`!p snip.rv = get_filename()`};`!p
+snip.rv = param_separator()`${2:valueList}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(valuelistnames|vln)" "ValueListNames" r
@@ -1167,17 +1178,15 @@ WindowNames`!p snip.rv = open_paren()`${0:`!p snip.rv = get_filename()`} )
 endsnippet
 
 snippet "(?i)\bloc(ation)?" "Location" r
-Location`!p snip.rv = open_paren()`
-	${1:accuracy}${2:;
-	${3:timeout}}
-)
+Location`!p snip.rv = first_separator()`${1:accuracy}${2:;`!p
+snip.rv = param_separator()`${3:timeout}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(locationvalues|locv)" "LocationValues" r
-LocationValues`!p snip.rv = open_paren()`
-	${1:accuracy}${2:;
-	${3:timeout}}
-)
+LocationValues`!p snip.rv = first_separator()`${1:accuracy}${2:;`!p
+snip.rv = param_separator()`${3:timeout}}`!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
@@ -1185,46 +1194,17 @@ endsnippet
 
 # might be left out, only useful for Pre-7 FileMaker plugins
 snippet "(?i)\bexternal" "External" r
-External`!p snip.rv = open_paren()`
-	${1:nameOfFunction};
-	${2:parameter}
-)
+External`!p snip.rv = first_separator()`${1:nameOfFunction};`!p
+snip.rv = param_separator()`${2:parameter}`!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
 # Get functions
 
 snippet "(?i)\bget" "Get" r
-Get`!p snip.rv = open_paren()`$1`!p snip.rv = complete( t[1], ['AccountExtendedPrivileges', 'AccountName',
-	'AccountPrivilegeSetName', 'ActiveFieldContents', 'ActiveFieldName',
-	'ActiveFieldTableName', 'ActiveLayoutObjectName', 'ActiveModifierKeys',
-	'ActivePortalRowNumber', 'ActiveRepetitionNumber', 'ActiveSelectionSize',
-	'ActiveSelectionStart', 'AllowAbortState', 'AllowFormattingBarState',
-	'ApplicationLanguage', 'ApplicationVersion', 'CalculationRepetitionNumber',
-	'ConnectionAttributes', 'ConnectionState', 'CurrentDate',
-	'CurrentExtendedPrivileges', 'CurrentHostTimestamp', 'CurrentPrivilegeSetName',
-	'CurrentTime', 'CurrentTimestamp', 'CurrentTimeUTCMilliseconds',
-	'CustomMenuSetName', 'DesktopPath', 'Device', 'DocumentsPath',
-	'DocumentsPathListing', 'EncryptionState', 'ErrorCaptureState', 'FileName',
-	'FilePath', 'FileSize', 'FoundCount', 'HighContrastColor', 'HighContrastState',
-	'HostApplicationVersion', 'HostIPAddress', 'HostName', 'InstalledFMPlugins',
-	'LastError', 'LastMessageChoice', 'LastODBCError', 'LayoutAccess',
-	'LayoutCount', 'LayoutName', 'LayoutNumber', 'LayoutTableName',
-	'LayoutViewState', 'ModifiedFields', 'MultiUserState', 'NetworkProtocol',
-	'NetworkType', 'PageNumber', 'PersistentID', 'PreferencesPath', 'PrinterName',
-	'QuickFindText', 'RecordAccess', 'RecordID', 'RecordModificationCount',
-	'RecordNumber', 'RecordOpenCount', 'RecordOpenState', 'RequestCount',
-	'RequestOmitState', 'ScreenDepth', 'ScreenHeight', 'ScreenWidth',
-	'ScriptAnimationState', 'ScriptName', 'ScriptParameter', 'ScriptResult',
-	'SortState', 'StatusAreaState', 'SystemDrive', 'SystemIPAddress',
-	'SystemLanguage', 'SystemNICAddress', 'SystemPlatform', 'SystemVersion',
-	'TemporaryPath', 'TextRulerVisible', 'TotalRecordCount', 'TriggerCurrentPanel',
-	'TriggerGestureInfo', 'TriggerKeystroke', 'TriggerModifierKeys',
-	'TriggerTargetPanel', 'UserCount', 'UserName', 'UseSystemFormatsState', 'UUID',
-	'WindowContentHeight', 'WindowContentWidth', 'WindowDesktopHeight',
-	'WindowDesktopWidth', 'WindowHeight', 'WindowLeft', 'WindowMode', 'WindowName',
-	'WindowOrientation', 'WindowStyle', 'WindowVisible', 'WindowWidth',
-	'WindowZoomLevel'] )``!p snip.rv = close_paren()`
+Get`!p snip.rv = open_paren()`$1`!p snip.rv = complete( t[1], get_func_params() )``!p
+snip.rv = close_paren()`
 endsnippet
 
 snippet "(?i)\bgetaep" "(?i)\bGet( AccountExtendedPrivileges )" r
