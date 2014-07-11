@@ -100,7 +100,7 @@ endglobal
 global !p
 # Returns the format of a multi-parameter function's opening parenthsis based on
 #   user settings.
-def first_separator():
+def first_separator( sub_function = False ):
 	if snip.opt( PAD_SPACES_WITHIN_PARENS, PAD_SPACES_DEFAULT ):
 		space = ' '
 	else:
@@ -109,14 +109,17 @@ def first_separator():
 	if snip.opt( SEPARATE_PARAMS_WITH_SPACE, SEPARATE_PARAMS_DEFAULT ):
 		return '(' + space
 	else:
-		return '(' + '\n\t'
+		if sub_function:
+			return '(' + '\n\t\t'
+		else:
+			return '(' + '\n\t'
 endglobal
 
 # --------------------------------------
 global !p
 # Returns the format of a multi-parameter function's closing parenthsis based on
 #   user settings.
-def last_separator():
+def last_separator( sub_function = False ):
 	if snip.opt( PAD_SPACES_WITHIN_PARENS, PAD_SPACES_DEFAULT ):
 		space = ' '
 	else:
@@ -125,18 +128,24 @@ def last_separator():
 	if snip.opt( SEPARATE_PARAMS_WITH_SPACE, SEPARATE_PARAMS_DEFAULT ):
 		return space + ')'
 	else:
-		return '\n' + ')'
+		if sub_function:
+			return '\n\t' + ')'
+		else:
+			return '\n' + ')'
 endglobal
 
 # --------------------------------------
 global !p
 # Returns the format of a multi-parameter function's spacing between parameters
 #   based on user settings.
-def param_separator():
+def param_separator( sub_function = False ):
 	if snip.opt( SEPARATE_PARAMS_WITH_SPACE, SEPARATE_PARAMS_DEFAULT ):
 		return ' '
 	else:
-		return '\n\t'
+		if sub_function:
+			return '\n\t\t'
+		else:
+			return '\n\t'
 endglobal
 
 # --------------------------------------
@@ -519,25 +528,23 @@ snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\btextc(olor)?" "TextColor" r
-TextColor`!p snip.rv = open_paren()`
-	${1:text};
-	${2:RGB`!p snip.rv = open_paren()`
-		${3:red};
-		${4:green};
-		${5:blue}
-	)}
-)
+TextColor`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:RGB`!p
+snip.rv = first_separator( True )`${3:red};`!p
+snip.rv = param_separator( True )`${4:green};`!p
+snip.rv = param_separator( True )`${5:blue}`!p
+snip.rv = last_separator( True )`}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\b(textcolorremove|textcr)" "TextColorRemove" r
-TextColorRemove`!p snip.rv = open_paren()`
-	${1:text}${2:;
-	${3:RGB`!p snip.rv = open_paren()`
-		${4:red};
-		${5:green};
-		${6:blue}
-	)}}
-)
+TextColorRemove`!p snip.rv = first_separator()`${1:text};`!p
+snip.rv = param_separator()`${2:RGB`!p
+snip.rv = first_separator( True )`${3:red};`!p
+snip.rv = param_separator( True )`${4:green};`!p
+snip.rv = param_separator( True )`${5:blue}`!p
+snip.rv = last_separator( True )`}`!p
+snip.rv = last_separator()`
 endsnippet
 
 snippet "(?i)\btextf(ont)?" "TextFont" r
@@ -776,18 +783,17 @@ endsnippet
 # Timestamp functions
 
 snippet "(?i)\b(timestamp|ts)" "Timestamp" r
-Timestamp`!p snip.rv = open_paren()`
-	${1::Date`!p snip.rv = open_paren()`
-		${2:day};
-		${3:month};
-		${4:year}
-	)};
-	${5::Time`!p snip.rv = open_paren()`
-		${6:hours};
-		${7:minutes};
-		${8:seconds}
-	)}
-)
+Timestamp`!p snip.rv = first_separator()`${1:Date`!p
+snip.rv = first_separator( True )`${2:day};`!p
+snip.rv = param_separator( True )`${3:month};`!p
+snip.rv = param_separator( True )`${4:year}`!p
+snip.rv = last_separator( True )`};`!p
+snip.rv = param_separator()`${5:Time`!p
+snip.rv = first_separator( True )`${6:hours};`!p
+snip.rv = param_separator( True )`${7:minutes};`!p
+snip.rv = param_separator( True )` ${8:seconds}`!p
+snip.rv = last_separator( True )`}`!p
+snip.rv = last_separator()`
 endsnippet
 
 # ------------------------------------------------------------------------------
