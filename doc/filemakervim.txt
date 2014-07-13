@@ -8,10 +8,10 @@ Contents ~
 	 1.1.1. UltiSnips																		 |filemakervim-ultisnips|
 	 1.1.2. QuickCursor																 |filemakervim-quickcursor|
 	1.2. Acknowledgments													 |filemakervim-acknowledgments|
- 2. Installation																		|filemakervim-installation|
-	2.1. Vundle Installation									 |filemakervim-vundle-installation|
-	2.2. UltiSnips Installation							|filemakervim-ultisnips-installation|
-	2.3. filemaker.vim Installation			|filemakervim-filemaker.vim-installation|
+ 2. Installation																				 |filemakervim-install|
+	2.1. Vundle Installation												|filemakervim-vundle-install|
+	2.2. UltiSnips Installation									 |filemakervim-ultisnips-install|
+	2.3. filemaker.vim Installation					 |filemakervim-filemaker.vim-install|
  3. Settings																						|filemakervim-settings|
 	3.1. Default Conventions									 |filemakervim-default-conventions|
 	3.2. Overriding Conventions							|filemakervim-overriding-conventions|
@@ -20,22 +20,22 @@ Contents ~
 	4.2. Optional Parameters									 |filemakervim-optional-parameters|
 	4.3. Standard Parameters									 |filemakervim-standard-parameters|
 	4.4. Built-In Function Triggers			|filemakervim-built-in-function-triggers|
-	 4.4.1. Text Functions													|filemakervim-text-functions|
-	 4.4.2. Text Formatting Functions		 |filemakervim-text-formatting-functions|
-	 4.4.3. Number Functions											|filemakervim-number-functions|
-	 4.4.4. Date Functions													|filemakervim-date-functions|
-	 4.4.5. Time Functions													|filemakervim-time-functions|
-	 4.4.6. Timestamp Functions								 |filemakervim-timestamp-functions|
-	 4.4.7. Container Functions								 |filemakervim-container-functions|
-	 4.4.8. Aggregate Functions								 |filemakervim-aggregate-functions|
-	 4.4.9. Summary Functions										 |filemakervim-summary-functions|
-	 4.4.10. Repeating Functions							 |filemakervim-repeating-functions|
-	 4.4.11. Financial Functions							 |filemakervim-financial-functions|
-	 4.4.12. Trigonometric Functions			 |filemakervim-trigonometric-functions|
-	 4.4.13. Logical Functions									 |filemakervim-logical-functions|
-	 4.4.14. Design Functions											|filemakervim-design-functions|
-	 4.4.15. External Functions									|filemakervim-external-functions|
-	 4.4.16. Get Functions													 |filemakervim-get-functions|
+	 4.4.1. Text Functions																		|filemakervim-text|
+	 4.4.2. Text Formatting Functions							 |filemakervim-text-formatting|
+	 4.4.3. Number Functions																|filemakervim-number|
+	 4.4.4. Date Functions																		|filemakervim-date|
+	 4.4.5. Time Functions																		|filemakervim-time|
+	 4.4.6. Timestamp Functions													 |filemakervim-timestamp|
+	 4.4.7. Container Functions													 |filemakervim-container|
+	 4.4.8. Aggregate Functions													 |filemakervim-aggregate|
+	 4.4.9. Summary Functions															 |filemakervim-summary|
+	 4.4.10. Repeating Functions												 |filemakervim-repeating|
+	 4.4.11. Financial Functions												 |filemakervim-financial|
+	 4.4.12. Trigonometric Functions								 |filemakervim-trigonometric|
+	 4.4.13. Logical Functions														 |filemakervim-logical|
+	 4.4.14. Design Functions																|filemakervim-design|
+	 4.4.15. External Functions														|filemakervim-external|
+	 4.4.16. Get Functions																		 |filemakervim-get|
  5. Helping Out																			 |filemakervim-helping-out|
  6. Contact																							 |filemakervim-contact|
  7. Contributors																		|filemakervim-contributors|
@@ -129,7 +129,7 @@ A great deal of assistance with the snippets was kindly provided by Holger Rapp
 [7], whose help made the included snippets much more concise and useful.
 
 ===============================================================================
-																										*filemakervim-installation*
+																												 *filemakervim-install*
 Installation ~
 
 If you're already familiar with using Vundle [8] to manage plugins in Vim, just
@@ -145,7 +145,7 @@ Then enter the ':PluginInstall' command while in normal mode in Vim.
 If you need a bit more granular instructions, keep reading.
 
 -------------------------------------------------------------------------------
-																						 *filemakervim-vundle-installation*
+																									*filemakervim-vundle-install*
 Vundle Installation ~
 
 Vundle is the recommended method for installing filemaker.vim. Either read the
@@ -172,7 +172,7 @@ complete installation instructions [9] or follow these steps:
 5. Quit Vim if it's already running and relaunch it.
 
 -------------------------------------------------------------------------------
-																					*filemakervim-ultisnips-installation*
+																							 *filemakervim-ultisnips-install*
 UltiSnips Installation ~
 
 Now that Vundle is installed, installing UltiSnips is trivial. In your '.vimrc'
@@ -188,7 +188,7 @@ other languages (PHP, JavaScript, etc.) as well as snippets for writting
 snippets. See the UltiSnips documentation for more information.
 
 -------------------------------------------------------------------------------
-																			*filemakervim-filemaker.vim-installation*
+																					 *filemakervim-filemaker.vim-install*
 filemaker.vim Installation ~
 
 Installing filemaker.vim is just as easy as installing UltiSnips. Add this line
@@ -442,7 +442,7 @@ letters will narrow down the available options.
 Built-In Function Triggers ~
 
 -------------------------------------------------------------------------------
-																									*filemakervim-text-functions*
+																														*filemakervim-text*
 Text Functions ~
 
                                                             *filemakervim-char*
@@ -537,7 +537,7 @@ Text Functions ~
 'WordCount'            'wordcount'       'wordc'
 
 -------------------------------------------------------------------------------
-																			 *filemakervim-text-formatting-functions*
+																								 *filemakervim-text-formatting*
 Text Formatting Functions ~
 
 																														 *filemakervim-rgb*
@@ -560,7 +560,7 @@ Text Formatting Functions ~
 'TextStyleRemove'      'textstyleremove' 'textstr'
 
 -------------------------------------------------------------------------------
-																								*filemakervim-number-functions*
+																													*filemakervim-number*
 Number Functions ~
 
 																														 *filemakervim-abs*
@@ -601,7 +601,7 @@ Number Functions ~
 'Truncate'          'truncate'     'trunc'
 
 -------------------------------------------------------------------------------
-																									*filemakervim-date-functions*
+																														*filemakervim-date*
 Date Functions ~
 
 																														*filemakervim-date*
@@ -632,7 +632,7 @@ Date Functions ~
 'YearName'              'yearname'         'yrn'
 
 -------------------------------------------------------------------------------
-																									*filemakervim-time-functions*
+																														*filemakervim-time*
 Time Functions ~
 
 																														*filemakervim-hour*
@@ -645,14 +645,14 @@ Time Functions ~
 'Time'         'time'
 
 -------------------------------------------------------------------------------
-																						 *filemakervim-timestamp-functions*
+																											 *filemakervim-timestamp*
 Timestamp Functions ~
 
 																											 *filemakervim-timestamp*
 'Timestamp'      'timestamp' 'ts'
 
 -------------------------------------------------------------------------------
-																						 *filemakervim-container-functions*
+																											 *filemakervim-container*
 Container Functions ~
 
 																										*filemakervim-base64decode*
@@ -671,7 +671,7 @@ Container Functions ~
 'VerifyContainer'            'verifycontainer'       'ver'
 
 -------------------------------------------------------------------------------
-																						 *filemakervim-aggregate-functions*
+																											 *filemakervim-aggregate*
 Aggregate Functions ~
 
 																												 *filemakervim-average*
@@ -696,14 +696,14 @@ Aggregate Functions ~
 'VarianceP'      'variancep' 'varp'
 
 -------------------------------------------------------------------------------
-																							 *filemakervim-summary-functions*
+																												 *filemakervim-summary*
 Summary Functions ~
 
 																											*filemakervim-getsummary*
 'GetSummary'      'getsummary' 'getsum'
 
 -------------------------------------------------------------------------------
-																						 *filemakervim-repeating-functions*
+																											 *filemakervim-repeating*
 Repeating Functions ~
 
 																													*filemakervim-extend*
@@ -714,7 +714,7 @@ Repeating Functions ~
 'Last'               'last'
 
 -------------------------------------------------------------------------------
-																						 *filemakervim-financial-functions*
+																											 *filemakervim-financial*
 Financial Functions ~
 
 																															*filemakervim-fv*
@@ -727,7 +727,7 @@ Financial Functions ~
 'PV'       'pv'
 
 -------------------------------------------------------------------------------
-																				 *filemakervim-trigonometric-functions*
+																									 *filemakervim-trigonometric*
 Trigonometric Functions ~
 
 																														*filemakervim-acos*
@@ -748,7 +748,7 @@ Trigonometric Functions ~
 'Tan'          'tan'
 
 -------------------------------------------------------------------------------
-																							 *filemakervim-logical-functions*
+																												 *filemakervim-logical*
 Logical Functions ~
 
 																														*filemakervim-case*
@@ -787,7 +787,7 @@ Logical Functions ~
 'LookupNext'                    'lookupnext'               'lookn'
 
 -------------------------------------------------------------------------------
-																								*filemakervim-design-functions*
+																													*filemakervim-design*
 Design Functions ~
 
 																														 *filemakervim-dbn*
@@ -836,14 +836,14 @@ Design Functions ~
 'WindowNames'             'windownames'        'wn'
 
 -------------------------------------------------------------------------------
-																							*filemakervim-external-functions*
+																												*filemakervim-external*
 External Functions ~
 
 																												*filemakervim-external*
 'External'      'external'
 
 -------------------------------------------------------------------------------
-																									 *filemakervim-get-functions*
+																														 *filemakervim-get*
 Get Functions ~
 
 																			 *filemakervim-accountextendedprivileges*
