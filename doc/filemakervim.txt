@@ -21,22 +21,22 @@ Contents ~
 	4.2. Optional Parameters									 |filemakervim-optional-parameters|
 	4.3. Standard Parameters									 |filemakervim-standard-parameters|
 	4.4. Built-In Function Triggers			|filemakervim-built-in-function-triggers|
-	 4.4.1. Text Functions																		|filemakervim-text|
-	 4.4.2. Text Formatting Functions							 |filemakervim-text-formatting|
-	 4.4.3. Number Functions																|filemakervim-number|
-	 4.4.4. Date Functions																		|filemakervim-date|
-	 4.4.5. Time Functions																		|filemakervim-time|
-	 4.4.6. Timestamp Functions													 |filemakervim-timestamp|
-	 4.4.7. Container Functions													 |filemakervim-container|
-	 4.4.8. Aggregate Functions													 |filemakervim-aggregate|
-	 4.4.9. Summary Functions															 |filemakervim-summary|
-	 4.4.10. Repeating Functions												 |filemakervim-repeating|
-	 4.4.11. Financial Functions												 |filemakervim-financial|
-	 4.4.12. Trigonometric Functions								 |filemakervim-trigonometric|
-	 4.4.13. Logical Functions														 |filemakervim-logical|
-	 4.4.14. Design Functions																|filemakervim-design|
-	 4.4.15. External Functions														|filemakervim-external|
-	 4.4.16. Get Functions																		 |filemakervim-get|
+	 4.4.1. Text Functions															|filemakervim-text-group|
+	 4.4.2. Text Formatting Functions				 |filemakervim-text-formatting-group|
+	 4.4.3. Number Functions													|filemakervim-number-group|
+	 4.4.4. Date Functions															|filemakervim-date-group|
+	 4.4.5. Time Functions															|filemakervim-time-group|
+	 4.4.6. Timestamp Functions										 |filemakervim-timestamp-group|
+	 4.4.7. Container Functions										 |filemakervim-container-group|
+	 4.4.8. Aggregate Functions										 |filemakervim-aggregate-group|
+	 4.4.9. Summary Functions												 |filemakervim-summary-group|
+	 4.4.10. Repeating Functions									 |filemakervim-repeating-group|
+	 4.4.11. Financial Functions									 |filemakervim-financial-group|
+	 4.4.12. Trigonometric Functions					 |filemakervim-trigonometric-group|
+	 4.4.13. Logical Functions											 |filemakervim-logical-group|
+	 4.4.14. Design Functions													|filemakervim-design-group|
+	 4.4.15. External Functions											|filemakervim-external-group|
+	 4.4.16. Get Functions															 |filemakervim-get-group|
  5. Helping Out																			 |filemakervim-helping-out|
  6. Contact																							 |filemakervim-contact|
  7. Contributors																		|filemakervim-contributors|
@@ -475,8 +475,8 @@ letters will narrow down the available options.
 Built-In Function Triggers ~
 
 -------------------------------------------------------------------------------
-																														*filemakervim-text*
-																																		 *fmv-text*
+																											*filemakervim-text-group*
+																															 *fmv-text-group*
 Text Functions ~
 
                                                             *filemakervim-char*
@@ -616,8 +616,8 @@ Text Functions ~
 'WordCount'            'wordcount'       'wordc'
 
 -------------------------------------------------------------------------------
-																								 *filemakervim-text-formatting*
-																													*fmv-text-formatting*
+																					 *filemakervim-text-formatting-group*
+																										*fmv-text-formatting-group*
 Text Formatting Functions ~
 
 																														 *filemakervim-rgb*
@@ -649,8 +649,8 @@ Text Formatting Functions ~
 'TextStyleRemove'      'textstyleremove' 'textstr'
 
 -------------------------------------------------------------------------------
-																													*filemakervim-number*
-																																	 *fmv-number*
+																										*filemakervim-number-group*
+																														 *fmv-number-group*
 Number Functions ~
 
 																														 *filemakervim-abs*
@@ -709,8 +709,8 @@ Number Functions ~
 'Truncate'          'truncate'     'trunc'
 
 -------------------------------------------------------------------------------
-																														*filemakervim-date*
-																																		 *fmv-date*
+																											*filemakervim-date-group*
+																															 *fmv-date-group*
 Date Functions ~
 
 																														*filemakervim-date*
@@ -754,8 +754,8 @@ Date Functions ~
 'YearName'              'yearname'         'yrn'
 
 -------------------------------------------------------------------------------
-																														*filemakervim-time*
-																																		 *fmv-time*
+																											*filemakervim-time-group*
+																															 *fmv-time-group*
 Time Functions ~
 
 																														*filemakervim-hour*
@@ -772,8 +772,8 @@ Time Functions ~
 'Time'         'time'
 
 -------------------------------------------------------------------------------
-																											 *filemakervim-timestamp*
-																																*fmv-timestamp*
+																								 *filemakervim-timestamp-group*
+																													*fmv-timestamp-group*
 Timestamp Functions ~
 
 																											 *filemakervim-timestamp*
@@ -781,8 +781,8 @@ Timestamp Functions ~
 'Timestamp'      'timestamp' 'ts'
 
 -------------------------------------------------------------------------------
-																											 *filemakervim-container*
-																																*fmv-container*
+																								 *filemakervim-container-group*
+																													*fmv-container-group*
 Container Functions ~
 
 																										*filemakervim-base64decode*
@@ -808,8 +808,8 @@ Container Functions ~
 'VerifyContainer'            'verifycontainer'       'ver'
 
 -------------------------------------------------------------------------------
-																											 *filemakervim-aggregate*
-																																*fmv-aggregate*
+																								 *filemakervim-aggregate-group*
+																													*fmv-aggregate-group*
 Aggregate Functions ~
 
 																												 *filemakervim-average*
@@ -844,8 +844,8 @@ Aggregate Functions ~
 'VarianceP'      'variancep' 'varp'
 
 -------------------------------------------------------------------------------
-																												 *filemakervim-summary*
-																																	*fmv-summary*
+																									 *filemakervim-summary-group*
+																														*fmv-summary-group*
 Summary Functions ~
 
 																											*filemakervim-getsummary*
@@ -853,8 +853,8 @@ Summary Functions ~
 'GetSummary'      'getsummary' 'getsum'
 
 -------------------------------------------------------------------------------
-																											 *filemakervim-repeating*
-																																*fmv-repeating*
+																								 *filemakervim-repeating-group*
+																													*fmv-repeating-group*
 Repeating Functions ~
 
 																													*filemakervim-extend*
@@ -868,8 +868,8 @@ Repeating Functions ~
 'Last'               'last'
 
 -------------------------------------------------------------------------------
-																											 *filemakervim-financial*
-																																*fmv-financial*
+																								 *filemakervim-financial-group*
+																													*fmv-financial-group*
 Financial Functions ~
 
 																															*filemakervim-fv*
@@ -886,8 +886,8 @@ Financial Functions ~
 'PV'       'pv'
 
 -------------------------------------------------------------------------------
-																									 *filemakervim-trigonometric*
-																														*fmv-trigonometric*
+																						 *filemakervim-trigonometric-group*
+																											*fmv-trigonometric-group*
 Trigonometric Functions ~
 
 																														*filemakervim-acos*
@@ -916,8 +916,8 @@ Trigonometric Functions ~
 'Tan'          'tan'
 
 -------------------------------------------------------------------------------
-																												 *filemakervim-logical*
-																																	*fmv-logical*
+																									 *filemakervim-logical-group*
+																														*fmv-logical-group*
 Logical Functions ~
 
 																														*filemakervim-case*
@@ -973,8 +973,8 @@ Logical Functions ~
 'LookupNext'                    'lookupnext'               'lookn'
 
 -------------------------------------------------------------------------------
-																													*filemakervim-design*
-																																	 *fmv-design*
+																										*filemakervim-design-group*
+																														 *fmv-design-group*
 Design Functions ~
 
 																														 *filemakervim-dbn*
@@ -1045,8 +1045,8 @@ Design Functions ~
 'WindowNames'             'windownames'        'wn'
 
 -------------------------------------------------------------------------------
-																												*filemakervim-external*
-																																 *fmv-external*
+																									*filemakervim-external-group*
+																													 *fmv-external-group*
 External Functions ~
 
 																												*filemakervim-external*
@@ -1054,8 +1054,8 @@ External Functions ~
 'External'      'external'
 
 -------------------------------------------------------------------------------
-																														 *filemakervim-get*
-																																			*fmv-get*
+																											 *filemakervim-get-group*
+																																*fmv-get-group*
 Get Functions ~
 
 																			 *filemakervim-accountextendedprivileges*
