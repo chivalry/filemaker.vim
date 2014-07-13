@@ -1,0 +1,1125 @@
+*filemakervim.txt*	For Vim version 7.4 or later
+
+===============================================================================
+Contents ~
+
+ 1. Introduction																		|filemakervim-introduction|
+	1.1. Requirements																	|filemakervim-requirements|
+	 1.1.1. UltiSnips																		 |filemakervim-ultisnips|
+	 1.1.2. QuickCursor																 |filemakervim-quickcursor|
+	1.2. Acknowledgments													 |filemakervim-acknowledgments|
+ 2. Installation																		|filemakervim-installation|
+	2.1. Vundle Installation									 |filemakervim-vundle-installation|
+	2.2. UltiSnips Installation							|filemakervim-ultisnips-installation|
+	2.3. filemaker.vim Installation			|filemakervim-filemaker.vim-installation|
+ 3. Settings																						|filemakervim-settings|
+	3.1. Default Conventions									 |filemakervim-default-conventions|
+	3.2. Overriding Conventions							|filemakervim-overriding-conventions|
+ 4. Triggers																						|filemakervim-triggers|
+	4.1. Trigger Standards											 |filemakervim-trigger-standards|
+	4.2. Optional Parameters									 |filemakervim-optional-parameters|
+	4.3. Standard Parameters									 |filemakervim-standard-parameters|
+	4.4. Built-In Function Triggers			|filemakervim-built-in-function-triggers|
+	 4.4.1. Text Functions													|filemakervim-text-functions|
+	 4.4.2. Text Formatting Functions		 |filemakervim-text-formatting-functions|
+	 4.4.3. Number Functions											|filemakervim-number-functions|
+	 4.4.4. Date Functions													|filemakervim-date-functions|
+	 4.4.5. Time Functions													|filemakervim-time-functions|
+	 4.4.6. Timestamp Functions								 |filemakervim-timestamp-functions|
+	 4.4.7. Container Functions								 |filemakervim-container-functions|
+	 4.4.8. Aggregate Functions								 |filemakervim-aggregate-functions|
+	 4.4.9. Summary Functions										 |filemakervim-summary-functions|
+	 4.4.10. Repeating Functions							 |filemakervim-repeating-functions|
+	 4.4.11. Financial Functions							 |filemakervim-financial-functions|
+	 4.4.12. Trigonometric Functions			 |filemakervim-trigonometric-functions|
+	 4.4.13. Logical Functions									 |filemakervim-logical-functions|
+	 4.4.14. Design Functions											|filemakervim-design-functions|
+	 4.4.15. External Functions									|filemakervim-external-functions|
+	 4.4.16. Get Functions													 |filemakervim-get-functions|
+ 5. Helping Out																			 |filemakervim-helping-out|
+ 6. Contact																							 |filemakervim-contact|
+ 7. Contributors																		|filemakervim-contributors|
+ 8. References																				|filemakervim-references|
+
+===============================================================================
+																										*filemakervim-introduction*
+Introduction ~
+
+filemaker.vim provides syntax highlighting and snippet support for FileMaker
+calculations to be edited in Vim. It detects the filetype for the extensions
+'filemaker', 'fmcalc', 'fm', and 'fmfn'. It also recognizes calculations that
+have been opened using the QuickCursor app on OS X.
+
+The following features are supported:
+
+- Syntax highlighting of the following:
+- Local and global variables
+- FileMaker operators (i.e., '+', '-', '&', etc.)
+- String and number literals
+- Built-in FileMaker functions
+- Built-in FileMaker constants (such as Get function parameters)
+- Block and in-line comments
+- Calculation variables that begin with an underscore or tilde (i.e., '_foo'
+	or '~bar')
+- Custom functions that begin with a prepended code and dot (i.e.,
+	'code.CustomFunction')
+- With the installation of UltiSnips, intelligent snippet insertion for all
+	of the built-in FileMaker functions
+
+-------------------------------------------------------------------------------
+																										*filemakervim-requirements*
+Requirements ~
+
+Currently there are two main feature sets included with filemaker.vim: syntax
+highlighting and snippets. Syntax highlighting has no additional requirements.
+filemaker.vim has been tested with MavVim snapshot 74 (which runs Vim 7.4) and
+command-line Vim 7.4 running within a terminal on Mac OS X. It will probably
+work with Vim 7 or above on any platform Vim supports, but not testing of this
+has been performed yet.
+
+-------------------------------------------------------------------------------
+																											 *filemakervim-ultisnips*
+UltiSnips ~
+
+UltiSnips is a snippet system required by the snippets feature from TextMate
+[1]. Using the snippets feature requires UltiSnips [2]. See the the
+instructions below for additional details.
+
+-------------------------------------------------------------------------------
+																										 *filemakervim-quickcursor*
+QuickCursor ~
+
+QuickCursor is in now way required for using filemaker.vim, but if you're using
+a Mac and you have a version of it, it can make life much easier by allowing
+you to press a key combination and open a FileMaker calculation directly in
+MacVim.
+
+Unfortunately QuickCursor is no longer being actively sold because of
+incompatibility woth Apple's sandboxing. If you were fortunate enough to get
+version 1 from before it entered the Mac App Store or version 2 before it was
+taken down, you're good to go.
+
+The publisher [3] of QuickCursor has made the source code [4] available, but
+all attempts to build and run it under OS X Yosemit have failed to demonstrate
+that it works successfully.
+
+In the future we hope to make either version 1 available for a free download or
+edit the source code of version 2 and make it available. In the meantime, if
+you're interested in a workaround, check out what some others have done by
+replacing QuickCursor with custom-built [5] routines using Keyboard Maestro
+[6].
+
+If neither of these solutions work for you, there are two final options I can
+recommend. If you place the following line at the end of your calcuatation
+before you copy and paste it into a Vim buffer, Vim will read it to set the
+filetype:
+
+// vim:ft=fmcalc
+
+Alternative you can enter the following command while in normal mode to
+manually set the file type:
+>
+	:set ft=fmcalc
+<
+-------------------------------------------------------------------------------
+																								 *filemakervim-acknowledgments*
+Acknowledgments ~
+
+A great deal of assistance with the snippets was kindly provided by Holger Rapp
+[7], whose help made the included snippets much more concise and useful.
+
+===============================================================================
+																										*filemakervim-installation*
+Installation ~
+
+If you're already familiar with using Vundle [8] to manage plugins in Vim, just
+add these three lines to your '.vimrc' file between the calls to 'vundle#begin'
+and 'vundle#end'.
+>
+	Plugin 'SirVer/ultisnips'
+	Plugin 'honza/vim-snippets'
+	Plugin 'chivalry/filemaker.vim'
+<
+Then enter the ':PluginInstall' command while in normal mode in Vim.
+
+If you need a bit more granular instructions, keep reading.
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-vundle-installation*
+Vundle Installation ~
+
+Vundle is the recommended method for installing filemaker.vim. Either read the
+complete installation instructions [9] or follow these steps:
+
+1. Create a '.vim' directory in your home folder if it doesn't already
+	 exist.
+
+2. Create a 'bundle' directory in the '.vim' directory.
+
+3. Run the following command from your terminal application:
+>
+	 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+<
+4. Create a '.vimrc' file in your home directory and add the following lines
+	 to it:
+>
+	 set runtimepath+=~/.vim/bundle/Vundle.vim
+	 call vundle#begin()
+	 Plugin 'gmarik/Vundle.vim'
+	 call vundle#end()
+	 filetype plugin indent on
+<
+5. Quit Vim if it's already running and relaunch it.
+
+-------------------------------------------------------------------------------
+																					*filemakervim-ultisnips-installation*
+UltiSnips Installation ~
+
+Now that Vundle is installed, installing UltiSnips is trivial. In your '.vimrc'
+file, after the first call to 'Plugin', add the following lines:
+>
+	Plugin 'SirVer/ultisnips'
+	Plugin 'honza/vim-snippets'
+<
+Save your '.vimrc' and run the ':PluginInstall' command.
+
+The second plugin is completely optional, but will add many useful snippets for
+other languages (PHP, JavaScript, etc.) as well as snippets for writting
+snippets. See the UltiSnips documentation for more information.
+
+-------------------------------------------------------------------------------
+																			*filemakervim-filemaker.vim-installation*
+filemaker.vim Installation ~
+
+Installing filemaker.vim is just as easy as installing UltiSnips. Add this line
+to your '.vimrc' file after your previous lines and before the call to
+'vundle#end':
+>
+	Plugin 'chivalry/filemaker.vim'
+<
+Again, run the ':PluginInstall' command.
+
+===============================================================================
+																												*filemakervim-settings*
+Settings ~
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-default-conventions*
+Default Conventions ~
+
+Conventions in FileMaker are notoriously varried. By default the snippets
+included with filemaker.vim conform to very specific conventions for formatting
+FileMaker calculations. These include the following:
+
+- No space between a function name and its opening parenthesis
+- A space between the opening and closing parentheses and the nearest
+	parameter
+- Functions with a single parameter are inserted on a single line
+- Functions with multiple parameters are (generally) placed with each
+	parameter on its own line
+
+Note the word "generally" above. Some functions often take a single parameter
+but can take multiple parameters, especially the Aggregate functions, such as
+Count. These multi-parameter functions are placed ona single line with their
+optional parameters included as optional tab stops.
+
+-------------------------------------------------------------------------------
+																					*filemakervim-overriding-conventions*
+Overriding Conventions ~
+
+Most of the conventions above can be overridden by setting global variables in
+your '.vimrc' file.
+
+g:FMVAddSpaceAfterFunction : Defaults to false (0). If set to true (1) a space
+will appear between function names and their opening parenthsis. For example,
+by default functions are inserted with the following format:
+>
+	Func( param )
+<
+:By setting this variable to 1, functions will be inserted with the following
+format:
+>
+	Func ( param )
+<
+g:FMVPadSpacesWithinParens : Defaults to true (1). If set to false (0) there
+will be no space between a funciton's parentheses and its parameters. For
+example, by default functions are inserted with the following format:
+>
+	Func( param )
+<
+:If this variable is set to 0, functions will be inserted with the following
+format:
+>
+	Func(param)
+<
+Defaults to false (0). If set to true (1) multi-parameter functions will have
+all of their parameters appear on the same line. For example, by default multi-
+parameter functions are inserted with the following format:
+>
+	Func(
+		param1;
+		param2
+	)
+<
+:If this variable is set to 1, multi-parameter functions will be inserted with
+the following format:
+>
+	Func( param1; param2 )o
+<
+:Note that this does not yet apply to the Let function.
+
+g:FMVFillInGetFileName :Defaults to true (1). If set to false (0), functions
+that which have a 'fileName' parameter will set this parameter to 'Get(
+FileName )'. For example, such a function would have the following format:
+>
+	Func( Get( FileName ) )
+<
+: with the 'Get( FileName )' portion being a snippet tab stop. If this variable
+is set to 0, such a function would have the following format:
+>
+	Func( fileName )
+<
+:with 'fileName' acting as the snippet's tab stop.
+
+All of these settings are cumulative. For example, with their default values
+the 'FieldBounds' snippet will insert the following:
+>
+	FieldBounds(
+		Get( FileName );
+		layoutName;
+		fieldName
+	)
+<
+Overriding all of the defaults results in the following:
+>
+	FieldBound (Get (FileName); layoutName; fieldName)
+<
+===============================================================================
+																												*filemakervim-triggers*
+Triggers ~
+
+-------------------------------------------------------------------------------
+																							 *filemakervim-trigger-standards*
+Trigger Standards ~
+
+An UltiSnips trigger is included for every built-in FileMaker function except
+'Pi'. Every included function has a snippet that is the same as the function's
+name (except the 'Get' function parameters and 'DatabaseNames', for which such
+a snippet is pretty useless). So you know right away that the trigger for
+'RightValues' is 'rightvalues', but most functions have abbreviated but unique
+triggers ('ritv' in this case). Although UltiSnips supports duplicate triggers,
+using them seriously reduces the time savings, so if a function has an
+abbreviated trigger, that trigger is unique. When multiple functions could have
+a competing trigger, the one that is more likely to be used has received the
+default trigger.
+
+The trigges for 'Get' functions are generally 'get' followed by the letters in
+the words making up the parameter, such as 'getfp' for 'Get( FilePath )', but
+using that technique does result in some duplicates. When that's the case the
+default is attached to the more common function and a logical letter is added
+to the alternative.
+
+Finally, triggers are case-insensitive. In other words, 'getv', 'Getv', and
+'GETV' are all triggers for the 'GetValue' function.
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-optional-parameters*
+Optional Parameters ~
+
+Many FileMaker functions include optional parameters that can be ommitted. When
+parameters are all required each parameter is matched with a snippet tab stop.
+When a parameter is optional, the optional parameters as a while, including the
+last semi-colon, are an enclosing tabstop.
+
+A prime example are a few of the Aggregate functions functions. The 'Average'
+function for example needs at least one parameter but could take a series of
+parameters. The trigger therefore has three tabstops, one for the first
+parameter, one for the semi-colon and optional sections parameter, and a third
+for the second parameter. Triggering this snippet results in the following
+steps, where the currently active tabstop is between pipes ('|'):
+>
+	Average( |field|; field )
+<
+Filling in the first tab stop and pressing UltiSnips' <jumptrigger> key
+selects the semi-colon and the second parameter:
+>
+	Average( TO::field|; field| )
+<
+At this point pressing the delete key will remove the entire tab stop and using
+UltiSnips' <jumptrigger> key will move outside the snippet. If there are
+additional parameters to pass to 'Average' then pressing the <jumptrigger>
+key will retain the semi-colon and move to the third tab stop, which is the
+second parameter:
+>
+	Average( TO::field; |field| )
+<
+This is the method for tab stops whenever a function accepts optional
+parameters.
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-standard-parameters*
+Standard Parameters ~
+
+A few FileMaker functions accept only a specific set of options for their
+parameters. The most common case of this is the 'Get' function, but a few of
+the [Text Formatting](#FMV-textformatting') functions fall under this category.
+Sometimes the parameters are constants, as is the case with'Get`, and sometimes
+they're strings (GetLayoutObjectAttribute for example.
+
+While standard parameters are case-insenstivie (i.e., within the 'Get' function
+you can type 'account' to narrow the list of available options to those that
+begin with 'Account'), the case won't be replaced with the option's case. In
+other words, typing 'accounte' will end up with 'Get( accountextendedPrivileges
+)'. FileMaker will correct this when the calculation is saved. Given the tools
+being used having optional values replace entered text with appropriate
+character cases isn't possible yet.
+
+When a function only takes a set of standard parameters the snippet for that
+function will allow any of the standard parameters to be filled in based on the
+first few characters. For example, the 'TextStyleRemove' function takes a
+number of styles for its second parameter. Triggering this snippet and
+navigating to the second tab stop initially looks something like this (with the
+current tabstop surrounded by pipes ('|')):
+>
+	TextStyleRemove(
+		"some text";
+		|(Plain|...|SmallCaps|Superscript|Subscript|...|AllStyles)|
+	)
+<
+Typing 'Su' reduces the matching possible parameters to display the following:
+>
+	TextStyleRemove(
+		"some text";
+		Su|(perscript|bscript)|
+	)
+<
+Only two of the options begin with 'Su', so the available options have been
+reduced. Typing a third letter that matches one of the remaining choices
+reduces the option to one, and using the <jumptrigger> key will move you out
+of the snippet:
+>
+	TextStyleRemove(
+		"some text";
+		Subscript
+	)|
+<
+Some functions take string options instead of constant options. When this is
+the case the enclosing double-quote are an enclosing tabstop so that the entire
+tabstop, including the double quotes, can be replaced, perhaps by a variable or
+field name. Or, while on the tabstop that includes the double quotes you can
+press the <jumptrigger> key and move to the quoted options. The following
+state was arrived at by pressing 'getcatt<tab>"source Field"<jumptrigger>':
+>
+	GetContainerAttribute(
+		"source Field";
+			|"(filename|MD5|storageType|fileSize|...|all)"|
+<
+)
+
+Note that the tabstop is selecting the quotes including the available options.
+At this point typing can overwrite all of the available options. On the other
+hand, pressing <jumptrigger> again leads to only the available options being
+selected within the double quotes.
+>
+	GetContainerAttribute(
+		"source Field";
+			"|(filename|MD5|storageType|fileSize|...|all)|"
+<
+)
+
+Finally, once the options without the double quotes are selected, typing a few
+letters will narrow down the available options.
+>
+	GetContainerAttribute(
+		"source Field";
+		"file|(name|Size)|"
+	)
+<
+-------------------------------------------------------------------------------
+																			*filemakervim-built-in-function-triggers*
+Built-In Function Triggers ~
+
+-------------------------------------------------------------------------------
+																									*filemakervim-text-functions*
+Text Functions ~
+
+                                                            *filemakervim-char*
+'Char' 'char', 'cha'
+																														*filemakervim-code*
+`Code` | `code`
+																													 *filemakervim-exact*
+`Exact` | `exact`, `exa`
+																												 *filemakervime-filter*
+`Filter` | `filter`, `fil`
+																									 *filemakervime-filtervalues*
+`FilterValues` | `filtervalues`, `filv`
+																											 *filemakervime-getascss*
+`GetAsCSS` | `getascss`, `getc`
+																											*filemakervime-getasdate*
+`GetAsDate` | `getasdate`, `getd`
+																										*filemakervime-getasnumber*
+`GetAsNumber` | `getasnumber`, `getn`
+																											 *filemakervime-getassvg*
+`GetAsSVG` | `getassvg`, `gets`
+																											*filemakervime-getastext*
+`GetAsText` | `getastext`, `gett`
+																											*filemakervime-getastime*
+`GetAsTime` | `getastime`, `geti`
+																								 *filemakervime-getastimestamp*
+`GetAsTimestamp` | `getastimestamp`, `getm`
+																								*filemakervime-getasurlencoded*
+`GetAsURLEncoded` | `getasurlencoded`, `getu`
+																											 *filemakervime-getvalue*
+`GetValue` | `getvalue`, `getv`
+																											 *filemakervime-hiragana*
+`Hiragana` | `hiragana`, `hir`
+																										*filemakervime-kanahankaku*
+`KanaHankaku` | `kanahankaku`, `kanah`
+																										*filemakervime-kanazenkaku*
+`KanaZenkaku` | `kanazenkaku`, `kanaz`
+																									 *filemakervime-kanjinumeral*
+`KanjiNumeral` | `kanjinumeral`, `kanj`
+																											 *filemakervime-katakana*
+`Katakana` | `katakana`, `kata`
+																													 *filemakervime-left*
+`Left` | `left`, `lef`
+																										 *filemakervime-leftvalues*
+`LeftValues` | `leftvalues`, `leftv`
+																											*filemakervime-leftwords*
+`LeftWords` | `leftwords`, `leftw`
+																												 *filemakervime-length*
+`Length` | `length`, `len`
+																													*filemakervime-lower*
+`Lower` | `lower`, `low`
+																												 *filemakervime-middle*
+`Middle` | `middle`, `mid`
+																									 *filemakervime-middlevalues*
+`MiddleValues` | `middlevalues`, `midv`
+																										*filemakervime-middlewords*
+`MiddleWords` | `middlewords`, `midw`
+																										 *filemakervime-numtojtext*
+`NumToJText` | `numtojtext`, `numj`
+																									 *filemakervime-patterncount*
+`PatternCount` | `patterncount`, `pat`
+																											 *filemakervime-position*
+`Position` | `position`, `pos`
+																												 *filemakervime-proper*
+`Proper` | `proper`, `pro`
+																													*filemakervime-quote*
+`Quote` | `quote`, `quo`
+																												*filemakervime-replace*
+`Replace` | `replace`, `repl`
+																													*filemakervime-right*
+`Right` | `right`, `rit`
+																										*filemakervime-rightvalues*
+`RightValues` | `rightvalues`, `ritv`
+																										 *filemakervime-rightwords*
+`RightWords` | `rightwords`, `ritw`
+																									 *filemakervime-romanhankaku*
+`RomanHankaku` | `romanhankaku`, `romh`
+																									 *filemakervime-romankenkaku*
+`RomanZenkaku` | `romankenkaku`, `romz`
+																								*filemakervime-serialincrement*
+`SerialIncrement` | `serialincrement`, `seri`
+																										 *filemakervime-substitute*
+`Substitute` | `substitute`, `sub`
+																													 *filemakervime-trim*
+`Trim` | `trim`
+																												*filemakervime-trimall*
+`TrimAll` | `trimall`, `trima`
+																													*filemakervime-upper*
+`Upper` | `upper`, `upp`
+																										 *filemakervime-valuecount*
+`ValueCount` | `valuecount`, `valc`
+																											*filemakervime-wordcount*
+`WordCount` | `wordcount`, `wordc`
+
+-------------------------------------------------------------------------------
+																			 *filemakervim-text-formatting-functions*
+Text Formatting Functions ~
+
+																														*filemakervime-rgb*
+`RGB` | `rgb`
+																											*filemakervime-textcolor*
+`TextColor` | `textcolor`, `textc`
+																								*filemakervime-textcolorremove*
+`TextColorRemove` | `textcolorremove`, `textcr`
+																											 *filemakervime-textfont*
+`TextFont` | `textfont`, `textf`
+																								 *filemakervime-textfontremove*
+`TextFontRemove` | `textfontremove`, `textfr`
+																											 *filemakervime-textsize*
+`TextSize` | `textsize`, `texts`
+																								 *filemakervime-textsizeremove*
+`TextSizeRemove` | `textsizeremove`, `textsr`
+																									 *filemakervime-textstyleadd*
+`TextStyleAdd` | `textstyleadd`, `textsts`
+																								*filemakervime-textstyleremove*
+`TextStyleRemove` | `textstyleremove`, `textstr`
+
+-------------------------------------------------------------------------------
+																								*filemakervim-number-functions*
+Number Functions ~
+
+																														*filemakervime-abs*
+`Abs` | `abs`
+																												*filemakervime-ceiling*
+`Ceiling` | `ceiling`, `ceil`
+																										*filemakervime-combination*
+`Combination` | `combination`, `comb`
+																														*filemakervime-div*
+`Div` | `div`
+																														*filemakervime-exp*
+`Exp` | `exp`
+																											*filemakervime-factorial*
+`Factorial` | `factorial`, `fact`
+																													*filemakervime-floor*
+`Floor` | `floor`, `flo`
+																														*filemakervime-int*
+`Int` | `int`
+																														 *filemakervime-lg*
+`Lg` | `lg`
+																														 *filemakervime-ln*
+`Ln` | `ln`
+																														*filemakervime-log*
+`Log` | `log`
+																														*filemakervime-mod*
+`Mod` | `mod`
+																												 *filemakervime-random*
+`Random` | `random`, `rand`
+																													*filemakervime-round*
+`Round` | `round`, `rou`
+																									 *filemakervime-setprecision*
+`SetPrecision` | `setprecision`, `setp`
+																													 *filemakervime-sign*
+`Sign` | `sign`
+																													 *filemakervime-sqrt*
+`Sqrt` | `sqrt`
+																											 *filemakervime-truncate*
+`Truncate` | `truncate`, `trunc`
+
+-------------------------------------------------------------------------------
+																									*filemakervim-date-functions*
+Date Functions ~
+
+																													 *filemakervime-date*
+`Date` | `date`
+																														*filemakervime-day*
+`Day` | `day`
+																												*filemakervime-dayname*
+`DayName` | `dayname`, `dayn`
+																											 *filemakervime-daynamej*
+`DayNameJ` | `daynamej`, `daynj`
+																											*filemakervime-dayofweek*
+`DayOfWeek` | `dayofweek`, `dow`
+																											*filemakervime-dayofyear*
+`DayOfYear` | `dayofyear`, `doy`
+																													*filemakervime-month*
+`Month` | `month`, `mon`
+																											*filemakervime-monthname*
+`MonthName` | `monthname`, `monn`
+																										 *filemakervime-monthnamej*
+`MonthNameJ` | `monthnamej`, `monnj`
+																										 *filemakervime-weekofyear*
+`WeekOfYear` | `weekofyear`, `woy`
+																							 *filemakervime-weekofyearfiscal*
+`WeekOfYearFiscal` | `weekofyearfiscal`, `woyf`
+																													 *filemakervime-year*
+`Year` | `year`, `yr`
+																											 *filemakervime-yearname*
+`YearName` | `yearname`, `yrn`
+
+-------------------------------------------------------------------------------
+																									*filemakervim-time-functions*
+Time Functions ~
+
+																													 *filemakervime-hour*
+`Hour` | `hour`, `hr`
+																												 *filemakervime-minute*
+`Minute` | `minute`, `minu`
+																												*filemakervime-seconds*
+`Seconds` | `seconds`, `secs`
+																													 *filemakervime-time*
+`Time` | `time`
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-timestamp-functions*
+Timestamp Functions ~
+
+																											*filemakervime-timestamp*
+`Timestamp` | `timestamp`, `ts`
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-container-functions*
+Container Functions ~
+
+																									 *filemakervime-base64decode*
+`Base64Decode` | `base64decode`, `based`
+																									 *filemakervime-base64encode*
+`Base64Encode` | `base64encode`, `basee`
+																					*filemakervime-getcontainerattribute*
+`GetContainerAttribute` | `getcontainerattribute`, `getcatt`
+																											*filemakervime-getheight*
+`GetHeight` | `getheight`, `geth`
+																									 *filemakervime-getthumbnail*
+`GetThumbnail` | `getthumbnail`, `getth`
+																											 *filemakervime-getwidth*
+`GetWidth` | `getwidth`, `getw`
+																								*filemakervime-verifycontainer*
+`VerifyContainer` | `verifycontainer`, `ver`
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-aggregate-functions*
+Aggregate Functions ~
+
+																												*filemakervime-average*
+`Average` | `average`, `avg`
+																													*filemakervime-count*
+`Count` | `count`, `cnt`
+																													 *filemakervime-list*
+`List` | `list`
+																														*filemakervime-max*
+`Max` | `max`
+																														*filemakervime-min*
+`Min` | `min`
+																													*filemakervime-stdev*
+`StDev` | `stdev`, `std`
+																												 *filemakervime-stdevp*
+`StDevP` | `stdevp`, `stdp`
+																														*filemakervime-sum*
+`Sum` | `sum`
+																											 *filemakervime-variance*
+`Variance` | `variance`, `var`
+																											*filemakervime-variancep*
+`VarianceP` | `variancep`, `varp`
+
+-------------------------------------------------------------------------------
+																							 *filemakervim-summary-functions*
+Summary Functions ~
+
+																										 *filemakervime-getsummary*
+`GetSummary` | `getsummary`, `getsum`
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-repeating-functions*
+Repeating Functions ~
+
+																												 *filemakervime-extend*
+`Extend` | `extend`, `extd`
+																									*filemakervime-getrepetition*
+`GetRepetition` | `getrepetition`, `getrep`
+																													 *filemakervime-last*
+`Last` | `last`
+
+-------------------------------------------------------------------------------
+																						 *filemakervim-financial-functions*
+Financial Functions ~
+
+																														 *filemakervime-fv*
+`FV` | `fv`
+																														*filemakervime-npv*
+`NPV` | `npv`
+																														*filemakervime-pmt*
+`PMT` | `pmt`
+																														 *filemakervime-pv*
+`PV` | `pv`
+
+-------------------------------------------------------------------------------
+																				 *filemakervim-trigonometric-functions*
+Trigonometric Functions ~
+
+																													 *filemakervime-acos*
+`Acos` | `acos`
+																													 *filemakervime-asin*
+`Asin` | `asin`
+																													 *filemakervime-atan*
+`Atan` | `atan`
+																														*filemakervime-cos*
+`Cos` | `cos`
+																												*filemakervime-degrees*
+`Degrees` | `degrees`, `deg`
+																												*filemakervime-radians*
+`Radians` | `radians`, `rad`
+																														*filemakervime-sin*
+`Sin` | `sin`
+																														*filemakervime-tan*
+`Tan` | `tan`
+
+-------------------------------------------------------------------------------
+																							 *filemakervim-logical-functions*
+Logical Functions ~
+
+																													 *filemakervime-case*
+`Case` | `case`
+																												 *filemakervime-choose*
+`Choose` | `choose`, `cho`
+																											 *filemakervime-evaluate*
+`Evaluate` | `evaluate`, `eval`
+																								*filemakervime-evaluationerror*
+`EvaluationError` | `evaluationerror`, `evalerr`
+																										 *filemakervime-executesql*
+`ExecuteSQL` | `executesql`, `sql`
+																									 *filemakervime-getasboolean*
+`GetAsBoolean` | `getasboolean`, `getb`
+																											 *filemakervime-getfield*
+`GetField` | `getfield`, `getf`
+																									 *filemakervime-getfieldname*
+`GetFieldName` | `getfieldname`, `getfn`
+																			 *filemakervime-getlayoutobjectattribute*
+`GetLayoutObjectAttribute` | `getlayoutobjectattribute`, `getloa`
+																									 *filemakervime-getnthrecord*
+`GetNthRecord` | `getnthrecord`, `getnth`
+																														 *filemakervime-if*
+`If` | `if`
+																												*filemakervime-isempty*
+`IsEmpty` | `isempty`, `ise`
+																												*filemakervime-isvalid*
+`IsValid` | `isvalid`, `isv`
+																							*filemakervime-isvalidexpression*
+`IsValidExpression` | `isvalidexpression`, `isve`
+																														*filemakervime-let*
+`Let` | `let`
+																												 *filemakervime-lookup*
+`Lookup` | `lookup`, `look`
+																										 *filemakervime-lookupnext*
+`LookupNext` | `lookupnext`, `lookn`
+
+-------------------------------------------------------------------------------
+																								*filemakervim-design-functions*
+Design Functions ~
+
+																														*filemakervime-dbn*
+`DatabaseNames` | `dbn`
+																										*filemakervime-fieldbounds*
+`FieldBounds` | `fieldbounds`, `fb`
+																									 *filemakervime-fieldcomment*
+`FieldComment` | `fieldcomment`, `fc`
+																											 *filemakervime-fieldids*
+`FieldIDs` | `fieldids`, `fid`
+																										 *filemakervime-fieldnames*
+`FieldNames` | `fieldnames`, `fn`
+																							 *filemakervime-fieldrepetitions*
+`FieldRepetitions` | `fieldrepetitions`, `frep`
+																										 *filemakervime-fieldstyle*
+`FieldStyle` | `fieldstyle`, `fst`
+																											*filemakervime-fieldtype*
+`FieldType` | `fieldtype`, `fty`
+																						 *filemakervime-getnextserialvalue*
+`GetNextSerialValue` | `getnextserialvalue`, `gnsv`
+																											*filemakervime-layoutids*
+`LayoutIDs` | `layoutids`, `lid`
+																										*filemakervime-layoutnames*
+`LayoutNames` | `layoutnames`, `lon`
+																							*filemakervime-layoutobjectnames*
+`LayoutObjectNames` | `layoutobjectnames`, `loon`
+																											 *filemakervime-location*
+`Location` | `location`, `loc`
+																								 *filemakervime-locationvalues*
+`LocationValues` | `locationvalues`, `locv`
+																									 *filemakervime-relationinfo*
+`RelationInfo` | `relationinfo`, `ri`
+																											*filemakervime-scriptids*
+`ScriptIDs` | `scriptids`, `sid`
+																											 *filemakervime-tableids*
+`TableIDs` | `tableids`, `tid`
+																										 *filemakervime-tablenames*
+`TableNames` | `tablenames`, `tn`
+																									 *filemakervime-valuelistids*
+`ValueListIDs` | `valuelistids`, `vid`
+																								 *filemakervime-valuelistitems*
+`ValueListItems` | `valuelistitems`, `vli`
+																								 *filemakervime-valuelistnames*
+`ValueListNames` | `valuelistnames`, `vln`
+																										*filemakervime-windownames*
+`WindowNames` | `windownames`, `wn`
+
+-------------------------------------------------------------------------------
+																							*filemakervim-external-functions*
+External Functions ~
+
+																											 *filemakervime-external*
+`External` | `external`
+
+-------------------------------------------------------------------------------
+																									 *filemakervim-get-functions*
+Get Functions ~
+
+																												 *filemakervime-getaep*
+`Get( AccountExtendedPrivileges )` | `getaep`
+																													*filemakervime-getan*
+`Get( AccountName )` | `getan`
+																												*filemakervime-getapsn*
+`Get( AccountPrivilegeSetName )` | `getapsn`
+																												 *filemakervime-getafc*
+`Get( ActiveFieldContents )` | `getafc`
+																												 *filemakervime-getafn*
+`Get( ActiveFieldName )` | `getafn`
+																												*filemakervime-getaftn*
+`Get( ActiveFieldTableName )` | `getaftn`
+																												*filemakervime-getalon*
+`Get( ActiveLayoutObjectName )` | `getalon`
+																												 *filemakervime-getafk*
+`Get( ActiveModifierKeys )` | `getafk`
+																												*filemakervime-getaprn*
+`Get( ActivePortalRowNumber )` | `getaprn`
+																												 *filemakervime-getarn*
+`Get( ActiveRepetitionNumber )` | `getarn`
+																												 *filemakervime-getass*
+`Get( ActiveSelectionState )` | `getass`
+																												*filemakervime-getasst*
+`Get( ActiveSelectionStart )` | `getasst`
+																												 *filemakervime-getaas*
+`Get( AllowAbortState )` | `getaas`
+																												*filemakervime-getafbs*
+`Get( AllowFormattingBarState )` | `getafbs`
+																													*filemakervime-getal*
+`Get( ApplicationLanguage )` | `getal`
+																													*filemakervime-getav*
+`Get( ApplicationVersion )` | `getav`
+																												 *filemakervime-getcrn*
+`Get( CalculationRepetitionNumber )` | `getcrn`
+																													*filemakervime-getca*
+`Get( ConnectionAttributes )` | `getca`
+																													*filemakervime-getcs*
+`Get( ConnectionState )` | `getcs`
+																													*filemakervime-getcd*
+`Get( CurrentDate )` | `getcd`, `cd`
+																												 *filemakervime-getcap*
+`Get( CurrentExtendedPrivileges )` | `getcap`
+																												 *filemakervime-getcht*
+`Get( CurrentHostTimestamp )` | `getcht`
+																												*filemakervime-getcpsn*
+`Get( CurrentPrivilegeSetName )` | `getcpsn`
+																													*filemakervime-getct*
+`Get( CurrentTime )` | `getct`, `ct`
+																												 *filemakervime-getcts*
+`Get( CurrentTimestamp )` | `getcts`, `cts`
+																												 *filemakervime-getutc*
+`Get( CurrentTimeUTCMilliseconds )` | `getutc`
+																												*filemakervime-getcmsn*
+`Get( CustomMenuSetName )` | `getcmsn`
+																													*filemakervime-getdp*
+`Get( DesktopPath )` | `getdp`
+																													*filemakervime-getdv*
+`Get( Device )` | `getdv`
+																												*filemakervime-getdocp*
+`Get( DocumentsPath )` | `getdocp`
+																												 *filemakervime-getdpl*
+`Get( DocumentsPathListing )` | `getdpl`
+																													*filemakervime-getes*
+`Get( EncryptionState )` | `getes`
+																												 *filemakervime-geters*
+`Get( ErrorCaptureState )` | `geters`
+																												 *filemakervime-getfmp*
+`Get( FileMakerPath )` | `getfmp`
+																													*filemakervime-getfn*
+`Get( FileName )` | `getfn`
+																													*filemakervime-getfp*
+`Get( FilePath )` | `getfp`
+																													*filemakervime-getfs*
+`Get( FileSize )` | `getfs`
+																													*filemakervime-getfc*
+`Get( FoundCount )` | `getfc`
+																												 *filemakervime-gethcc*
+`Get( HighContrastColor )` | `gethcc`
+																												 *filemakervime-gethcs*
+`Get( HighContrastState )` | `gethcs`
+																												 *filemakervime-gethav*
+`Get( HostApplicationVersion )` | `gethav`
+																												*filemakervime-gethipa*
+`Get( HostIPAddress )` | `gethipa`
+																													*filemakervime-gethn*
+`Get( HostName )` | `gethn`
+																												*filemakervime-getifmp*
+`Get( InstalledFMPlugins )` | `getifmp`
+																													*filemakervime-getle*
+`Get( LastError )` | `getle`
+																												 *filemakervime-getlmc*
+`Get( LastMessageChoice )` | `getlmc`
+																												 *filemakervime-getloe*
+`Get( LastODBCError )` | `getloe`
+																													*filemakervime-getla*
+`Get( LayoutAccess )` | `getla`
+																													*filemakervime-getlc*
+`Get( LayoutCount )` | `getlc`
+																													*filemakervime-getln*
+`Get( LayoutName )` | `getln`
+																												 *filemakervime-getlnu*
+`Get( LayoutNumber )` | `getlnu`
+																												 *filemakervime-getltn*
+`Get( LayoutTableName )` | `getltn`
+																												 *filemakervime-getlvs*
+`Get( LayoutViewState )` | `getlvs`
+																													*filemakervime-getmf*
+`Get( ModifiedFields )` | `getmf`
+																												 *filemakervime-getmus*
+`Get( MultiUserState )` | `getmus`
+																													*filemakervime-getnp*
+`Get( NetworkProtocol )` | `getnp`
+																													*filemakervime-getnt*
+`Get( NetworkType )` | `getnt`
+																													*filemakervime-getpn*
+`Get( PageNumber )` | `getpn`
+																												 *filemakervime-getpid*
+`Get( PersistentID )` | `getpid`
+																													*filemakervime-getpp*
+`Get( PreferencesPath )` | `getpp`
+																												 *filemakervime-getprn*
+`Get( PrinterName )` | `getprn`
+																												 *filemakervime-getqft*
+`Get( QuickFindText )` | `getqft`
+																													*filemakervime-getra*
+`Get( RecordAccess )` | `getra`
+																												 *filemakervime-getrid*
+`Get( RecordID )` | `getrid`
+																												 *filemakervime-getrmc*
+`Get( RecordModificationCount )` | `getrmc`
+																													*filemakervime-getrn*
+`Get( RecordNumber )` | `getrn`
+																												 *filemakervime-getroc*
+`Get( RecordOpenCount )` | `getroc`
+																												 *filemakervime-getros*
+`Get( RecordOpenState )` | `getros`
+																												 *filemakervime-getrqc*
+`Get( RequestCount )` | `getrqc`
+																												*filemakervime-getrqos*
+`Get( RequestOmitState )` | `getrqos`
+																													*filemakervime-getsd*
+`Get( ScreenDepth )` | `getsd`
+																													*filemakervime-getsh*
+`Get( ScreenHeight )` | `getsh`
+																													*filemakervime-getsw*
+`Get( ScreenWidth )` | `getsw`
+																												 *filemakervime-getsas*
+`Get( ScriptAnimationState )` | `getsas`
+																													*filemakervime-getsn*
+`Get( ScriptName )` | `getsn`
+																													*filemakervime-getsp*
+`Get( ScriptParameter )` | `getsp`
+																													*filemakervime-getsr*
+`Get( ScriptResult )` | `getsr`
+																													*filemakervime-getss*
+`Get( SortState )` | `getss`
+																												*filemakervime-getsars*
+`Get( StatusAreaState )` | `getsars`
+																												 *filemakervime-getsdv*
+`Get( SystemDrive )` | `getsdv`
+																												*filemakervime-getsipa*
+`Get( SystemIPAddress )` | `getsipa`
+																													*filemakervime-getsl*
+`Get( SystemLanguage )` | `getsl`
+																												 *filemakervime-getsna*
+`Get( SystemNICAddress )` | `getsna`
+																												 *filemakervime-getspl*
+`Get( SystemPlatform )` | `getspl`
+																													*filemakervime-getsv*
+`Get( SystemVersion )` | `getsv`
+																													*filemakervime-gettp*
+`Get( TemporaryPath )` | `gettp`
+																												 *filemakervime-gettrv*
+`Get( TextRulerVisible )` | `gettrv`
+																												 *filemakervime-gettrc*
+`Get( TotalRecordCount )` | `gettrc`
+																												 *filemakervime-gettcp*
+`Get( TriggerCurrentPanel )` | `gettcp`
+																												 *filemakervime-gettgi*
+`Get( TriggerGestureInfo )` | `gettgi`
+																													*filemakervime-gettk*
+`Get( TriggerKeystroke )` | `gettk`
+																												 *filemakervime-gettmk*
+`Get( TriggerModifierKeys )` | `gettmk`
+																												 *filemakervime-getttp*
+`Get( TriggerTargetPanel )` | `getttp`
+																													*filemakervime-getuc*
+`Get( UserCount )` | `getuc`
+																													*filemakervime-getun*
+`Get( UserName )` | `getun`
+																												*filemakervime-getusfs*
+`Get( UseSystemFormatsState )` | `getusfs`
+																												*filemakervime-getuuid*
+`Get( UUID )` | `getuuid`, `getuu`
+																												 *filemakervime-getwch*
+`Get( WindowContentHeight )` | `getwch`
+																												 *filemakervime-getwcw*
+`Get( WindowContentWidth )` | `getwcw`
+																												 *filemakervime-getwdh*
+`Get( WindowDesktopHeight )` | `getwdh`
+																												 *filemakervime-getwdw*
+`Get( WindowDesktopWidth )` | `getwdw`
+																													*filemakervime-getwh*
+`Get( WindowHeight )` | `getwh`
+																													*filemakervime-getwl*
+`Get( WindowLeft )` | `getwl`
+																													*filemakervime-getwm*
+`Get( WindowMode )` | `getwm`
+																													*filemakervime-getwn*
+`Get( WindowName )` | `getwn`
+																													*filemakervime-getwo*
+`Get( WindowOrientation )` | `getwo`
+																													*filemakervime-getws*
+`Get( WindowStyle )` | `getws`
+																													*filemakervime-getwt*
+`Get( WindowTop )` | `getwt`
+																													*filemakervime-getwv*
+`Get( WindowVisible )` | `getwv`
+																													*filemakervime-getww*
+`Get( WindowWidth )` | `getww`
+																												 *filemakervime-getwzl*
+`Get( WindowZoomLevel )` | `getwzl`
+
+===============================================================================
+																										 *filemakervim-helping-out*
+Helping Out ~
+
+filemaker.vim needs the help of the FileMaker community to keep improving.
+Please consider joining this effort by providing new snippets, new features or
+bug reports.
+
+You can contribute snippets or patches in various ways. The methods are listed
+below in order of convenience for me. Please be as convenient as you can be. :)
+
+- Clone the repository on GitHub ('git clone
+	git@github.com:chivalry/filemaker.vim.git'), make your changes and send a
+	pull request on GitHub.
+- Make a patch, report a bug/feature request [10] and attach the patch to it.
+- Send me an email with a patch (see Contact section below).
+- Send me an email with the changed files only.
+
+===============================================================================
+																												 *filemakervim-contact*
+Contact ~
+
+You can reach me at chivalry -AT- mac -DOT- com. This project aims to be a
+complete solution for working with FileMaker calculations within Vim. If you
+miss a feature or find a bug, please contact me or add an issue to our issues
+tracker [10].
+
+===============================================================================
+																										*filemakervim-contributors*
+Contributors ~
+
+The maintainer and primary developer of filemaker.com is Charles Ross (GitHub
+[11], Twitter [12]). Matt Petrowski (GitHub [13], Twitter [14]) was of enormous
+help not only in developing this plugin but also in providing valueable insight
+into which features to include and how they should be implemented.
+
+===============================================================================
+																											*filemakervim-references*
+References ~
+
+[1] https://macromates.com
+[2] https://github.com/SirVer/ultisnips
+[3] http://www.hogbaysoftware.com
+[4] https://github.com/jessegrosjean/quickcursor
+[5] http://rocketink.net/2013/05/quickcursor-keyboard-maestro.html
+[6] http://www.keyboardmaestro.com
+[7] https://github.com/SirVer
+[8] https://github.com/gmarik/Vundle.vim
+[9] https://github.com/gmarik/Vundle.vim/blob/master/README.md#quick-start
+[10] https://github.com/chivalry/filemaker.vim/issues
+[11] https://github.com/chivalry
+[12] https://twitter.com/chivalrysoft
+[13] https://github.com/petrowsky
+[14] https://twitter.com/filemakermag
+
+vim: ft=help

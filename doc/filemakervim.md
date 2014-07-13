@@ -1,4 +1,4 @@
-<a name="FileMakerVim-description"></a><a name="FMV-description"></a>
+a name="FileMakerVim-description"></a><a name="FMV-description"></a>
 # Description
 
 filemaker.vim provides syntax highlighting and snippet support for FileMaker calculations to be edited in Vim. It detects the filetype for the extensions `filemaker`, `fmcalc`, `fm`, and `fmfn`. It also recognizes calculations that have been opened using the [QuickCursor](#FileMakerVim-quickcursor) app on OS X.
@@ -64,7 +64,7 @@ Then enter the `:PluginInstall` command while in normal mode in Vim.
 If you need a bit more granular instructions, keep reading.
 
 <a name="FileMakerVim-vundle"></a><a name="FMV-vundle"></a>
-## Vundle
+## Vundle Installation
 
 Vundle is the recommended method for installing filemaker.vim. Either read the [complete installation instructions](https://github.com/gmarik/Vundle.vim/blob/master/README.md#quick-start) or follow these steps:
 
@@ -85,7 +85,7 @@ Vundle is the recommended method for installing filemaker.vim. Either read the [
 5. Quit Vim if it's already running and relaunch it.
 
 <a name="FileMakerVim-ultisnipsinstall"></a><a name="FMV-ultisnipsinstall"></a>
-## UltiSnips
+## UltiSnips Installation
 
 Now that Vundle is installed, installing UltiSnips is trivial. In your `.vimrc` file, after the first call to `Plugin`, add the following lines:
 
@@ -97,7 +97,7 @@ Save your `.vimrc` and run the `:PluginInstall` command.
 The second plugin is completely optional, but will add many useful snippets for other languages (PHP, JavaScript, etc.) as well as snippets for writting snippets. See the UltiSnips documentation for more information.
 
 <a name="FileMakerVim-filemaker.vim"></a><a name="FMV-filemaker.vim"></a>
-## filemaker.vim
+## filemaker.vim Installation
 
 Installing filemaker.vim is just as easy as installing UltiSnips. Add this line to your `.vimrc` file after your previous lines and before the call to `vundle#end`:
 
@@ -656,4 +656,4 @@ You can reach me at chivalry -AT- mac -DOT- com. This project aims to be a compl
 <a name="FileMakerVim-contributors"></a><a name="FMV-contributors"></a>
 # Contributors
 
-The maintainer and primary developer of filemaker.com is Charles Ross ([github](https://github.com/chivalry), [twitter](https://twitter.com/chivalrysoft)). Matt Petrowski ([github](https://github.com/petrowsky), [twitter](https://twitter.com/filemakermag)) was of enormous help not only in developing this plugin but also in providing valueable insight into which features to include and how they should be implemented.
+The maintainer and primary developer of filemaker.com is Charles Ross ([GitHub](https://github.com/chivalry), [Twitter](https://twitter.com/chivalrysoft)). Matt Petrowski ([GitHub](https://github.com/petrowsky), [Twitter](https://twitter.com/filemakermag)) was of enormous help not only in developing this plugin but also in providing valueable insight into which features to include and how they should be implemented.
