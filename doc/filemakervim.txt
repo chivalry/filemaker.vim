@@ -481,37 +481,37 @@ Text Functions ~
 
                   *filemakervim-char*
                                                                      *fmv-char*
-'Char'           'char'     'cha'
+'Char'                 'char'     'cha'
                                                             *filemakervim-code*
                                                                      *fmv-code*
-'Code'           'code'     'cod'
+'Code'                 'code'     'cod'
                                                            *filemakervim-exact*
                                                                     *fmv-exact*
-'Exact'           'exact'     'exa'
+'Exact'                'exact'     'exa'
                                                           *filemakervim-filter*
                                                                    *fmv-filter*
-'Filter'         'filter'     'fil'
+'Filter'               'filter'     'fil'
                                                     *filemakervim-filtervalues*
                                                              *fmv-filtervalues*
 'Filtervalues'         'filtervalues'   'filv'
                                                         *filemakervim-getascss*
                                                                  *fmv-getascss*
-'GetAsCSS'         'getascss'   'getc'
+'GetAsCSS'             'getascss'   'getc'
                                                        *filemakervim-getasdate*
                                                                 *fmv-getasdate*
-'GetAsDate'         'getasdate'   'getd'
+'GetAsDate'            'getasdate'   'getd'
                                                      *filemakervim-getasnumber*
                                                               *fmv-getasnumber*
-'GetAsNumber'         'getasnumber'   'getn'
+'GetAsNumber'          'getasnumber'   'getn'
                                                         *filemakervim-getassvg*
                                                                  *fmv-getassvg*
-'GetAsSVG'         'getassvg'   'gets'
+'GetAsSVG'             'getassvg'   'gets'
                                                        *filemakervim-getastext*
                                                                 *fmv-getastext*
-'GetAsText'         'getastext'   'gett'
+'GetAsText'            'getastext'   'gett'
                                                        *filemakervim-getastime*
                                                                 *fmv-getastime*
-'GetAsTime'         'getastime'   'geti'
+'GetAsTime'            'getastime'   'geti'
                                                   *filemakervim-getastimestamp*
                                                            *fmv-getastimestamp*
 'GetAsTimestamp'       'getastimestamp'  'getm'
@@ -520,73 +520,73 @@ Text Functions ~
 'GetAsURLEncoded'      'getasurlencoded' 'getu'
                                                         *filemakervim-getvalue*
                                                                  *fmv-getvalue*
-'GetValue'         'getvalue'   'getv'
+'GetValue'             'getvalue'   'getv'
                                                         *filemakervim-hiragana*
                                                                  *fmv-hiragana*
-'Hiragana'         'hiragana'   'hir'
+'Hiragana'             'hiragana'   'hir'
                                                      *filemakervim-kanahankaku*
                                                               *fmv-kanahankaku*
-'KanaHankaku'         'kanahankaku'   'kanah'
+'KanaHankaku'          'kanahankaku'   'kanah'
                                                      *filemakervim-kanazenkaku*
                                                               *fmv-kanazenkaku*
-'KanaZenkaku'         'kanazenkaku'   'kanaz'
+'KanaZenkaku'          'kanazenkaku'   'kanaz'
                                                     *filemakervim-kanjinumeral*
                                                              *fmv-kanjinumeral*
 'KanjiNumeral'         'kanjinumeral'   'kanj'
                                                         *filemakervim-katakana*
                                                                  *fmv-katakana*
-'Katakana'         'katakana'   'kata'
+'Katakana'             'katakana'   'kata'
                                                             *filemakervim-left*
                                                                      *fmv-left*
-'Left'           'left'     'lef'
+'Left'                 'left'     'lef'
                                                       *filemakervim-leftvalues*
                                                                *fmv-leftvalues*
-'LeftValues'         'leftvalues'   'leftv'
+'LeftValues'           'leftvalues'   'leftv'
                                                        *filemakervim-leftwords*
                                                                 *fmv-leftwords*
-'LeftWords'         'leftwords'   'leftw'
+'LeftWords'            'leftwords'   'leftw'
                                                           *filemakervim-length*
                                                                    *fmv-length*
-'Length'         'length'     'len'
+'Length'               'length'     'len'
                                                            *filemakervim-lower*
                                                                     *fmv-lower*
-'Lower'           'lower'     'low'
+'Lower'                'lower'     'low'
                                                           *filemakervim-middle*
                                                                    *fmv-middle*
-'Middle'         'middle'     'mid'
+'Middle'               'middle'     'mid'
                                                     *filemakervim-middlevalues*
                                                              *fmv-middlevalues*
 'MiddleValues'         'middlevalues'   'midv'
                                                      *filemakervim-middlewords*
                                                               *fmv-middlewords*
-'MiddleWords'         'middlewords'   'midw'
+'MiddleWords'          'middlewords'   'midw'
                                                       *filemakervim-numtojtext*
                                                                *fmv-numtojtext*
-'NumToJText'         'numtojtext'   'numj'
+'NumToJText'           'numtojtext'   'numj'
                                                     *filemakervim-patterncount*
                                                              *fmv-patterncount*
 'PatternCount'         'patterncount'   'pat'
                                                         *filemakervim-position*
                                                                  *fmv-position*
-'Position'         'position'   'pos'
+'Position'             'position'   'pos'
                                                           *filemakervim-proper*
                                                                    *fmv-proper*
-'Proper'         'proper'     'pro'
+'Proper'               'proper'     'pro'
                                                            *filemakervim-quote*
                                                                     *fmv-quote*
-'Quote'           'quote'     'quo'
+'Quote'                'quote'     'quo'
                                                          *filemakervim-replace*
                                                                   *fmv-replace*
-'Replace'         'replace'   'repl'
+'Replace'              'replace'   'repl'
                                                            *filemakervim-right*
                                                                     *fmv-right*
-'Right'           'right'     'rit'
+'Right'                'right'     'rit'
                                                      *filemakervim-rightvalues*
                                                               *fmv-rightvalues*
-'RightValues'         'rightvalues'   'ritv'
+'RightValues'          'rightvalues'   'ritv'
                                                       *filemakervim-rightwords*
                                                                *fmv-rightwords*
-'RightWords'         'rightwords'   'ritw'
+'RightWords'           'rightwords'   'ritw'
                                                     *filemakervim-romanhankaku*
                                                              *fmv-romanhankaku*
 'RomanHankaku'         'romanhankaku'   'romh'
@@ -598,22 +598,22 @@ Text Functions ~
 'SerialIncrement'      'serialincrement' 'seri'
                                                       *filemakervim-substitute*
                                                                *fmv-substitute*
-'Substitute'         'substitute'   'sub'
+'Substitute'           'substitute'   'sub'
                                                             *filemakervim-trim*
                                                                      *fmv-trim*
-'Trim'           'trim'
+'Trim'                 'trim'
                                                          *filemakervim-trimall*
                                                                   *fmv-trimall*
-'TrimAll'         'trimall'   'trima'
+'TrimAll'              'trimall'   'trima'
                                                            *filemakervim-upper*
                                                                     *fmv-upper*
-'Upper'           'upper'     'upp'
+'Upper'                'upper'     'upp'
                                                       *filemakervim-valuecount*
                                                                *fmv-valuecount*
-'ValueCount'         'valuecount'   'valc'
+'ValueCount'           'valuecount'   'valc'
                                                        *filemakervim-wordcount*
                                                                 *fmv-wordcount*
-'WordCount'         'wordcount'   'wordc'
+'WordCount'            'wordcount'   'wordc'
 
 -------------------------------------------------------------------------------
                                            *filemakervim-text-formatting-group*
