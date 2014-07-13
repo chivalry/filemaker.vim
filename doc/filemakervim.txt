@@ -444,628 +444,355 @@ Built-In Function Triggers ~
 Text Functions ~
 
                                                             *filemakervim-char*
-'Char' 'char', 'cha'
-																														*filemakervim-code*
-`Code` | `code`
-																													 *filemakervim-exact*
-`Exact` | `exact`, `exa`
-																												 *filemakervime-filter*
-`Filter` | `filter`, `fil`
-																									 *filemakervime-filtervalues*
-`FilterValues` | `filtervalues`, `filv`
-																											 *filemakervime-getascss*
-`GetAsCSS` | `getascss`, `getc`
-																											*filemakervime-getasdate*
-`GetAsDate` | `getasdate`, `getd`
-																										*filemakervime-getasnumber*
-`GetAsNumber` | `getasnumber`, `getn`
-																											 *filemakervime-getassvg*
-`GetAsSVG` | `getassvg`, `gets`
-																											*filemakervime-getastext*
-`GetAsText` | `getastext`, `gett`
-																											*filemakervime-getastime*
-`GetAsTime` | `getastime`, `geti`
-																								 *filemakervime-getastimestamp*
-`GetAsTimestamp` | `getastimestamp`, `getm`
-																								*filemakervime-getasurlencoded*
-`GetAsURLEncoded` | `getasurlencoded`, `getu`
-																											 *filemakervime-getvalue*
-`GetValue` | `getvalue`, `getv`
-																											 *filemakervime-hiragana*
-`Hiragana` | `hiragana`, `hir`
-																										*filemakervime-kanahankaku*
-`KanaHankaku` | `kanahankaku`, `kanah`
-																										*filemakervime-kanazenkaku*
-`KanaZenkaku` | `kanazenkaku`, `kanaz`
-																									 *filemakervime-kanjinumeral*
-`KanjiNumeral` | `kanjinumeral`, `kanj`
-																											 *filemakervime-katakana*
-`Katakana` | `katakana`, `kata`
-																													 *filemakervime-left*
-`Left` | `left`, `lef`
-																										 *filemakervime-leftvalues*
-`LeftValues` | `leftvalues`, `leftv`
-																											*filemakervime-leftwords*
-`LeftWords` | `leftwords`, `leftw`
-																												 *filemakervime-length*
-`Length` | `length`, `len`
-																													*filemakervime-lower*
-`Lower` | `lower`, `low`
-																												 *filemakervime-middle*
-`Middle` | `middle`, `mid`
-																									 *filemakervime-middlevalues*
-`MiddleValues` | `middlevalues`, `midv`
-																										*filemakervime-middlewords*
-`MiddleWords` | `middlewords`, `midw`
-																										 *filemakervime-numtojtext*
-`NumToJText` | `numtojtext`, `numj`
-																									 *filemakervime-patterncount*
-`PatternCount` | `patterncount`, `pat`
-																											 *filemakervime-position*
-`Position` | `position`, `pos`
-																												 *filemakervime-proper*
-`Proper` | `proper`, `pro`
-																													*filemakervime-quote*
-`Quote` | `quote`, `quo`
-																												*filemakervime-replace*
-`Replace` | `replace`, `repl`
-																													*filemakervime-right*
-`Right` | `right`, `rit`
-																										*filemakervime-rightvalues*
-`RightValues` | `rightvalues`, `ritv`
-																										 *filemakervime-rightwords*
-`RightWords` | `rightwords`, `ritw`
-																									 *filemakervime-romanhankaku*
-`RomanHankaku` | `romanhankaku`, `romh`
-																									 *filemakervime-romankenkaku*
-`RomanZenkaku` | `romankenkaku`, `romz`
-																								*filemakervime-serialincrement*
-`SerialIncrement` | `serialincrement`, `seri`
-																										 *filemakervime-substitute*
-`Substitute` | `substitute`, `sub`
-																													 *filemakervime-trim*
-`Trim` | `trim`
-																												*filemakervime-trimall*
-`TrimAll` | `trimall`, `trima`
-																													*filemakervime-upper*
-`Upper` | `upper`, `upp`
-																										 *filemakervime-valuecount*
-`ValueCount` | `valuecount`, `valc`
-																											*filemakervime-wordcount*
-`WordCount` | `wordcount`, `wordc`
+`Char`            |     `char`, `cha`
+`Code`            |     `code`, `cod`
+`Exact`           |     `exact`, `exa`
+`Filter`          |     `filter`, `fil`
+`FilterValues`    |     `filtervalues`, `filv`
+`GetAsCSS`        |     `getascss`, `getc`
+`GetAsDate`       |     `getasdate`, `getd`
+`GetAsNumber`     |     `getasnumber`, `getn`
+`GetAsSVG`        |     `getassvg`, `gets`
+`GetAsText`       |     `getastext`, `gett`
+`GetAsTime`       |     `getastime`, `geti`
+`GetAsTimestamp`  |     `getastimestamp`, `getm`
+`GetAsURLEncoded` |     `getasurlencoded`, `getu`
+`GetValue`        |     `getvalue`, `getv`
+`Hiragana`        |     `hiragana`, `hir`
+`KanaHankaku`     |     `kanahankaku`, `kanah`
+`KanaZenkaku`     |     `kanazenkaku`, `kanaz`
+`KanjiNumeral`    |     `kanjinumeral`, `kanj`
+`Katakana`        |     `katakana`, `kata`
+`Left`            |     `left`, `lef`
+`LeftValues`      |     `leftvalues`, `leftv`
+`LeftWords`       |     `leftwords`, `leftw`
+`Length`          |     `length`, `len`
+`Lower`           |     `lower`, `low`
+`Middle`          |     `middle`, `mid`
+`MiddleValues`    |     `middlevalues`, `midv`
+`MiddleWords`     |     `middlewords`, `midw`
+`NumToJText`      |     `numtojtext`, `numj`
+`PatternCount`    |     `patterncount`, `pat`
+`Position`        |     `position`, `pos`
+`Proper`          |     `proper`, `pro`
+`Quote`           |     `quote`, `quo`
+`Replace`         |     `replace`, `repl`
+`Right`           |     `right`, `rit`
+`RightValues`     |     `rightvalues`, `ritv`
+`RightWords`      |     `rightwords`, `ritw`
+`RomanHankaku`    |     `romanhankaku`, `romh`
+`RomanZenkaku`    |     `romankenkaku`, `romz`
+`SerialIncrement` |     `serialincrement`, `seri`
+`Substitute`      |     `substitute`, `sub`
+`Trim`            |     `trim`
+`TrimAll`         |     `trimall`, `trima`
+`Upper`           |     `upper`, `upp`
+`ValueCount`      |     `valuecount`, `valc`
+`WordCount`       |     `wordcount`, `wordc`
 
 -------------------------------------------------------------------------------
 																			 *filemakervim-text-formatting-functions*
 Text Formatting Functions ~
 
-																														*filemakervime-rgb*
-`RGB` | `rgb`
-																											*filemakervime-textcolor*
-`TextColor` | `textcolor`, `textc`
-																								*filemakervime-textcolorremove*
-`TextColorRemove` | `textcolorremove`, `textcr`
-																											 *filemakervime-textfont*
-`TextFont` | `textfont`, `textf`
-																								 *filemakervime-textfontremove*
-`TextFontRemove` | `textfontremove`, `textfr`
-																											 *filemakervime-textsize*
-`TextSize` | `textsize`, `texts`
-																								 *filemakervime-textsizeremove*
-`TextSizeRemove` | `textsizeremove`, `textsr`
-																									 *filemakervime-textstyleadd*
-`TextStyleAdd` | `textstyleadd`, `textsts`
-																								*filemakervime-textstyleremove*
-`TextStyleRemove` | `textstyleremove`, `textstr`
+`RGB`             |     `rgb`
+`TextColor`       |     `textcolor`, `textc`
+`TextColorRemove` |     `textcolorremove`, `textcr`
+`TextFont`        |     `textfont`, `textf`
+`TextFontRemove`  |     `textfontremove`, `textfr`
+`TextSize`        |     `textsize`, `texts`
+`TextSizeRemove`  |     `textsizeremove`, `textsr`
+`TextStyleAdd`    |     `textstyleadd`, `textsts`
+`TextStyleRemove` |     `textstyleremove`, `textstr`
 
 -------------------------------------------------------------------------------
 																								*filemakervim-number-functions*
 Number Functions ~
 
-																														*filemakervime-abs*
-`Abs` | `abs`
-																												*filemakervime-ceiling*
-`Ceiling` | `ceiling`, `ceil`
-																										*filemakervime-combination*
-`Combination` | `combination`, `comb`
-																														*filemakervime-div*
-`Div` | `div`
-																														*filemakervime-exp*
-`Exp` | `exp`
-																											*filemakervime-factorial*
-`Factorial` | `factorial`, `fact`
-																													*filemakervime-floor*
-`Floor` | `floor`, `flo`
-																														*filemakervime-int*
-`Int` | `int`
-																														 *filemakervime-lg*
-`Lg` | `lg`
-																														 *filemakervime-ln*
-`Ln` | `ln`
-																														*filemakervime-log*
-`Log` | `log`
-																														*filemakervime-mod*
-`Mod` | `mod`
-																												 *filemakervime-random*
-`Random` | `random`, `rand`
-																													*filemakervime-round*
-`Round` | `round`, `rou`
-																									 *filemakervime-setprecision*
-`SetPrecision` | `setprecision`, `setp`
-																													 *filemakervime-sign*
-`Sign` | `sign`
-																													 *filemakervime-sqrt*
-`Sqrt` | `sqrt`
-																											 *filemakervime-truncate*
-`Truncate` | `truncate`, `trunc`
+`Abs`          |     `abs`
+`Ceiling`      |     `ceiling`, `ceil`
+`Combination`  |     `combination`, `comb`
+`Div`          |     `div`
+`Exp`          |     `exp`
+`Factorial`    |     `factorial`, `fact`
+`Floor`        |     `floor`, `flo`
+`Int`          |     `int`
+`Lg`           |     `lg`
+`Ln`           |     `ln`
+`Log`          |     `log`
+`Mod`          |     `mod`
+`Random`       |     `random`, `rand`
+`Round`        |     `round`, `rou`
+`SetPrecision` |     `setprecision`, `setp`
+`Sign`         |     `sign`
+`Sqrt`         |     `sqrt`
+`Truncate`     |     `truncate`, `trunc`
 
 -------------------------------------------------------------------------------
 																									*filemakervim-date-functions*
 Date Functions ~
 
-																													 *filemakervime-date*
-`Date` | `date`
-																														*filemakervime-day*
-`Day` | `day`
-																												*filemakervime-dayname*
-`DayName` | `dayname`, `dayn`
-																											 *filemakervime-daynamej*
-`DayNameJ` | `daynamej`, `daynj`
-																											*filemakervime-dayofweek*
-`DayOfWeek` | `dayofweek`, `dow`
-																											*filemakervime-dayofyear*
-`DayOfYear` | `dayofyear`, `doy`
-																													*filemakervime-month*
-`Month` | `month`, `mon`
-																											*filemakervime-monthname*
-`MonthName` | `monthname`, `monn`
-																										 *filemakervime-monthnamej*
-`MonthNameJ` | `monthnamej`, `monnj`
-																										 *filemakervime-weekofyear*
-`WeekOfYear` | `weekofyear`, `woy`
-																							 *filemakervime-weekofyearfiscal*
-`WeekOfYearFiscal` | `weekofyearfiscal`, `woyf`
-																													 *filemakervime-year*
-`Year` | `year`, `yr`
-																											 *filemakervime-yearname*
-`YearName` | `yearname`, `yrn`
+`Date`             |     `date`
+`Day`              |     `day`
+`DayName`          |     `dayname`, `dayn`
+`DayNameJ`         |     `daynamej`, `daynj`
+`DayOfWeek`        |     `dayofweek`, `dow`
+`DayOfYear`        |     `dayofyear`, `doy`
+`Month`            |     `month`, `mon`
+`MonthName`        |     `monthname`, `monn`
+`MonthNameJ`       |     `monthnamej`, `monnj`
+`WeekOfYear`       |     `weekofyear`, `woy`
+`WeekOfYearFiscal` |     `weekofyearfiscal`, `woyf`
+`Year`             |     `year`, `yr`
+`YearName`         |     `yearname`, `yrn`
 
 -------------------------------------------------------------------------------
 																									*filemakervim-time-functions*
 Time Functions ~
 
-																													 *filemakervime-hour*
-`Hour` | `hour`, `hr`
-																												 *filemakervime-minute*
-`Minute` | `minute`, `minu`
-																												*filemakervime-seconds*
-`Seconds` | `seconds`, `secs`
-																													 *filemakervime-time*
-`Time` | `time`
+`Hour`    |     `hour`, `hr`
+`Minute`  |     `minute`, `minu`
+`Seconds` |     `seconds`, `secs`
+`Time`    |     `time`
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-timestamp-functions*
 Timestamp Functions ~
 
-																											*filemakervime-timestamp*
-`Timestamp` | `timestamp`, `ts`
+`Timestamp` |     `timestamp`, `ts`
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-container-functions*
 Container Functions ~
 
-																									 *filemakervime-base64decode*
-`Base64Decode` | `base64decode`, `based`
-																									 *filemakervime-base64encode*
-`Base64Encode` | `base64encode`, `basee`
-																					*filemakervime-getcontainerattribute*
-`GetContainerAttribute` | `getcontainerattribute`, `getcatt`
-																											*filemakervime-getheight*
-`GetHeight` | `getheight`, `geth`
-																									 *filemakervime-getthumbnail*
-`GetThumbnail` | `getthumbnail`, `getth`
-																											 *filemakervime-getwidth*
-`GetWidth` | `getwidth`, `getw`
-																								*filemakervime-verifycontainer*
-`VerifyContainer` | `verifycontainer`, `ver`
+`Base64Decode`          |     `base64decode`, `based`
+`Base64Encode`          |     `base64encode`, `basee`
+`GetContainerAttribute` |     `getcontainerattribute`, `getcatt`
+`GetHeight`             |     `getheight`, `geth`
+`GetThumbnail`          |     `getthumbnail`, `getth`
+`GetWidth`              |     `getwidth`, `getw`
+`VerifyContainer`       |     `verifycontainer`, `ver`
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-aggregate-functions*
 Aggregate Functions ~
 
-																												*filemakervime-average*
-`Average` | `average`, `avg`
-																													*filemakervime-count*
-`Count` | `count`, `cnt`
-																													 *filemakervime-list*
-`List` | `list`
-																														*filemakervime-max*
-`Max` | `max`
-																														*filemakervime-min*
-`Min` | `min`
-																													*filemakervime-stdev*
-`StDev` | `stdev`, `std`
-																												 *filemakervime-stdevp*
-`StDevP` | `stdevp`, `stdp`
-																														*filemakervime-sum*
-`Sum` | `sum`
-																											 *filemakervime-variance*
-`Variance` | `variance`, `var`
-																											*filemakervime-variancep*
-`VarianceP` | `variancep`, `varp`
+`Average`   |     `average`, `avg`
+`Count`     |     `count`, `cnt`
+`List`      |     `list`
+`Max`       |     `max`
+`Min`       |     `min`
+`StDev`     |     `stdev`, `std`
+`StDevP`    |     `stdevp`, `stdp`
+`Sum`       |     `sum`
+`Variance`  |     `variance`, `var`
+`VarianceP` |     `variancep`, `varp`
 
 -------------------------------------------------------------------------------
 																							 *filemakervim-summary-functions*
 Summary Functions ~
 
-																										 *filemakervime-getsummary*
-`GetSummary` | `getsummary`, `getsum`
+`GetSummary` |     `getsummary`, `getsum`
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-repeating-functions*
 Repeating Functions ~
 
-																												 *filemakervime-extend*
-`Extend` | `extend`, `extd`
-																									*filemakervime-getrepetition*
-`GetRepetition` | `getrepetition`, `getrep`
-																													 *filemakervime-last*
-`Last` | `last`
+`Extend`        |     `extend`, `extd`
+`GetRepetition` |     `getrepetition`, `getrep`
+`Last`          |     `last`
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-financial-functions*
 Financial Functions ~
 
-																														 *filemakervime-fv*
-`FV` | `fv`
-																														*filemakervime-npv*
-`NPV` | `npv`
-																														*filemakervime-pmt*
-`PMT` | `pmt`
-																														 *filemakervime-pv*
-`PV` | `pv`
+`FV`  |     `fv`
+`NPV` |     `npv`
+`PMT` |     `pmt`
+`PV`  |     `pv`
 
 -------------------------------------------------------------------------------
 																				 *filemakervim-trigonometric-functions*
 Trigonometric Functions ~
 
-																													 *filemakervime-acos*
-`Acos` | `acos`
-																													 *filemakervime-asin*
-`Asin` | `asin`
-																													 *filemakervime-atan*
-`Atan` | `atan`
-																														*filemakervime-cos*
-`Cos` | `cos`
-																												*filemakervime-degrees*
-`Degrees` | `degrees`, `deg`
-																												*filemakervime-radians*
-`Radians` | `radians`, `rad`
-																														*filemakervime-sin*
-`Sin` | `sin`
-																														*filemakervime-tan*
-`Tan` | `tan`
+`Acos`    |     `acos`
+`Asin`    |     `asin`
+`Atan`    |     `atan`
+`Cos`     |     `cos`
+`Degrees` |     `degrees`, `deg`
+`Radians` |     `radians`, `rad`
+`Sin`     |     `sin`
+`Tan`     |     `tan`
 
 -------------------------------------------------------------------------------
 																							 *filemakervim-logical-functions*
 Logical Functions ~
 
-																													 *filemakervime-case*
-`Case` | `case`
-																												 *filemakervime-choose*
-`Choose` | `choose`, `cho`
-																											 *filemakervime-evaluate*
-`Evaluate` | `evaluate`, `eval`
-																								*filemakervime-evaluationerror*
-`EvaluationError` | `evaluationerror`, `evalerr`
-																										 *filemakervime-executesql*
-`ExecuteSQL` | `executesql`, `sql`
-																									 *filemakervime-getasboolean*
-`GetAsBoolean` | `getasboolean`, `getb`
-																											 *filemakervime-getfield*
-`GetField` | `getfield`, `getf`
-																									 *filemakervime-getfieldname*
-`GetFieldName` | `getfieldname`, `getfn`
-																			 *filemakervime-getlayoutobjectattribute*
-`GetLayoutObjectAttribute` | `getlayoutobjectattribute`, `getloa`
-																									 *filemakervime-getnthrecord*
-`GetNthRecord` | `getnthrecord`, `getnth`
-																														 *filemakervime-if*
-`If` | `if`
-																												*filemakervime-isempty*
-`IsEmpty` | `isempty`, `ise`
-																												*filemakervime-isvalid*
-`IsValid` | `isvalid`, `isv`
-																							*filemakervime-isvalidexpression*
-`IsValidExpression` | `isvalidexpression`, `isve`
-																														*filemakervime-let*
-`Let` | `let`
-																												 *filemakervime-lookup*
-`Lookup` | `lookup`, `look`
-																										 *filemakervime-lookupnext*
-`LookupNext` | `lookupnext`, `lookn`
+`Case`                     |     `case`
+`Choose`                   |     `choose`, `cho`
+`Evaluate`                 |     `evaluate`, `eval`
+`EvaluationError`          |     `evaluationerror`, `evalerr`
+`ExecuteSQL`               |     `executesql`, `sql`
+`GetAsBoolean`             |     `getasboolean`, `getb`
+`GetField`                 |     `getfield`, `getf`
+`GetFieldName`             |     `getfieldname`, `getfn`
+`GetLayoutObjectAttribute` |     `getlayoutobjectattribute`, `getloa`
+`GetNthRecord`             |     `getnthrecord`, `getnth`
+`If`                       |     `if`
+`IsEmpty`                  |     `isempty`, `ise`
+`IsValid`                  |     `isvalid`, `isv`
+`IsValidExpression`        |     `isvalidexpression`, `isve`
+`Let`                      |     `let`
+`Lookup`                   |     `lookup`, `look`
+`LookupNext`               |     `lookupnext`, `lookn`
 
 -------------------------------------------------------------------------------
 																								*filemakervim-design-functions*
 Design Functions ~
 
-																														*filemakervime-dbn*
-`DatabaseNames` | `dbn`
-																										*filemakervime-fieldbounds*
-`FieldBounds` | `fieldbounds`, `fb`
-																									 *filemakervime-fieldcomment*
-`FieldComment` | `fieldcomment`, `fc`
-																											 *filemakervime-fieldids*
-`FieldIDs` | `fieldids`, `fid`
-																										 *filemakervime-fieldnames*
-`FieldNames` | `fieldnames`, `fn`
-																							 *filemakervime-fieldrepetitions*
-`FieldRepetitions` | `fieldrepetitions`, `frep`
-																										 *filemakervime-fieldstyle*
-`FieldStyle` | `fieldstyle`, `fst`
-																											*filemakervime-fieldtype*
-`FieldType` | `fieldtype`, `fty`
-																						 *filemakervime-getnextserialvalue*
-`GetNextSerialValue` | `getnextserialvalue`, `gnsv`
-																											*filemakervime-layoutids*
-`LayoutIDs` | `layoutids`, `lid`
-																										*filemakervime-layoutnames*
-`LayoutNames` | `layoutnames`, `lon`
-																							*filemakervime-layoutobjectnames*
-`LayoutObjectNames` | `layoutobjectnames`, `loon`
-																											 *filemakervime-location*
-`Location` | `location`, `loc`
-																								 *filemakervime-locationvalues*
-`LocationValues` | `locationvalues`, `locv`
-																									 *filemakervime-relationinfo*
-`RelationInfo` | `relationinfo`, `ri`
-																											*filemakervime-scriptids*
-`ScriptIDs` | `scriptids`, `sid`
-																											 *filemakervime-tableids*
-`TableIDs` | `tableids`, `tid`
-																										 *filemakervime-tablenames*
-`TableNames` | `tablenames`, `tn`
-																									 *filemakervime-valuelistids*
-`ValueListIDs` | `valuelistids`, `vid`
-																								 *filemakervime-valuelistitems*
-`ValueListItems` | `valuelistitems`, `vli`
-																								 *filemakervime-valuelistnames*
-`ValueListNames` | `valuelistnames`, `vln`
-																										*filemakervime-windownames*
-`WindowNames` | `windownames`, `wn`
+`DatabaseNames`      |     `dbn`
+`FieldBounds`        |     `fieldbounds`, `fb`
+`FieldComment`       |     `fieldcomment`, `fc`
+`FieldIDs`           |     `fieldids`, `fid`
+`FieldNames`         |     `fieldnames`, `fn`
+`FieldRepetitions`   |     `fieldrepetitions`, `frep`
+`FieldStyle`         |     `fieldstyle`, `fst`
+`FieldType`          |     `fieldtype`, `fty`
+`GetNextSerialValue` |     `getnextserialvalue`, `gnsv`
+`LayoutIDs`          |     `layoutids`, `lid`
+`LayoutNames`        |     `layoutnames`, `lon`
+`LayoutObjectNames`  |     `layoutobjectnames`, `loon`
+`Location`           |     `location`, `loc`
+`LocationValues`     |     `locationvalues`, `locv`
+`RelationInfo`       |     `relationinfo`, `ri`
+`ScriptIDs`          |     `scriptids`, `sid`
+`TableIDs`           |     `tableids`, `tid`
+`TableNames`         |     `tablenames`, `tn`
+`ValueListIDs`       |     `valuelistids`, `vid`
+`ValueListItems`     |     `valuelistitems`, `vli`
+`ValueListNames`     |     `valuelistnames`, `vln`
+`WindowNames`        |     `windownames`, `wn`
 
 -------------------------------------------------------------------------------
 																							*filemakervim-external-functions*
 External Functions ~
 
-																											 *filemakervime-external*
-`External` | `external`
+`External` |     `external`
 
 -------------------------------------------------------------------------------
 																									 *filemakervim-get-functions*
 Get Functions ~
 
-																												 *filemakervime-getaep*
-`Get( AccountExtendedPrivileges )` | `getaep`
-																													*filemakervime-getan*
-`Get( AccountName )` | `getan`
-																												*filemakervime-getapsn*
-`Get( AccountPrivilegeSetName )` | `getapsn`
-																												 *filemakervime-getafc*
-`Get( ActiveFieldContents )` | `getafc`
-																												 *filemakervime-getafn*
-`Get( ActiveFieldName )` | `getafn`
-																												*filemakervime-getaftn*
-`Get( ActiveFieldTableName )` | `getaftn`
-																												*filemakervime-getalon*
-`Get( ActiveLayoutObjectName )` | `getalon`
-																												 *filemakervime-getafk*
-`Get( ActiveModifierKeys )` | `getafk`
-																												*filemakervime-getaprn*
-`Get( ActivePortalRowNumber )` | `getaprn`
-																												 *filemakervime-getarn*
-`Get( ActiveRepetitionNumber )` | `getarn`
-																												 *filemakervime-getass*
-`Get( ActiveSelectionState )` | `getass`
-																												*filemakervime-getasst*
-`Get( ActiveSelectionStart )` | `getasst`
-																												 *filemakervime-getaas*
-`Get( AllowAbortState )` | `getaas`
-																												*filemakervime-getafbs*
-`Get( AllowFormattingBarState )` | `getafbs`
-																													*filemakervime-getal*
-`Get( ApplicationLanguage )` | `getal`
-																													*filemakervime-getav*
-`Get( ApplicationVersion )` | `getav`
-																												 *filemakervime-getcrn*
-`Get( CalculationRepetitionNumber )` | `getcrn`
-																													*filemakervime-getca*
-`Get( ConnectionAttributes )` | `getca`
-																													*filemakervime-getcs*
-`Get( ConnectionState )` | `getcs`
-																													*filemakervime-getcd*
-`Get( CurrentDate )` | `getcd`, `cd`
-																												 *filemakervime-getcap*
-`Get( CurrentExtendedPrivileges )` | `getcap`
-																												 *filemakervime-getcht*
-`Get( CurrentHostTimestamp )` | `getcht`
-																												*filemakervime-getcpsn*
-`Get( CurrentPrivilegeSetName )` | `getcpsn`
-																													*filemakervime-getct*
-`Get( CurrentTime )` | `getct`, `ct`
-																												 *filemakervime-getcts*
-`Get( CurrentTimestamp )` | `getcts`, `cts`
-																												 *filemakervime-getutc*
-`Get( CurrentTimeUTCMilliseconds )` | `getutc`
-																												*filemakervime-getcmsn*
-`Get( CustomMenuSetName )` | `getcmsn`
-																													*filemakervime-getdp*
-`Get( DesktopPath )` | `getdp`
-																													*filemakervime-getdv*
-`Get( Device )` | `getdv`
-																												*filemakervime-getdocp*
-`Get( DocumentsPath )` | `getdocp`
-																												 *filemakervime-getdpl*
-`Get( DocumentsPathListing )` | `getdpl`
-																													*filemakervime-getes*
-`Get( EncryptionState )` | `getes`
-																												 *filemakervime-geters*
-`Get( ErrorCaptureState )` | `geters`
-																												 *filemakervime-getfmp*
-`Get( FileMakerPath )` | `getfmp`
-																													*filemakervime-getfn*
-`Get( FileName )` | `getfn`
-																													*filemakervime-getfp*
-`Get( FilePath )` | `getfp`
-																													*filemakervime-getfs*
-`Get( FileSize )` | `getfs`
-																													*filemakervime-getfc*
-`Get( FoundCount )` | `getfc`
-																												 *filemakervime-gethcc*
-`Get( HighContrastColor )` | `gethcc`
-																												 *filemakervime-gethcs*
-`Get( HighContrastState )` | `gethcs`
-																												 *filemakervime-gethav*
-`Get( HostApplicationVersion )` | `gethav`
-																												*filemakervime-gethipa*
-`Get( HostIPAddress )` | `gethipa`
-																													*filemakervime-gethn*
-`Get( HostName )` | `gethn`
-																												*filemakervime-getifmp*
-`Get( InstalledFMPlugins )` | `getifmp`
-																													*filemakervime-getle*
-`Get( LastError )` | `getle`
-																												 *filemakervime-getlmc*
-`Get( LastMessageChoice )` | `getlmc`
-																												 *filemakervime-getloe*
-`Get( LastODBCError )` | `getloe`
-																													*filemakervime-getla*
-`Get( LayoutAccess )` | `getla`
-																													*filemakervime-getlc*
-`Get( LayoutCount )` | `getlc`
-																													*filemakervime-getln*
-`Get( LayoutName )` | `getln`
-																												 *filemakervime-getlnu*
-`Get( LayoutNumber )` | `getlnu`
-																												 *filemakervime-getltn*
-`Get( LayoutTableName )` | `getltn`
-																												 *filemakervime-getlvs*
-`Get( LayoutViewState )` | `getlvs`
-																													*filemakervime-getmf*
-`Get( ModifiedFields )` | `getmf`
-																												 *filemakervime-getmus*
-`Get( MultiUserState )` | `getmus`
-																													*filemakervime-getnp*
-`Get( NetworkProtocol )` | `getnp`
-																													*filemakervime-getnt*
-`Get( NetworkType )` | `getnt`
-																													*filemakervime-getpn*
-`Get( PageNumber )` | `getpn`
-																												 *filemakervime-getpid*
-`Get( PersistentID )` | `getpid`
-																													*filemakervime-getpp*
-`Get( PreferencesPath )` | `getpp`
-																												 *filemakervime-getprn*
-`Get( PrinterName )` | `getprn`
-																												 *filemakervime-getqft*
-`Get( QuickFindText )` | `getqft`
-																													*filemakervime-getra*
-`Get( RecordAccess )` | `getra`
-																												 *filemakervime-getrid*
-`Get( RecordID )` | `getrid`
-																												 *filemakervime-getrmc*
-`Get( RecordModificationCount )` | `getrmc`
-																													*filemakervime-getrn*
-`Get( RecordNumber )` | `getrn`
-																												 *filemakervime-getroc*
-`Get( RecordOpenCount )` | `getroc`
-																												 *filemakervime-getros*
-`Get( RecordOpenState )` | `getros`
-																												 *filemakervime-getrqc*
-`Get( RequestCount )` | `getrqc`
-																												*filemakervime-getrqos*
-`Get( RequestOmitState )` | `getrqos`
-																													*filemakervime-getsd*
-`Get( ScreenDepth )` | `getsd`
-																													*filemakervime-getsh*
-`Get( ScreenHeight )` | `getsh`
-																													*filemakervime-getsw*
-`Get( ScreenWidth )` | `getsw`
-																												 *filemakervime-getsas*
-`Get( ScriptAnimationState )` | `getsas`
-																													*filemakervime-getsn*
-`Get( ScriptName )` | `getsn`
-																													*filemakervime-getsp*
-`Get( ScriptParameter )` | `getsp`
-																													*filemakervime-getsr*
-`Get( ScriptResult )` | `getsr`
-																													*filemakervime-getss*
-`Get( SortState )` | `getss`
-																												*filemakervime-getsars*
-`Get( StatusAreaState )` | `getsars`
-																												 *filemakervime-getsdv*
-`Get( SystemDrive )` | `getsdv`
-																												*filemakervime-getsipa*
-`Get( SystemIPAddress )` | `getsipa`
-																													*filemakervime-getsl*
-`Get( SystemLanguage )` | `getsl`
-																												 *filemakervime-getsna*
-`Get( SystemNICAddress )` | `getsna`
-																												 *filemakervime-getspl*
-`Get( SystemPlatform )` | `getspl`
-																													*filemakervime-getsv*
-`Get( SystemVersion )` | `getsv`
-																													*filemakervime-gettp*
-`Get( TemporaryPath )` | `gettp`
-																												 *filemakervime-gettrv*
-`Get( TextRulerVisible )` | `gettrv`
-																												 *filemakervime-gettrc*
-`Get( TotalRecordCount )` | `gettrc`
-																												 *filemakervime-gettcp*
-`Get( TriggerCurrentPanel )` | `gettcp`
-																												 *filemakervime-gettgi*
-`Get( TriggerGestureInfo )` | `gettgi`
-																													*filemakervime-gettk*
-`Get( TriggerKeystroke )` | `gettk`
-																												 *filemakervime-gettmk*
-`Get( TriggerModifierKeys )` | `gettmk`
-																												 *filemakervime-getttp*
-`Get( TriggerTargetPanel )` | `getttp`
-																													*filemakervime-getuc*
-`Get( UserCount )` | `getuc`
-																													*filemakervime-getun*
-`Get( UserName )` | `getun`
-																												*filemakervime-getusfs*
-`Get( UseSystemFormatsState )` | `getusfs`
-																												*filemakervime-getuuid*
-`Get( UUID )` | `getuuid`, `getuu`
-																												 *filemakervime-getwch*
-`Get( WindowContentHeight )` | `getwch`
-																												 *filemakervime-getwcw*
-`Get( WindowContentWidth )` | `getwcw`
-																												 *filemakervime-getwdh*
-`Get( WindowDesktopHeight )` | `getwdh`
-																												 *filemakervime-getwdw*
-`Get( WindowDesktopWidth )` | `getwdw`
-																													*filemakervime-getwh*
-`Get( WindowHeight )` | `getwh`
-																													*filemakervime-getwl*
-`Get( WindowLeft )` | `getwl`
-																													*filemakervime-getwm*
-`Get( WindowMode )` | `getwm`
-																													*filemakervime-getwn*
-`Get( WindowName )` | `getwn`
-																													*filemakervime-getwo*
-`Get( WindowOrientation )` | `getwo`
-																													*filemakervime-getws*
-`Get( WindowStyle )` | `getws`
-																													*filemakervime-getwt*
-`Get( WindowTop )` | `getwt`
-																													*filemakervime-getwv*
-`Get( WindowVisible )` | `getwv`
-																													*filemakervime-getww*
-`Get( WindowWidth )` | `getww`
-																												 *filemakervime-getwzl*
-`Get( WindowZoomLevel )` | `getwzl`
+`Get( AccountExtendedPrivileges )`   |     `getaep`
+`Get( AccountName )`                 |     `getan`
+`Get( AccountPrivilegeSetName )`     |     `getapsn`
+`Get( ActiveFieldContents )`         |     `getafc`
+`Get( ActiveFieldName )`             |     `getafn`
+`Get( ActiveFieldTableName )`        |     `getaftn`
+`Get( ActiveLayoutObjectName )`      |     `getalon`
+`Get( ActiveModifierKeys )`          |     `getafk`
+`Get( ActivePortalRowNumber )`       |     `getaprn`
+`Get( ActiveRepetitionNumber )`      |     `getarn`
+`Get( ActiveSelectionState )`        |     `getass`
+`Get( ActiveSelectionStart )`        |     `getasst`
+`Get( AllowAbortState )`             |     `getaas`
+`Get( AllowFormattingBarState )`     |     `getafbs`
+`Get( ApplicationLanguage )`         |     `getal`
+`Get( ApplicationVersion )`          |     `getav`
+`Get( CalculationRepetitionNumber )` |     `getcrn`
+`Get( ConnectionAttributes )`        |     `getca`
+`Get( ConnectionState )`             |     `getcs`
+`Get( CurrentDate )`                 |     `getcd`, `cd`
+`Get( CurrentExtendedPrivileges )`   |     `getcap`
+`Get( CurrentHostTimestamp )`        |     `getcht`
+`Get( CurrentPrivilegeSetName )`     |     `getcpsn`
+`Get( CurrentTime )`                 |     `getct`, `ct`
+`Get( CurrentTimestamp )`            |     `getcts`, `cts`
+`Get( CurrentTimeUTCMilliseconds )`  |     `getutc`
+`Get( CustomMenuSetName )`           |     `getcmsn`
+`Get( DesktopPath )`                 |     `getdp`
+`Get( Device )`                      |     `getdv`
+`Get( DocumentsPath )`               |     `getdocp`
+`Get( DocumentsPathListing )`        |     `getdpl`
+`Get( EncryptionState )`             |     `getes`
+`Get( ErrorCaptureState )`           |     `geters`
+`Get( FileMakerPath )`               |     `getfmp`
+`Get( FileName )`                    |     `getfn`
+`Get( FilePath )`                    |     `getfp`
+`Get( FileSize )`                    |     `getfs`
+`Get( FoundCount )`                  |     `getfc`
+`Get( HighContrastColor )`           |     `gethcc`
+`Get( HighContrastState )`           |     `gethcs`
+`Get( HostApplicationVersion )`      |     `gethav`
+`Get( HostIPAddress )`               |     `gethipa`
+`Get( HostName )`                    |     `gethn`
+`Get( InstalledFMPlugins )`          |     `getifmp`
+`Get( LastError )`                   |     `getle`
+`Get( LastMessageChoice )`           |     `getlmc`
+`Get( LastODBCError )`               |     `getloe`
+`Get( LayoutAccess )`                |     `getla`
+`Get( LayoutCount )`                 |     `getlc`
+`Get( LayoutName )`                  |     `getln`
+`Get( LayoutNumber )`                |     `getlnu`
+`Get( LayoutTableName )`             |     `getltn`
+`Get( LayoutViewState )`             |     `getlvs`
+`Get( ModifiedFields )`              |     `getmf`
+`Get( MultiUserState )`              |     `getmus`
+`Get( NetworkProtocol )`             |     `getnp`
+`Get( NetworkType )`                 |     `getnt`
+`Get( PageNumber )`                  |     `getpn`
+`Get( PersistentID )`                |     `getpid`
+`Get( PreferencesPath )`             |     `getpp`
+`Get( PrinterName )`                 |     `getprn`
+`Get( QuickFindText )`               |     `getqft`
+`Get( RecordAccess )`                |     `getra`
+`Get( RecordID )`                    |     `getrid`
+`Get( RecordModificationCount )`     |     `getrmc`
+`Get( RecordNumber )`                |     `getrn`
+`Get( RecordOpenCount )`             |     `getroc`
+`Get( RecordOpenState )`             |     `getros`
+`Get( RequestCount )`                |     `getrqc`
+`Get( RequestOmitState )`            |     `getrqos`
+`Get( ScreenDepth )`                 |     `getsd`
+`Get( ScreenHeight )`                |     `getsh`
+`Get( ScreenWidth )`                 |     `getsw`
+`Get( ScriptAnimationState )`        |     `getsas`
+`Get( ScriptName )`                  |     `getsn`
+`Get( ScriptParameter )`             |     `getsp`
+`Get( ScriptResult )`                |     `getsr`
+`Get( SortState )`                   |     `getss`
+`Get( StatusAreaState )`             |     `getsars`
+`Get( SystemDrive )`                 |     `getsdv`
+`Get( SystemIPAddress )`             |     `getsipa`
+`Get( SystemLanguage )`              |     `getsl`
+`Get( SystemNICAddress )`            |     `getsna`
+`Get( SystemPlatform )`              |     `getspl`
+`Get( SystemVersion )`               |     `getsv`
+`Get( TemporaryPath )`               |     `gettp`
+`Get( TextRulerVisible )`            |     `gettrv`
+`Get( TotalRecordCount )`            |     `gettrc`
+`Get( TriggerCurrentPanel )`         |     `gettcp`
+`Get( TriggerGestureInfo )`          |     `gettgi`
+`Get( TriggerKeystroke )`            |     `gettk`
+`Get( TriggerModifierKeys )`         |     `gettmk`
+`Get( TriggerTargetPanel )`          |     `getttp`
+`Get( UserCount )`                   |     `getuc`
+`Get( UserName )`                    |     `getun`
+`Get( UseSystemFormatsState )`       |     `getusfs`
+`Get( UUID )`                        |     `getuuid`, `getuu`
+`Get( WindowContentHeight )`         |     `getwch`
+`Get( WindowContentWidth )`          |     `getwcw`
+`Get( WindowDesktopHeight )`         |     `getwdh`
+`Get( WindowDesktopWidth )`          |     `getwdw`
+`Get( WindowHeight )`                |     `getwh`
+`Get( WindowLeft )`                  |     `getwl`
+`Get( WindowMode )`                  |     `getwm`
+`Get( WindowName )`                  |     `getwn`
+`Get( WindowOrientation )`           |     `getwo`
+`Get( WindowStyle )`                 |     `getws`
+`Get( WindowTop )`                   |     `getwt`
+`Get( WindowVisible )`               |     `getwv`
+`Get( WindowWidth )`                 |     `getww`
+`Get( WindowZoomLevel )`             |     `getwzl`
 
 ===============================================================================
 																										 *filemakervim-helping-out*
