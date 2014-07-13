@@ -330,6 +330,8 @@ Triggers ~
 																												*fmv-trigger-standards*
 Trigger Standards ~
 
+See |fmv-snippets| for the trigger text of every snippet.
+
 An UltiSnips trigger is included for every built-in FileMaker function except
 'Pi'. Every included function has a snippet that is the same as the function's
 name (except the 'Get' function parameters and 'DatabaseNames', for which such
@@ -468,8 +470,6 @@ letters will narrow down the available options.
 -------------------------------------------------------------------------------
 																			*filemakervim-built-in-function-triggers*
 																							 *fmv-built-in-function-triggers*
-																												*filemakervim-triggers*
-																																 *fmv-triggers*
 																												*filemakervim-snippets*
 																																 *fmv-snippets*
 Built-In Function Triggers ~
