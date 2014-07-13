@@ -47,6 +47,8 @@ Perhaps in the future I'll look into an installer script to do this automaticall
 
 To take full advantage of filemaker.vim you'll need [UltiSnips](https://github.com/sirver/ultisnips) in addition to Vim. With Vundle, the installation of UltiSnips is just as easy as it is for filemaker.vim.
 
+See `:help filemakervim` (or `:help fmv` for short) for complete documentation. This file is found in the repository at https://github.com/chivalry/filemaker.vim/blob/master/doc/filemakervim.txt.
+
 Features
 --------
 
@@ -135,7 +137,7 @@ Some customization is possible, however, and I plan to include more down the roa
     set g:FMVAddSpaceAfterFunction=1 " places a space between a function name and the opening parenthsis
     set g:FMVPadSpacesWithinParens=0 " does not place a space between parentheses and parameters
 
-See the help file (`:help filemakervim-overriding-conventions`) for additional information.
+See the help file (`:help fmv-overriding-conventions`) for additional information.
 
 Future Enhancements
 -------------------
@@ -163,4 +165,4 @@ The triggers for `Get` functions are generally `get` followed by the letters in 
 
 Finally, triggers are *generally* case-insenstive. In other words, `getv`, `Getv`, and `GETV` are all triggers for the `GetValue` function.
 
-To find the abbreviated trigger use the help system with the function name, as in `:help filemakervim-filter`.
+To find the abbreviated trigger use the help system with the function name, as in `:help fmv-filter`.
