@@ -1437,4 +1437,4 @@ Charles Ross at GitHub: https://github.com/chivalry
 Matt Petrowsky at GitHub: https://github.com/petrowsky
                at Twitter: https://twitter.com/filemakermag
 
-vim: ft=help
+vim: ft=help:tw=78:ts=2
