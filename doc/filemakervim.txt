@@ -920,9 +920,6 @@ Trigonometric Functions ~
                                                             *fmv-logical-group*
 Logical Functions ~
 
-                                                            *filemakervim-char*
-                                                                     *fmv-char*
-'Char'        'char'
                                                             *filemakervim-case*
                                                                      *fmv-case*
 'Case'        'case'
