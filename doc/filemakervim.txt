@@ -437,6 +437,8 @@ letters will narrow down the available options.
 <
 -------------------------------------------------------------------------------
 																			*filemakervim-built-in-function-triggers*
+																												*filemakervim-triggers*
+																												*filemakervim-snippets*
 Built-In Function Triggers ~
 
 -------------------------------------------------------------------------------
@@ -444,355 +446,628 @@ Built-In Function Triggers ~
 Text Functions ~
 
                                                             *filemakervim-char*
-`Char`            |     `char`, `cha`
-`Code`            |     `code`, `cod`
-`Exact`           |     `exact`, `exa`
-`Filter`          |     `filter`, `fil`
-`FilterValues`    |     `filtervalues`, `filv`
-`GetAsCSS`        |     `getascss`, `getc`
-`GetAsDate`       |     `getasdate`, `getd`
-`GetAsNumber`     |     `getasnumber`, `getn`
-`GetAsSVG`        |     `getassvg`, `gets`
-`GetAsText`       |     `getastext`, `gett`
-`GetAsTime`       |     `getastime`, `geti`
-`GetAsTimestamp`  |     `getastimestamp`, `getm`
-`GetAsURLEncoded` |     `getasurlencoded`, `getu`
-`GetValue`        |     `getvalue`, `getv`
-`Hiragana`        |     `hiragana`, `hir`
-`KanaHankaku`     |     `kanahankaku`, `kanah`
-`KanaZenkaku`     |     `kanazenkaku`, `kanaz`
-`KanjiNumeral`    |     `kanjinumeral`, `kanj`
-`Katakana`        |     `katakana`, `kata`
-`Left`            |     `left`, `lef`
-`LeftValues`      |     `leftvalues`, `leftv`
-`LeftWords`       |     `leftwords`, `leftw`
-`Length`          |     `length`, `len`
-`Lower`           |     `lower`, `low`
-`Middle`          |     `middle`, `mid`
-`MiddleValues`    |     `middlevalues`, `midv`
-`MiddleWords`     |     `middlewords`, `midw`
-`NumToJText`      |     `numtojtext`, `numj`
-`PatternCount`    |     `patterncount`, `pat`
-`Position`        |     `position`, `pos`
-`Proper`          |     `proper`, `pro`
-`Quote`           |     `quote`, `quo`
-`Replace`         |     `replace`, `repl`
-`Right`           |     `right`, `rit`
-`RightValues`     |     `rightvalues`, `ritv`
-`RightWords`      |     `rightwords`, `ritw`
-`RomanHankaku`    |     `romanhankaku`, `romh`
-`RomanZenkaku`    |     `romankenkaku`, `romz`
-`SerialIncrement` |     `serialincrement`, `seri`
-`Substitute`      |     `substitute`, `sub`
-`Trim`            |     `trim`
-`TrimAll`         |     `trimall`, `trima`
-`Upper`           |     `upper`, `upp`
-`ValueCount`      |     `valuecount`, `valc`
-`WordCount`       |     `wordcount`, `wordc`
+'Char'                 'char'            'cha'
+																														*filemakervim-code*
+'Code'                 'code'            'cod'
+																													 *filemakervim-exact*
+'Exact'                'exact'           'exa'
+																													*filemakervim-filter*
+'Filter'               'filter'          'fil'
+																										*filemakervim-filtervalues*
+'Filtervalues'         'filtervalues'    'filv'
+																												*filemakervim-getascss*
+'GetAsCSS'             'getascss'        'getc'
+																											 *filemakervim-getasdate*
+'GetAsDate'            'getasdate'       'getd'
+																										 *filemakervim-getasnumber*
+'GetAsNumber'          'getasnumber'     'getn'
+																												*filemakervim-getassvg*
+'GetAsSVG'             'getassvg'        'gets'
+																											 *filemakervim-getastext*
+'GetAsText'            'getastext'       'gett'
+																											 *filemakervim-getastime*
+'GetAsTime'            'getastime'       'geti'
+																									*filemakervim-getastimestamp*
+'GetAsTimestamp'       'getastimestamp'  'getm'
+																								 *filemakervim-getasurlencoded*
+'GetAsURLEncoded'      'getasurlencoded' 'getu'
+																												*filemakervim-getvalue*
+'GetValue'             'getvalue'        'getv'
+																												*filemakervim-hiragana*
+'Hiragana'             'hiragana'        'hir'
+																										 *filemakervim-kanahankaku*
+'KanaHankaku'          'kanahankaku'     'kanah'
+																										 *filemakervim-kanazenkaku*
+'KanaZenkaku'          'kanazenkaku'     'kanaz'
+																										*filemakervim-kanjinumeral*
+'KanjiNumeral'         'kanjinumeral'    'kanj'
+																												*filemakervim-katakana*
+'Katakana'             'katakana'        'kata'
+																														*filemakervim-left*
+'Left'                 'left'            'lef'
+																											*filemakervim-leftvalues*
+'LeftValues'           'leftvalues'      'leftv'
+																											 *filemakervim-leftwords*
+'LeftWords'            'leftwords'       'leftw'
+																													*filemakervim-length*
+'Length'               'length'          'len'
+																													 *filemakervim-lower*
+'Lower'                'lower'           'low'
+																													*filemakervim-middle*
+'Middle'               'middle'          'mid'
+																										*filemakervim-middlevalues*
+'MiddleValues'         'middlevalues'    'midv'
+																										 *filemakervim-middlewords*
+'MiddleWords'          'middlewords'     'midw'
+																											*filemakervim-numtojtext*
+'NumToJText'           'numtojtext'      'numj'
+																										*filemakervim-patterncount*
+'PatternCount'         'patterncount'    'pat'
+																												*filemakervim-position*
+'Position'             'position'        'pos'
+																													*filemakervim-proper*
+'Proper'               'proper'          'pro'
+																													 *filemakervim-quote*
+'Quote'                'quote'           'quo'
+																												 *filemakervim-replace*
+'Replace'              'replace'         'repl'
+																													 *filemakervim-right*
+'Right'                'right'           'rit'
+																										 *filemakervim-rightvalues*
+'RightValues'          'rightvalues'     'ritv'
+																											*filemakervim-rightwords*
+'RightWords'           'rightwords'      'ritw'
+																										*filemakervim-romanhankaku*
+'RomanHankaku'         'romanhankaku'    'romh'
+																										*filemakervim-romankenkaku*
+'RomanZenkaku'         'romankenkaku'    'romz'
+																								 *filemakervim-serialincrement*
+'SerialIncrement'      'serialincrement' 'seri'
+																											*filemakervim-substitute*
+'Substitute'           'substitute'      'sub'
+																														*filemakervim-trim*
+'Trim'                 'trim'
+																												 *filemakervim-trimall*
+'TrimAll'              'trimall'         'trima'
+																													 *filemakervim-upper*
+'Upper'                'upper'           'upp'
+																											*filemakervim-valuecount*
+'ValueCount'           'valuecount'      'valc'
+																											 *filemakervim-wordcount*
+'WordCount'            'wordcount'       'wordc'
 
 -------------------------------------------------------------------------------
 																			 *filemakervim-text-formatting-functions*
 Text Formatting Functions ~
 
-`RGB`             |     `rgb`
-`TextColor`       |     `textcolor`, `textc`
-`TextColorRemove` |     `textcolorremove`, `textcr`
-`TextFont`        |     `textfont`, `textf`
-`TextFontRemove`  |     `textfontremove`, `textfr`
-`TextSize`        |     `textsize`, `texts`
-`TextSizeRemove`  |     `textsizeremove`, `textsr`
-`TextStyleAdd`    |     `textstyleadd`, `textsts`
-`TextStyleRemove` |     `textstyleremove`, `textstr`
+																														 *filemakervim-rgb*
+'RGB'                  'rgb'
+																											 *filemakervim-textcolor*
+'TextColor'            'textcolor'       'textc'
+																								 *filemakervim-textcolorremove*
+'TextColorRemove'      'textcolorremove' 'textcr'
+																												*filemakervim-textfont*
+'TextFont'             'textfont'        'textf'
+																									*filemakervim-textfontremove*
+'TextFontRemove'       'textfontremove'  'textfr'
+																												*filemakervim-textsize*
+'TextSize'             'textsize'        'texts'
+																									*filemakervim-textsizeremove*
+'TextSizeRemove'       'textsizeremove'  'textsr'
+																										*filemakervim-textstyleadd*
+'TextStyleAdd'         'textstyleadd'    'textsts'
+																								 *filemakervim-textstyleremove*
+'TextStyleRemove'      'textstyleremove' 'textstr'
 
 -------------------------------------------------------------------------------
 																								*filemakervim-number-functions*
 Number Functions ~
 
-`Abs`          |     `abs`
-`Ceiling`      |     `ceiling`, `ceil`
-`Combination`  |     `combination`, `comb`
-`Div`          |     `div`
-`Exp`          |     `exp`
-`Factorial`    |     `factorial`, `fact`
-`Floor`        |     `floor`, `flo`
-`Int`          |     `int`
-`Lg`           |     `lg`
-`Ln`           |     `ln`
-`Log`          |     `log`
-`Mod`          |     `mod`
-`Random`       |     `random`, `rand`
-`Round`        |     `round`, `rou`
-`SetPrecision` |     `setprecision`, `setp`
-`Sign`         |     `sign`
-`Sqrt`         |     `sqrt`
-`Truncate`     |     `truncate`, `trunc`
+																														 *filemakervim-abs*
+'Abs'               'abs'
+																												 *filemakervim-ceiling*
+'Ceiling'           'ceiling'      'ceil'
+																										 *filemakervim-combination*
+'Combination'       'combination'  'comb'
+																														 *filemakervim-div*
+'Div'               'div'
+																														 *filemakervim-exp*
+'Exp'               'exp'
+																											 *filemakervim-factorial*
+'Factorial'         'factorial'    'fact'
+																													 *filemakervim-floor*
+'Floor'             'floor'        'flo'
+																														 *filemakervim-int*
+'Int'               'int'
+																															*filemakervim-lg*
+'Lg'                'lg'
+																															*filemakervim-ln*
+'Ln'                'ln'
+																														 *filemakervim-log*
+'Log'               'log'
+																														 *filemakervim-mod*
+'Mod'               'mod'
+																													*filemakervim-random*
+'Random'            'random'       'rand'
+																													 *filemakervim-round*
+'Round'             'round'        'rou'
+																										*filemakervim-setprecision*
+'SetPrecision'      'setprecision' 'setp'
+																														*filemakervim-sign*
+'Sign'              'sign'
+																														*filemakervim-sqrt*
+'Sqrt'              'sqrt'
+																												*filemakervim-truncate*
+'Truncate'          'truncate'     'trunc'
 
 -------------------------------------------------------------------------------
 																									*filemakervim-date-functions*
 Date Functions ~
 
-`Date`             |     `date`
-`Day`              |     `day`
-`DayName`          |     `dayname`, `dayn`
-`DayNameJ`         |     `daynamej`, `daynj`
-`DayOfWeek`        |     `dayofweek`, `dow`
-`DayOfYear`        |     `dayofyear`, `doy`
-`Month`            |     `month`, `mon`
-`MonthName`        |     `monthname`, `monn`
-`MonthNameJ`       |     `monthnamej`, `monnj`
-`WeekOfYear`       |     `weekofyear`, `woy`
-`WeekOfYearFiscal` |     `weekofyearfiscal`, `woyf`
-`Year`             |     `year`, `yr`
-`YearName`         |     `yearname`, `yrn`
+																														*filemakervim-date*
+'Date'                  'date'
+																														 *filemakervim-day*
+'Day'                   'day'
+																												 *filemakervim-dayname*
+'DayName'               'dayname'          'dayn'
+																												*filemakervim-daynamej*
+'DayNameJ'              'daynamej'         'daynj'
+																											 *filemakervim-dayofweek*
+'DayOfWeek'             'dayofweek'        'dow'
+																											 *filemakervim-dayofyear*
+'DayOfYear'             'dayofyear'        'doy'
+																													 *filemakervim-month*
+'Month'                 'month'            'mon'
+																											 *filemakervim-monthname*
+'MonthName'             'monthname'        'monn'
+																											*filemakervim-monthnamej*
+'MonthNameJ'            'monthnamej'       'monnj'
+																											*filemakervim-weekofyear*
+'WeekOfYear'            'weekofyear'       'woy'
+																								*filemakervim-weekofyearfiscal*
+'WeekOfYearFiscal'      'weekofyearfiscal' 'woyf'
+																														*filemakervim-year*
+'Year'                  'year'             'yr'
+																												*filemakervim-yearname*
+'YearName'              'yearname'         'yrn'
 
 -------------------------------------------------------------------------------
 																									*filemakervim-time-functions*
 Time Functions ~
 
-`Hour`    |     `hour`, `hr`
-`Minute`  |     `minute`, `minu`
-`Seconds` |     `seconds`, `secs`
-`Time`    |     `time`
+																														*filemakervim-hour*
+'Hour'         'hour'    'hr'
+																													*filemakervim-minute*
+'Minute'       'minute'  'minu'
+																												 *filemakervim-seconds*
+'Seconds'      'seconds' 'secs'
+																														*filemakervim-time*
+'Time'         'time'
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-timestamp-functions*
 Timestamp Functions ~
 
-`Timestamp` |     `timestamp`, `ts`
+																											 *filemakervim-timestamp*
+'Timestamp'      'timestamp' 'ts'
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-container-functions*
 Container Functions ~
 
-`Base64Decode`          |     `base64decode`, `based`
-`Base64Encode`          |     `base64encode`, `basee`
-`GetContainerAttribute` |     `getcontainerattribute`, `getcatt`
-`GetHeight`             |     `getheight`, `geth`
-`GetThumbnail`          |     `getthumbnail`, `getth`
-`GetWidth`              |     `getwidth`, `getw`
-`VerifyContainer`       |     `verifycontainer`, `ver`
+																										*filemakervim-base64decode*
+'Base64Decode'               'base64decode'          'based'
+																										*filemakervim-base64encode*
+'Base64Encode'               'base64encode'          'basee'
+																					 *filemakervim-getcontainerattribute*
+'GetContainerAttribute'      'getcontainerattribute' 'getcatt'
+																											 *filemakervim-getheight*
+'GetHeight'                  'getheight'             'geth'
+																										*filemakervim-getthumbnail*
+'GetThumbnail'               'getthumbnail'          'getth'
+																												*filemakervim-getwidth*
+'GetWidth'                   'getwidth'              'getw'
+																								 *filemakervim-verifycontainer*
+'VerifyContainer'            'verifycontainer'       'ver'
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-aggregate-functions*
 Aggregate Functions ~
 
-`Average`   |     `average`, `avg`
-`Count`     |     `count`, `cnt`
-`List`      |     `list`
-`Max`       |     `max`
-`Min`       |     `min`
-`StDev`     |     `stdev`, `std`
-`StDevP`    |     `stdevp`, `stdp`
-`Sum`       |     `sum`
-`Variance`  |     `variance`, `var`
-`VarianceP` |     `variancep`, `varp`
+																												 *filemakervim-average*
+'Average'        'average'   'avg'
+																													 *filemakervim-count*
+'Count'          'count'     'cnt'
+																														*filemakervim-list*
+'List'           'list'
+																														 *filemakervim-max*
+'Max'            'max'
+																														 *filemakervim-min*
+'Min'            'min'
+																													 *filemakervim-stdev*
+'StDev'          'stdev'     'std'
+																													*filemakervim-stdevp*
+'StDevP'         'stdevp'    'stdp'
+																														 *filemakervim-sum*
+'Sum'            'sum'
+																												*filemakervim-variance*
+'Variance'       'variance'  'var'
+																											 *filemakervim-variancep*
+'VarianceP'      'variancep' 'varp'
 
 -------------------------------------------------------------------------------
 																							 *filemakervim-summary-functions*
 Summary Functions ~
 
-`GetSummary` |     `getsummary`, `getsum`
+																											*filemakervim-getsummary*
+'GetSummary'      'getsummary' 'getsum'
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-repeating-functions*
 Repeating Functions ~
 
-`Extend`        |     `extend`, `extd`
-`GetRepetition` |     `getrepetition`, `getrep`
-`Last`          |     `last`
+																													*filemakervim-extend*
+'Extend'             'extend'        'extd'
+																									 *filemakervim-getrepetition*
+'GetRepetition'      'getrepetition' 'getrep'
+																														*filemakervim-last*
+'Last'               'last'
 
 -------------------------------------------------------------------------------
 																						 *filemakervim-financial-functions*
 Financial Functions ~
 
-`FV`  |     `fv`
-`NPV` |     `npv`
-`PMT` |     `pmt`
-`PV`  |     `pv`
+																															*filemakervim-fv*
+'FV'       'fv'
+																														 *filemakervim-npv*
+'NPV'      'npv'
+																														 *filemakervim-pmt*
+'PMT'      'pmt'
+																															*filemakervim-pv*
+'PV'       'pv'
 
 -------------------------------------------------------------------------------
 																				 *filemakervim-trigonometric-functions*
 Trigonometric Functions ~
 
-`Acos`    |     `acos`
-`Asin`    |     `asin`
-`Atan`    |     `atan`
-`Cos`     |     `cos`
-`Degrees` |     `degrees`, `deg`
-`Radians` |     `radians`, `rad`
-`Sin`     |     `sin`
-`Tan`     |     `tan`
+																														*filemakervim-acos*
+'Acos'         'acos'
+																														*filemakervim-asin*
+'Asin'         'asin'
+																														*filemakervim-atan*
+'Atan'         'atan'
+																														 *filemakervim-cos*
+'Cos'          'cos'
+																												 *filemakervim-degrees*
+'Degrees'      'degrees' 'deg'
+																												 *filemakervim-radians*
+'Radians'      'radians' 'rad'
+																														 *filemakervim-sin*
+'Sin'          'sin'
+																														 *filemakervim-tan*
+'Tan'          'tan'
 
 -------------------------------------------------------------------------------
 																							 *filemakervim-logical-functions*
 Logical Functions ~
 
-`Case`                     |     `case`
-`Choose`                   |     `choose`, `cho`
-`Evaluate`                 |     `evaluate`, `eval`
-`EvaluationError`          |     `evaluationerror`, `evalerr`
-`ExecuteSQL`               |     `executesql`, `sql`
-`GetAsBoolean`             |     `getasboolean`, `getb`
-`GetField`                 |     `getfield`, `getf`
-`GetFieldName`             |     `getfieldname`, `getfn`
-`GetLayoutObjectAttribute` |     `getlayoutobjectattribute`, `getloa`
-`GetNthRecord`             |     `getnthrecord`, `getnth`
-`If`                       |     `if`
-`IsEmpty`                  |     `isempty`, `ise`
-`IsValid`                  |     `isvalid`, `isv`
-`IsValidExpression`        |     `isvalidexpression`, `isve`
-`Let`                      |     `let`
-`Lookup`                   |     `lookup`, `look`
-`LookupNext`               |     `lookupnext`, `lookn`
+																														*filemakervim-case*
+'Case'                          'case'
+																													*filemakervim-choose*
+'Choose'                        'choose'                   'cho'
+																												*filemakervim-evaluate*
+'Evaluate'                      'evaluate'                 'eval'
+																								 *filemakervim-evaluationerror*
+'EvaluationError'               'evaluationerror'          'evalerr'
+																											*filemakervim-executesql*
+'ExecuteSQL'                    'executesql'               'sql'
+																										*filemakervim-getasboolean*
+'GetAsBoolean'                  'getasboolean'             'getb'
+																												*filemakervim-getfield*
+'GetField'                      'getfield'                 'getf'
+																										*filemakervim-getfieldname*
+'GetFieldName'                  'getfieldname'             'getfn'
+																				*filemakervim-getlayoutobjectattribute*
+'GetLayoutObjectAttribute'      'getlayoutobjectattribute' 'getloa'
+																										*filemakervim-getnthrecord*
+'GetNthRecord'                  'getnthrecord'             'getnth'
+																															*filemakervim-if*
+'If'                            'if'
+																												 *filemakervim-isempty*
+'IsEmpty'                       'isempty'                  'ise'
+																												 *filemakervim-isvalid*
+'IsValid'                       'isvalid'                  'isv'
+																							 *filemakervim-isvalidexpression*
+'IsValidExpression'             'isvalidexpression'        'isve'
+																														 *filemakervim-let*
+'Let'                           'let'
+																													*filemakervim-lookup*
+'Lookup'                        'lookup'                   'look'
+																											*filemakervim-lookupnext*
+'LookupNext'                    'lookupnext'               'lookn'
 
 -------------------------------------------------------------------------------
 																								*filemakervim-design-functions*
 Design Functions ~
 
-`DatabaseNames`      |     `dbn`
-`FieldBounds`        |     `fieldbounds`, `fb`
-`FieldComment`       |     `fieldcomment`, `fc`
-`FieldIDs`           |     `fieldids`, `fid`
-`FieldNames`         |     `fieldnames`, `fn`
-`FieldRepetitions`   |     `fieldrepetitions`, `frep`
-`FieldStyle`         |     `fieldstyle`, `fst`
-`FieldType`          |     `fieldtype`, `fty`
-`GetNextSerialValue` |     `getnextserialvalue`, `gnsv`
-`LayoutIDs`          |     `layoutids`, `lid`
-`LayoutNames`        |     `layoutnames`, `lon`
-`LayoutObjectNames`  |     `layoutobjectnames`, `loon`
-`Location`           |     `location`, `loc`
-`LocationValues`     |     `locationvalues`, `locv`
-`RelationInfo`       |     `relationinfo`, `ri`
-`ScriptIDs`          |     `scriptids`, `sid`
-`TableIDs`           |     `tableids`, `tid`
-`TableNames`         |     `tablenames`, `tn`
-`ValueListIDs`       |     `valuelistids`, `vid`
-`ValueListItems`     |     `valuelistitems`, `vli`
-`ValueListNames`     |     `valuelistnames`, `vln`
-`WindowNames`        |     `windownames`, `wn`
+																														 *filemakervim-dbn*
+'DatabaseNames'           'dbn'
+																										 *filemakervim-fieldbounds*
+'FieldBounds'             'fieldbounds'        'fb'
+																										*filemakervim-fieldcomment*
+'FieldComment'            'fieldcomment'       'fc'
+																												*filemakervim-fieldids*
+'FieldIDs'                'fieldids'           'fid'
+																											*filemakervim-fieldnames*
+'FieldNames'              'fieldnames'         'fn'
+																								*filemakervim-fieldrepetitions*
+'FieldRepetitions'        'fieldrepetitions'   'frep'
+																											*filemakervim-fieldstyle*
+'FieldStyle'              'fieldstyle'         'fst'
+																											 *filemakervim-fieldtype*
+'FieldType'               'fieldtype'          'fty'
+																							*filemakervim-getnextserialvalue*
+'GetNextSerialValue'      'getnextserialvalue' 'gnsv'
+																											 *filemakervim-layoutids*
+'LayoutIDs'               'layoutids'          'lid'
+																										 *filemakervim-layoutnames*
+'LayoutNames'             'layoutnames'        'lon'
+																							 *filemakervim-layoutobjectnames*
+'LayoutObjectNames'       'layoutobjectnames'  'loon'
+																												*filemakervim-location*
+'Location'                'location'           'loc'
+																									*filemakervim-locationvalues*
+'LocationValues'          'locationvalues'     'locv'
+																										*filemakervim-relationinfo*
+'RelationInfo'            'relationinfo'       'ri'
+																											 *filemakervim-scriptids*
+'ScriptIDs'               'scriptids'          'sid'
+																												*filemakervim-tableids*
+'TableIDs'                'tableids'           'tid'
+																											*filemakervim-tablenames*
+'TableNames'              'tablenames'         'tn'
+																										*filemakervim-valuelistids*
+'ValueListIDs'            'valuelistids'       'vid'
+																									*filemakervim-valuelistitems*
+'ValueListItems'          'valuelistitems'     'vli'
+																									*filemakervim-valuelistnames*
+'ValueListNames'          'valuelistnames'     'vln'
+																										 *filemakervim-windownames*
+'WindowNames'             'windownames'        'wn'
 
 -------------------------------------------------------------------------------
 																							*filemakervim-external-functions*
 External Functions ~
 
-`External` |     `external`
+																												*filemakervim-external*
+'External'      'external'
 
 -------------------------------------------------------------------------------
 																									 *filemakervim-get-functions*
 Get Functions ~
 
-`Get( AccountExtendedPrivileges )`   |     `getaep`
-`Get( AccountName )`                 |     `getan`
-`Get( AccountPrivilegeSetName )`     |     `getapsn`
-`Get( ActiveFieldContents )`         |     `getafc`
-`Get( ActiveFieldName )`             |     `getafn`
-`Get( ActiveFieldTableName )`        |     `getaftn`
-`Get( ActiveLayoutObjectName )`      |     `getalon`
-`Get( ActiveModifierKeys )`          |     `getafk`
-`Get( ActivePortalRowNumber )`       |     `getaprn`
-`Get( ActiveRepetitionNumber )`      |     `getarn`
-`Get( ActiveSelectionState )`        |     `getass`
-`Get( ActiveSelectionStart )`        |     `getasst`
-`Get( AllowAbortState )`             |     `getaas`
-`Get( AllowFormattingBarState )`     |     `getafbs`
-`Get( ApplicationLanguage )`         |     `getal`
-`Get( ApplicationVersion )`          |     `getav`
-`Get( CalculationRepetitionNumber )` |     `getcrn`
-`Get( ConnectionAttributes )`        |     `getca`
-`Get( ConnectionState )`             |     `getcs`
-`Get( CurrentDate )`                 |     `getcd`, `cd`
-`Get( CurrentExtendedPrivileges )`   |     `getcap`
-`Get( CurrentHostTimestamp )`        |     `getcht`
-`Get( CurrentPrivilegeSetName )`     |     `getcpsn`
-`Get( CurrentTime )`                 |     `getct`, `ct`
-`Get( CurrentTimestamp )`            |     `getcts`, `cts`
-`Get( CurrentTimeUTCMilliseconds )`  |     `getutc`
-`Get( CustomMenuSetName )`           |     `getcmsn`
-`Get( DesktopPath )`                 |     `getdp`
-`Get( Device )`                      |     `getdv`
-`Get( DocumentsPath )`               |     `getdocp`
-`Get( DocumentsPathListing )`        |     `getdpl`
-`Get( EncryptionState )`             |     `getes`
-`Get( ErrorCaptureState )`           |     `geters`
-`Get( FileMakerPath )`               |     `getfmp`
-`Get( FileName )`                    |     `getfn`
-`Get( FilePath )`                    |     `getfp`
-`Get( FileSize )`                    |     `getfs`
-`Get( FoundCount )`                  |     `getfc`
-`Get( HighContrastColor )`           |     `gethcc`
-`Get( HighContrastState )`           |     `gethcs`
-`Get( HostApplicationVersion )`      |     `gethav`
-`Get( HostIPAddress )`               |     `gethipa`
-`Get( HostName )`                    |     `gethn`
-`Get( InstalledFMPlugins )`          |     `getifmp`
-`Get( LastError )`                   |     `getle`
-`Get( LastMessageChoice )`           |     `getlmc`
-`Get( LastODBCError )`               |     `getloe`
-`Get( LayoutAccess )`                |     `getla`
-`Get( LayoutCount )`                 |     `getlc`
-`Get( LayoutName )`                  |     `getln`
-`Get( LayoutNumber )`                |     `getlnu`
-`Get( LayoutTableName )`             |     `getltn`
-`Get( LayoutViewState )`             |     `getlvs`
-`Get( ModifiedFields )`              |     `getmf`
-`Get( MultiUserState )`              |     `getmus`
-`Get( NetworkProtocol )`             |     `getnp`
-`Get( NetworkType )`                 |     `getnt`
-`Get( PageNumber )`                  |     `getpn`
-`Get( PersistentID )`                |     `getpid`
-`Get( PreferencesPath )`             |     `getpp`
-`Get( PrinterName )`                 |     `getprn`
-`Get( QuickFindText )`               |     `getqft`
-`Get( RecordAccess )`                |     `getra`
-`Get( RecordID )`                    |     `getrid`
-`Get( RecordModificationCount )`     |     `getrmc`
-`Get( RecordNumber )`                |     `getrn`
-`Get( RecordOpenCount )`             |     `getroc`
-`Get( RecordOpenState )`             |     `getros`
-`Get( RequestCount )`                |     `getrqc`
-`Get( RequestOmitState )`            |     `getrqos`
-`Get( ScreenDepth )`                 |     `getsd`
-`Get( ScreenHeight )`                |     `getsh`
-`Get( ScreenWidth )`                 |     `getsw`
-`Get( ScriptAnimationState )`        |     `getsas`
-`Get( ScriptName )`                  |     `getsn`
-`Get( ScriptParameter )`             |     `getsp`
-`Get( ScriptResult )`                |     `getsr`
-`Get( SortState )`                   |     `getss`
-`Get( StatusAreaState )`             |     `getsars`
-`Get( SystemDrive )`                 |     `getsdv`
-`Get( SystemIPAddress )`             |     `getsipa`
-`Get( SystemLanguage )`              |     `getsl`
-`Get( SystemNICAddress )`            |     `getsna`
-`Get( SystemPlatform )`              |     `getspl`
-`Get( SystemVersion )`               |     `getsv`
-`Get( TemporaryPath )`               |     `gettp`
-`Get( TextRulerVisible )`            |     `gettrv`
-`Get( TotalRecordCount )`            |     `gettrc`
-`Get( TriggerCurrentPanel )`         |     `gettcp`
-`Get( TriggerGestureInfo )`          |     `gettgi`
-`Get( TriggerKeystroke )`            |     `gettk`
-`Get( TriggerModifierKeys )`         |     `gettmk`
-`Get( TriggerTargetPanel )`          |     `getttp`
-`Get( UserCount )`                   |     `getuc`
-`Get( UserName )`                    |     `getun`
-`Get( UseSystemFormatsState )`       |     `getusfs`
-`Get( UUID )`                        |     `getuuid`, `getuu`
-`Get( WindowContentHeight )`         |     `getwch`
-`Get( WindowContentWidth )`          |     `getwcw`
-`Get( WindowDesktopHeight )`         |     `getwdh`
-`Get( WindowDesktopWidth )`          |     `getwdw`
-`Get( WindowHeight )`                |     `getwh`
-`Get( WindowLeft )`                  |     `getwl`
-`Get( WindowMode )`                  |     `getwm`
-`Get( WindowName )`                  |     `getwn`
-`Get( WindowOrientation )`           |     `getwo`
-`Get( WindowStyle )`                 |     `getws`
-`Get( WindowTop )`                   |     `getwt`
-`Get( WindowVisible )`               |     `getwv`
-`Get( WindowWidth )`                 |     `getww`
-`Get( WindowZoomLevel )`             |     `getwzl`
+																			 *filemakervim-accountextendedprivileges*
+'Get( AccountExtendedPrivileges )'        'getaep'
+																										 *filemakervim-accountname*
+'Get( AccountName )'                      'getan'
+																				 *filemakervim-accountprivilegesetname*
+'Get( AccountPrivilegeSetName )'          'getapsn'
+																						 *filemakervim-activefieldcontents*
+'Get( ActiveFieldContents )'              'getafc'
+																								 *filemakervim-activefieldname*
+'Get( ActiveFieldName )'                  'getafn'
+																						*filemakervim-activefieldtablename*
+'Get( ActiveFieldTableName )'             'getaftn'
+																					*filemakervim-activelayoutobjectname*
+'Get( ActiveLayoutObjectName )'           'getalon'
+																							*filemakervim-activemodifierkeys*
+'Get( ActiveModifierKeys )'               'getafk'
+																					 *filemakervim-activeportalrownumber*
+'Get( ActivePortalRowNumber )'            'getaprn'
+																					*filemakervim-activerepetitionnumber*
+'Get( ActiveRepetitionNumber )'           'getarn'
+																						*filemakervim-activeselectionstate*
+'Get( ActiveSelectionState )'             'getass'
+																						*filemakervim-activeselectionstart*
+'Get( ActiveSelectionStart )'             'getasst'
+																								 *filemakervim-allowabortstate*
+'Get( AllowAbortState )'                  'getaas'
+																				 *filemakervim-allowformattingbarstate*
+'Get( AllowFormattingBarState )'          'getafbs'
+																						 *filemakervim-applicationlanguage*
+'Get( ApplicationLanguage )'              'getal'
+																							*filemakervim-applicationversion*
+'Get( ApplicationVersion )'               'getav'
+																		 *filemakervim-calculationrepetitionnumber*
+'Get( CalculationRepetitionNumber )'      'getcrn'
+																						*filemakervim-connectionattributes*
+'Get( ConnectionAttributes )'             'getca'
+																								 *filemakervim-connectionstate*
+'Get( ConnectionState )'                  'getcs'
+																										 *filemakervim-currentdate*
+'Get( CurrentDate )'                      'getcd'   'cd'
+																			 *filemakervim-currentextendedprivileges*
+'Get( CurrentExtendedPrivileges )'        'getcap'
+																						*filemakervim-currenthosttimestamp*
+'Get( CurrentHostTimestamp )'             'getcht'
+																				 *filemakervim-currentprivilegesetname*
+'Get( CurrentPrivilegeSetName )'          'getcpsn'
+																										 *filemakervim-currenttime*
+'Get( CurrentTime )'                      'getct'   'ct'
+																								*filemakervim-currenttimestamp*
+'Get( CurrentTimestamp )'                 'getcts'  'cts'
+																			*filemakervim-currenttimeutcmilliseconds*
+'Get( CurrentTimeUTCMilliseconds )'       'getutc'
+																							 *filemakervim-custommenusetname*
+'Get( CustomMenuSetName )'                'getcmsn'
+																										 *filemakervim-desktoppath*
+'Get( DesktopPath )'                      'getdp'
+																													*filemakervim-device*
+'Get( Device )'                           'getdv'
+																									 *filemakervim-documentspath*
+'Get( DocumentsPath )'                    'getdocp'
+																						*filemakervim-documentspathlisting*
+'Get( DocumentsPathListing )'             'getdpl'
+																								 *filemakervim-encryptionstate*
+'Get( EncryptionState )'                  'getes'
+																							 *filemakervim-errorcapturestate*
+'Get( ErrorCaptureState )'                'geters'
+																									 *filemakervim-filemakerpath*
+'Get( FileMakerPath )'                    'getfmp'
+																												*filemakervim-filename*
+'Get( FileName )'                         'getfn'
+																												*filemakervim-filepath*
+'Get( FilePath )'                         'getfp'
+																												*filemakervim-filesize*
+'Get( FileSize )'                         'getfs'
+																											*filemakervim-foundcount*
+'Get( FoundCount )'                       'getfc'
+																							 *filemakervim-highcontrastcolor*
+'Get( HighContrastColor )'                'gethcc'
+																							 *filemakervim-highcontraststate*
+'Get( HighContrastState )'                'gethcs'
+																					*filemakervim-hostapplicationversion*
+'Get( HostApplicationVersion )'           'gethav'
+																									 *filemakervim-hostipaddress*
+'Get( HostIPAddress )'                    'gethipa'
+																												*filemakervim-hostname*
+'Get( HostName )'                         'gethn'
+																							*filemakervim-installedfmplugins*
+'Get( InstalledFMPlugins )'               'getifmp'
+																											 *filemakervim-lasterror*
+'Get( LastError )'                        'getle'
+																							 *filemakervim-lastmessagechoice*
+'Get( LastMessageChoice )'                'getlmc'
+																									 *filemakervim-lastodbcerror*
+'Get( LastODBCError )'                    'getloe'
+																										*filemakervim-layoutaccess*
+'Get( LayoutAccess )'                     'getla'
+																										 *filemakervim-layoutcount*
+'Get( LayoutCount )'                      'getlc'
+																											*filemakervim-layoutname*
+'Get( LayoutName )'                       'getln'
+																										*filemakervim-layoutnumber*
+'Get( LayoutNumber )'                     'getlnu'
+																								 *filemakervim-layouttablename*
+'Get( LayoutTableName )'                  'getltn'
+																								 *filemakervim-layoutviewstate*
+'Get( LayoutViewState )'                  'getlvs'
+																									*filemakervim-modifiedfields*
+'Get( ModifiedFields )'                   'getmf'
+																									*filemakervim-multiuserstate*
+'Get( MultiUserState )'                   'getmus'
+																								 *filemakervim-networkprotocol*
+'Get( NetworkProtocol )'                  'getnp'
+																										 *filemakervim-networktype*
+'Get( NetworkType )'                      'getnt'
+																											*filemakervim-pagenumber*
+'Get( PageNumber )'                       'getpn'
+																										*filemakervim-persistentid*
+'Get( PersistentID )'                     'getpid'
+																								 *filemakervim-preferencespath*
+'Get( PreferencesPath )'                  'getpp'
+																										 *filemakervim-printername*
+'Get( PrinterName )'                      'getprn'
+																									 *filemakervim-quickfindtext*
+'Get( QuickFindText )'                    'getqft'
+																										*filemakervim-recordaccess*
+'Get( RecordAccess )'                     'getra'
+																												*filemakervim-recordid*
+'Get( RecordID )'                         'getrid'
+																				 *filemakervim-recordmodificationcount*
+'Get( RecordModificationCount )'          'getrmc'
+																										*filemakervim-recordnumber*
+'Get( RecordNumber )'                     'getrn'
+																								 *filemakervim-recordopencount*
+'Get( RecordOpenCount )'                  'getroc'
+																								 *filemakervim-recordopenstate*
+'Get( RecordOpenState )'                  'getros'
+																										*filemakervim-requestcount*
+'Get( RequestCount )'                     'getrqc'
+																								*filemakervim-requestomitstate*
+'Get( RequestOmitState )'                 'getrqos'
+																										 *filemakervim-screendepth*
+'Get( ScreenDepth )'                      'getsd'
+																										*filemakervim-screenheight*
+'Get( ScreenHeight )'                     'getsh'
+																										 *filemakervim-screenwidth*
+'Get( ScreenWidth )'                      'getsw'
+																						*filemakervim-scriptanimationstate*
+'Get( ScriptAnimationState )'             'getsas'
+																											*filemakervim-scriptname*
+'Get( ScriptName )'                       'getsn'
+																								 *filemakervim-scriptparameter*
+'Get( ScriptParameter )'                  'getsp'
+																										*filemakervim-scriptresult*
+'Get( ScriptResult )'                     'getsr'
+																											 *filemakervim-sortstate*
+'Get( SortState )'                        'getss'
+																								 *filemakervim-statusareastate*
+'Get( StatusAreaState )'                  'getsars'
+																										 *filemakervim-systemdrive*
+'Get( SystemDrive )'                      'getsdv'
+																								 *filemakervim-systemipaddress*
+'Get( SystemIPAddress )'                  'getsipa'
+																									*filemakervim-systemlanguage*
+'Get( SystemLanguage )'                   'getsl'
+																								*filemakervim-systemnicaddress*
+'Get( SystemNICAddress )'                 'getsna'
+																									*filemakervim-systemplatform*
+'Get( SystemPlatform )'                   'getspl'
+																									 *filemakervim-systemversion*
+'Get( SystemVersion )'                    'getsv'
+																									 *filemakervim-temporarypath*
+'Get( TemporaryPath )'                    'gettp'
+																								*filemakervim-textrulervisible*
+'Get( TextRulerVisible )'                 'gettrv'
+																								*filemakervim-totalrecordcount*
+'Get( TotalRecordCount )'                 'gettrc'
+																						 *filemakervim-triggercurrentpanel*
+'Get( TriggerCurrentPanel )'              'gettcp'
+																							*filemakervim-triggergestureinfo*
+'Get( TriggerGestureInfo )'               'gettgi'
+																								*filemakervim-triggerkeystroke*
+'Get( TriggerKeystroke )'                 'gettk'
+																						 *filemakervim-triggermodifierkeys*
+'Get( TriggerModifierKeys )'              'gettmk'
+																							*filemakervim-triggertargetpanel*
+'Get( TriggerTargetPanel )'               'getttp'
+																											 *filemakervim-usercount*
+'Get( UserCount )'                        'getuc'
+																												*filemakervim-username*
+'Get( UserName )'                         'getun'
+																					 *filemakervim-usesystemformatsstate*
+'Get( UseSystemFormatsState )'            'getusfs'
+																														*filemakervim-uuid*
+'Get( UUID )'                             'getuuid' 'getuu'
+																						 *filemakervim-windowcontentheight*
+'Get( WindowContentHeight )'              'getwch'
+																							*filemakervim-windowcontentwidth*
+'Get( WindowContentWidth )'               'getwcw'
+																						 *filemakervim-windowdesktopheight*
+'Get( WindowDesktopHeight )'              'getwdh'
+																							*filemakervim-windowdesktopwidth*
+'Get( WindowDesktopWidth )'               'getwdw'
+																										*filemakervim-windowheight*
+'Get( WindowHeight )'                     'getwh'
+																											*filemakervim-windowleft*
+'Get( WindowLeft )'                       'getwl'
+																											*filemakervim-windowmode*
+'Get( WindowMode )'                       'getwm'
+																											*filemakervim-windowname*
+'Get( WindowName )'                       'getwn'
+																							 *filemakervim-windoworientation*
+'Get( WindowOrientation )'                'getwo'
+																										 *filemakervim-windowstyle*
+'Get( WindowStyle )'                      'getws'
+																											 *filemakervim-windowtop*
+'Get( WindowTop )'                        'getwt'
+																									 *filemakervim-windowvisible*
+'Get( WindowVisible )'                    'getwv'
+																										 *filemakervim-windowwidth*
+'Get( WindowWidth )'                      'getww'
+																								 *filemakervim-windowzoomlevel*
+'Get( WindowZoomLevel )'                  'getwzl'
 
 ===============================================================================
 																										 *filemakervim-helping-out*
