@@ -82,34 +82,35 @@ has been performed yet.
 UltiSnips ~
 
 UltiSnips is a snippet system required by the snippets feature from TextMate
-[1]. Using the snippets feature requires UltiSnips [2]. See the the
-instructions below for additional details.
+(https://macromates.com). Using the snippets feature requires UltiSnips
+(https://github.com/SirVer/ultisnips). See the the instructions below for
+additional details.
 
 -------------------------------------------------------------------------------
 																										 *filemakervim-quickcursor*
 QuickCursor ~
 
-QuickCursor is in now way required for using filemaker.vim, but if you're using
+QuickCursor is in no way required for using filemaker.vim, but if you're using
 a Mac and you have a version of it, it can make life much easier by allowing
 you to press a key combination and open a FileMaker calculation directly in
 MacVim.
 
-Unfortunately QuickCursor is no longer being actively sold because of
-incompatibility woth Apple's sandboxing. If you were fortunate enough to get
-version 1 from before it entered the Mac App Store or version 2 before it was
-taken down, you're good to go.
+QuickCursor is no longer being actively sold because of incompatibility with
+Apple's sandboxing. There are two options available. Jesse Grosjean
+(http://www.hogbaysoftware.com), the author of QuickCursor has made
+the source code of version 2 available on GitHub
+(https://github.com/jessegrosjean/quickcursor). Although it appears to run
+under OS X Yosemite, however, it doesn't appear to be functional. Fortunately
+he's also given permission for us to make version 1 available for anyone to
+download. You can download a zip archive of it from DropBox
+(https://www.dropbox.com/s/flkam037ia2pblm/QuickCursor.app.zip).
 
-The publisher [3] of QuickCursor has made the source code [4] available, but
-all attempts to build and run it under OS X Yosemit have failed to demonstrate
-that it works successfully.
+Alternatively, if you're interested in a workaround, check out what some
+others have done by replacing QuickCursor with custom-built
+(http://rocketink.net/2013/05/quickcursor-keyboard-maestro.html) rountes using
+Keyboard Maestro (http://www.keyboardmaestro.com).
 
-In the future we hope to make either version 1 available for a free download or
-edit the source code of version 2 and make it available. In the meantime, if
-you're interested in a workaround, check out what some others have done by
-replacing QuickCursor with custom-built [5] routines using Keyboard Maestro
-[6].
-
-If neither of these solutions work for you, there are two final options I can
+If neither of these solutions work for you, there are two final options we can
 recommend. If you place the following line at the end of your calcuatation
 before you copy and paste it into a Vim buffer, Vim will read it to set the
 filetype:
@@ -126,14 +127,24 @@ manually set the file type:
 Acknowledgments ~
 
 A great deal of assistance with the snippets was kindly provided by Holger Rapp
-[7], whose help made the included snippets much more concise and useful.
+(https://github.com/SirVer), whose help made the included snippets much more
+concise and useful.
+
+Thanks to all of the very helpful people on the #vim and #python IRC channels
+at freenode.net, especially gfixler, udioica, japh, Raimondi, pgdouyon, fow,
+jamessan, and watabou on #vim and Moonlightning and Avaris on #python.
+
+Peter Odding (https://github.com/xolox) made things much easier by publishing
+his vim-tools software (https://github.com/xolox/vim-tools), allowing the
+plugin help files to be written almost entirely in Markdown.
 
 ===============================================================================
 																												 *filemakervim-install*
 Installation ~
 
-If you're already familiar with using Vundle [8] to manage plugins in Vim, just
-add these three lines to your '.vimrc' file between the calls to 'vundle#begin'
+If you're already familiar with using Vundle
+(https://github.com/gmarik/Vundle.vim) to manage plugins in Vim, just add
+these three lines to your '.vimrc' file between the calls to 'vundle#begin'
 and 'vundle#end'.
 >
 	Plugin 'SirVer/ultisnips'
@@ -149,7 +160,9 @@ If you need a bit more granular instructions, keep reading.
 Vundle Installation ~
 
 Vundle is the recommended method for installing filemaker.vim. Either read the
-complete installation instructions [9] or follow these steps:
+complete installation instructions
+(https://github.com/gmarik/Vundle.vim/blob/master/README.md#quick-start) or
+follow these steps:
 
 1. Create a '.vim' directory in your home folder if it doesn't already
 	 exist.
@@ -1083,7 +1096,8 @@ below in order of convenience for me. Please be as convenient as you can be. :)
 - Clone the repository on GitHub ('git clone
 	git@github.com:chivalry/filemaker.vim.git'), make your changes and send a
 	pull request on GitHub.
-- Make a patch, report a bug/feature request [10] and attach the patch to it.
+- Make a patch, report a bug/feature request
+	(https://github.com/chivalry/filemaker.vim/issues) and attach the patch to it.
 - Send me an email with a patch (see Contact section below).
 - Send me an email with the changed files only.
 
@@ -1094,34 +1108,20 @@ Contact ~
 You can reach me at chivalry -AT- mac -DOT- com. This project aims to be a
 complete solution for working with FileMaker calculations within Vim. If you
 miss a feature or find a bug, please contact me or add an issue to our issues
-tracker [10].
+tracker (https://github.com/chivalry/filemaker.vim/issues).
 
 ===============================================================================
 																										*filemakervim-contributors*
 Contributors ~
 
-The maintainer and primary developer of filemaker.com is Charles Ross (GitHub
-[11], Twitter [12]). Matt Petrowski (GitHub [13], Twitter [14]) was of enormous
-help not only in developing this plugin but also in providing valueable insight
-into which features to include and how they should be implemented.
+The maintainer and primary developer of filemaker.com is Charles Ross. Matt
+Petrowski was of enormous help not only in developing this plugin but also in
+providing valueable insight into which features to include and how they should
+be implemented.
 
-===============================================================================
-																											*filemakervim-references*
-References ~
-
-[1] https://macromates.com
-[2] https://github.com/SirVer/ultisnips
-[3] http://www.hogbaysoftware.com
-[4] https://github.com/jessegrosjean/quickcursor
-[5] http://rocketink.net/2013/05/quickcursor-keyboard-maestro.html
-[6] http://www.keyboardmaestro.com
-[7] https://github.com/SirVer
-[8] https://github.com/gmarik/Vundle.vim
-[9] https://github.com/gmarik/Vundle.vim/blob/master/README.md#quick-start
-[10] https://github.com/chivalry/filemaker.vim/issues
-[11] https://github.com/chivalry
-[12] https://twitter.com/chivalrysoft
-[13] https://github.com/petrowsky
-[14] https://twitter.com/filemakermag
+Charles Ross at GitHub: https://github.com/chivalry
+             at Twitter: https://twitter.com/chivalrysoft
+Matt Petrowsky at GitHub: https://github.com/petrowsky
+               at Twitter: https://twitter.com/filemakermag
 
 vim: ft=help
