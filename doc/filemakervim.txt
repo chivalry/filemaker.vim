@@ -503,139 +503,139 @@ Text Functions ~
 
                   *filemakervim-char*
                                                                      *fmv-char*
-'Char'                 'char'     'cha'
+'Char'                 'char'               'cha'
                                                             *filemakervim-code*
                                                                      *fmv-code*
-'Code'                 'code'     'cod'
+'Code'                 'code'               'cod'
                                                            *filemakervim-exact*
                                                                     *fmv-exact*
-'Exact'                'exact'     'exa'
+'Exact'                'exact'              'exa'
                                                           *filemakervim-filter*
                                                                    *fmv-filter*
-'Filter'               'filter'     'fil'
+'Filter'               'filter'             'fil'
                                                     *filemakervim-filtervalues*
                                                              *fmv-filtervalues*
-'Filtervalues'         'filtervalues'   'filv'
+'Filtervalues'         'filtervalues'       'filv'
                                                         *filemakervim-getascss*
                                                                  *fmv-getascss*
-'GetAsCSS'             'getascss'   'getc'
+'GetAsCSS'             'getascss'           'getc'
                                                        *filemakervim-getasdate*
                                                                 *fmv-getasdate*
-'GetAsDate'            'getasdate'   'getd'
+'GetAsDate'            'getasdate'          'getd'
                                                      *filemakervim-getasnumber*
                                                               *fmv-getasnumber*
-'GetAsNumber'          'getasnumber'   'getn'
+'GetAsNumber'          'getasnumber'        'getn'
                                                         *filemakervim-getassvg*
                                                                  *fmv-getassvg*
-'GetAsSVG'             'getassvg'   'gets'
+'GetAsSVG'             'getassvg'           'gets'
                                                        *filemakervim-getastext*
                                                                 *fmv-getastext*
-'GetAsText'            'getastext'   'gett'
+'GetAsText'            'getastext'          'gett'
                                                        *filemakervim-getastime*
                                                                 *fmv-getastime*
-'GetAsTime'            'getastime'   'geti'
+'GetAsTime'            'getastime'          'geti'
                                                   *filemakervim-getastimestamp*
                                                            *fmv-getastimestamp*
-'GetAsTimestamp'       'getastimestamp'  'getm'
+'GetAsTimestamp'       'getastimestamp'     'getm'
                                                  *filemakervim-getasurlencoded*
                                                           *fmv-getasurlencoded*
-'GetAsURLEncoded'      'getasurlencoded' 'getu'
+'GetAsURLEncoded'      'getasurlencoded'    'getu'
                                                         *filemakervim-getvalue*
                                                                  *fmv-getvalue*
-'GetValue'             'getvalue'   'getv'
+'GetValue'             'getvalue'           'getv'
                                                         *filemakervim-hiragana*
                                                                  *fmv-hiragana*
-'Hiragana'             'hiragana'   'hir'
+'Hiragana'             'hiragana'           'hir'
                                                      *filemakervim-kanahankaku*
                                                               *fmv-kanahankaku*
-'KanaHankaku'          'kanahankaku'   'kanah'
+'KanaHankaku'          'kanahankaku'        'kanah'
                                                      *filemakervim-kanazenkaku*
                                                               *fmv-kanazenkaku*
-'KanaZenkaku'          'kanazenkaku'   'kanaz'
+'KanaZenkaku'          'kanazenkaku'        'kanaz'
                                                     *filemakervim-kanjinumeral*
                                                              *fmv-kanjinumeral*
-'KanjiNumeral'         'kanjinumeral'   'kanj'
+'KanjiNumeral'         'kanjinumeral'       'kanj'
                                                         *filemakervim-katakana*
                                                                  *fmv-katakana*
-'Katakana'             'katakana'   'kata'
+'Katakana'             'katakana'           'kata'
                                                             *filemakervim-left*
                                                                      *fmv-left*
-'Left'                 'left'     'lef'
+'Left'                 'left'               'lef'
                                                       *filemakervim-leftvalues*
                                                                *fmv-leftvalues*
-'LeftValues'           'leftvalues'   'leftv'
+'LeftValues'           'leftvalues'         'leftv'
                                                        *filemakervim-leftwords*
                                                                 *fmv-leftwords*
-'LeftWords'            'leftwords'   'leftw'
+'LeftWords'            'leftwords'          'leftw'
                                                           *filemakervim-length*
                                                                    *fmv-length*
-'Length'               'length'     'len'
+'Length'               'length'             'len'
                                                            *filemakervim-lower*
                                                                     *fmv-lower*
-'Lower'                'lower'     'low'
+'Lower'                'lower'              'low'
                                                           *filemakervim-middle*
                                                                    *fmv-middle*
-'Middle'               'middle'     'mid'
+'Middle'               'middle'             'mid'
                                                     *filemakervim-middlevalues*
                                                              *fmv-middlevalues*
-'MiddleValues'         'middlevalues'   'midv'
+'MiddleValues'         'middlevalues'       'midv'
                                                      *filemakervim-middlewords*
                                                               *fmv-middlewords*
-'MiddleWords'          'middlewords'   'midw'
+'MiddleWords'          'middlewords'        'midw'
                                                       *filemakervim-numtojtext*
                                                                *fmv-numtojtext*
-'NumToJText'           'numtojtext'   'numj'
+'NumToJText'           'numtojtext'         'numj'
                                                     *filemakervim-patterncount*
                                                              *fmv-patterncount*
-'PatternCount'         'patterncount'   'pat'
+'PatternCount'         'patterncount'       'pat'
                                                         *filemakervim-position*
                                                                  *fmv-position*
-'Position'             'position'   'pos'
+'Position'             'position'           'pos'
                                                           *filemakervim-proper*
                                                                    *fmv-proper*
-'Proper'               'proper'     'pro'
+'Proper'               'proper'             'pro'
                                                            *filemakervim-quote*
                                                                     *fmv-quote*
-'Quote'                'quote'     'quo'
+'Quote'                'quote'              'quo'
                                                          *filemakervim-replace*
                                                                   *fmv-replace*
-'Replace'              'replace'   'repl'
+'Replace'              'replace'            'repl'
                                                            *filemakervim-right*
                                                                     *fmv-right*
-'Right'                'right'     'rit'
+'Right'                'right'              'rit'
                                                      *filemakervim-rightvalues*
                                                               *fmv-rightvalues*
-'RightValues'          'rightvalues'   'ritv'
+'RightValues'          'rightvalues'        'ritv'
                                                       *filemakervim-rightwords*
                                                                *fmv-rightwords*
-'RightWords'           'rightwords'   'ritw'
+'RightWords'           'rightwords'         'ritw'
                                                     *filemakervim-romanhankaku*
                                                              *fmv-romanhankaku*
-'RomanHankaku'         'romanhankaku'   'romh'
+'RomanHankaku'         'romanhankaku'       'romh'
                                                     *filemakervim-romankenkaku*
                                                              *fmv-romankenkaku*
-'RomanZenkaku'         'romankenkaku'   'romz'
+'RomanZenkaku'         'romankenkaku'       'romz'
                                                  *filemakervim-serialincrement*
                                                           *fmv-serialincrement*
-'SerialIncrement'      'serialincrement' 'seri'
+'SerialIncrement'      'serialincrement'    'seri'
                                                       *filemakervim-substitute*
                                                                *fmv-substitute*
-'Substitute'           'substitute'   'sub'
+'Substitute'           'substitute'         'sub'
                                                             *filemakervim-trim*
                                                                      *fmv-trim*
 'Trim'                 'trim'
                                                          *filemakervim-trimall*
                                                                   *fmv-trimall*
-'TrimAll'              'trimall'   'trima'
+'TrimAll'              'trimall'            'trima'
                                                            *filemakervim-upper*
                                                                     *fmv-upper*
-'Upper'                'upper'     'upp'
+'Upper'                'upper'              'upp'
                                                       *filemakervim-valuecount*
                                                                *fmv-valuecount*
-'ValueCount'           'valuecount'   'valc'
+'ValueCount'           'valuecount'         'valc'
                                                        *filemakervim-wordcount*
                                                                 *fmv-wordcount*
-'WordCount'            'wordcount'   'wordc'
+'WordCount'            'wordcount'          'wordc'
 
 -------------------------------------------------------------------------------
                                            *filemakervim-text-formatting-group*
@@ -644,31 +644,31 @@ Text Formatting Functions ~
 
                                                              *filemakervim-rgb*
                                                                       *fmv-rgb*
-'RGB'           'rgb'
+'RGB'                   'rgb'
                                                        *filemakervim-textcolor*
                                                                 *fmv-textcolor*
-'TextColor'         'textcolor'   'textc'
+'TextColor'             'textcolor'         'textc'
                                                  *filemakervim-textcolorremove*
                                                           *fmv-textcolorremove*
-'TextColorRemove'      'textcolorremove' 'textcr'
+'TextColorRemove'       'textcolorremove'   'textcr'
                                                         *filemakervim-textfont*
                                                                  *fmv-textfont*
-'TextFont'         'textfont'   'textf'
+'TextFont'              'textfont'          'textf'
                                                   *filemakervim-textfontremove*
                                                            *fmv-textfontremove*
-'TextFontRemove'       'textfontremove'  'textfr'
+'TextFontRemove'        'textfontremove'    'textfr'
                                                         *filemakervim-textsize*
                                                                  *fmv-textsize*
-'TextSize'         'textsize'   'texts'
+'TextSize'              'textsize'          'texts'
                                                   *filemakervim-textsizeremove*
                                                            *fmv-textsizeremove*
-'TextSizeRemove'       'textsizeremove'  'textsr'
+'TextSizeRemove'        'textsizeremove'    'textsr'
                                                     *filemakervim-textstyleadd*
                                                              *fmv-textstyleadd*
-'TextStyleAdd'         'textstyleadd'   'textsts'
+'TextStyleAdd'          'textstyleadd'      'textsts'
                                                  *filemakervim-textstyleremove*
                                                           *fmv-textstyleremove*
-'TextStyleRemove'      'textstyleremove' 'textstr'
+'TextStyleRemove'       'textstyleremove'   'textstr'
 
 -------------------------------------------------------------------------------
                                                     *filemakervim-number-group*
@@ -677,58 +677,58 @@ Number Functions ~
 
                                                              *filemakervim-abs*
                                                                       *fmv-abs*
-'Abs'        'abs'
+'Abs'               'abs'
                                                          *filemakervim-ceiling*
                                                                   *fmv-ceiling*
-'Ceiling'      'ceiling'     'ceil'
+'Ceiling'           'ceiling'       'ceil'
                                                      *filemakervim-combination*
                                                               *fmv-combination*
-'Combination'      'combination'  'comb'
+'Combination'       'combination'   'comb'
                                                              *filemakervim-div*
                                                                       *fmv-div*
-'Div'        'div'
+'Div'               'div'
                                                              *filemakervim-exp*
                                                                       *fmv-exp*
-'Exp'        'exp'
+'Exp'               'exp'
                                                        *filemakervim-factorial*
                                                                 *fmv-factorial*
-'Factorial'      'factorial'    'fact'
+'Factorial'         'factorial'     'fact'
                                                            *filemakervim-floor*
                                                                     *fmv-floor*
-'Floor'        'floor'     'flo'
+'Floor'             'floor'         'flo'
                                                              *filemakervim-int*
                                                                       *fmv-int*
-'Int'        'int'
+'Int'               'int'
                                                               *filemakervim-lg*
                                                                        *fmv-lg*
-'Lg'        'lg'
+'Lg'                'lg'
                                                               *filemakervim-ln*
                                                                        *fmv-ln*
-'Ln'        'ln'
+'Ln'                'ln'
                                                              *filemakervim-log*
                                                                       *fmv-log*
-'Log'        'log'
+'Log'               'log'
                                                              *filemakervim-mod*
                                                                       *fmv-mod*
-'Mod'        'mod'
+'Mod'               'mod'
                                                           *filemakervim-random*
                                                                    *fmv-random*
-'Random'      'random'     'rand'
+'Random'            'random'        'rand'
                                                            *filemakervim-round*
                                                                     *fmv-round*
-'Round'        'round'     'rou'
+'Round'             'round'         'rou'
                                                     *filemakervim-setprecision*
                                                              *fmv-setprecision*
-'SetPrecision'      'setprecision' 'setp'
+'SetPrecision'      'setprecision'  'setp'
                                                             *filemakervim-sign*
                                                                      *fmv-sign*
-'Sign'        'sign'
+'Sign'              'sign'
                                                             *filemakervim-sqrt*
                                                                      *fmv-sqrt*
-'Sqrt'        'sqrt'
+'Sqrt'              'sqrt'
                                                         *filemakervim-truncate*
                                                                  *fmv-truncate*
-'Truncate'      'truncate'     'trunc'
+'Truncate'          'truncate'      'trunc'
 
 -------------------------------------------------------------------------------
                                                       *filemakervim-date-group*
@@ -737,43 +737,43 @@ Date Functions ~
 
                                                             *filemakervim-date*
                                                                      *fmv-date*
-'Date'      'date'
+'Date'                'date'
                                                              *filemakervim-day*
                                                                       *fmv-day*
-'Day'      'day'
+'Day'                 'day'
                                                          *filemakervim-dayname*
                                                                   *fmv-dayname*
-'DayName'    'dayname'     'dayn'
+'DayName'             'dayname'             'dayn'
                                                         *filemakervim-daynamej*
                                                                  *fmv-daynamej*
-'DayNameJ'    'daynamej'     'daynj'
+'DayNameJ'            'daynamej'            'daynj'
                                                        *filemakervim-dayofweek*
                                                                 *fmv-dayofweek*
-'DayOfWeek'    'dayofweek'     'dow'
+'DayOfWeek'           'dayofweek'           'dow'
                                                        *filemakervim-dayofyear*
                                                                 *fmv-dayofyear*
-'DayOfYear'    'dayofyear'     'doy'
+'DayOfYear'           'dayofyear'           'doy'
                                                            *filemakervim-month*
                                                                     *fmv-month*
-'Month'      'month'       'mon'
+'Month'               'month'               'mon'
                                                        *filemakervim-monthname*
                                                                 *fmv-monthname*
-'MonthName'    'monthname'     'monn'
+'MonthName'           'monthname'           'monn'
                                                       *filemakervim-monthnamej*
                                                                *fmv-monthnamej*
-'MonthNameJ'    'monthnamej'     'monnj'
+'MonthNameJ'          'monthnamej'          'monnj'
                                                       *filemakervim-weekofyear*
                                                                *fmv-weekofyear*
-'WeekOfYear'    'weekofyear'     'woy'
+'WeekOfYear'          'weekofyear'          'woy'
                                                 *filemakervim-weekofyearfiscal*
                                                          *fmv-weekofyearfiscal*
-'WeekOfYearFiscal'  'weekofyearfiscal' 'woyf'
+'WeekOfYearFiscal'    'weekofyearfiscal'    'woyf'
                                                             *filemakervim-year*
                                                                      *fmv-year*
-'Year'      'year'       'yr'
+'Year'                'year'                'yr'
                                                         *filemakervim-yearname*
                                                                  *fmv-yearname*
-'YearName'    'yearname'     'yrn'
+'YearName'            'yearname'            'yrn'
 
 -------------------------------------------------------------------------------
                                                       *filemakervim-time-group*
@@ -782,13 +782,13 @@ Time Functions ~
 
                                                             *filemakervim-hour*
                                                                      *fmv-hour*
-'Hour'         'hour'   'hr'
+'Hour'         'hour'       'hr'
                                                           *filemakervim-minute*
                                                                    *fmv-minute*
-'Minute'       'minute'  'minu'
+'Minute'       'minute'     'minu'
                                                          *filemakervim-seconds*
                                                                   *fmv-seconds*
-'Seconds'      'seconds' 'secs'
+'Seconds'      'seconds'    'secs'
                                                             *filemakervim-time*
                                                                      *fmv-time*
 'Time'         'time'
@@ -800,7 +800,7 @@ Timestamp Functions ~
 
                                                        *filemakervim-timestamp*
                                                                 *fmv-timestamp*
-'Timestamp'   'timestamp' 'ts'
+'Timestamp'   'timestamp'   'ts'
 
 -------------------------------------------------------------------------------
                                                  *filemakervim-container-group*
@@ -809,25 +809,25 @@ Container Functions ~
 
                                                     *filemakervim-base64decode*
                                                              *fmv-base64decode*
-'Base64Decode'         'base64decode'       'based'
+'Base64Decode'                'base64decode'            'based'
                                                     *filemakervim-base64encode*
                                                              *fmv-base64encode*
-'Base64Encode'         'base64encode'       'basee'
+'Base64Encode'                'base64encode'            'basee'
                                            *filemakervim-getcontainerattribute*
                                                     *fmv-getcontainerattribute*
-'GetContainerAttribute'      'getcontainerattribute' 'getcatt'
+'GetContainerAttribute'       'getcontainerattribute'   'getcatt'
                                                        *filemakervim-getheight*
                                                                 *fmv-getheight*
-'GetHeight'         'getheight'       'geth'
+'GetHeight'                   'getheight'               'geth'
                                                     *filemakervim-getthumbnail*
                                                              *fmv-getthumbnail*
-'GetThumbnail'         'getthumbnail'       'getth'
+'GetThumbnail'                'getthumbnail'            'getth'
                                                         *filemakervim-getwidth*
                                                                  *fmv-getwidth*
-'GetWidth'         'getwidth'         'getw'
+'GetWidth'                    'getwidth'                'getw'
                                                  *filemakervim-verifycontainer*
                                                           *fmv-verifycontainer*
-'VerifyContainer'       'verifycontainer'       'ver'
+'VerifyContainer'             'verifycontainer'         'ver'
 
 -------------------------------------------------------------------------------
                                                  *filemakervim-aggregate-group*
@@ -836,34 +836,34 @@ Aggregate Functions ~
 
                                                          *filemakervim-average*
                                                                   *fmv-average*
-'Average'   'average'   'avg'
+'Average'       'average'     'avg'
                                                            *filemakervim-count*
                                                                     *fmv-count*
-'Count'     'count'     'cnt'
+'Count'         'count'       'cnt'
                                                             *filemakervim-list*
                                                                      *fmv-list*
-'List'     'list'
+'List'          'list'
                                                              *filemakervim-max*
                                                                       *fmv-max*
-'Max'     'max'
+'Max'           'max'
                                                              *filemakervim-min*
                                                                       *fmv-min*
-'Min'     'min'
+'Min'           'min'
                                                            *filemakervim-stdev*
                                                                     *fmv-stdev*
-'StDev'     'stdev'     'std'
+'StDev'         'stdev'       'std'
                                                           *filemakervim-stdevp*
                                                                    *fmv-stdevp*
-'StDevP'   'stdevp'    'stdp'
+'StDevP'        'stdevp'      'stdp'
                                                              *filemakervim-sum*
                                                                       *fmv-sum*
-'Sum'     'sum'
+'Sum'           'sum'
                                                         *filemakervim-variance*
                                                                  *fmv-variance*
-'Variance'   'variance'  'var'
+'Variance'      'variance'    'var'
                                                        *filemakervim-variancep*
                                                                 *fmv-variancep*
-'VarianceP'   'variancep' 'varp'
+'VarianceP'     'variancep'   'varp'
 
 -------------------------------------------------------------------------------
                                                    *filemakervim-summary-group*
@@ -872,7 +872,7 @@ Summary Functions ~
 
                                                       *filemakervim-getsummary*
                                                                *fmv-getsummary*
-'GetSummary'    'getsummary' 'getsum'
+'GetSummary'    'getsummary'  'getsum'
 
 -------------------------------------------------------------------------------
                                                  *filemakervim-repeating-group*
@@ -881,13 +881,13 @@ Repeating Functions ~
 
                                                           *filemakervim-extend*
                                                                    *fmv-extend*
-'Extend'       'extend'       'extd'
+'Extend'              'extend'          'extd'
                                                    *filemakervim-getrepetition*
                                                             *fmv-getrepetition*
-'GetRepetition'      'getrepetition' 'getrep'
+'GetRepetition'       'getrepetition'   'getrep'
                                                             *filemakervim-last*
                                                                      *fmv-last*
-'Last'         'last'
+'Last'                'last'
 
 -------------------------------------------------------------------------------
                                                  *filemakervim-financial-group*
@@ -896,7 +896,7 @@ Financial Functions ~
 
                                                               *filemakervim-fv*
                                                                        *fmv-fv*
-'FV'     'fv'
+'FV'      'fv'
                                                              *filemakervim-npv*
                                                                       *fmv-npv*
 'NPV'     'npv'
@@ -905,7 +905,7 @@ Financial Functions ~
 'PMT'     'pmt'
                                                               *filemakervim-pv*
                                                                        *fmv-pv*
-'PV'     'pv'
+'PV'      'pv'
 
 -------------------------------------------------------------------------------
                                              *filemakervim-trigonometric-group*
@@ -914,28 +914,28 @@ Trigonometric Functions ~
 
                                                             *filemakervim-acos*
                                                                      *fmv-acos*
-'Acos'         'acos'
+'Acos'          'acos'
                                                             *filemakervim-asin*
                                                                      *fmv-asin*
-'Asin'         'asin'
+'Asin'          'asin'
                                                             *filemakervim-atan*
                                                                      *fmv-atan*
-'Atan'         'atan'
+'Atan'          'atan'
                                                              *filemakervim-cos*
                                                                       *fmv-cos*
-'Cos'         'cos'
+'Cos'           'cos'
                                                          *filemakervim-degrees*
                                                                   *fmv-degrees*
-'Degrees'      'degrees' 'deg'
+'Degrees'       'degrees'   'deg'
                                                          *filemakervim-radians*
                                                                   *fmv-radians*
-'Radians'      'radians' 'rad'
+'Radians'       'radians'   'rad'
                                                              *filemakervim-sin*
                                                                       *fmv-sin*
-'Sin'         'sin'
+'Sin'           'sin'
                                                              *filemakervim-tan*
                                                                       *fmv-tan*
-'Tan'         'tan'
+'Tan'           'tan'
 
 -------------------------------------------------------------------------------
                                                    *filemakervim-logical-group*
@@ -944,55 +944,55 @@ Logical Functions ~
 
                                                             *filemakervim-case*
                                                                      *fmv-case*
-'Case'        'case'
+'Case'                      'case'
                                                           *filemakervim-choose*
                                                                    *fmv-choose*
-'Choose'      'choose'       'cho'
+'Choose'                    'choose'                      'cho'
                                                         *filemakervim-evaluate*
                                                                  *fmv-evaluate*
-'Evaluate'      'evaluate'       'eval'
+'Evaluate'                  'evaluate'                    'eval'
                                                  *filemakervim-evaluationerror*
                                                           *fmv-evaluationerror*
-'EvaluationError'    'evaluationerror'     'evalerr'
+'EvaluationError'           'evaluationerror'             'evalerr'
                                                       *filemakervim-executesql*
                                                                *fmv-executesql*
-'ExecuteSQL'      'executesql'       'sql'
+'ExecuteSQL'                'executesql'                  'sql'
                                                     *filemakervim-getasboolean*
                                                              *fmv-getasboolean*
-'GetAsBoolean'      'getasboolean'       'getb'
+'GetAsBoolean'              'getasboolean'                'getb'
                                                         *filemakervim-getfield*
                                                                  *fmv-getfield*
-'GetField'      'getfield'       'getf'
+'GetField'                  'getfield'                    'getf'
                                                     *filemakervim-getfieldname*
                                                              *fmv-getfieldname*
-'GetFieldName'      'getfieldname'       'getfn'
+'GetFieldName'              'getfieldname'                'getfn'
                                         *filemakervim-getlayoutobjectattribute*
                                                  *fmv-getlayoutobjectattribute*
-'GetLayoutObjectAttribute'  'getlayoutobjectattribute' 'getloa'
+'GetLayoutObjectAttribute'  'getlayoutobjectattribute'    'getloa'
                                                     *filemakervim-getnthrecord*
                                                              *fmv-getnthrecord*
-'GetNthRecord'      'getnthrecord'       'getnth'
+'GetNthRecord'              'getnthrecord'                'getnth'
                                                               *filemakervim-if*
                                                                        *fmv-if*
-'If'        'if'
+'If'                        'if'
                                                          *filemakervim-isempty*
                                                                   *fmv-isempty*
-'IsEmpty'      'isempty'       'ise'
+'IsEmpty'                   'isempty'                     'ise'
                                                          *filemakervim-isvalid*
                                                                   *fmv-isvalid*
-'IsValid'      'isvalid'       'isv'
+'IsValid'                   'isvalid'                     'isv'
                                                *filemakervim-isvalidexpression*
                                                         *fmv-isvalidexpression*
-'IsValidExpression'    'isvalidexpression'     'isve'
+'IsValidExpression'         'isvalidexpression'           'isve'
                                                              *filemakervim-let*
                                                                       *fmv-let*
-'Let'        'let'
+'Let'                       'let'
                                                           *filemakervim-lookup*
                                                                    *fmv-lookup*
-'Lookup'      'lookup'       'look'
+'Lookup'                    'lookup'                      'look'
                                                       *filemakervim-lookupnext*
                                                                *fmv-lookupnext*
-'LookupNext'      'lookupnext'       'lookn'
+'LookupNext'                'lookupnext'                  'lookn'
 
 -------------------------------------------------------------------------------
                                                     *filemakervim-design-group*
@@ -1001,70 +1001,70 @@ Design Functions ~
 
                                                              *filemakervim-dbn*
                                                                       *fmv-dbn*
-'DatabaseNames'      'dbn'
+'DatabaseNames'         'dbn'
                                                      *filemakervim-fieldbounds*
                                                               *fmv-fieldbounds*
-'FieldBounds'      'fieldbounds'        'fb'
+'FieldBounds'           'fieldbounds'         'fb'
                                                     *filemakervim-fieldcomment*
                                                              *fmv-fieldcomment*
-'FieldComment'      'fieldcomment'       'fc'
+'FieldComment'          'fieldcomment'        'fc'
                                                         *filemakervim-fieldids*
                                                                  *fmv-fieldids*
-'FieldIDs'      'fieldids'         'fid'
+'FieldIDs'              'fieldids'            'fid'
                                                       *filemakervim-fieldnames*
                                                                *fmv-fieldnames*
-'FieldNames'      'fieldnames'         'fn'
+'FieldNames'            'fieldnames'          'fn'
                                                 *filemakervim-fieldrepetitions*
                                                          *fmv-fieldrepetitions*
-'FieldRepetitions'    'fieldrepetitions'   'frep'
+'FieldRepetitions'      'fieldrepetitions'    'frep'
                                                       *filemakervim-fieldstyle*
                                                                *fmv-fieldstyle*
-'FieldStyle'      'fieldstyle'         'fst'
+'FieldStyle'            'fieldstyle'          'fst'
                                                        *filemakervim-fieldtype*
                                                                 *fmv-fieldtype*
-'FieldType'      'fieldtype'         'fty'
+'FieldType'             'fieldtype'           'fty'
                                               *filemakervim-getnextserialvalue*
                                                        *fmv-getnextserialvalue*
-'GetNextSerialValue'    'getnextserialvalue' 'gnsv'
+'GetNextSerialValue'    'getnextserialvalue'  'gnsv'
                                                        *filemakervim-layoutids*
                                                                 *fmv-layoutids*
-'LayoutIDs'      'layoutids'         'lid'
+'LayoutIDs'             'layoutids'           'lid'
                                                      *filemakervim-layoutnames*
                                                               *fmv-layoutnames*
-'LayoutNames'      'layoutnames'        'lon'
+'LayoutNames'           'layoutnames'         'lon'
                                                *filemakervim-layoutobjectnames*
                                                         *fmv-layoutobjectnames*
-'LayoutObjectNames'    'layoutobjectnames'  'loon'
+'LayoutObjectNames'     'layoutobjectnames'   'loon'
                                                         *filemakervim-location*
                                                                  *fmv-location*
-'Location'      'location'         'loc'
+'Location'              'location'            'loc'
                                                   *filemakervim-locationvalues*
                                                            *fmv-locationvalues*
-'LocationValues'    'locationvalues'     'locv'
+'LocationValues'        'locationvalues'      'locv'
                                                     *filemakervim-relationinfo*
                                                              *fmv-relationinfo*
-'RelationInfo'      'relationinfo'       'ri'
+'RelationInfo'          'relationinfo'        'ri'
                                                        *filemakervim-scriptids*
                                                                 *fmv-scriptids*
-'ScriptIDs'      'scriptids'         'sid'
+'ScriptIDs'             'scriptids'           'sid'
                                                         *filemakervim-tableids*
                                                                  *fmv-tableids*
-'TableIDs'      'tableids'         'tid'
+'TableIDs'              'tableids'            'tid'
                                                       *filemakervim-tablenames*
                                                                *fmv-tablenames*
-'TableNames'      'tablenames'         'tn'
+'TableNames'            'tablenames'          'tn'
                                                     *filemakervim-valuelistids*
                                                              *fmv-valuelistids*
-'ValueListIDs'      'valuelistids'       'vid'
+'ValueListIDs'          'valuelistids'        'vid'
                                                   *filemakervim-valuelistitems*
                                                            *fmv-valuelistitems*
-'ValueListItems'    'valuelistitems'     'vli'
+'ValueListItems'        'valuelistitems'      'vli'
                                                   *filemakervim-valuelistnames*
                                                            *fmv-valuelistnames*
-'ValueListNames'    'valuelistnames'     'vln'
+'ValueListNames'        'valuelistnames'      'vln'
                                                      *filemakervim-windownames*
                                                               *fmv-windownames*
-'WindowNames'      'windownames'        'wn'
+'WindowNames'           'windownames'         'wn'
 
 -------------------------------------------------------------------------------
                                                   *filemakervim-external-group*
@@ -1082,337 +1082,337 @@ Get Functions ~
 
                                        *filemakervim-accountextendedprivileges*
                                                 *fmv-accountextendedprivileges*
-'Get( AccountExtendedPrivileges )'    'getaep'
+'Get( AccountExtendedPrivileges )'      'getaep'
                                                      *filemakervim-accountname*
                                                               *fmv-accountname*
-'Get( AccountName )'        'getan'
+'Get( AccountName )'                    'getan'
                                          *filemakervim-accountprivilegesetname*
                                                   *fmv-accountprivilegesetname*
-'Get( AccountPrivilegeSetName )'    'getapsn'
+'Get( AccountPrivilegeSetName )'        'getapsn'
                                              *filemakervim-activefieldcontents*
                                                       *fmv-activefieldcontents*
-'Get( ActiveFieldContents )'      'getafc'
+'Get( ActiveFieldContents )'            'getafc'
                                                  *filemakervim-activefieldname*
                                                           *fmv-activefieldname*
-'Get( ActiveFieldName )'      'getafn'
+'Get( ActiveFieldName )'                'getafn'
                                             *filemakervim-activefieldtablename*
                                                      *fmv-activefieldtablename*
-'Get( ActiveFieldTableName )'      'getaftn'
+'Get( ActiveFieldTableName )'           'getaftn'
                                           *filemakervim-activelayoutobjectname*
                                                    *fmv-activelayoutobjectname*
-'Get( ActiveLayoutObjectName )'      'getalon'
+'Get( ActiveLayoutObjectName )'         'getalon'
                                               *filemakervim-activemodifierkeys*
                                                        *fmv-activemodifierkeys*
-'Get( ActiveModifierKeys )'      'getafk'
+'Get( ActiveModifierKeys )'             'getafk'
                                            *filemakervim-activeportalrownumber*
                                                     *fmv-activeportalrownumber*
-'Get( ActivePortalRowNumber )'      'getaprn'
+'Get( ActivePortalRowNumber )'          'getaprn'
                                           *filemakervim-activerepetitionnumber*
                                                    *fmv-activerepetitionnumber*
-'Get( ActiveRepetitionNumber )'      'getarn'
+'Get( ActiveRepetitionNumber )'         'getarn'
                                             *filemakervim-activeselectionstate*
                                                      *fmv-activeselectionstate*
-'Get( ActiveSelectionState )'      'getass'
+'Get( ActiveSelectionState )'           'getass'
                                             *filemakervim-activeselectionstart*
                                                      *fmv-activeselectionstart*
-'Get( ActiveSelectionStart )'      'getasst'
+'Get( ActiveSelectionStart )'           'getasst'
                                                  *filemakervim-allowabortstate*
                                                           *fmv-allowabortstate*
-'Get( AllowAbortState )'      'getaas'
+'Get( AllowAbortState )'                'getaas'
                                          *filemakervim-allowformattingbarstate*
                                                   *fmv-allowformattingbarstate*
-'Get( AllowFormattingBarState )'    'getafbs'
+'Get( AllowFormattingBarState )'        'getafbs'
                                              *filemakervim-applicationlanguage*
                                                       *fmv-applicationlanguage*
-'Get( ApplicationLanguage )'      'getal'
+'Get( ApplicationLanguage )'            'getal'
                                               *filemakervim-applicationversion*
                                                        *fmv-applicationversion*
-'Get( ApplicationVersion )'      'getav'
+'Get( ApplicationVersion )'             'getav'
                                      *filemakervim-calculationrepetitionnumber*
                                               *fmv-calculationrepetitionnumber*
 'Get( CalculationRepetitionNumber )'    'getcrn'
                                             *filemakervim-connectionattributes*
                                                      *fmv-connectionattributes*
-'Get( ConnectionAttributes )'      'getca'
+'Get( ConnectionAttributes )'           'getca'
                                                  *filemakervim-connectionstate*
                                                           *fmv-connectionstate*
-'Get( ConnectionState )'      'getcs'
+'Get( ConnectionState )'                'getcs'
                                                      *filemakervim-currentdate*
                                                               *fmv-currentdate*
-'Get( CurrentDate )'        'getcd'   'cd'
+'Get( CurrentDate )'                    'getcd'   'cd'
                                        *filemakervim-currentextendedprivileges*
                                                 *fmv-currentextendedprivileges*
-'Get( CurrentExtendedPrivileges )'    'getcap'
+'Get( CurrentExtendedPrivileges )'      'getcap'
                                             *filemakervim-currenthosttimestamp*
                                                      *fmv-currenthosttimestamp*
-'Get( CurrentHostTimestamp )'      'getcht'
+'Get( CurrentHostTimestamp )'           'getcht'
                                          *filemakervim-currentprivilegesetname*
                                                   *fmv-currentprivilegesetname*
-'Get( CurrentPrivilegeSetName )'    'getcpsn'
+'Get( CurrentPrivilegeSetName )'        'getcpsn'
                                                      *filemakervim-currenttime*
                                                               *fmv-currenttime*
-'Get( CurrentTime )'        'getct'   'ct'
+'Get( CurrentTime )'                    'getct'   'ct'
                                                 *filemakervim-currenttimestamp*
                                                          *fmv-currenttimestamp*
-'Get( CurrentTimestamp )'      'getcts'  'cts'
+'Get( CurrentTimestamp )'               'getcts'  'cts'
                                       *filemakervim-currenttimeutcmilliseconds*
                                                *fmv-currenttimeutcmilliseconds*
-'Get( CurrentTimeUTCMilliseconds )'    'getutc'
+'Get( CurrentTimeUTCMilliseconds )'     'getutc'
                                                *filemakervim-custommenusetname*
                                                         *fmv-custommenusetname*
-'Get( CustomMenuSetName )'      'getcmsn'
+'Get( CustomMenuSetName )'              'getcmsn'
                                                      *filemakervim-desktoppath*
                                                               *fmv-desktoppath*
-'Get( DesktopPath )'        'getdp'
+'Get( DesktopPath )'                    'getdp'
                                                           *filemakervim-device*
                                                                    *fmv-device*
-'Get( Device )'          'getdv'
+'Get( Device )'                         'getdv'
                                                    *filemakervim-documentspath*
                                                             *fmv-documentspath*
-'Get( DocumentsPath )'        'getdocp'
+'Get( DocumentsPath )'                  'getdocp'
                                             *filemakervim-documentspathlisting*
                                                      *fmv-documentspathlisting*
-'Get( DocumentsPathListing )'      'getdpl'
+'Get( DocumentsPathListing )'           'getdpl'
                                                  *filemakervim-encryptionstate*
                                                           *fmv-encryptionstate*
-'Get( EncryptionState )'      'getes'
+'Get( EncryptionState )'                'getes'
                                                *filemakervim-errorcapturestate*
                                                         *fmv-errorcapturestate*
-'Get( ErrorCaptureState )'      'geters'
+'Get( ErrorCaptureState )'              'geters'
                                                    *filemakervim-filemakerpath*
                                                             *fmv-filemakerpath*
-'Get( FileMakerPath )'        'getfmp'
+'Get( FileMakerPath )'                  'getfmp'
                                                         *filemakervim-filename*
                                                                  *fmv-filename*
-'Get( FileName )'        'getfn'
+'Get( FileName )'                       'getfn'
                                                         *filemakervim-filepath*
                                                                  *fmv-filepath*
-'Get( FilePath )'        'getfp'
+'Get( FilePath )'                       'getfp'
                                                         *filemakervim-filesize*
                                                                  *fmv-filesize*
-'Get( FileSize )'        'getfs'
+'Get( FileSize )'                       'getfs'
                                                       *filemakervim-foundcount*
                                                                *fmv-foundcount*
-'Get( FoundCount )'        'getfc'
+'Get( FoundCount )'                     'getfc'
                                                *filemakervim-highcontrastcolor*
                                                         *fmv-highcontrastcolor*
-'Get( HighContrastColor )'      'gethcc'
+'Get( HighContrastColor )'              'gethcc'
                                                *filemakervim-highcontraststate*
                                                         *fmv-highcontraststate*
-'Get( HighContrastState )'      'gethcs'
+'Get( HighContrastState )'              'gethcs'
                                           *filemakervim-hostapplicationversion*
                                                    *fmv-hostapplicationversion*
-'Get( HostApplicationVersion )'      'gethav'
+'Get( HostApplicationVersion )'         'gethav'
                                                    *filemakervim-hostipaddress*
                                                             *fmv-hostipaddress*
-'Get( HostIPAddress )'        'gethipa'
+'Get( HostIPAddress )'                  'gethipa'
                                                         *filemakervim-hostname*
                                                                  *fmv-hostname*
-'Get( HostName )'        'gethn'
+'Get( HostName )'                       'gethn'
                                               *filemakervim-installedfmplugins*
                                                        *fmv-installedfmplugins*
-'Get( InstalledFMPlugins )'      'getifmp'
+'Get( InstalledFMPlugins )'             'getifmp'
                                                        *filemakervim-lasterror*
                                                                 *fmv-lasterror*
-'Get( LastError )'        'getle'
+'Get( LastError )'                      'getle'
                                                *filemakervim-lastmessagechoice*
                                                         *fmv-lastmessagechoice*
-'Get( LastMessageChoice )'      'getlmc'
+'Get( LastMessageChoice )'              'getlmc'
                                                    *filemakervim-lastodbcerror*
                                                             *fmv-lastodbcerror*
-'Get( LastODBCError )'        'getloe'
+'Get( LastODBCError )'                  'getloe'
                                                     *filemakervim-layoutaccess*
                                                              *fmv-layoutaccess*
-'Get( LayoutAccess )'        'getla'
+'Get( LayoutAccess )'                   'getla'
                                                      *filemakervim-layoutcount*
                                                               *fmv-layoutcount*
-'Get( LayoutCount )'        'getlc'
+'Get( LayoutCount )'                    'getlc'
                                                       *filemakervim-layoutname*
                                                                *fmv-layoutname*
-'Get( LayoutName )'        'getln'
+'Get( LayoutName )'                     'getln'
                                                     *filemakervim-layoutnumber*
                                                              *fmv-layoutnumber*
-'Get( LayoutNumber )'        'getlnu'
+'Get( LayoutNumber )'                   'getlnu'
                                                  *filemakervim-layouttablename*
                                                           *fmv-layouttablename*
-'Get( LayoutTableName )'      'getltn'
+'Get( LayoutTableName )'                'getltn'
                                                  *filemakervim-layoutviewstate*
                                                           *fmv-layoutviewstate*
-'Get( LayoutViewState )'      'getlvs'
+'Get( LayoutViewState )'                'getlvs'
                                                   *filemakervim-modifiedfields*
                                                            *fmv-modifiedfields*
-'Get( ModifiedFields )'        'getmf'
+'Get( ModifiedFields )'                 'getmf'
                                                   *filemakervim-multiuserstate*
                                                            *fmv-multiuserstate*
-'Get( MultiUserState )'        'getmus'
+'Get( MultiUserState )'                 'getmus'
                                                  *filemakervim-networkprotocol*
                                                           *fmv-networkprotocol*
-'Get( NetworkProtocol )'      'getnp'
+'Get( NetworkProtocol )'                'getnp'
                                                      *filemakervim-networktype*
                                                               *fmv-networktype*
-'Get( NetworkType )'        'getnt'
+'Get( NetworkType )'                    'getnt'
                                                       *filemakervim-pagenumber*
                                                                *fmv-pagenumber*
-'Get( PageNumber )'        'getpn'
+'Get( PageNumber )'                     'getpn'
                                                     *filemakervim-persistentid*
                                                              *fmv-persistentid*
-'Get( PersistentID )'        'getpid'
+'Get( PersistentID )'                   'getpid'
                                                  *filemakervim-preferencespath*
                                                           *fmv-preferencespath*
-'Get( PreferencesPath )'      'getpp'
+'Get( PreferencesPath )'                'getpp'
                                                      *filemakervim-printername*
                                                               *fmv-printername*
-'Get( PrinterName )'        'getprn'
+'Get( PrinterName )'                    'getprn'
                                                    *filemakervim-quickfindtext*
                                                             *fmv-quickfindtext*
-'Get( QuickFindText )'        'getqft'
+'Get( QuickFindText )'                  'getqft'
                                                     *filemakervim-recordaccess*
                                                              *fmv-recordaccess*
-'Get( RecordAccess )'        'getra'
+'Get( RecordAccess )'                   'getra'
                                                         *filemakervim-recordid*
                                                                  *fmv-recordid*
-'Get( RecordID )'        'getrid'
+'Get( RecordID )'                       'getrid'
                                          *filemakervim-recordmodificationcount*
                                                   *fmv-recordmodificationcount*
-'Get( RecordModificationCount )'    'getrmc'
+'Get( RecordModificationCount )'        'getrmc'
                                                     *filemakervim-recordnumber*
                                                              *fmv-recordnumber*
-'Get( RecordNumber )'        'getrn'
+'Get( RecordNumber )'                   'getrn'
                                                  *filemakervim-recordopencount*
                                                           *fmv-recordopencount*
-'Get( RecordOpenCount )'      'getroc'
+'Get( RecordOpenCount )'                'getroc'
                                                  *filemakervim-recordopenstate*
                                                           *fmv-recordopenstate*
-'Get( RecordOpenState )'      'getros'
+'Get( RecordOpenState )'                'getros'
                                                     *filemakervim-requestcount*
                                                              *fmv-requestcount*
-'Get( RequestCount )'        'getrqc'
+'Get( RequestCount )'                   'getrqc'
                                                 *filemakervim-requestomitstate*
                                                          *fmv-requestomitstate*
-'Get( RequestOmitState )'      'getrqos'
+'Get( RequestOmitState )'               'getrqos'
                                                      *filemakervim-screendepth*
                                                               *fmv-screendepth*
-'Get( ScreenDepth )'        'getsd'
+'Get( ScreenDepth )'                    'getsd'
                                                     *filemakervim-screenheight*
                                                              *fmv-screenheight*
-'Get( ScreenHeight )'        'getsh'
+'Get( ScreenHeight )'                   'getsh'
                                                      *filemakervim-screenwidth*
                                                               *fmv-screenwidth*
-'Get( ScreenWidth )'        'getsw'
+'Get( ScreenWidth )'                    'getsw'
                                             *filemakervim-scriptanimationstate*
                                                      *fmv-scriptanimationstate*
-'Get( ScriptAnimationState )'      'getsas'
+'Get( ScriptAnimationState )'           'getsas'
                                                       *filemakervim-scriptname*
                                                                *fmv-scriptname*
-'Get( ScriptName )'        'getsn'
+'Get( ScriptName )'                     'getsn'
                                                  *filemakervim-scriptparameter*
                                                           *fmv-scriptparameter*
-'Get( ScriptParameter )'      'getsp'
+'Get( ScriptParameter )'                'getsp'
                                                     *filemakervim-scriptresult*
                                                              *fmv-scriptresult*
-'Get( ScriptResult )'        'getsr'
+'Get( ScriptResult )'                   'getsr'
                                                        *filemakervim-sortstate*
                                                                 *fmv-sortstate*
-'Get( SortState )'        'getss'
+'Get( SortState )'                      'getss'
                                                  *filemakervim-statusareastate*
                                                           *fmv-statusareastate*
-'Get( StatusAreaState )'      'getsars'
+'Get( StatusAreaState )'                'getsars'
                                                      *filemakervim-systemdrive*
                                                               *fmv-systemdrive*
-'Get( SystemDrive )'        'getsdv'
+'Get( SystemDrive )'                    'getsdv'
                                                  *filemakervim-systemipaddress*
                                                           *fmv-systemipaddress*
-'Get( SystemIPAddress )'      'getsipa'
+'Get( SystemIPAddress )'                'getsipa'
                                                   *filemakervim-systemlanguage*
                                                            *fmv-systemlanguage*
-'Get( SystemLanguage )'        'getsl'
+'Get( SystemLanguage )'                 'getsl'
                                                 *filemakervim-systemnicaddress*
                                                          *fmv-systemnicaddress*
-'Get( SystemNICAddress )'      'getsna'
+'Get( SystemNICAddress )'               'getsna'
                                                   *filemakervim-systemplatform*
                                                            *fmv-systemplatform*
-'Get( SystemPlatform )'        'getspl'
+'Get( SystemPlatform )'                 'getspl'
                                                    *filemakervim-systemversion*
                                                             *fmv-systemversion*
-'Get( SystemVersion )'        'getsv'
+'Get( SystemVersion )'                  'getsv'
                                                    *filemakervim-temporarypath*
                                                             *fmv-temporarypath*
-'Get( TemporaryPath )'        'gettp'
+'Get( TemporaryPath )'                  'gettp'
                                                 *filemakervim-textrulervisible*
                                                          *fmv-textrulervisible*
-'Get( TextRulerVisible )'      'gettrv'
+'Get( TextRulerVisible )'               'gettrv'
                                                 *filemakervim-totalrecordcount*
                                                          *fmv-totalrecordcount*
-'Get( TotalRecordCount )'      'gettrc'
+'Get( TotalRecordCount )'               'gettrc'
                                              *filemakervim-triggercurrentpanel*
                                                       *fmv-triggercurrentpanel*
-'Get( TriggerCurrentPanel )'      'gettcp'
+'Get( TriggerCurrentPanel )'            'gettcp'
                                               *filemakervim-triggergestureinfo*
                                                        *fmv-triggergestureinfo*
-'Get( TriggerGestureInfo )'      'gettgi'
+'Get( TriggerGestureInfo )'             'gettgi'
                                                 *filemakervim-triggerkeystroke*
                                                          *fmv-triggerkeystroke*
-'Get( TriggerKeystroke )'      'gettk'
+'Get( TriggerKeystroke )'               'gettk'
                                              *filemakervim-triggermodifierkeys*
                                                       *fmv-triggermodifierkeys*
-'Get( TriggerModifierKeys )'      'gettmk'
+'Get( TriggerModifierKeys )'            'gettmk'
                                               *filemakervim-triggertargetpanel*
                                                        *fmv-triggertargetpanel*
-'Get( TriggerTargetPanel )'      'getttp'
+'Get( TriggerTargetPanel )'             'getttp'
                                                        *filemakervim-usercount*
                                                                 *fmv-usercount*
-'Get( UserCount )'        'getuc'
+'Get( UserCount )'                      'getuc'
                                                         *filemakervim-username*
                                                                  *fmv-username*
-'Get( UserName )'        'getun'
+'Get( UserName )'                       'getun'
                                            *filemakervim-usesystemformatsstate*
                                                     *fmv-usesystemformatsstate*
-'Get( UseSystemFormatsState )'      'getusfs'
+'Get( UseSystemFormatsState )'          'getusfs'
                                                             *filemakervim-uuid*
                                                                      *fmv-uuid*
-'Get( UUID )'          'getuuid' 'getuu'
+'Get( UUID )'                           'getuuid' 'getuu'
                                              *filemakervim-windowcontentheight*
                                                       *fmv-windowcontentheight*
-'Get( WindowContentHeight )'      'getwch'
+'Get( WindowContentHeight )'            'getwch'
                                               *filemakervim-windowcontentwidth*
                                                        *fmv-windowcontentwidth*
-'Get( WindowContentWidth )'      'getwcw'
+'Get( WindowContentWidth )'             'getwcw'
                                              *filemakervim-windowdesktopheight*
                                                       *fmv-windowdesktopheight*
-'Get( WindowDesktopHeight )'      'getwdh'
+'Get( WindowDesktopHeight )'            'getwdh'
                                               *filemakervim-windowdesktopwidth*
                                                        *fmv-windowdesktopwidth*
-'Get( WindowDesktopWidth )'      'getwdw'
+'Get( WindowDesktopWidth )'             'getwdw'
                                                     *filemakervim-windowheight*
                                                              *fmv-windowheight*
-'Get( WindowHeight )'        'getwh'
+'Get( WindowHeight )'                   'getwh'
                                                       *filemakervim-windowleft*
                                                                *fmv-windowleft*
-'Get( WindowLeft )'        'getwl'
+'Get( WindowLeft )'                     'getwl'
                                                       *filemakervim-windowmode*
                                                                *fmv-windowmode*
-'Get( WindowMode )'        'getwm'
+'Get( WindowMode )'                     'getwm'
                                                       *filemakervim-windowname*
                                                                *fmv-windowname*
-'Get( WindowName )'        'getwn'
+'Get( WindowName )'                     'getwn'
                                                *filemakervim-windoworientation*
                                                         *fmv-windoworientation*
-'Get( WindowOrientation )'      'getwo'
+'Get( WindowOrientation )'              'getwo'
                                                      *filemakervim-windowstyle*
                                                               *fmv-windowstyle*
-'Get( WindowStyle )'        'getws'
+'Get( WindowStyle )'                    'getws'
                                                        *filemakervim-windowtop*
                                                                 *fmv-windowtop*
-'Get( WindowTop )'        'getwt'
+'Get( WindowTop )'                      'getwt'
                                                    *filemakervim-windowvisible*
                                                             *fmv-windowvisible*
-'Get( WindowVisible )'        'getwv'
+'Get( WindowVisible )'                  'getwv'
                                                      *filemakervim-windowwidth*
                                                               *fmv-windowwidth*
-'Get( WindowWidth )'        'getww'
+'Get( WindowWidth )'                    'getww'
                                                  *filemakervim-windowzoomlevel*
                                                           *fmv-windowzoomlevel*
-'Get( WindowZoomLevel )'      'getwzl'
+'Get( WindowZoomLevel )'                'getwzl'
 
 ===============================================================================
                                                      *filemakervim-helping-out*
@@ -1449,7 +1449,7 @@ tracker (https://github.com/chivalry/filemaker.vim/issues).
                                                              *fmv-contributors*
 Contributors ~
 
-The maintainer and primary developer of filemaker.com is Charles Ross. Matt
+The maintainer and primary developer of filemaker.vim is Charles Ross. Matt
 Petrowski was of enormous help not only in developing this plugin but also in
 providing valueable insight into which features to include and how they should
 be implemented.
