@@ -77,7 +77,7 @@ Currently there are two main feature sets included with filemaker.vim: syntax
 highlighting and snippets. Syntax highlighting has no additional requirements.
 filemaker.vim has been tested with MavVim snapshot 74 (which runs Vim 7.4) and
 command-line Vim 7.4 running within a terminal on Mac OS X. It will probably
-work with Vim 7 or above on any platform Vim supports, but not testing of this
+work with Vim 7 or above on any platform Vim supports, but no testing of this
 has been performed yet.
 
 -------------------------------------------------------------------------------
@@ -244,9 +244,10 @@ FileMaker calculations. These include the following:
   parameter on its own line
 
 Note the word "generally" above. Some functions often take a single parameter
-but can take multiple parameters, especially the Aggregate functions, such as
-Count. These multi-parameter functions are placed ona single line with their
-optional parameters included as optional tab stops.
+but can take multiple parameters, especially the Aggregate
+(|fmp-aggregate-group|) functions, such as Count (|fmp-count|). These
+multi-parameter functions are placed on a single line with their optional
+parameters included as optional tab stops.
 
 -------------------------------------------------------------------------------
                                           *filemakervim-overriding-conventions*
@@ -256,56 +257,74 @@ Overriding Conventions ~
 Most of the conventions above can be overridden by setting global variables in
 your '.vimrc' file.
 
-g:FMVAddSpaceAfterFunction : Defaults to false (0). If set to true (1) a space
-will appear between function names and their opening parenthsis. For example,
-by default functions are inserted with the following format:
+                                        *filemakervim-FMVAddApaceAfterFunction*
+                                                 *fmv-FMVAddSpaceAfterFunction*
+g:FMVAddSpaceAfterFunction     Defaults to false (0). If set to true (1) a
+                               space will appear between function names and
+                               their opening parenthsis. For example, by
+                               default functions are inserted with the
+                               following format:
 >
-  Func( param )
+                                 Func( param )
 <
-:By setting this variable to 1, functions will be inserted with the following
-format:
+                               By setting this variable to 1, functions will
+                               be inserted with the following format:
 >
-  Func ( param )
+                                 Func ( param )
 <
-g:FMVPadSpacesWithinParens : Defaults to true (1). If set to false (0) there
-will be no space between a funciton's parentheses and its parameters. For
-example, by default functions are inserted with the following format:
+                                        *filemakervim-FMVPadSpacesWithinParens*
+                                                 *fmv-FMVPadSpacesWithinParens*
+g:FMVPadSpacesWithinParens     Defaults to true (1). If set to false (0) there
+                               will be no space between a funciton's parentheses
+                               and its parameters. For example, by default
+                               functions are inserted with the following format:
 >
-  Func( param )
+                                 Func( param )
 <
-:If this variable is set to 0, functions will be inserted with the following
-format:
+                               If this variable is set to 0, functions will be
+                               inserted with the following format:
 >
-  Func(param)
+                                 Func(param)
 <
-Defaults to false (0). If set to true (1) multi-parameter functions will have
-all of their parameters appear on the same line. For example, by default multi-
-parameter functions are inserted with the following format:
+                                      *filemakervim-FMVSeparateParamsWithSpace*
+                                               *fmv-FMVSeparateParamsWithSpace*
+g:FMVSeparateParamsWithSpace   Defaults to false (0). If set to true (1) multi-
+                               parameter functions will have all of their
+                               parameters appear on the same line. For example,
+                               by default multi- parameter functions are
+                               inserted with the following format:
 >
-  Func(
-    param1;
-    param2
-  )
+                                 Func(
+                                   param1;
+                                   param2
+                                 )
 <
-:If this variable is set to 1, multi-parameter functions will be inserted with
-the following format:
+                               If this variable is set to 1, multi-parameter
+                               functions will be inserted with the following
+                               format:
 >
-  Func( param1; param2 )o
+                                 Func( param1; param2 )
 <
-:Note that this does not yet apply to the Let function.
+                               Note that this does not yet apply to the Let
+                               (|fmv-let|) function.
 
-g:FMVFillInGetFileName :Defaults to true (1). If set to false (0), functions
-that which have a 'fileName' parameter will set this parameter to 'Get(
-FileName )'. For example, such a function would have the following format:
+                                            *filemakervim-FMVFillInGetFileName*
+                                                     *fmv-FMVFillInGetFileName*
+g:FMVFillInGetFileName         Defaults to true (1). If set to false (0),
+                               functions that which have a 'fileName' parameter
+                               will set this parameter to 'Get( FileName )'. For
+                               example, such a function would have the following
+                               format:
 >
-  Func( Get( FileName ) )
+                                 Func( Get( FileName ) )
 <
-: with the 'Get( FileName )' portion being a snippet tab stop. If this variable
-is set to 0, such a function would have the following format:
+                               with the 'Get( FileName )' portion being a
+                               snippet tab stop. If this variable is set to 0,
+                               such a function would have the following format:
 >
-  Func( fileName )
+                                 Func( fileName )
 <
-:with 'fileName' acting as the snippet's tab stop.
+                               with 'fileName' acting as the snippet's tab stop.
 
 All of these settings are cumulative. For example, with their default values
 the 'FieldBounds' snippet will insert the following:
@@ -334,23 +353,24 @@ See |fmv-snippets| for the trigger text of every snippet.
 
 An UltiSnips trigger is included for every built-in FileMaker function except
 'Pi'. Every included function has a snippet that is the same as the function's
-name (except the 'Get' function parameters and 'DatabaseNames', for which such
-a snippet is pretty useless). So you know right away that the trigger for
-'RightValues' is 'rightvalues', but most functions have abbreviated but unique
-triggers ('ritv' in this case). Although UltiSnips supports duplicate triggers,
-using them seriously reduces the time savings, so if a function has an
-abbreviated trigger, that trigger is unique. When multiple functions could have
-a competing trigger, the one that is more likely to be used has received the
+name (except the 'Get' (|fmv-get-group|) function parameters and 'DatabaseNames'
+(|fmv-databasenames|), for which such a snippet is pretty useless). So you know
+right away that the trigger for 'RightValues' (|fmv-rightvalues|) is
+'rightvalues', but most functions have abbreviated but unique triggers ('ritv'
+in this case). Although UltiSnips supports duplicate triggers, using them
+seriously reduces the time savings, so if a function has an abbreviated
+trigger, that trigger is unique. When multiple functions could have a
+competing trigger, the one that is more likely to be used has received the
 default trigger.
 
 The trigges for 'Get' functions are generally 'get' followed by the letters in
-the words making up the parameter, such as 'getfp' for 'Get( FilePath )', but
-using that technique does result in some duplicates. When that's the case the
-default is attached to the more common function and a logical letter is added
-to the alternative.
+the words making up the parameter, such as 'getfp' for 'Get( FilePath )'
+(|fmv-filepath|), but using that technique does result in some duplicates. When
+that's the case the default is attached to the more common function and a
+logical letter is added to the alternative.
 
 Finally, triggers are case-insensitive. In other words, 'getv', 'Getv', and
-'GETV' are all triggers for the 'GetValue' function.
+'GETV' are all triggers for the 'GetValue' (|fmv-getvalue|) function.
 
 -------------------------------------------------------------------------------
                                              *filemakervim-optional-parameters*
@@ -359,15 +379,16 @@ Optional Parameters ~
 
 Many FileMaker functions include optional parameters that can be ommitted. When
 parameters are all required each parameter is matched with a snippet tab stop.
-When a parameter is optional, the optional parameters as a while, including the
+When a parameter is optional, the optional parameters as a whole, including the
 last semi-colon, are an enclosing tabstop.
 
-A prime example are a few of the Aggregate functions functions. The 'Average'
-function for example needs at least one parameter but could take a series of
-parameters. The trigger therefore has three tabstops, one for the first
-parameter, one for the semi-colon and optional sections parameter, and a third
-for the second parameter. Triggering this snippet results in the following
-steps, where the currently active tabstop is between pipes ('|'):
+A prime example are a few of the Aggregate (|fmv-aggregate-group|) functions
+functions. The 'Average' (|fmv-average|) function for example needs at least
+one parameter but could take a series of parameters. The trigger therefore
+has three tabstops, one for the first parameter, one for the semi-colon and
+optional sections parameter, and a third for the second parameter. Triggering
+this snippet results in the following steps, where the currently active tabstop
+is between pipes ('|'):
 >
   Average( |field|; field )
 <
@@ -393,10 +414,11 @@ parameters.
 Standard Parameters ~
 
 A few FileMaker functions accept only a specific set of options for their
-parameters. The most common case of this is the 'Get' function, but a few of
-the [Text Formatting](#FMV-textformatting') functions fall under this category.
-Sometimes the parameters are constants, as is the case with'Get`, and sometimes
-they're strings (GetLayoutObjectAttribute for example.
+parameters. The most common case of this is the 'Get' (|fmv-get-group|)
+function, but a few of the Text Formatting (|fmv-textformatting|) functions
+fall under this category.  Sometimes the parameters are constants, as is the
+case with'Get`, and sometimes they're strings (GetLayoutObjectAttribute
+(|fmv-getlayoutobjectattribute|) for example.
 
 While standard parameters are case-insenstivie (i.e., within the 'Get' function
 you can type 'account' to narrow the list of available options to those that
@@ -408,10 +430,10 @@ character cases isn't possible yet.
 
 When a function only takes a set of standard parameters the snippet for that
 function will allow any of the standard parameters to be filled in based on the
-first few characters. For example, the 'TextStyleRemove' function takes a
-number of styles for its second parameter. Triggering this snippet and
-navigating to the second tab stop initially looks something like this (with the
-current tabstop surrounded by pipes ('|')):
+first few characters. For example, the 'TextStyleRemove' (|fmv-textstyleremove|)
+function takes a number of styles for its second parameter. Triggering this
+snippet and navigating to the second tab stop initially looks something like
+this (with the current tabstop surrounded by pipes ('|')):
 >
   TextStyleRemove(
     "some text";
@@ -1437,4 +1459,4 @@ Charles Ross at GitHub: https://github.com/chivalry
 Matt Petrowsky at GitHub: https://github.com/petrowsky
          at Twitter: https://twitter.com/filemakermag
 
-vim: ft=help:tw=78:ts=2
+vim: ft=help:tw=78:ts=2:expandtab
