@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Filemaker.vim by chivalry</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Filemaker.vim</h1>
+          <h2>A Vim plugin for working with FileMaker calculations.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/chivalry/filemaker.vim/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/chivalry/filemaker.vim/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/chivalry/filemaker.vim" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>Official project home is now at <a href="https://github.com/chivalry/filemaker.vim">GitHub</a>.</p>
+
+<h1>
+<a name="filemakervim" class="anchor" href="#filemakervim"><span class="octicon octicon-link"></span></a>filemaker.vim</h1>
+
+<p>Combining <a href="http://www.filemaker.com">FileMaker</a> with <a href="http://www.vim.org">Vim</a> may seem like an odd coupling, but I use both every day, and have been getting more and more atuned to the "Vim" way of doing things. Years ago, when I was using <a href="https://macromates.com">TextMate</a> I wrote a <a href="https://code.google.com/p/filemaker-textmate-bundle/">bundle</a> for it that made for easier FileMaker calculation editing in TextMate. This project has the same goal for Vim.</p>
+
+<p>The filemaker.vim plugin provides syntax highlighting and snippet support for FileMaker calculations to be edited in Vim. It detects the filetype for the extensions <code>.filemaker</code>, <code>.fmcalc</code>, <code>.fm</code> and <code>.fmfn</code> and also recognizes FileMaker calcs that have been opened using the <a href="https://github.com/jessegrosjean/quickcursor">QuickCursor</a> app on OS X.</p>
+
+<h2>
+<a name="why-vim" class="anchor" href="#why-vim"><span class="octicon octicon-link"></span></a>Why Vim</h2>
+
+<p>Just about everyone looking at this project probably knows FileMaker but may be unfamiliar with Vim. As great as FileMaker is for quickly building database applications, its leaves a lot to be desired in its calculations dialogs. Using an external text editor alleviates that problem for me. Not wanting to get caught again in the vaporware problem that TextMate gave us for many years, the safest choice of text editors on the Mac comes down to either <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> or Vim, both of which have been under active development for over 20 years and I've used both in one form or another for nearly that long.</p>
+
+<p>Vim won out for two reasons: extensibility and open source. I've honestly never seen software that can be customized to the extent that Vim can. If you don't like how Vim behaves, you can generally change it, and there are hundreds of plugins available that allow you to simply plug some text files in and get even more functionality.</p>
+
+<p>And because it's open source, the likelihood of it becoming abandonware is slim, especially given its popularity among programmers. The <a href="http://vim.wikia.com/wiki/Vim_on_Freenode">#vim IRC channel</a> consistently has hundreds of users online ready to answer any questions. And should Vim itself become stagnant, there are already <a href="http://neovim.org">ports</a> of it in development.</p>
+
+<p>Of course, there's the final reason, which is that once you become proficient in Vim, editing text is unbelievably fast. If you give it a try, you'll become amazed at how much you can acomplish in strikingly few keystrokes. Don't let Vim's reputation for having a steep learning curve disuade you. I can tell you from experience the return on time investment will be amply repaid.</p>
+
+<h2>
+<a name="quickcursor" class="anchor" href="#quickcursor"><span class="octicon octicon-link"></span></a>QuickCursor</h2>
+
+<p>QuickCursor is an OS X app that allows the editing of appliation text fields in an external text editor. For example, while I'm in the text field for a FileMaker calculation, I can press <code>Cmd-Opt-Ctrl-V</code> and it will open that calculation in <a href="https://code.google.com/p/macvim/">MacVim</a>. But this procedure has two downsides.</p>
+
+<p>First of all, as nice as QuickCursor is, it's no longer being supported because of its inability to work with Apple's sandbox, but my old version does seem to work with OS X Yosemite.</p>
+
+<p>Second, my version of FileMaker apparently uses DOS returns in calculation dialog boxes even though I'm running this on a Mac. Therefore when a FileMaker calculation is opened in Vim the DOS returns are automatically replaced with Unix returns. This doesn't seem to be a problem, but you should be aware that saving a Vim buffer back into a FileMaker calculation is changing the carriage returns at the end of each line.</p>
+
+<p>My point is, QuickCursor is one of the pieces that will make your editing of FileMaker calculations within Vim (or any external text editor, for that matter) much smoother. If you didn't buy it when it was available in the Mac App Store, QuickCursor's author, <a href="http://blog.hogbaysoftware.com">Jesse Grosjean</a> has kindly given permission for us to make Version 1 available on <a href="https://www.dropbox.com/s/flkam037ia2pblm/QuickCursor.app.zip">Dropbox</a>. He's also made the source code available for <a href="https://github.com/jessegrosjean/quickcursor">version 2</a>. Finally, you can try one of <a href="http://rocketink.net/2013/05/quickcursor-keyboard-maestro.html">the workarounds</a> people have come up with using other tools such as <a href="http://www.keyboardmaestro.com/main/">Keyboard Maestro</a>. I can't comment on how useful these are, being satisfied with QuickCursor.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>filemaker.vim is compatible with <a href="https://github.com/gmarik/Vundle.vim">Vundle.vim</a> and <a href="http://www.vim.org/scripts/script.php?script_id=2332">Pathogen</a>. The easiest way to install is with Vundle by adding <code>Plugin 'chivalry/filemaker.vim'</code> to your <code>.vimrc</code> and running <code>:PluginInstall</code> from within Vim. Alternatively, if you already have Pathogen then clone the <code>filemakervim</code> project into <code>~/.vim/bundle</code>.</p>
+
+<pre><code>cd ~/.vimrc/bundle
+git clone https://github.com/chivalry/filemaker.vim.git
+</code></pre>
+
+<p>If you don't use Vundle or Pathogen (and really, you should, Vim's native plugin management is non-existant), then you'll need to place the files manually as follows, creating the folders in <code>.vim</code> as needed.:</p>
+
+<pre><code>filemakervim/ftdetect/filemakervim.vim -&gt; ~/.vim/ftdetect/filemakervim.vim
+filemakervim/ftplugin/filemakervim.vim -&gt; ~/.vim/ftplugin/filemakervim.vim
+filemakervim/syntax/filemakervim.vim   -&gt; ~/.vim/syntax/filemakervim.vim
+</code></pre>
+
+<p>Perhaps in the future I'll look into an installer script to do this automatically. If you're using FileMaker and Vim on Windows, place the files in the analogous <code>vimfiles</code> folder (I think).</p>
+
+<p>To take full advantage of filemaker.vim you'll need <a href="https://github.com/sirver/ultisnips">UltiSnips</a> in addition to Vim. With Vundle, the installation of UltiSnips is just as easy as it is for filemaker.vim.</p>
+
+<p>See <code>:help filemakervim</code> (or <code>:help fmv</code> for short) for complete documentation. This file is found in the repository at <a href="https://github.com/chivalry/filemaker.vim/blob/master/doc/filemakervim.txt">https://github.com/chivalry/filemaker.vim/blob/master/doc/filemakervim.txt</a>.</p>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<p>filemaker.vim has two main features. First of all, it (generally) detects the following patterns for syntax highlighting:</p>
+
+<ul>
+<li>Local and global variables</li>
+<li>Calculation variables that begin with an underscore (i.e., <code>_variable</code>)</li>
+<li>Mathematical, logical and string operators</li>
+<li>String and number literals</li>
+<li>Built-in FileMaker functions</li>
+<li>Custom functions that begin with a prefix and a dot (i.e., <code>dev.MyCustomFunction</code>)</li>
+<li>Block and in-line comments</li>
+<li>Confirmed compatibility with MacVim and command-line Vim on OS X.</li>
+</ul><p>The second major feature is snippet support using UltiSnips. You don't need UltiSnips to use filemaker.vim, but you'll definately want it. It allows the typing of triggers followed by a trigger key (generally <code>tab</code>) and fills in a snippet based on the trigger. Although a textual description won't due the feature justics (see the vidos linked to on the UltiSnips page) as an example, if I type <code>mid&lt;tab&gt;</code> I get the following:</p>
+
+<pre><code>Middle( 
+  text;
+  start;
+  numberOfCharacters
+)
+</code></pre>
+
+<p>The word <code>text</code> is highlighted for me so that I can enter the first parameter. Pressing <code>Ctrl-B</code> then takes me to the <code>start</code> parameter, where I can type over the template text for it and press <code>Ctrl-B</code> again to get to the third parameter, enter it, press <code>Ctrl-B</code> one more time and it takes me outside the function. filemaker.vim has entries for every FileMaker function there is (OK, <code>Pi</code> doesn't have a snippet, but even <code>External</code> is included, which it probably doesn't really need anymore), including all of the <code>Get</code> functions with mnemonic abbreviations such as <code>getfc</code> for <code>Get( FoundCount )</code>. But filemaker.vim is even smarter than that.</p>
+
+<p>UltiSnips includes Python interpolation, which means that we can use Python code to provide even more intelligence to our snippets. A major example in filemaker.vim is the <code>Get</code> function. Typing <code>get&lt;tab&gt;</code> inserts the following:</p>
+
+<pre><code>Get( (AccountExtendedPrivileges|AccountName|AccountPrivilegeSetName|...|WindowZoomLevel) )
+</code></pre>
+
+<p>That's every parameter that <code>Get</code> accepts. The snippet places you at the beginning of that list and as you begin to type it narrows down the list of available parameters:</p>
+
+<pre><code>Get( Accou(ntExtendedPrivileges|ntName|ntPrivilegeSetName) )
+</code></pre>
+
+<p>Once you wheedle the list down to a single possible parameter, that's all filemaker.vim provides, and <code>Ctrl-B</code>ing takes you outside the function.</p>
+
+<p>All of the functions that take a list of possible parameters, such as <code>TextFont</code>, <code>TextStyleAdd</code>, and <code>GetContainerAttribute</code>, include this feature.</p>
+
+<p>Another nicety is that the design functions that take a file name as a parameter, which is almost always going to be <code>Get( FileName )</code>, fill that in for you automatically. As an example, <code>fn&lt;tab&gt;</code> expands to:</p>
+
+<pre><code>FieldNames(
+  Get( FileName );
+  layoutName
+)
+</code></pre>
+
+<p>If this turns out to be a feature some don't prefer, an override setting might be provided in the future. But given that the text <code>Get( FileName )</code> are highlighted in the resulting expansion and you can immediately type over them, I don't see a downside yet.</p>
+
+<p>The last snippet feature is that some functions, those which often take the same other functions as parameters, have those sub-functions filled in by default. For example, <code>ts&lt;tab&gt;</code> expands to:</p>
+
+<pre><code>Timestamp(
+  Date(
+    day;
+    month;
+    year
+  );
+  Time(
+    hours;
+    minutes;
+    seconds
+  )
+)
+</code></pre>
+
+<p>However, the top-level parameters are tabstops for the snippet, so the initial jump to them highlights their entirety so that they can be overwritten by simply typing. Jumping to the next tabstop without overriding them takes you to the sub-function parameters.</p>
+
+<h2>
+<a name="formatting-and-conventions" class="anchor" href="#formatting-and-conventions"><span class="octicon octicon-link"></span></a>Formatting and Conventions</h2>
+
+<p>FileMaker calculation formatting conventions are notoriously divergent and at this point filemaker.vim uses mine. This expresses itself in how the snippets are inserted and in what variables and custom functions it recognizes in the syntax highlighting.</p>
+
+<p>Syntax highlighting uses regular expressions to match text to language tokens, and honestly I'm no regex expert. For years, however, I've used the convention of beginning my calculation variables with an underscore and my custom functions with a three or four letter code followed by a dot. Recognizing these is much easier than recognizing anything FileMaker would accept, so for the time being that's what filemaker.vim does.</p>
+
+<p>If you don't use this convention the rest of the syntax highlighting will still work and prove useful. If someone out there <em>is</em> a regex expert and would like to assist on this front, the help would be very welcome.</p>
+
+<p>Function formatting is also a convention affected by filemaker.vim. I generally format functions with the following rules:</p>
+
+<ul>
+<li>Single parameter functions appear on a single line.</li>
+<li>Mult-parameter functions generally have each of their parameters on their own line.</li>
+<li>Parameters are indented by two spaces more than their function.</li>
+<li>There's no space between a function name and the opening parenthesis.</li>
+<li>There's a space between the parentheses and the parameters.</li>
+<li>There's no space between a parameter and its following semicolon.</li>
+<li>When multiple parameters appear on a single line there's a space between the semicolon and the next parameter.</li>
+</ul><p>filemaker.vim, by default, follows these conventions strictly. I'll admit that this isn't always the best option for readibility (which is the purpose of my general conventions), but for an early version it was easiest to use the same conventions across the board.</p>
+
+<p>Some customization is possible, however, and I plan to include more down the road. For the time being you can override two of the defaults by setting global variables within your <code>.vimrc</code> file. </p>
+
+<pre><code>set g:FMVAddSpaceAfterFunction=1 " places a space between a function name and the opening parenthsis
+set g:FMVPadSpacesWithinParens=0 " does not place a space between parentheses and parameters
+</code></pre>
+
+<p>See the help file (<code>:help fmv-overriding-conventions</code>) for additional information.</p>
+
+<h2>
+<a name="future-enhancements" class="anchor" href="#future-enhancements"><span class="octicon octicon-link"></span></a>Future Enhancements</h2>
+
+<p>This is version 1, and it does most of what I set out to do to make it useful, but I do have plans for future features, and am very interested in feedback regarding their anticipated usefulness as well as their priority.</p>
+
+<ul>
+<li>Recognition of any calculation variable (i.e., no need to prepend an underscore)</li>
+<li>Recognition of any custom or external function (i.e., no need to prepend a code followed by a dot)</li>
+<li>Addition of an indent file that allows for automatic formatting of calculations</li>
+<li>Ability to customize triggers without having to edit the original snippets file</li>
+<li>Ability to provide variable triggers for fuctions such as <code>Case</code> and <code>Substitute</code>
+</li>
+<li>Integrated function documentation</li>
+<li>Integration with other Vim plugins, such as <a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a>
+</li>
+<li>Optional inclusion of popular FileMaker plugin external functions</li>
+<li>Optional inclusion of a standard library of custom function snippets</li>
+<li>Are FileMaker functions language-dependent? If so, multiple language support</li>
+<li>Syntax recognition for languages commonly embedded within FileMaker strings (SQL, Groovy, PHP, JavaScript, AppleScript)</li>
+</ul><h2>
+<a name="snippet-triggers" class="anchor" href="#snippet-triggers"><span class="octicon octicon-link"></span></a>Snippet Triggers</h2>
+
+<p>Every included function (except the <code>Get</code> function's parameters and <code>DatabaseNames</code>, for which such a snippet is pretty useless) has a snippet that is the same as the function's name in lower-case letters. So you know right away that the trigger for <code>RightValues</code> is <code>rightvalues</code>, but most have abbreviated but unique triggers (<code>ritv</code> in this case). Although UltiSnips supports duplicate triggers, using them seriously reduces the time savings, so if a function has a trigger, that trigger is unique. When selecting between competing functions I tried to make the most common function the one with the most obvious trigger.</p>
+
+<p>The triggers for <code>Get</code> functions are generally <code>get</code> followed by the letters in the words making up the parameter, such as <code>getfp</code> for <code>Get( FilePath )</code>, but using that technique does result in some duplicates. When that's the case I tried to use the default on the more common function and added a logical letter to the alternative.</p>
+
+<p>Finally, triggers are <em>generally</em> case-insenstive. In other words, <code>getv</code>, <code>Getv</code>, and <code>GETV</code> are all triggers for the <code>GetValue</code> function.</p>
+
+<p>To find the abbreviated trigger use the help system with the function name, as in <code>:help fmv-filter</code>.</p>
+        </section>
+
+        <footer>
+          Filemaker.vim is maintained by <a href="https://github.com/chivalry">chivalry</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
