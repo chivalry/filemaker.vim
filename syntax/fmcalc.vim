@@ -11,6 +11,8 @@ endif
 
 " Add the tilde to the keyword characters
 set iskeyword+=126
+" Add the colon to the keyword characters
+set iskeyword+=58
 
 " ---------------------------------------------------
 " Local and Global Variables
@@ -25,6 +27,16 @@ syntax match fm_variables "\v\${1,2}[^ ]+"
 " TODO: Find more accurate regular expression.
 " TODO: Find a way to abstract repeated sub regexes
 syntax match convention_variables "\v<[_~][^ ]+"
+
+" ---------------------------------------------------
+" Fully Qualified Field Variables
+
+syntax match qualified_field "\<\a[^ ]*\>"
+
+" ---------------------------------------------------
+" Non-Convention Variables Field Variables
+
+syntax match noncon_variables "\<\a[^: ]*\>"
 
 " ---------------------------------------------------
 " Operators
@@ -201,6 +213,8 @@ syntax region fm_comment start="/\*" end="\*/"
 
 highlight link fm_variables Identifier
 highlight link convention_variables Special
+highlight link noncon_variables Special
+highlight link qualified_field Type
 highlight link fm_operator Operator
 highlight link fm_string String
 highlight link fm_literal Constant
