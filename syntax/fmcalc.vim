@@ -80,11 +80,12 @@ syntax keyword fm_built_ins Char Code Exact Filter FilterValues
 syntax keyword fm_built_ins GetAsCSS GetAsDate GetAsNumber GetAsSVG GetAsText
 syntax keyword fm_built_ins GetAsTime GetAsTimestamp GetAsURLEncoded GetValue
 syntax keyword fm_built_ins Hiragana KanaHankaku KanaZenkaku KanjiNumeral Katakana
-syntax keyword fm_built_ins Left LeftValues LeftWords Length Lower Middle MiddleValues
+syntax keyword fm_built_ins Left LeftValues LeftWords Length Middle MiddleValues
 syntax keyword fm_built_ins MiddleWords NumToJText PatternCount Position Proper Quote
 syntax keyword fm_built_ins Replace Right RightValues RightWords RomanHankaku
 syntax keyword fm_built_ins RomanZenkaku SerialIncrement Substitute Trim TrimAll Upper
 syntax keyword fm_built_ins ValueCount WordCount
+syntax match   fm_built_ins "Lower(\@="
 
 " Text formatting functions
 syntax keyword fm_built_ins RGB TextColor TextColorRemove TextFont TextFontRemove
@@ -195,7 +196,8 @@ syntax keyword fm_constants Superscript Subscript Uppercase Lowercase Titlecase
 syntax keyword fm_constants WordUnderline DoubleUnderline AllStyles
 
 " LookupNext function constants
-syntax keyword fm_constants Lower Higher
+syntax keyword fm_constants Higher
+syntax match   fm_constants "Lower[^(]\@="
 
 " ---------------------------------------------------
 " Conventional Custom Functions
