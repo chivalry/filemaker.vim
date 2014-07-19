@@ -19,24 +19,24 @@ set iskeyword+=58
 
 " TODO: Find more accurate regular expression
 " TODO: Find a way to abstract repeated sub regexes
-syntax match fm_variables "\v\${1,2}[^ ]+"
+syntax match fm_variables "\v\${1,2}[^ ;]+"
 
 " ---------------------------------------------------
 " Convention Variables
 
 " TODO: Find more accurate regular expression.
 " TODO: Find a way to abstract repeated sub regexes
-syntax match convention_variables "\v<[_~][^ ]+"
+syntax match convention_variables "\v<[_~][^ ;]+"
 
 " ---------------------------------------------------
 " Fully Qualified Field Variables
 
-syntax match qualified_field "\<\a[^ ]*\>"
+syntax match qualified_field "\<\a[^ ;]*\>"
 
 " ---------------------------------------------------
 " Non-Convention Variables Field Variables
 
-syntax match noncon_variables "\<\a[^: ]*\>"
+syntax match noncon_variables "\<\a[^: ;]*\>"
 
 " ---------------------------------------------------
 " Operators

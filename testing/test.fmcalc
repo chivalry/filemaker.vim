@@ -1,19 +1,22 @@
 // comment = + operators and a $var
 
 Let(
-  [
-  ~filemakerstandards.org = "foobar";
-    _a = 123 < 3; // comment
-    $$b = "abc" ≤ 1 <= 3.1;
-    _foo = TableOccurrence::field_name;
+	[
+	~filemakerstandards.org = "foobar";
+		_a = 123 < 3; // comment
+		$$b = "abc" ≤ 1 <= 3.1;
+		_foo = TableOccurrence::field_name;
 
-    nonconventionvar = _a & ~filemakerstandards.org;
+		nonconventionvar = _a & ~filemakerstandards.org;
+		_? = Case( $test; $result; $$default_result );
+
+		xyz = TO::field;
 /* multi
 line
 comment
 Let keyword
 */
-    $c = True;
+		$c = True;
 
 $d.with.multiple.dots =
 "string with \"quotes\"";
@@ -21,17 +24,17 @@ $$e =
 1.02
 * 3;
 $var_atstart = "catch_this_one"
-  ];
+	];
 
-  Case(
-    Get( LastError ) > 7 ≥ 0 >= "qerty";
-    TextStyleAdd( "Some text"; Bold );
+	Case(
+		Get( LastError ) > 7 ≥ 0 >= "qerty";
+		TextStyleAdd( "Some text"; Bold );
 
 custom.function;
 
-    custom.function;
+		custom.function;
 _a
-  )
+	)
 ) & ¶ & "¶"
 
 &
