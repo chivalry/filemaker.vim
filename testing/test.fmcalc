@@ -47,3 +47,11 @@ _a
 &
 
 ""
+
+& Lower( Get( AccountName ) ) + // This Lower should be a function
+                                // like `Get`.
+LookupNext(
+	TO2::field;
+	Lower                         // This Lower should be a constant
+																// like `AccountName`.
+)
