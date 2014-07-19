@@ -19,19 +19,21 @@ set iskeyword+=58
 
 " TODO: Find more accurate regular expression
 " TODO: Find a way to abstract repeated sub regexes
+"       Found, but it involves the `execute` command
 " Regex: Match 1 or 2 dollar signs followed by
 "        characters other than a space and semicolon
-syntax match fm_variables "\v\${1,2}[^ ;]+"
+syntax match fm_script_variable "\v\${1,2}[^ ;]+"
 
 " ---------------------------------------------------
 " Convention Variables
 
 " TODO: Find more accurate regular expression.
 " TODO: Find a way to abstract repeated sub regexes
+"       Found, but it involves the `execute` command
 " Regex: Match either an underscore or tilde at the
 "        beginning of a word followed by characters
 "        other than a space and semicolon
-syntax match convention_variables "\v<[_~][^ ;]+"
+syntax match fm_standard_variable "\v<[_~][^ ;]+"
 
 " ---------------------------------------------------
 " Fully Qualified Field Variables
@@ -39,7 +41,7 @@ syntax match convention_variables "\v<[_~][^ ;]+"
 " Regex: Match any alphabetical character at the
 "        beginning of a word followed by characters
 "        other than a space and semicolon
-syntax match qualified_field "\<\a[^ ;]*\>"
+syntax match fm_fully_qualified_field "\<\a[^ ;]*\>"
 
 " ---------------------------------------------------
 " Non-Convention Variables Field Variables
@@ -47,27 +49,27 @@ syntax match qualified_field "\<\a[^ ;]*\>"
 " Regex: Match any alphabetical character at the
 "        beginning of a word followed by characters
 "        other than a space, color or semicolon
-syntax match noncon_variables "\<\a[^: ;]*\>"
+syntax match fm_let_variable "\<\a[^: ;]*\>"
 
 " ---------------------------------------------------
 " Operators
 
-syntax match fm_operator "\v\*"
-syntax match fm_operator "\v/"
-syntax match fm_operator "\v\+"
-syntax match fm_operator "\v-"
-syntax match fm_operator "\v\="
-syntax match fm_operator "\v\&"
-syntax match fm_operator "\v¶"
-syntax match fm_operator "\v\<\="
-syntax match fm_operator "\v\<"
-syntax match fm_operator "\v≤"
-syntax match fm_operator "\v\>\="
-syntax match fm_operator "\v\>"
-syntax match fm_operator "\v≥"
-syntax match fm_operator "\v≠"
-syntax match fm_operator "\v\^"
-syntax keyword fm_operator and or not xor
+syntax match fm_multiplication_op   "\v\*"
+syntax match fm_division_op         "\v/"
+syntax match fm_addition_op         "\v\+"
+syntax match fm_subtraction_op      "\v-"
+syntax match fm_equals_op           "\v\="
+syntax match fm_concat_op           "\v\&"
+syntax match fm_paragraph_mark      "\v¶"
+syntax match fm_lessequal_op        "\v\<\="
+syntax match fm_less_op             "\v\<"
+syntax match fm_lessequal_op        "\v≤"
+syntax match fm_greatequal_op       "\v\>\="
+syntax match fm_great_op            "\v\>"
+syntax match fm_greatequal_op       "\v≥"
+syntax match fm_notequal_op         "\v≠"
+syntax match fm_power_op            "\v\^"
+syntax keyword fm_logical_op and or not xor
 
 " ---------------------------------------------------
 " Literals
@@ -75,15 +77,15 @@ syntax keyword fm_operator and or not xor
 " Regex: This was copied and pasted from another syntax
 "        file. The start and end regexes are obvious, but
 "        I don't understand what the skip is doing yet.
-syntax region fm_string start=/\v"/ skip=/\v\\./ end=/\v"/
-syntax keyword fm_literal True False
+syntax region fm_string_literal start=/\v"/ skip=/\v\\./ end=/\v"/
+syntax keyword fm_bool_literal True False
 
 " Regex: Match an optional sign followed by digits
-syntax match fm_literal "[-+]\=\d\+" " contained display
+syntax match fm_int_literal "[-+]\=\d\+" " contained display
 
 " Regex: Match an optional sign followed by optional digits,
 "        a dot and more optional digits
-syntax match fm_literal "[-+]\=\d*\.\d*" " contained display
+syntax match fm_float_literal "[-+]\=\d*\.\d*" " contained display
 
 " ---------------------------------------------------
 " Built-in FileMaker functions
@@ -235,13 +237,32 @@ syntax region fm_comment start="/\*" end="\*/"
 " ---------------------------------------------------
 " Links
 
-highlight link fm_variables Identifier
-highlight link convention_variables Special
-highlight link noncon_variables Special
-highlight link qualified_field Type
-highlight link fm_operator Operator
-highlight link fm_string String
-highlight link fm_literal Constant
+highlight link fm_script_variable     Identifier
+highlight link fm_standard_variable   Special
+highlight link fm_let_variable        Special
+
+highlight link fm_fully_qualified_field Type
+
+highlight link fm_multiplication_op   Operator
+highlight link fm_division_op         Operator
+highlight link fm_addition_op         Operator
+highlight link fm_subtraction_op      Operator
+highlight link fm_equals_op           Operator
+highlight link fm_concat_op           Operator
+highlight link fm_paragraph_mark      Operator
+highlight link fm_lessequal_op        Operator
+highlight link fm_less_op             Operator
+highlight link fm_greatequal_op       Operator
+highlight link fm_great_op            Operator
+highlight link fm_notequal_op         Operator
+highlight link fm_power_op            Operator
+highlight link fm_logical_op          Operator
+
+highlight link fm_string_literal  String
+highlight link fm_bool_literal    Constant
+highlight link fm_int_literal     Constant
+highlight link fm_float_literal   Constant
+
 highlight link fm_built_ins Function
 highlight link fm_constants Structure
 highlight link fm_convention_custom_functions Function
