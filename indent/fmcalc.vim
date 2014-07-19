@@ -1,5 +1,5 @@
 :" Vim indent file for FileMaker calculations
-" Last Change: 2014 Jul 18
+" Last Change: 2014 Jul 19
 " Version: 1.0
 " Language: Vimscript
 " Maintainer: Charles Ross <chivalry@mac.com>
@@ -15,3 +15,11 @@
 " Ideally the indent rule would be as above but don't override the user's
 " entry of an entire function on a single line. This last part may be
 " difficult to do, so we'll begin with the simple rule as stated above.
+"
+" It appears that `set smartindent` may be sufficient if we can tell Vim to
+" use parentheses and brackets instead of using braces.
+
+if exists("b:did_indent")
+  finish
+endif
+let b:did_indent = 1
