@@ -19,7 +19,64 @@
 " It appears that `set smartindent` may be sufficient if we can tell Vim to
 " use parentheses and brackets instead of using braces.
 
+" Don't do anything for now
+finish
+
 if exists("b:did_indent")
   finish
 endif
 let b:did_indent = 1
+
+setlocal indentexpr=GetFMCalcIndent()
+setlocal indentkeys=0{,0},!^F,o,O
+
+" This may do more than is needed. Probably only need to undo what we do.
+let b:undo_indent = 'setlocal autoindent< smartindent< expandtab< softtabstop< shiftwidth< indentexpr< indentkeys<'
+
+if exists("*GetFMCalcIndent")
+  finish
+endif
+
+" I don't think this is needed if we are never going to worry about vi
+" compatibility.
+let s:cpo_bu= &cpo
+set cpo&vim
+
+function GetFMCalcIndent()
+  let line = getline(v:lnum)
+  let prev_line = getline(v:lnum - 1)
+  let prev_indent = indent(v:lnum - 1)
+
+  " If the previous line is blank use it's indent
+  if prev_line =~ "^\s*$"
+    return prev_indent
+  endif
+
+  " If the previous line began with an open paren, increment the indent
+  if prev_line =~ "^.*(\s*$"
+    return prev_indent + &sw
+  endif
+
+  " If the current line begins with a closing paren, decrement the indent
+  if line =~ "^\s*)$"
+    return prev_indent - $sw
+  endif
+endfunction
+
+function GetCSSIndent()
+  let line = getline(v:lnum)
+  if line =~ '^\s*\*'
+    return cindent(v:lnum)
+  endif
+
+  let pnum = s:prevnonblanknoncomment(v:lnum - 1)
+  if pnum == 0
+    return 0
+  endif
+
+  return indent(pnum) + s:count_braces(pnum, 1) * &sw
+        \ - s:count_braces(v:lnum, 0) * &sw
+endfunction
+
+let &cpo = s:cpo_bu
+unlet s:cpo_bu
