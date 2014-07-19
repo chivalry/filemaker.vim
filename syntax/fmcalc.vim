@@ -78,13 +78,12 @@ syntax keyword fm_operator and or not xor
 syntax region fm_string start=/\v"/ skip=/\v\\./ end=/\v"/
 syntax keyword fm_literal True False
 
-" Integer with -, + or nothing in front
-syntax match fm_literal "\d\+" " contained display
-syntax match fm_literal "[-+]\d\+" " contained display
+" Regex: Match an optional sign followed by digits
+syntax match fm_literal "[-+]\=\d\+" " contained display
 
-" Floating point number with decimal.
-syntax match fm_literal "\d\+\.\d*" " contained display
-syntax match fm_literal "[-+]\d\+\.\d*" " contained display
+" Regex: Match an optional sign followed by optional digits,
+"        a dot and more optional digits
+syntax match fm_literal "[-+]\=\d*\.\d*" " contained display
 
 " ---------------------------------------------------
 " Built-in FileMaker functions

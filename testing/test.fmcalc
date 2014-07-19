@@ -10,8 +10,8 @@
 Let(
 	[
 	~filemakerstandards.org = "foobar";
-		_a = 123 < 3; // comment
-		$$b = "abc"≤1<=3.1 + -23 - +1.234 / -.234;
+		_a = +123 < 3; // comment
+		$$b = "abc"≤1<=3.1 + -23 - +1.234 / -1.234 ^ -.321;
 		_foo = TableOccurrence::field_name;
 
 		nonconventionvar = _a & ~filemakerstandards.org;
