@@ -19,6 +19,8 @@ set iskeyword+=58
 
 " TODO: Find more accurate regular expression
 " TODO: Find a way to abstract repeated sub regexes
+" Regex: Match 1 or 2 dollar signs followed by
+"        characters other than a space and semicolon
 syntax match fm_variables "\v\${1,2}[^ ;]+"
 
 " ---------------------------------------------------
@@ -26,16 +28,25 @@ syntax match fm_variables "\v\${1,2}[^ ;]+"
 
 " TODO: Find more accurate regular expression.
 " TODO: Find a way to abstract repeated sub regexes
+" Regex: Match either an underscore or tilde at the
+"        beginning of a word followed by characters
+"        other than a space and semicolon
 syntax match convention_variables "\v<[_~][^ ;]+"
 
 " ---------------------------------------------------
 " Fully Qualified Field Variables
 
+" Regex: Match any alphabetical character at the
+"        beginning of a word followed by characters
+"        other than a space and semicolon
 syntax match qualified_field "\<\a[^ ;]*\>"
 
 " ---------------------------------------------------
 " Non-Convention Variables Field Variables
 
+" Regex: Match any alphabetical character at the
+"        beginning of a word followed by characters
+"        other than a space, color or semicolon
 syntax match noncon_variables "\<\a[^: ;]*\>"
 
 " ---------------------------------------------------
@@ -61,6 +72,9 @@ syntax keyword fm_operator and or not xor
 " ---------------------------------------------------
 " Literals
 
+" Regex: This was copied and pasted from another syntax
+"        file. The start and end regexes are obvious, but
+"        I don't understand what the skip is doing yet.
 syntax region fm_string start=/\v"/ skip=/\v\\./ end=/\v"/
 syntax keyword fm_literal True False
 
@@ -85,6 +99,9 @@ syntax keyword fm_built_ins MiddleWords NumToJText PatternCount Position Proper 
 syntax keyword fm_built_ins Replace Right RightValues RightWords RomanHankaku
 syntax keyword fm_built_ins RomanZenkaku SerialIncrement Substitute Trim TrimAll Upper
 syntax keyword fm_built_ins ValueCount WordCount
+" Regex: Match the word Lower so long as it's followed by
+"        zero or more whitespaces that end in an open
+"        parenthsis.
 syntax match   fm_built_ins "Lower(\@="
 syntax match   fm_built_ins "Lower\(\s*(\)\@="
 
@@ -198,16 +215,21 @@ syntax keyword fm_constants WordUnderline DoubleUnderline AllStyles
 
 " LookupNext function constants
 syntax keyword fm_constants Higher
+" Regex: Match the word Lower so long as it's not followed
+"        by an optional space and an opening parenthesis
 syntax match   fm_constants "Lower[^ (]\@="
 
 " ---------------------------------------------------
 " Conventional Custom Functions
 
+" Regex: Match lower case alphabetical letters followed by
+"        a dot and upper or lower case letters.
 syntax match fm_convention_custom_functions "[a-z]\+\.[A-Za-z]\+"
 
 " ---------------------------------------------------
 " Comments
 
+" Regex: Match two slashes to the end of the line.
 syntax match fm_comment "//.*$"
 syntax region fm_comment start="/\*" end="\*/"
 
