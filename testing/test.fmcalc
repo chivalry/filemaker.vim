@@ -55,3 +55,6 @@ LookupNext(
 	Lower													// This Lower should be a constant
 																// like `AccountName`.
 )
+
+& Lowerxyz
+& Lower ( Get( AccountName ) )

@@ -86,6 +86,7 @@ syntax keyword fm_built_ins Replace Right RightValues RightWords RomanHankaku
 syntax keyword fm_built_ins RomanZenkaku SerialIncrement Substitute Trim TrimAll Upper
 syntax keyword fm_built_ins ValueCount WordCount
 syntax match   fm_built_ins "Lower(\@="
+syntax match   fm_built_ins "Lower\(\s*(\)\@="
 
 " Text formatting functions
 syntax keyword fm_built_ins RGB TextColor TextColorRemove TextFont TextFontRemove
@@ -197,7 +198,7 @@ syntax keyword fm_constants WordUnderline DoubleUnderline AllStyles
 
 " LookupNext function constants
 syntax keyword fm_constants Higher
-syntax match   fm_constants "Lower[^(]\@="
+syntax match   fm_constants "Lower[^ (]\@="
 
 " ---------------------------------------------------
 " Conventional Custom Functions
