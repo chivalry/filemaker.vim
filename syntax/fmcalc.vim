@@ -196,12 +196,6 @@ syntax keyword fm_text_formatting_constant Roman Greek Cyrillic CentralEurope
   \ Superscript Subscript Uppercase Lowercase Titlecase WordUnderline 
   \ DoubleUnderline AllStyles
 
-" LookupNext function constants
-syntax keyword fm_lookup_constant Higher
-" Regex: Match the word Lower so long as it's not followed
-"        by an optional space and an opening parenthesis
-"        and ends as a word
-syntax match   fm_lookup_constant "Lower[^ (]\@=\>"
 
 " ---------------------------------------------------
 " Conventional Custom Functions
@@ -235,6 +229,15 @@ syntax match   fm_custom_function "\h[0-9a-zA-Z_\.]*\(\s\=(\)\@="
 "        zero or more whitespaces that end in an open
 "        parenthsis.
 syntax match   fm_built_in "Lower\(\s*(\)\@="
+
+" ---------------------------------------------------
+" LookupNext function constants
+
+syntax keyword fm_lookup_constant Higher
+" Regex: Match the word Lower so long as it's not followed
+"        by an optional space and an opening parenthesis
+"        and ends as a word
+syntax match   fm_lookup_constant "Lower[^ (]\@=\>"
 
 " ---------------------------------------------------
 " Links
