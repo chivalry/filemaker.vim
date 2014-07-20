@@ -16,6 +16,7 @@ Contents ~
  3. Settings                                            |filemakervim-settings|
   3.1. Default Conventions                   |filemakervim-default-conventions|
   3.2. Overriding Conventions             |filemakervim-overriding-conventions|
+  3.3. Other Settings                             |filemakervim-other-settings|
  4. Triggers                                            |filemakervim-triggers|
   4.1. Trigger Standards                       |filemakervim-trigger-standards|
   4.2. Optional Parameters                   |filemakervim-optional-parameters|
@@ -55,18 +56,21 @@ have been opened using the QuickCursor app on OS X.
 The following features are supported:
 
 - Syntax highlighting of the following:
-- Local and global variables
-- FileMaker operators (i.e., '+', '-', '&', etc.)
-- String and number literals
-- Built-in FileMaker functions
-- Built-in FileMaker constants (such as Get function parameters)
-- Block and in-line comments
-- Calculation variables that begin with an underscore or tilde (i.e., '_foo'
-  or '~bar')
-- Custom functions that begin with a prepended code and dot (i.e.,
-  'code.CustomFunction')
+  o Local and global variables
+  o FileMaker operators (i.e., '+', '-', '&', etc.)
+  o String and number literals
+  o Built-in FileMaker functions
+  o Built-in FileMaker constants (such as Get function parameters)
+  o Block and in-line comments
+  o Calculation variables that begin with an underscore or tilde (i.e., '_foo'
+  o or '~bar')
+  o Custom functions that begin with a prepended code and dot (i.e.,
+    'code.CustomFunction')
 - With the installation of UltiSnips, intelligent snippet insertion for all
   of the built-in FileMaker functions
+- Function completion using <c-x><c-u> (mapped by default to <c-tab>, see
+  |fmv-other-settings|)
+- Confirmed compatibility with MacVim and command-line Vim on OS X
 
 -------------------------------------------------------------------------------
                                                     *filemakervim-requirements*
@@ -138,7 +142,7 @@ concise and useful.
 
 Thanks to all of the very helpful people on the #vim and #python IRC channels
 at freenode.net, especially gfixler, udioica, japh, Raimondi, pgdouyon, fow,
-jamessan, and watabou on #vim and Moonlightning and Avaris on #python.
+jamessan, Houl, and watabou on #vim and Moonlightning and Avaris on #python.
 
 Peter Odding (https://github.com/xolox) made things much easier by publishing
 his vim-tools software (https://github.com/xolox/vim-tools), allowing the
@@ -339,6 +343,20 @@ Overriding all of the defaults results in the following:
 >
   FieldBound (Get (FileName); layoutName; fieldName)
 <
+-------------------------------------------------------------------------------
+                                                 *filemakervim-other-settings*
+                                                          *fmv-other-settings*
+Other Settings ~
+
+                                                     *filemakervim-FMVMapKeys*
+                                                              *fmv-FMVMapKeys*
+g:FMVMapKeys                   Defaults to true (1). When true an insert mode
+                               mapping is created for fmcalc buffers that
+                               initiates the keyword completion. The mapping
+                               is <c-tab> to execute <c-x><c-u>. When false (0)
+                               this mapping is bypassed. See ':h
+                               ins-completion' for more information.
+
 ===============================================================================
                                                         *filemakervim-triggers*
                                                                  *fmv-triggers*
@@ -1459,4 +1477,4 @@ Charles Ross at GitHub: https://github.com/chivalry
 Matt Petrowsky at GitHub: https://github.com/petrowsky
          at Twitter: https://twitter.com/filemakermag
 
-vim: ft=help:tw=78:ts=2:expandtab
+vim: ft=help:tw=78:ts=2:noexpandtab

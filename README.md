@@ -1,3 +1,12 @@
+<!--
+Vim indent file for FileMaker calculations
+Last Change: 2014 Jul 20
+Version: 1.0
+Language: Vimscript
+Maintainer: Charles Ross <chivalry@mac.com>
+License: The MIT License
+-->
+
 Official project home is now at [GitHub](https://github.com/chivalry/filemaker.vim).
 
 filemaker.vim
@@ -54,13 +63,20 @@ Features
 
 filemaker.vim has two main features. First of all, it (generally) detects the following patterns for syntax highlighting:
 
-- Local and global variables
-- Calculation variables that begin with an underscore (i.e., `_variable`)
-- Mathematical, logical and string operators
-- String and number literals
-- Built-in FileMaker functions
-- Custom functions that begin with a prefix and a dot (i.e., `dev.MyCustomFunction`)
-- Block and in-line comments
+- Syntax highlighting of the following:
+  - Local and global variables
+  - FileMaker operators (i.e., '+', '-', '&', etc.)
+  - String and number literals
+  - Built-in FileMaker functions
+  - Built-in FileMaker constants (such as Get function parameters)
+  - Block and in-line comments
+  - Calculation variables that begin with an underscore or tilde (i.e., '_foo'
+    or '~bar')
+  - Custom functions that begin with a prepended code and dot (i.e.,
+    'code.CustomFunction')
+- With the installation of UltiSnips, intelligent snippet insertion for all
+  of the built-in FileMaker functions
+- Function completion using <c-x><c-u> (mapped by default to `<c-tab>`
 - Confirmed compatibility with MacVim and command-line Vim on OS X.
 
 The second major feature is snippet support using UltiSnips. You don't need UltiSnips to use filemaker.vim, but you'll definately want it. It allows the typing of triggers followed by a trigger key (generally `tab`) and fills in a snippet based on the trigger. Although a textual description won't due the feature justics (see the vidos linked to on the UltiSnips page) as an example, if I type `mid<tab>` I get the following:
