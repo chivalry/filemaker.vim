@@ -142,7 +142,7 @@ concise and useful.
 
 Thanks to all of the very helpful people on the #vim and #python IRC channels
 at freenode.net, especially gfixler, udioica, japh, Raimondi, pgdouyon, fow,
-jamessan, and watabou on #vim and Moonlightning and Avaris on #python.
+jamessan, Houl, and watabou on #vim and Moonlightning and Avaris on #python.
 
 Peter Odding (https://github.com/xolox) made things much easier by publishing
 his vim-tools software (https://github.com/xolox/vim-tools), allowing the
@@ -1477,4 +1477,4 @@ Charles Ross at GitHub: https://github.com/chivalry
 Matt Petrowsky at GitHub: https://github.com/petrowsky
          at Twitter: https://twitter.com/filemakermag
 
-vim: ft=help:tw=78:ts=2:expandtab
+vim: ft=help:tw=78:ts=2:noexpandtab
