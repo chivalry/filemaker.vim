@@ -1,0 +1,274 @@
+Char
+Code
+Exact
+Filter
+Filtervalues
+GetAsCSS
+GetAsDate
+GetAsNumber
+GetAsSVG
+GetAsText
+GetAsTime
+GetAsTimestamp
+GetAsURLEncoded
+GetValue
+Hiragana
+KanaHankaku
+KanaZenkaku
+KanjiNumeral
+Katakana
+Left
+LeftValues
+LeftWords
+Length
+Lower
+Middle
+MiddleValues
+MiddleWords
+NumToJText
+PatternCount
+Position
+Proper
+Quote
+Replace
+Right
+RightValues
+RightWords
+RomanHankaku
+RomanZenkaku
+SerialIncrement
+Substitute
+Trim
+TrimAll
+Upper
+ValueCount
+WordCount
+RGB
+TextColor
+TextColorRemove
+TextFont
+TextFontRemove
+TextSize
+TextSizeRemove
+TextStyleAdd
+TextStyleRemove
+Abs
+Ceiling
+Combination
+Div
+Exp
+Factorial
+Floor
+Int
+Lg
+Ln
+Log
+Mod
+Random
+Round
+SetPrecision
+Sign
+Sqrt
+Truncate
+Date
+Day
+DayName
+DayNameJ
+DayOfWeek
+DayOfYear
+Month
+MonthName
+MonthNameJ
+WeekOfYear
+WeekOfYearFiscal
+Year
+YearName
+Hour
+Minute
+Seconds
+Time
+Timestamp
+Base64Decode
+Base64Encode
+GetContainerAttribute
+GetHeight
+GetThumbnail
+GetWidth
+VerifyContainer
+Average
+Count
+List
+Max
+Min
+StDev
+StDevP
+Sum
+Variance
+VarianceP
+GetSummary
+Extend
+GetRepetition
+Last
+FV
+NPV
+PMT
+PV
+Acos
+Asin
+Atan
+Cos
+Degrees
+Radians
+Sin
+Tan
+Case
+Choose
+Evaluate
+EvaluationError
+ExecuteSQL
+GetAsBoolean
+GetField
+GetFieldName
+GetLayoutObjectAttribute
+GetNthRecord
+If
+IsEmpty
+IsValid
+IsValidExpression
+Let
+Lookup
+LookupNext
+DatabaseNames
+FieldBounds
+FieldComment
+FieldIDs
+FieldNames
+FieldRepetitions
+FieldStyle
+FieldType
+GetNextSerialValue
+LayoutIDs
+LayoutNames
+LayoutObjectNames
+Location
+LocationValues
+RelationInfo
+ScriptIDs
+TableIDs
+TableNames
+ValueListIDs
+ValueListItems
+ValueListNames
+WindowNames
+External
+Get( AccountExtendedPrivileges )
+Get( AccountName )
+Get( AccountPrivilegeSetName )
+Get( ActiveFieldContents )
+Get( ActiveFieldName )
+Get( ActiveFieldTableName )
+Get( ActiveLayoutObjectName )
+Get( ActiveModifierKeys )
+Get( ActivePortalRowNumber )
+Get( ActiveRepetitionNumber )
+Get( ActiveSelectionState )
+Get( ActiveSelectionStart )
+Get( AllowAbortState )
+Get( AllowFormattingBarState )
+Get( ApplicationLanguage )
+Get( ApplicationVersion )
+Get( CalculationRepetitionNumber )
+Get( ConnectionAttributes )
+Get( ConnectionState )
+Get( CurrentDate )
+Get( CurrentExtendedPrivileges )
+Get( CurrentHostTimestamp )
+Get( CurrentPrivilegeSetName )
+Get( CurrentTime )
+Get( CurrentTimestamp )
+Get( CurrentTimeUTCMilliseconds )
+Get( CustomMenuSetName )
+Get( DesktopPath )
+Get( Device )
+Get( DocumentsPath )
+Get( DocumentsPathListing )
+Get( EncryptionState )
+Get( ErrorCaptureState )
+Get( FileMakerPath )
+Get( FileName )
+Get( FilePath )
+Get( FileSize )
+Get( FoundCount )
+Get( HighContrastColor )
+Get( HighContrastState )
+Get( HostApplicationVersion )
+Get( HostIPAddress )
+Get( HostName )
+Get( InstalledFMPlugins )
+Get( LastError )
+Get( LastMessageChoice )
+Get( LastODBCError )
+Get( LayoutAccess )
+Get( LayoutCount )
+Get( LayoutName )
+Get( LayoutNumber )
+Get( LayoutTableName )
+Get( LayoutViewState )
+Get( ModifiedFields )
+Get( MultiUserState )
+Get( NetworkProtocol )
+Get( NetworkType )
+Get( PageNumber )
+Get( PersistentID )
+Get( PreferencesPath )
+Get( PrinterName )
+Get( QuickFindText )
+Get( RecordAccess )
+Get( RecordID )
+Get( RecordModificationCount )
+Get( RecordNumber )
+Get( RecordOpenCount )
+Get( RecordOpenState )
+Get( RequestCount )
+Get( RequestOmitState )
+Get( ScreenDepth )
+Get( ScreenHeight )
+Get( ScreenWidth )
+Get( ScriptAnimationState )
+Get( ScriptName )
+Get( ScriptParameter )
+Get( ScriptResult )
+Get( SortState )
+Get( StatusAreaState )
+Get( SystemDrive )
+Get( SystemIPAddress )
+Get( SystemLanguage )
+Get( SystemNICAddress )
+Get( SystemPlatform )
+Get( SystemVersion )
+Get( TemporaryPath )
+Get( TextRulerVisible )
+Get( TotalRecordCount )
+Get( TriggerCurrentPanel )
+Get( TriggerGestureInfo )
+Get( TriggerKeystroke )
+Get( TriggerModifierKeys )
+Get( TriggerTargetPanel )
+Get( UserCount )
+Get( UserName )
+Get( UseSystemFormatsState )
+Get( UUID )
+Get( WindowContentHeight )
+Get( WindowContentWidth )
+Get( WindowDesktopHeight )
+Get( WindowDesktopWidth )
+Get( WindowHeight )
+Get( WindowLeft )
+Get( WindowMode )
+Get( WindowName )
+Get( WindowOrientation )
+Get( WindowStyle )
+Get( WindowTop )
+Get( WindowVisible )
+Get( WindowWidth )
+Get( WindowZoomLevel )
