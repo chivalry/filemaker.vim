@@ -1,12 +1,11 @@
 // Vim indent file for FileMaker calculations
-// Last Change: 2014 Jul 18
+// Last Change: 2014 Jul 20
 // Version: 1.0
 // Language: FileMaker Calc
 // Maintainer: Charles Ross <chivalry@mac.com>
 // License: The MIT License
 
 // comment = + operators and a $var
-
 Let(
 	[
 	~filemakerstandards.org = "foobar";
@@ -20,8 +19,7 @@ Let(
 		xyz = TO::field;
 /* multi
 line
-comment
-Let keyword
+comment Let keyword
 */
 		$c = True;
 $d.with.multiple.dots =
@@ -50,3 +48,5 @@ LookupNext(
 )
 & Lowerxyz
 & Lower ( Get( AccountName ) )
+& non_convention.customfunction( $parameter )
+& non_convention.customfunction ( $parameter )

@@ -1,5 +1,5 @@
 " Vim syntax file for FileMaker calculations
-" Last Change: 2014 Jul 18
+" Last Change: 2014 Jul 20
 " Version: 1.0
 " Language: Vimscript
 " Maintainer: Charles Ross <chivalry@mac.com>
@@ -91,77 +91,74 @@ syntax match fm_float_literal "[-+]\=\d*\.\d*" " contained display
 " Built-in FileMaker functions
 
 " Text functions
-syntax keyword fm_built_ins Char Code Exact Filter FilterValues GetAsCSS
+syntax keyword fm_built_in Char Code Exact Filter FilterValues GetAsCSS
   \ GetAsDate GetAsNumber GetAsSVG GetAsText GetAsTime GetAsTimestamp
   \ GetAsURLEncoded GetValue Hiragana KanaHankaku KanaZenkaku KanjiNumeral
   \ Katakana Left LeftValues LeftWords Length Middle MiddleValues MiddleWords
   \ NumToJText PatternCount Position Proper Quote Replace Right RightValues
   \ RightWords RomanHankaku RomanZenkaku SerialIncrement Substitute Trim
   \ TrimAll Upper ValueCount WordCount
-" Regex: Match the word Lower so long as it's followed by
-"        zero or more whitespaces that end in an open
-"        parenthsis.
-syntax match   fm_built_ins "Lower(\@="
-syntax match   fm_built_ins "Lower\(\s*(\)\@="
+" The Lower function is included as a regex after general custom functions
+" so it will take precedence.
 
 " Text formatting functions
-syntax keyword fm_built_ins RGB TextColor TextColorRemove TextFont
+syntax keyword fm_built_in RGB TextColor TextColorRemove TextFont
   \ TextFontRemove TextFormatRemove TextSize TextSizeRemove TextStyleAdd
   \ TextStyleRemove
 
 " Number functions
-syntax keyword fm_built_ins Abs Ceiling Combination Div Exp Factorial Floor Int
+syntax keyword fm_built_in Abs Ceiling Combination Div Exp Factorial Floor Int
   \ Lg Ln Log Mod Random Round SetPrecision Sign Sqrt Truncate
 
 " Date functions
-syntax keyword fm_built_ins Date Day DayName DayNameJ DayOfWeek DayOfYear Month
+syntax keyword fm_built_in Date Day DayName DayNameJ DayOfWeek DayOfYear Month
   \ MonthName MonthNameJ WeekOfYear WeekOfYearFiscal Year YearName
 
 " Time functions
-syntax keyword fm_built_ins Hour Minute Seconds Time
+syntax keyword fm_built_in Hour Minute Seconds Time
 
 " Timestamp functions
-syntax keyword fm_built_ins Timestamp
+syntax keyword fm_built_in Timestamp
 
 " Container functions
-syntax keyword fm_built_ins Base64Decode Base64Encode GetContainerAttribute
+syntax keyword fm_built_in Base64Decode Base64Encode GetContainerAttribute
   \ GetHeight GetThumbnail GetWidth VerifyContainer
 
 " Aggregate functions
-syntax keyword fm_built_ins Average Count List Max Min StDev StDevP Sum
+syntax keyword fm_built_in Average Count List Max Min StDev StDevP Sum
   \ Variance VarianceP
 
 " Summary functions
-syntax keyword fm_built_ins GetSummary
+syntax keyword fm_built_in GetSummary
 
 " Repeating functions
-syntax keyword fm_built_ins Extend GetRepetition Last
+syntax keyword fm_built_in Extend GetRepetition Last
 
 " Financial functions
-syntax keyword fm_built_ins FV NPV PMT PV
+syntax keyword fm_built_in FV NPV PMT PV
 
 " Trigonometric functions
-syntax keyword fm_built_ins Acos Asin Atan Cos Degrees Pi Radians Sin Tan
+syntax keyword fm_built_in Acos Asin Atan Cos Degrees Pi Radians Sin Tan
 
 " Logical functions
-syntax keyword fm_built_ins Case Choose Evaluate EvaluationError ExecuteSQL
+syntax keyword fm_built_in Case Choose Evaluate EvaluationError ExecuteSQL
   \ GetAsBoolean GetField GetFieldName GetLayoutObjectAttribute GetNthRecord If
   \ IsEmpty IsValid IsValidExpression Let Lookup LookupNext Self
 
 " Get functions
-syntax keyword fm_built_ins Get
+syntax keyword fm_built_in Get
 
 " Design functions
-syntax keyword fm_built_ins DatabaseNames FieldBounds FieldComment FieldIDs
+syntax keyword fm_built_in DatabaseNames FieldBounds FieldComment FieldIDs
   \ FieldNames FieldRepetitions FieldStyle FieldType GetNextSerialValue
   \ LayoutIDs LayoutNames LayoutObjectNames RelationInfo ScriptIDs ScriptNames
   \ TableIDs TableNames ValueListIDs ValueListItems ValueListNames WindowNames
 
 " Mobile functions
-syntax keyword fm_built_ins Location LocationValues
+syntax keyword fm_built_in Location LocationValues
 
 " External functions
-syntax keyword fm_built_ins External
+syntax keyword fm_built_in External
 
 " Get function constants
 syntax keyword fm_get_constants AccountExtendedPrivileges AccountName
@@ -203,7 +200,8 @@ syntax keyword fm_text_formatting_constant Roman Greek Cyrillic CentralEurope
 syntax keyword fm_lookup_constant Higher
 " Regex: Match the word Lower so long as it's not followed
 "        by an optional space and an opening parenthesis
-syntax match   fm_lookup_constant "Lower[^ (]\@="
+"        and ends as a word
+syntax match   fm_lookup_constant "Lower[^ (]\@=\>"
 
 " ---------------------------------------------------
 " Conventional Custom Functions
@@ -218,6 +216,25 @@ syntax match fm_convention_custom_function "[a-z]\+\.[A-Za-z]\+"
 " Regex: Match two slashes to the end of the line.
 syntax match fm_line_comment "//.*$"
 syntax region fm_block_comment start="/\*" end="\*/"
+
+" ---------------------------------------------------
+" Non-Convention Custom Functions
+
+" Regex: Match a head-of-word character, any number of word
+"        characters, underscores or dots, followed by optional
+"        whitespace and an opening paren, but don't include
+"        the paren in the match
+syntax match   fm_custom_function "\h[0-9a-zA-Z_\.]*\(\s\=(\)\@="
+
+" ---------------------------------------------------
+" The Lower Function
+
+" Placed here to override its capture with fm_custom_function
+
+" Regex: Match the word Lower so long as it's followed by
+"        zero or more whitespaces that end in an open
+"        parenthsis.
+syntax match   fm_built_in "Lower\(\s*(\)\@="
 
 " ---------------------------------------------------
 " Links
@@ -248,8 +265,9 @@ highlight link fm_bool_literal    Constant
 highlight link fm_int_literal     Constant
 highlight link fm_float_literal   Constant
 
-highlight link fm_built_ins Function
+highlight link fm_built_in Function
 highlight link fm_convention_custom_function Function
+highlight link fm_custom_function Function
 
 highlight link fm_text_formatting_constant  Structure
 highlight link fm_get_constants             Structure
