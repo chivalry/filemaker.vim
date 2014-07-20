@@ -20,21 +20,6 @@ setlocal autoindent
 let s:path = expand('<sfile>:p:h')
 
 " ------------------------------------------------------------------------------
-" Map <c-tab> to call the complete function.
-" function! SetMapKeys()
-"   if !exists('g:FMVMapKeys')
-"     let g:FMVMapKeys = 1
-"   endif
-
-"   if g:FMVMapKeys
-"     let g:UltiSnipsListSnippets="<c-s-tab>"
-"     call UltiSnips#map_keys#MapKeys()
-"     autocmd! FileType fmcalc inoremap <buffer> <c-tab> <c-x><c-u>
-"   endif
-" endfunction
-" call SetMapKeys()
-
-" ------------------------------------------------------------------------------
 " Map the completion key unless the user has overridden this feature
 function! SetMapKeys()
   if !exists('g:FMVMapKeys')
