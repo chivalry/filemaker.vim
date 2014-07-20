@@ -144,6 +144,10 @@ Peter Odding (https://github.com/xolox) made things much easier by publishing
 his vim-tools software (https://github.com/xolox/vim-tools), allowing the
 plugin help files to be written almost entirely in Markdown.
 
+Neil Carter wrote a very helpful article
+(http://psy.swansea.ac.uk/staff/Carter/Vim/vim_indent.htm) that was
+indespensable in writing the indent file.
+
 ===============================================================================
                                                          *filemakervim-install*
                                                                   *fmv-install*
