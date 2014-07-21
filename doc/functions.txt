@@ -5,22 +5,91 @@
                                                                 *fmv-functions*
 Contents ~
 
- 1.  Aggregate Functions |filemakervim-aggregate|
- 2.  Container Functions |filemakervim-container|
- 3.  Date Functions |filemakervim-date|
- 4.  Design Functions |filemakervim-design|
- 5.  External Functions |filemakervim-external|
- 6.  Financial Functions |filemakervim-financial|
- 7.  Get Functions |filemakervim-get|
- 8.  Logical Functions |filemakervim-logical|
- 9.  Mobile Functions |filemakervim-mobile|
- 10. Number Functions |filemakervim-number|
- 11. Repeating Functions |filemakervim-repeating|
- 12. Summary Functions |filemakervim-summary|
- 13. Text Functions |filemakervim-text|
- 14. Text Formatting Functions |filemakervim-text-formatting|
- 15. Time Functions |filemakervim-time|
- 16. Timestamp Functions |filemakervim-timestamp|
- 17. Trigonometric Functions |filemakervim-trigonometric|
+ 1.  Aggregate Functions                          |filemakervim-func-aggregate|
+ 2.  Container Functions                          |filemakervim-func-container|
+ 3.  Date Functions                                    |filemakervim-func-date|
+ 4.  Design Functions                                |filemakervim-func-design|
+ 5.  External Functions                            |filemakervim-func-external|
+ 6.  Financial Functions                          |filemakervim-func-financial|
+ 7.  Get Functions                                      |filemakervim-func-get|
+ 8.  Logical Functions                              |filemakervim-func-logical|
+ 9.  Mobile Functions                                |filemakervim-func-mobile|
+ 10. Number Functions                                |filemakervim-func-number|
+ 11. Repeating Functions                          |filemakervim-func-repeating|
+ 12. Summary Functions                              |filemakervim-func-summary|
+ 13. Text Functions                                    |filemakervim-func-text|
+ 14. Text Formatting Functions              |filemakervim-func-text-formatting|
+ 15. Time Functions                                    |filemakervim-func-time|
+ 16. Timestamp Functions                          |filemakervim-func-timestamp|
+ 17. Trigonometric Functions                  |filemakervim-func-trigonometric|
+
+===============================================================================
+                                                  *filemakervim-func-aggregate*
+                                                           *fmv-func-aggregate*
+Aggregate Functions ~
+
+-------------------------------------------------------------------------------
+                                                    *filemakervim-func-average*
+                                                             *fmv-func-average*
+Average ~
+
+Purpose
+-------
+Returns a value that is the average of all valid, non-blank values in `field`.
+
+Format
+------
+Average(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields; or
+an expression that returns a field, repeating field, or a set of non-repeating
+fields.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker 6.0 or earlier
+
+Description
+-----------
+`Field` can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`, whether
+    or not these records appear in a portal.
+  - several non-repeating fields in a record `(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result is
+    returned in a repeating field with at least the same number of repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from different
+    tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+A Student table has a portal showing scores for all exams a student has taken.
+The exam scores are in a table called Exams.
+
+`Average(Exams::Score)` returns the student's average score for all exams she
+has taken.
+
+In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains 6
+
+`Average(Field2)` returns `6.5` when the calculation isn't a repeating field.
+
+`Average(Field1;Field2;Field3) returns `4, 4, 7, 8` when the calculation is a
+repeating field.
+
+Note: When a referenced field is a repeating field, the `Average` function
+returns the average of all the values in the first repetition field, then the
+average of the values in the second repetition field, and so on. Therefore,
+`(1+5+6)/3=4;(2+6)/2=4;7/1=7;8/1=8`.
 
 vim: ft=help:tw=78:ts=2
