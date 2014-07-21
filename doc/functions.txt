@@ -1,0 +1,6 @@
+*functions.txt*  For Vim version 7.4 or later
+
+===============================================================================
+                                                       *filemakervim-functions*
+                                                                *fmv-functions*
+vim: ft=help:tw=78:ts=2

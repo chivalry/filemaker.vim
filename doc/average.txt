@@ -1,3 +1,0 @@
-average.txt
-
-vim: ft=help:tw=78:ts=2
