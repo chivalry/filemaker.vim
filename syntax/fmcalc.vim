@@ -284,30 +284,25 @@ let b:current_syntax = "fmcalc"
 " ---------------------------------------------------
 " Embedded Syntax Highlighting
 
-let csyn = b:current_syntax
-unlet b:current_syntax
-syntax include @sql syntax/sql.vim
-syntax region fm_sql start='\(\)\(/\* *lang=sql *\*/\)\@=' end='\(\)"\@='
-      \ contains=@sql containedin=ALL
-let b:current_syntax = csyn
+function! ApplyNestedSyntaxHighlighting(lang)
+  let curr_syntax = b:current_syntax
+  unlet b:current_syntax
+  
+  " Original code provided by Junegunn Choi was as follows. Function
+  " abstracted it to allow calling for any language supporting mult-line
+  " C-style comments
+  "
+  " syntax include @sql syntax/sql.vim
+  " syntax region fm_sql start='\(\)\(/\* *lang=sql *\*/\)\@=' end='\(\)"\@='
+  "       \ contains=@sql containedin=ALL
+  execute "syntax include @" . a:lang . " syntax/" . a:lang . ".vim"
+  execute "syntax region fm_" . a:lang . " start='\\(\\)\\(/\\* *lang=" . a:lang .
+        \ " *\\*/\\)\\@=' end='\\(\\)\"\\@=' contains=@" . a:lang . " containedin=ALL"
+  
+  let b:current_syntax = curr_syntax
+endfunction
 
-let csyn = b:current_syntax
-unlet b:current_syntax
-syntax include @groovy syntax/groovy.vim
-syntax region fm_groovy start='\(\)\(/\* *lang=groovy *\*/\)\@=' end='\(\)"\@='
-      \ contains=@groovy containedin=ALL
-let b:current_syntax = csyn
-
-let csyn = b:current_syntax
-unlet b:current_syntax
-syntax include @php syntax/php.vim
-syntax region fm_php start='\(\)\(/\* *lang=php *\*/\)\@=' end='\(\)"\@='
-      \ contains=@php containedin=ALL
-let b:current_syntax = csyn
-
-let csyn = b:current_syntax
-unlet b:current_syntax
-syntax include @javascript syntax/javascript.vim
-syntax region fm_javascript start='\(\)\(/\* *lang=javascript *\*/\)\@=' end='\(\)"\@='
-      \ contains=@javascript containedin=ALL
-let b:current_syntax = csyn
+call ApplyNestedSyntaxHighlighting('sql')
+call ApplyNestedSyntaxHighlighting('groovy')
+call ApplyNestedSyntaxHighlighting('php')
+call ApplyNestedSyntaxHighlighting('javascript')
