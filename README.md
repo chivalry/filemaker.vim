@@ -14,7 +14,7 @@ filemaker.vim
 
 Combining [FileMaker](http://www.filemaker.com) with [Vim](http://www.vim.org) may seem like an odd coupling, but I use both every day, and have been getting more and more atuned to the "Vim" way of doing things. Years ago, when I was using [TextMate](https://macromates.com) I wrote a [bundle](https://code.google.com/p/filemaker-textmate-bundle/) for it that made for easier FileMaker calculation editing in TextMate. This project has the same goal for Vim.
 
-The filemaker.vim plugin provides syntax highlighting and snippet support for FileMaker calculations to be edited in Vim. It detects the filetype for the extensions `.filemaker`, `.fmcalc`, `.fm` and `.fmfn` and also recognizes FileMaker calcs that have been opened using the [QuickCursor](https://github.com/jessegrosjean/quickcursor) app on OS X.
+The filemaker.vim plugin provides syntax highlighting and snippet support for FileMaker calculations to be edited in Vim. It detects the filetype for the extensions `.filemaker`, `.fmcalc`, `.calc`, `.fm` and `.fmfn` and also recognizes FileMaker calcs that have been opened using the [QuickCursor](https://github.com/jessegrosjean/quickcursor) app on OS X.
 
 Why Vim
 -------
@@ -70,10 +70,9 @@ filemaker.vim has two main features. First of all, it (generally) detects the fo
   - Built-in FileMaker functions
   - Built-in FileMaker constants (such as Get function parameters)
   - Block and in-line comments
-  - Calculation variables that begin with an underscore or tilde (i.e., '_foo'
-    or '~bar')
-  - Custom functions that begin with a prepended code and dot (i.e.,
-    'code.CustomFunction')
+  - Calculation variables that begin with an underscore or tilde (i.e., '_foo' or '~bar')
+  - Custom functions that begin with a prepended code and dot (i.e., 'code.CustomFunction')
+  - Embedded source code within FileMaker strings for SQL, JavaScript, Groovy and PHP
 - With the installation of UltiSnips, intelligent snippet insertion for all
   of the built-in FileMaker functions
 - Function completion using <c-x><c-u> (mapped by default to `<c-tab>`
@@ -160,8 +159,6 @@ Future Enhancements
 
 This is version 1, and it does most of what I set out to do to make it useful, but I do have plans for future features, and am very interested in feedback regarding their anticipated usefulness as well as their priority.
 
-- Recognition of any calculation variable (i.e., no need to prepend an underscore)
-- Recognition of any custom or external function (i.e., no need to prepend a code followed by a dot)
 - Addition of an indent file that allows for automatic formatting of calculations
 - Ability to customize triggers without having to edit the original snippets file
 - Ability to provide variable triggers for fuctions such as `Case` and `Substitute`
@@ -170,7 +167,6 @@ This is version 1, and it does most of what I set out to do to make it useful, b
 - Optional inclusion of popular FileMaker plugin external functions
 - Optional inclusion of a standard library of custom function snippets
 - Are FileMaker functions language-dependent? If so, multiple language support
-- Syntax recognition for languages commonly embedded within FileMaker strings (SQL, Groovy, PHP, JavaScript, AppleScript)
 
 Snippet Triggers
 ----------------
