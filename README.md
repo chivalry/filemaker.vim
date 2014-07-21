@@ -23,7 +23,7 @@ Just about everyone looking at this project probably knows FileMaker but may be 
 
 Vim won out for two reasons: extensibility and open source. I've honestly never seen software that can be customized to the extent that Vim can. If you don't like how Vim behaves, you can generally change it, and there are hundreds of plugins available that allow you to simply plug some text files in and get even more functionality.
 
-And because it's open source, the likelihood of it becoming abandonware is slim, especially given its popularity among programmers. The [\#vim IRC channel](http://vim.wikia.com/wiki/Vim_on_Freenode) consistently has hundreds of users online ready to answer any questions. And should Vim itself become stagnant, there are already [ports](http://neovim.org) of it in development.
+And because it's open source, the likelihood of it becoming abandonware is slim, especially given its popularity among programmers. The [\#vim IRC channel](http://vim.wikia.com/wiki/Vim_on_Freenode) consistently has hundreds of users online ready to answer any questions. And should Vim itself become stagnant, there are already [forks](http://neovim.org) of it in development.
 
 Of course, there's the final reason, which is that once you become proficient in Vim, editing text is unbelievably fast. If you give it a try, you'll become amazed at how much you can acomplish in strikingly few keystrokes. Don't let Vim's reputation for having a steep learning curve disuade you. I can tell you from experience the return on time investment will be amply repaid.
 
