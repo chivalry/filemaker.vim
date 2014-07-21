@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns an integer number from 0 to 16777215 obtained by combining the red, green, and blue values (each ranging from 0 to 255) to represent a color." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>RGB</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.96.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.94.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1062414">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1062414">Functions reference</a> &gt; 
+      <a href="func_ref3.33.94.html#1062414">Text formatting functions</a> &gt; 
+      <b>RGB</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">RGB</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1062400"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047926">Returns an integer number from 0 to 16777215 obtained by combining the </a><span class="c-code">red</span>, <span class="c-code">green,</span> and <span class="c-code">blue</span> values (each ranging from 0 to 255) to represent a color.</div>
+      <div class="ffh-funcformathead">Format<a name="1032197"> </a></div>
+      <div class="ff-funcformat"><a name="1032198">RGB(red;green;blue)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1032199"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1032202">red</a></span> - any numeric <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> or numeric <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> containing a value ranging from 0 to 255</div>
+      <div class="b-body"><span class="c-code"><a name="1032203">green</a></span> - any numeric expression or numeric field containing a value ranging from 0 to 255</div>
+      <div class="b-body"><span class="c-code"><a name="1032204">blue</a></span> - any numeric expression or numeric field containing a value ranging from 0 to 255</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1032205"> </a></div>
+      <div class="b-body"><a name="1032206">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1057392"> </a></div>
+      <div class="or-origin"><a name="1057393">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1032207"> </a></div>
+      <div class="b-body"><a name="1032208">Numbers returned by this function can be passed as the color parameter in the </a><span class="c-code">TextColor</span> or <span class="c-code">TextColorRemove</span> functions. The <span class="c-code">RGB</span> function uses the following formula to calculate the result:</div>
+      <div class="co-code"><a name="1032209">red * 256</a><sup class="s-superscript">2</sup> + green * 256 + blue </div>
+      <div class="b-body"><a name="1032210">where 256</a><sup class="s-superscript">2</sup> = 65536</div>
+      <div class="b-body"><a name="1032211"> </a></div>
+      <div class="nt-notetip">
+        <span class="zan-autonum">Tip  </span><a name="1084022">To determine the RGB value of a color, in Layout mode, click the Fill color palette in the </a><span class="g-glosslink"><a href="glossary.html#1047854">formatting bar</a></span> and choose <span class="o-onscreen">Other Color</span>. In OS X, select the Color Sliders tab. Values are shown for each of the basic colors.</div>
+      <div class="feh-funcexamhead">Examples<a name="1032215"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1032216">RGB(255;0;0)</a></span> returns <span class="o-onscreen">16711680</span> representing red.</div>
+      <div class="b-body"><span class="c-code"><a name="1032217">RGB(0;255;0)</a></span> returns <span class="o-onscreen">65280</span> representing green.</div>
+      <div class="b-body"><span class="c-code"><a name="1032218">RGB(0;0;255)</a></span> returns <span class="o-onscreen">255</span> representing blue.</div>
+      <div class="b-body"><span class="c-code"><a name="1032219">RGB(0;0;0)</a></span> returns <span class="o-onscreen">0</span> representing black.</div>
+      <div class="b-body"><span class="c-code"><a name="1032220">RGB(255;255;255)</a></span> returns <span class="o-onscreen">16777215</span> representing white.</div>
+      <div class="b-body"><a name="1061701">Using a table with text fields FirstName and LastName, specify the following auto-enter calculation for a third field called FullName that displays FirstName in orange and LastName in purple:</a></div>
+      <div class="co-code"><a name="1061715">TextColor(FirstName;RGB(255;165;0)) &amp;" "&amp; TextColor(LastName;RGB(160;32;240))</a></div>
+      <div class="rh-relatedhead">Related topics<a name="1061703"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1032225">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1032229">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1032233">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1032237">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1032241">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1032245">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(sortstate), get sort state, get current sort state" />
+    <meta name="description" content="Returns a value representing the current sort state." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(SortState)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.80.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.78.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1031209">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1031209">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1031209">Get functions</a> &gt; 
+      <b>Get(SortState)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(SortState)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1041343"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1041344">Returns a value representing the current sort state.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1031210"> </a></div>
+      <div class="ff-funcformat"><a name="1031211">Get(SortState)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1031212"> </a></div>
+      <div class="b-body"><a name="1031213">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1031214"> </a></div>
+      <div class="b-body"><a name="1031215">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1050896"> </a></div>
+      <div class="or-origin"><a name="1050897">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1031216"> </a></div>
+      <div class="b-body"><a name="1031219">Returns:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1042262">0</a></span> if the records in the active <span class="g-glosslink"><a href="glossary.html#1045562">table</a></span> are not <span class="g-glosslink"><a href="glossary.html#1028117">sorted</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1031220">1</a></span> if the records in the active table are sorted</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1031221">2</a></span> if the records in the active table are partially sorted (semi-sorted)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><a name="1031222">Each window has its own sort state.</a></div>
+      <div class="hs1-headsub1"><a name="1031223">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1031224">When records are imported from another file to a previously found and sorted set, the records in a sorted set may exist in a semi-sorted state. To include the imported records in the sort order, sort the found set after importing.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1031226">If you specify the </a><span class="g-glosslink"><a href="glossary.html#1041249">context</a></span> for the current calculation, this function will be evaluated based on that context; otherwise, it will be evaluated based on the context of the current window.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1031230">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1031232"> </a></div>
+      <div class="b-body"><a name="1031234">Returns </a><span class="o-onscreen">1</span> when the <span class="g-glosslink"><a href="glossary.html#1028030">records</a></span> in the active table are sorted.</div>
+      <div class="rh-relatedhead">Related topics<a name="1031235"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1031239">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1031243">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1031247">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1031251">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1031255">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1031259">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Removes all font colors in text, or removes the font color specified by the RGB function." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>TextColorRemove</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.98.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.96.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1032294">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1032294">Functions reference</a> &gt; 
+      <a href="func_ref3.33.94.html#1032294">Text formatting functions</a> &gt; 
+      <b>TextColorRemove</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">TextColorRemove</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1048054"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048055">Removes all font colors in </a><span class="c-code">text</span>, or removes the font color specified by the <span class="c-code">RGB</span> function.</div>
+      <div class="ffh-funcformathead">Format<a name="1032295"> </a></div>
+      <div class="ff-funcformat"><a name="1032296">TextColorRemove(text{;RGB(red;green;blue)})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1032297"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1032300">text</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span> or text <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1032301">RGB(red;green;blue)</a></span> - any integer number from 0 to 16777215 obtained by combining the <span class="c-code">red</span>, <span class="c-code">green</span>, and <span class="c-code">blue</span> values (each ranging from 0 to 255) to represent a color.</div>
+      <div class="b-body"><a name="1032302">Parameters in curly braces { } are optional.</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1032303"> </a></div>
+      <div class="b-body"><a name="1032304">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1057469"> </a></div>
+      <div class="or-origin"><a name="1057470">FileMaker Pro 8.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1032305"> </a></div>
+      <div class="b-body"><a name="1032306">Use this function to revert </a><span class="c-code">text</span> to the default font color for the field. If you don’t use the <span class="c-code">RGB</span> function to specify a color, all of the text displays in the default font color that was set in Layout mode for the field. When the font color is specified by the <span class="c-code">RGB</span> function, only the specified font color is removed from every portion of the text displayed in that color and these same portions of the text are then displayed in the field's default font color.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1032307">Text formatting options will be lost if the field type that is returned is something other than text.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1032308"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1032309">TextColorRemove(“Red Text and Green Text”)</a></span> returns <span class="o-onscreen">Red Text and Green Text</span> displayed in the field’s default font color.</div>
+      <div class="b-body"><span class="c-code"><a name="1032310">TextColorRemove(“Red Text and Green Text”;RGB(255;0;0))</a></span> returns <span class="o-onscreen">Red Text and Green Text </span>with only the pure red font color removed from the words <span class="o-onscreen">Red Text</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1032311"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1032315">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1032319">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1032323">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1032327">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1032331">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1032335">Using operators in formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="edit_layout.10.62.html#1029747" name="1032339">Formatting text</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

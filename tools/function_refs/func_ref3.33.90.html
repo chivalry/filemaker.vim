@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a copy of text with specified spaces removed or inserted. Use to work with spaces between text or non-Roman spaces such as full- and half-width spaces; otherwise, use Trim." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>TrimAll</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.91.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.89.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1031850">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1031850">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1031850">Text functions</a> &gt; 
+      <b>TrimAll</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">TrimAll</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1054542"> </a></div>
+      <div class="b-body"><a name="1054543">Returns a copy of </a><span class="c-code">text</span> with specified spaces removed or inserted. Use to work with spaces between text or non-Roman spaces such as full- and half-width spaces; otherwise, use <span class="zh-hyper"><a href="func_ref3.33.89.html#1031809">Trim</a></span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1031851"> </a></div>
+      <div class="ff-funcformat"><a name="1031852">TrimAll(text;trimSpaces;trimType)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1053999"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1054001">text</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span> or text <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span></div>
+      <div class="b-body"><span class="c-code"><a name="1054002">trimSpaces</a></span> - 0 or False, 1 or True</div>
+      <div class="b-body"><span class="c-code"><a name="1031857">trimType</a></span> - 0 through 3 depending on the trim style that you wish to use</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1031858"> </a></div>
+      <div class="b-body"><a name="1031859">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1058212"> </a></div>
+      <div class="or-origin"><a name="1058213">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1031860"> </a></div>
+      <div class="b-body"><a name="1053977">Set trimSpaces to True (1) if you want to remove full-width spaces. Set </a><span class="c-code">trimSpaces</span> to False (0) if you want to keep full-width spaces.</div>
+      <div class="b-body"><span class="zan-autonum"><a name="1079898">Note  </a></span>Full-width spaces are only present in some non-Roman languages like Japanese. If you only use Roman languages, set trimSpaces to False (0).</div>
+      <div class="b-body"><a name="1053978">A character is considered Roman if its </a><span class="g-glosslink"><a href="glossary.html#1028214">Unicode</a></span> value is less than U+2F00. Any character whose Unicode value is greater than or equal to U+2F00 is considered non-Roman. </div>
+      <div class="b-body"><a name="1031864">Characters within the Roman range are those belonging to the following character blocks: Latin, Latin-1 Supplement, Latin Extended-A &amp; B, IPA Extensions, Spacing Modifier Letters, Combining Diacritical Marks, Greek, Cyrillic, Armenian, Hebrew, Arabic, Devanagari, Bengali, Gurmukhi, Gujarati, Oriya, Tamil, Telugu, Kannada, Malayalam, Thai, Lao, Tibetan, Georgian, Hangul Jamo, and additional Latin and Greek extended blocks. </a></div>
+      <div class="b-body"><a name="1031865">Symbols within the Roman range include punctuation characters, superscripts, subscripts, currency symbols, combining marks for symbols, letter-like symbols, number forms, arrows, math operators, control pictures, geometric shapes, dingbats, and so on.</a></div>
+      <div class="b-body"><a name="1031866">Characters within the non-Roman range are those belonging to the CJK symbols/punctuations area, Hiragana, Katakana, Bopomofo, Hangul compatibility Jamo, Kanbun, CJK unified ideographs, and so on.</a></div>
+      <div class="b-body"><a name="1031867">Spaces are removed or inserted depending on the value of </a><span class="c-code">trimType,</span> as given in the following tables:</div>
+      <div class="ta-tableanchor"><a name="1031889"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1031870">This trimType value</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1031872">Does this</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1031874">0</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1031876">Removes all spaces between non-Roman and Roman characters (always leave one space between Roman words).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1031878">1</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1031880">Always includes a half-width space between non-Roman and Roman characters (always leave one space between Roman words).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1031882">2</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1031884">Removes spaces between non-Roman characters (reduce multiple space between non-Roman and Roman words to 1 space; do not add spaces if there are none; always leave one space between Roman words).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1031886">3</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1031888">Removes all spaces everywhere.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="b-body"><a name="1031890">In all cases, spaces between non-Roman characters are removed.</a></div>
+      <div class="ta-tableanchor"><a name="1080184"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1080145">Type</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1080147">Non-Roman - Non-Roman</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1080149">Non-Roman - Roman</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1080151">Roman - Roman</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080153">0</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080155">Remove</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080157">Remove</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080159">1 space</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080161">1</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080163">Remove</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080165">1 space*</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080167">1 space</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080169">2</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080171">Remove</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080173">1 space</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080175">1 space</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080177">3</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080179">Remove</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080181">Remove</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080183">Remove</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="b-body"><a name="1080185">* = insert space between non-Roman and Roman text if there isn’t one.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1080186"> </a></div>
+      <div class="b-body"><a name="1080004">TrimAll(" Julian       Scott Dunn ";0;0) returns </a><span class="o-onscreen">Julian Scott Dunn</span>.</div>
+      <div class="b-body"><a name="1080017">TrimAll(<img class="Default" src="../images/trimall1.png" width="53" height="18" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text string field name trimSpace parameter set to 1 (True), and trimType parameter set to 0" />) returns <img class="Default" src="../images/trimall2.png" width="56" height="18" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text string" /> if the value of <img class="Default" src="../images/trimall3.png" width="28" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text string field name" /> field is <img class="Default" src="../images/trimall4.png" width="70" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text string with a space in the middle" /></a></div>
+      <div class="b-body"><a name="1031954">TrimAll(<img class="Default" src="../images/trimall5.png" width="232" height="18" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text string containing some Roman characters, trimSpace parameter set to 1 (True) and trimType parameter set to 0" />) returns <img class="Default" src="../images/trimall7.png" width="184" height="18" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text string containing some Roman characters, with all spaces between non Roman and Roman characters removed" /></a></div>
+      <div class="rh-relatedhead">Related topics<a name="1031955"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1031959">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1031963">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1031967">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1031971">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1031975">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1031979">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

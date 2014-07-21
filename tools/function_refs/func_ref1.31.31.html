@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a number between 1 and 53 representing the week containing date, figured according to startingDay." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>WeekOfYearFiscal</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.32.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.30.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028831">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028831">Functions reference</a> &gt; 
+      <a href="func_ref1.31.20.html#1028831">Date functions</a> &gt; 
+      <b>WeekOfYearFiscal</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">WeekOfYearFiscal</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1037108"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1037109">Returns a number between 1 and 53 representing the week containing </a><span class="c-code">date</span>, figured according to <span class="c-code">startingDay</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1028832"> </a></div>
+      <div class="ff-funcformat"><a name="1028833">WeekOfYearFiscal(date;startingDay)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028834"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028835">date</a></span> - any calendar date</div>
+      <div class="b-body"><span class="c-code"><a name="1028836">startingDay</a></span> - any number between 1 and 7, where 1 represents Sunday</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028837"> </a></div>
+      <div class="b-body"><a name="1028838">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1039433"> </a></div>
+      <div class="or-origin"><a name="1039434">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028839"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028840">startingDay</a></span> indicates which day is considered the first day of the week.</div>
+      <div class="b-body"><a name="1038194">The first week of the year is the first week that contains four or more days of that year. For example, if you select 1 (Sunday) as the starting day, then January 1 must be on Sunday, Monday, Tuesday, or Wednesday for that week to be the first week of the fiscal year. If you select 2 (Monday) as the starting day, then January 1 must be on Monday, Tuesday, Wednesday, or Thursday for that week to be the first week of the fiscal year.</a></div>
+      <div class="b-body"><a name="1028842">It is possible, using this function, that dates in a particular year will be returned as the 53rd week of the previous year. For example, if in 2008 you selected Sunday (1) as the starting date, then January 1, 2, or 3 in 2009 would occur in week 53 of fiscal year 2008 (in 2009, January 1 is on a Thursday). The first day of fiscal year 2009 would be on Sunday, January 4, because you selected Sunday (1) as the starting day.</a></div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1028843">To avoid errors when using dates, always use four-digit years. For more information about how FileMaker Pro handles two-digit dates, see </a><span class="zh-hyper"><a href="add_view_data.4.22.html#1028976">Conversion of dates with two-digit years</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1038141"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1043658">WeekOfYearFiscal(Date(1;7;2008);1)</a></span> returns <span class="o-onscreen">2</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1043659">WeekOfYearFiscal(Date(1;1;2009);5)</a></span> returns <span class="o-onscreen">1</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1043660">WeekOfYearFiscal(Date(1;2;2009);1)</a></span> returns <span class="o-onscreen">53</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028851"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028855">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028859">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028863">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028867">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028871">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028875">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(currentdate), get current date, get system date, get current day, get date, get day, current date" />
+    <meta name="description" content="Returns the current date according to the system calendar." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(CurrentDate)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.22.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.20.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028875">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028875">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1028875">Get functions</a> &gt; 
+      <b>Get(CurrentDate)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(CurrentDate)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1041231"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1041232">Returns the current date according to the system calendar.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1028876"> </a></div>
+      <div class="ff-funcformat"><a name="1028877">Get(CurrentDate)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028878"> </a></div>
+      <div class="b-body"><a name="1028879">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028880"> </a></div>
+      <div class="b-body"><a name="1028881">date</a></div>
+      <div class="orh-originhead">Originated in<a name="1050614"> </a></div>
+      <div class="or-origin"><a name="1050615">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028882"> </a></div>
+      <div class="b-body"><a name="1028885">The format of the result of this function varies based on the date format that was in use when the </a><span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span> was created. In the United States, dates are generally in the format MM/DD/YYYY. You can change the date and time formats in your operating system.</div>
+      <div class="b-body"><a name="1028887">If the result is displayed in a </a><span class="g-glosslink"><a href="glossary.html#1027703">field</a></span>, it is formatted according to the date format of the field in the current <span class="g-glosslink"><a href="glossary.html#1027851">layout</a></span>.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1028893">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1028894">To avoid errors when using dates, always use four-digit years. For more information about how FileMaker Pro handles two-digit dates, see </a><span class="zh-hyper"><a href="add_view_data.4.22.html#1028976">Conversion of dates with two-digit years</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1028898"> </a></div>
+      <div class="b-body"><a name="1028899">Returns </a><span class="o-onscreen">2/2/2014</span> when the system date is set to February 2, 2014.</div>
+      <div class="b-body"><span class="c-code"><a name="1075983">Get(CurrentDate)-Date(1;5;2014)</a></span> returns <span class="o-onscreen">4</span> when the system date is set to January 9, 2014.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028900"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028904">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028908">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028912">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028916">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028920">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1052469">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

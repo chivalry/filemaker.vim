@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns True(1) if field is empty, if a related field, related table, relationship, or file is missing, or if some other error occurs; otherwise, returns False(0)." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>IsEmpty</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.14.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.12.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028095">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028095">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1028095">Logical functions</a> &gt; 
+      <b>IsEmpty</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">IsEmpty</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047195"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047205">Returns True(1) if </a><span class="c-code">field</span> is empty, if a <span class="g-glosslink"><a href="glossary.html#1028036">related field</a></span>, <span class="g-glosslink"><a href="glossary.html#1028042">related table</a></span>, <span class="g-glosslink"><a href="glossary.html#1028048">relationship</a></span>, or file is missing, or if some other error occurs; otherwise, returns False(0).</div>
+      <div class="ffh-funcformathead">Format<a name="1028096"> </a></div>
+      <div class="ff-funcformat"><a name="1028097">IsEmpty(field)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028098"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1057808">field</a></span> - any <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> name, <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span>, or numeric expression</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1057809"> </a></div>
+      <div class="b-body"><a name="1057810">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1057815"> </a></div>
+      <div class="or-origin"><a name="1057816">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1028109"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028110">IsEmpty(OrderNum)</a></span> returns <span class="o-onscreen">1</span> if the OrderNum field is empty.</div>
+      <div class="b-body"><span class="c-code"><a name="1028111">If(IsEmpty(LastName);“Invalid record”;““)</a></span> displays <span class="o-onscreen">Invalid Record</span> if the LastName field is blank, but displays nothing if there is an entry in LastName.</div>
+      <div class="b-body"><span class="c-code"><a name="1028112">IsEmpty(Payments::DatePaid)</a></span> returns <span class="o-onscreen">1</span> if, for example, the Payments table has been moved or renamed.</div>
+      <div class="b-body"><span class="c-code"><a name="1028113">IsEmpty(“text”)</a></span> returns <span class="o-onscreen">0</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028114"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028118">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028122">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028126">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028130">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028134">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028138">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

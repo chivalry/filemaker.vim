@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the specified attributes of the layout object given by objectName that is currently active in the calculation." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>GetLayoutObjectAttribute</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.11.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.9.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1027917">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1027917">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1027917">Logical functions</a> &gt; 
+      <b>GetLayoutObjectAttribute</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">GetLayoutObjectAttribute</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1046814"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1046876">Returns the specified attributes of the layout object given by </a><span class="c-code">objectName</span> that is currently active in the calculation.</div>
+      <div class="ffh-funcformathead">Format<a name="1027918"> </a></div>
+      <div class="ff-funcformat"><a name="1027919">GetLayoutObjectAttribute(objectName;attributeName{;repetitionNumber; portalRowNumber})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1027920"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1027921">objectName</a></span> - the name of a named layout object on the current layout.</div>
+      <div class="b-body"><span class="c-code"><a name="1027922">attributeName</a></span> - the name of a supported attribute (see below).</div>
+      <div class="b-body"><span class="c-code"><a name="1027923">repetitionNumber</a></span> - the repetition number (for repeating fields).</div>
+      <div class="b-body"><span class="c-code"><a name="1027924">portalRowNumber</a></span> - the number of the row in the portal. </div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1027925">Parameters in curly braces {} are optional.</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1027926"> </a></div>
+      <div class="b-body"><a name="1047230">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1056489"> </a></div>
+      <div class="or-origin"><a name="1056490">FileMaker Pro 8.5</a></div>
+      <div class="hs1-headsub1"><a name="1047435">Attributes</a></div>
+      <div class="b-body"><span class="c-code"><a name="1047232">objectType</a></span> - returns the object's type as a text literal, in English. Valid return values are: field, text, graphic, line, rectangle, rounded rectangle, oval, group, button group, button, portal, tab panel, slide panel, chart, web viewer, popover, popover button, and unknown.</div>
+      <div class="b-body"><span class="c-code"><a name="1027932">hasFocus</a></span> - returns <span class="o-onscreen">1</span> (True) if <span class="c-code">objectName</span> is currently active, otherwise returns <span class="o-onscreen">0</span> (False). Objects that can have the focus are fields, portals, tab panels, slide panels, buttons, popover buttons, charts, and groups. Also returns <span class="o-onscreen">1</span> for a portal when a portal row is selected.</div>
+      <div class="b-body"><span class="c-code"><a name="1027933">containsFocus</a></span> - returns <span class="o-onscreen">1</span> (True) if <span class="c-code">objectName</span> is currently active or if it contains an active object; otherwise returns <span class="o-onscreen">0</span> (False). Objects that can contain the focus are fields, portals, tab panels, slide panels, buttons, popover buttons, popovers, charts, and groups.</div>
+      <div class="b-body"><span class="c-code"><a name="1027934">isFrontPanel</a></span> - returns <span class="o-onscreen">1</span> (True) if the target object is the tab or slide panel that is in front.</div>
+      <div class="b-body"><a name="1027935">The following object coordinates are given in points relative to the bottom-left corner of the FileMaker menu bar:</a></div>
+      <div class="b-body"><span class="c-code"><a name="1027936">bounds</a></span> - returns a list of numeric values, separated by spaces, that describes the placement of the specified object (left-top to right-bottom).</div>
+      <div class="b-body"><span class="c-code"><a name="1027937">left</a></span> - returns the left edge coordinate of the specified object.</div>
+      <div class="b-body"><span class="c-code"><a name="1027938">right</a></span> - returns the right edge coordinate of the specified object.</div>
+      <div class="b-body"><span class="c-code"><a name="1027939">top</a></span> - returns the top edge coordinate of the specified object.</div>
+      <div class="b-body"><span class="c-code"><a name="1027940">bottom</a></span> - returns the bottom edge coordinate of the specified object.</div>
+      <div class="b-body"><span class="c-code"><a name="1027941">width</a></span> - returns a number representing the width (in points) of the specified object.</div>
+      <div class="b-body"><span class="c-code"><a name="1027942">height</a></span> - returns a number representing the height (in points) of the specified object.</div>
+      <div class="b-body"><span class="c-code"><a name="1027943">rotation</a></span> - returns a number representing the rotation (in degrees) of the specified object.</div>
+      <div class="b-body"><span class="c-code"><a name="1027944">startPoint,endPoint</a></span> - returns a pair of numeric values (horizontal vertical), separated by spaces, that represent the start point or end point of a line object. Other objects return the top-left point for <span class="c-code">startPoint</span> and the bottom-right point for <span class="c-code">endPoint</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1027945">source</a></span> - returns the source description of the specified object as follows. For:</div>
+      <div class="b1-body1"><a name="1027946">web viewers - returns current URL.</a></div>
+      <div class="b1-body1"><a name="1027947">fields - returns the fully qualified field name (table name::field name).</a></div>
+      <div class="b1-body1"><a name="1027948">text objects - returns the text (does not return merge fields).</a></div>
+      <div class="b1-body1"><a name="1027949">portals - returns the related table name.</a></div>
+      <div class="b1-body1"><a name="1027950">graphics - returns image data such as the image filename.</a></div>
+      <div class="b1-body1"><a name="1059772">charts - returns the XML description of a chart object.</a></div>
+      <div class="b1-body1"><a name="1027951">For all other objects, returns an empty string.</a></div>
+      <div class="b-body"><span class="c-code"><a name="1027952">content</a></span> - returns the content of the specified object as follows. For:</div>
+      <div class="b1-body1"><a name="1027953">web viewers - returns the current content (such as HTML code).</a></div>
+      <div class="b1-body1"><a name="1027954">fields - returns the field data formatted using the specified object's properties.</a></div>
+      <div class="b1-body1"><a name="1027955">text objects - returns the text (including text from merge fields).</a></div>
+      <div class="b1-body1"><a name="1083506">graphics - returns image data such as the name of a file in a </a><span class="g-glosslink">container field</span> if the image is stored (in the field or externally), or the reference to the file if the image is unstored. </div>
+      <div class="b1-body1"><a name="1083507">charts - returns the bitmap representation of a chart object.</a></div>
+      <div class="b1-body1"><a name="1027957">For all other objects, returns an empty string.</a></div>
+      <div class="b-body"><span class="c-code"><a name="1027958">enclosingObject</a></span> - returns <span class="c-code">objectName</span> of the enclosing layout object. Otherwise, returns an empty string. Only groups, tab panels, slide panels, popover buttons, popovers, and portals can contain other objects.</div>
+      <div class="b-body"><span class="c-code"><a name="1027959">containedObjects</a></span> - returns a list of named objects contained within <span class="c-code">objectName</span>. Only groups, tab panels, slide panels, popover buttons, popovers, and portals can contain other objects.</div>
+      <div class="b-body"><span class="c-code"><a name="1083255">isobjecthidden</a></span> - returns <span class="o-onscreen">1</span> (True) if <span class="c-code">objectName</span> is hidden for the current record. Otherwise, returns <span class="o-onscreen">0</span> (False). Returns <span class="o-onscreen">1</span> for objects other than popovers that are to the right of the layout boundary.</div>
+      <div class="hs1-headsub1"><a name="1083381">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1083387">If objects are set to auto-resize, attributes returned are based on the resized bounds of the object in its current state.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1027962">If objects are located above the status toolbar, negative coordinate values are returned.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1049434">When </a><span class="c-code">repetitionNumber</span> or <span class="c-code">portalRowNumber</span> is 0, the function behaves as if the parameter was not specified. For <span class="c-code">portalRowNumber</span>, the function returns data from the first portal row. For <span class="c-code">repetitionNumber</span>, the function acts on the first repetition (for returning <span class="c-code">content</span> or <span class="c-code">source</span>) or acts on the entire field as a whole (for returning <span class="c-code">bounds</span>). Both parameters are necessary because you must be able to reference a particular field repetition within a particular portal row.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1049435"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1027965">GetLayoutObjectAttribute("CancelButton";"objectType")</a></span> returns <span class="o-onscreen">button </span>(if the button was created in a new file or a file after it was converted), returns <span class="o-onscreen">button group </span>(if the button is associated with a button action or script and was converted in a file from a previous version of FileMaker Pro), or returns <span class="o-onscreen">text</span> (if the button isn’t associated with a button action or script and was converted in a file from a previous version of FileMaker Pro).</div>
+      <div class="b-body"><span class="c-code"><a name="1027966">GetLayoutObjectAttribute("CancelButton";"bounds")</a></span> returns <span class="o-onscreen">138 24 391 38 0</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1027967"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1027971">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1027975">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1027979">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1027983">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1027987">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1027991">Using operators in formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="edit_layout.10.12.html#1066667" name="1027995">Naming objects</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

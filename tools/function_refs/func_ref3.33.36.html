@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a number between zero and one, including zero, but not including one." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Random</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.37.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.35.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029202">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029202">Functions reference</a> &gt; 
+      <a href="func_ref3.33.23.html#1029202">Number functions</a> &gt; 
+      <b>Random</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Random</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1054659"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1054660">Returns a number between zero and one, including zero, but not including one. </a></div>
+      <div class="ffh-funcformathead">Format<a name="1054661"> </a></div>
+      <div class="b-body"><a name="1029204">Random</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029205"> </a></div>
+      <div class="b-body"><a name="1029206">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029207"> </a></div>
+      <div class="b-body"><a name="1029208">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1057888"> </a></div>
+      <div class="or-origin"><a name="1057889">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029209"> </a></div>
+      <div class="b-body"><a name="1029210">Returns a pseudo-random number in the range (0,1). FileMaker Pro generates a new random number when you:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029212">insert the </a><span class="c-code">Random</span> function into a <span class="g-glosslink"><a href="glossary.html#1027744">formula</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029213">cause a formula containing the </a><span class="c-code">Random</span> function to be reevaluated (by changing data in any of the fields the formula uses)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029216">display or access a </a><span class="g-glosslink"><a href="glossary.html#1027566">calculation field</a></span> defined to have an <span class="g-glosslink"><a href="glossary.html#1028220">unstored</a></span> result</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1083211"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1083223">Int ( Dice::NumSides * Random ) + 1</a></span> returns a randomly chosen side of a single die.</div>
+      <div class="b-body"><a name="1083224">The following script calculates multiple die rolls, adds the rolls to a single variable, then displays the results in a custom dialog.</a></div>
+      <div class="co-code"><a name="1083212">Loop<br />	Set Variable [$ROLL; Value:$ROLL + ( Int ( Test::NumSides * Random ) + 1 )]<br />	Set Variable [$COUNTER; Value:$COUNTER + 1]<br />	Exit Loop If [$COUNTER = Dice::NumDice]<br />End Loop<br />Show Custom Dialog [$ROLL]</a></div>
+      <div class="rh-relatedhead">Related topics<a name="1083213"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1083217">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029227">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029231">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029235">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029239">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029243">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="mobile phone, cell phone, mobile network,FileMaker Go" />
+    <meta name="description" content="Returns the current latitude, longitude, and altitude on an iOS device running FileMaker Go. Returns the horizontal and vertical accuracy of the values returned and the number of minutes since the values were returned. The location is obtained via GPS, cel ..." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>LocationValues</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.23.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.21.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1067545">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1067545">Functions reference</a> &gt; 
+      <a href="func_ref3.33.20.html#1067545">Mobile functions</a> &gt; 
+      <b>LocationValues</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">LocationValues</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1067546"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1067547">Returns the current latitude, longitude, and altitude on an iOS device running FileMaker Go. Returns the horizontal and vertical accuracy of the values returned and the number of minutes since the values were returned. The location is obtained via GPS, cellular network, or Wi-Fi.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1067548"> </a></div>
+      <div class="ff-funcformat"><a name="1067549">LocationValues (accuracy {; timeout})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1067550"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1079275">accuracy</a></span> - any numeric expression or field containing a number that represents a distance in meters.</div>
+      <div class="b-body"><span class="c-code"><a name="1079309">timeout</a></span> - any numeric expression or field containing a number that represents the most time it will take to fetch the location. Measured in seconds, the default value is 60.</div>
+      <div class="b-body"><a name="1079277">Parameters in curly braces { } are optional.</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1067552"> </a></div>
+      <div class="b-body"><a name="1067553">Text</a></div>
+      <div class="orh-originhead">Originated in<a name="1067554"> </a></div>
+      <div class="or-origin"><a name="1067555">FileMaker Pro 12.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1079370"> </a></div>
+      <div class="b-body"><a name="1080848">Returns and caches the current location of a device in the format:</a></div>
+      <div class="b-body"><span class="c-code"><a name="1080913">latitude¶longitude¶altitude¶horizontal accuracy (+/- accuracy in meters)¶ vertical accuracy (+/- accuracy in meters)¶age of value in minutes (0.2 would represent 0.2 minutes or 12 seconds ago)</a></span></div>
+      <div class="b-body"><a name="1079397">You can use the GetValue function to retrieve any of the six carriage return-delimited values above.</a></div>
+      <div class="b-body"><span class="c-code"><a name="1079474">LocationValues </a></span>fetches the location values until the requested accuracy is met or until<span class="c-code"> timeout</span>. If you cancel the process, FileMaker Go returns the most accurate location in the cache (if any). If no location is received, FileMaker Go returns an empty string.</div>
+      <div class="b-body"><a name="1079326">In FileMaker Pro, </a><span class="c-code">LocationValues</span> returns an empty string.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1079554">To avoid excessive battery consumption and repeat fetches, specify a larger number for accuracy and a smaller number for timeout.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1067558"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1079423">LocationValues</a></span> returns the following location for a device:</div>
+      <div class="co-code"><a name="1080403">37.406489</a></div>
+      <div class="co-code"><a name="1080404">-121.983428</a></div>
+      <div class="co-code"><a name="1080405">0.000000</a></div>
+      <div class="co-code"><a name="1080406">65</a></div>
+      <div class="co-code"><a name="1080407">-1</a></div>
+      <div class="co-code"><a name="1080350">0.001236</a></div>
+      <div class="rh-relatedhead">Related topics<a name="1067670"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1067674">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1067692">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="func_ref3.33.21.html#1067125" name="1080231">Location</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

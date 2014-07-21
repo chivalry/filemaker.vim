@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Executes an SQL query statement for the specified table occurrence within a FileMaker Pro database." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>ExecuteSQL</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.7.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.5.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1062707">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1062707">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1062707">Logical functions</a> &gt; 
+      <b>ExecuteSQL</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">ExecuteSQL</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1062708"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1062709">Executes an SQL query statement for the specified table occurrence within a FileMaker Pro database.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1062710"> </a></div>
+      <div class="ff-funcformat"><a name="1062711">ExecuteSQL(sqlQuery; fieldSeparator; rowSeparator {;arguments...})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1081778"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1081779">sqlQuery</a></span> - an SQL SELECT statement. The statement can include a Union clause that combines the results of two queries. The statement can contain programmatically generated SQL (dynamic parameters) that indicate where optional arguments are to be used in the query. Use the question mark character (?) to specify a dynamic parameter.</div>
+      <div class="b-body"><span class="c-code"><a name="1063062">fieldSeparator</a></span> - the character string used as a separator between fields in the result. If an empty string is specified, the separator is a comma. The field separator is not displayed after the last field in the result.</div>
+      <div class="b-body"><span class="c-code"><a name="1063245">rowSeparator </a></span>- the character string used as a separator between records in the result. If an empty string is specified, the separator is a carriage return. The row separator is not displayed after the last row in the result.</div>
+      <div class="b-body"><span class="c-code"><a name="1062920">arguments</a></span>- one or more <span class="g-glosslink"><a href="glossary.html#1027690">expressions</a></span> that are evaluated and used as values for the dynamic parameters in the query statement.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1062715"> </a></div>
+      <div class="b-body"><a name="1062716">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1062717"> </a></div>
+      <div class="or-origin"><a name="1062718">FileMaker Pro 12.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1062719"> </a></div>
+      <div class="b-body"><a name="1083776">ExecuteSQL enables you to execute SQL SELECT statements containing dynamic parameters to safely query FileMaker Pro databases in order to avoid security vulnerabilities through injection attacks.</a></div>
+      <div class="b-body"><a name="1083852">ExecuteSQL does not recognize relationships created in FileMaker Pro, which gives you flexibility to define relationships in SQL statements and retrieve data from any table, independent of the layout context.</a></div>
+      <div class="b-body"><a name="1083731">ExecuteSQL cannot be used with SQL statements that modify data or the database schema (such as the Insert Into or Delete Table commands).</a></div>
+      <div class="b-body"><a name="1063036">If an error occurs during query parsing or execution, FileMaker Pro returns </a><span class="o-onscreen">?</span>.</div>
+      <div class="hs1-headsub1"><a name="1083807">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1084116">To apply the correct formatting to dates in an SQL query, use the DATE statement. If you do not use the DATE statement, ExecuteSQL treats dates as literal strings.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1084122">FileMaker Pro returns date, time, and number data in Unicode/SQL format, not in the locale of the operating system or the file.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1084117">ExecuteSQL accepts only the SQL-92 syntax ISO date and time formats with no braces. ExecuteSQL does not accept the ODBC/JDBC format date, time, and timestamp constants in braces.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1083815">For more details about SELECT statement syntax, supported SQL statements, expressions, and Catalog functions, see the </a><span class="bt-booktitle">FileMaker ODBC and JDBC Guide</span> and the <span class="bt-booktitle">FileMaker SQL Reference</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1083808"> </a></div>
+      <div class="b-body"><a name="1063506">Suppose a database contains two tables, Employees and Salaries, which are related through the EmpID field.</a></div>
+      <div class="b-body"><a name="1064548"><img class="Default" src="../images/func_ref3.33.6.1.png" width="671" height="187" style="float: none; left: 0.0; top: 0.0;" alt="List displaying Employees and Salaries" /></a></div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1081745">The Salaries::Salary field is a number field.</a></div>
+      <div class="b-body"><a name="1084071">You want to add a field to the Employees table that displays the percentage of an employee’s salary relative to the total salaries in a department. Though you could use a calculation in FileMaker Pro to generate this value, you can use the ExecuteSQL function to specify this query using dynamic parameters.</a></div>
+      <div class="b-body"><a name="1081746">Define a calculation field in the Employees table, then use the ExecuteSQL function to specify the following query statement:</a></div>
+      <div class="b-body"><span class="c-code"><a name="1081747">100 * Salaries::Salary /  ExecuteSQL ( “select sum ( S.salary ) from Employees E join Salaries S on E.EmpID = S.EmpID where E.Department = ?”; “”; “”; Employees::Department )</a></span></div>
+      <div class="rh-relatedhead">Related topics<a name="1062728"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1062732">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1062736">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1062740">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1062744">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1062748">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1062752">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

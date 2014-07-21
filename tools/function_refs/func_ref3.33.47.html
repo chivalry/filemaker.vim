@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the value of summaryField for the current range of records when the database file is sorted by breakField." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>GetSummary</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.48.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.46.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029667">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029667">Functions reference</a> &gt; 
+      <a href="func_ref3.33.46.html#1029667">Summary functions</a> &gt; 
+      <b>GetSummary</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">GetSummary</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047838"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047839">Returns the value of </a><span class="c-code">summaryField</span> for the current range of <span class="g-glosslink"><a href="glossary.html#1028030">records</a></span> when the <span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span> is <span class="g-glosslink"><a href="glossary.html#1028117">sorted</a></span> by <span class="c-code">breakField</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1029668"> </a></div>
+      <div class="ff-funcformat"><a name="1029669">GetSummary(summaryField;breakField)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029670"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029674">summaryField</a></span> - <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> of type <span class="g-glosslink"><a href="glossary.html#1028154">summary</a></span>, or an <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> that returns a reference to one.</div>
+      <div class="b-body"><span class="c-code"><a name="1029676">breakField</a></span> - field, or an expression that returns a reference to one. To calculate a <span class="g-glosslink"><a href="glossary.html#1027775">grand summary</a></span> value, use the same summary field for both the summary field and the <span class="g-glosslink"><a href="glossary.html#1027552">break field</a></span> parameters.</div>
+      <div class="b-body"><span class="c-code"><a name="1029678">GetSummary</a></span> must be set up in the same table as the break field.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029679"> </a></div>
+      <div class="b-body"><a name="1029680">number, date, time, timestamp</a></div>
+      <div class="orh-originhead">Originated in<a name="1057966"> </a></div>
+      <div class="or-origin"><a name="1057967">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029681"> </a></div>
+      <div class="b-body"><a name="1029684">This function produces </a><span class="g-glosslink"><a href="glossary.html#1028151">subsummary values</a></span>. If the database file isn’t sorted by the break field, the result is blank.</div>
+      <div class="b-body"><a name="1029687">When a summary field is also used as the break field, returns the summary field value for the entire </a><span class="g-glosslink"><a href="glossary.html#1027747">found set</a></span> of records (a grand summary value).</div>
+      <div class="b-body"><a name="1029689">Use </a><span class="c-code">GetSummary</span> to capture summary values when you want to:</div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029690">use summary values in a calculation</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029693">display subsummary values in </a><span class="g-glosslink"><a href="glossary.html#1027555">Browse mode</a></span> or in a <span class="g-glosslink"><a href="glossary.html#1047159">body part</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><a name="1029695">Calculations using the </a><span class="c-code">GetSummary</span> function are <span class="g-glosslink"><a href="glossary.html#1028220">unstored</a></span>.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1029700">You can get similar results using a </a><span class="g-glosslink"><a href="glossary.html#1028087">self-join</a></span> relationship and <span class="zh-hyper"><a href="func_ref1.31.1.html#1027500">Aggregate functions</a></span>. For more information, see <span class="zh-hyper"><a href="relational.11.21.html#1028942">Summarizing data in portals</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1029704"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029705">GetSummary(Total Sales;Country)</a></span> returns a summary of all records pertaining to the value in the Country field.</div>
+      <div class="b-body"><span class="c-code"><a name="1029706">GetSummary(Total Sales, if(Number of Countries &gt; 1, Country, Sales Zone))</a></span> returns a summary of Total Sales by Country if Number of Countries is greater than 1. Otherwise, it returns a summary of Total Sales by Sales Zone.</div>
+      <div class="b-body"><span class="c-code"><a name="1029707">GetSummary(Total Sales;Total Sales)</a></span> produces a summary of all records (similar to using a summary field, which is a total of total sales).</div>
+      <div class="b-body"><span class="c-code"><a name="1029708">If(ThisCharge &gt; 3 * GetSummary(AvgCharge;Customer), “Verify this charge”, “ “)</a></span> displays <span class="o-onscreen">Verify this charge</span> if the current charge is greater than three times the average charge.</div>
+      <div class="rh-relatedhead">Related topics<a name="1029709"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1029713">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029717">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029721">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029725">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029729">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029733">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

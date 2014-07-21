@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(triggertargetpanel), get trigger target panel" />
+    <meta name="description" content="Returns the index and the object name of the target tab panel or slide panel (the panel to be switched to) when the OnPanelSwitch script trigger is activated." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(TriggerTargetPanel)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.95.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.93.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1053326">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1053326">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1053326">Get functions</a> &gt; 
+      <b>Get(TriggerTargetPanel)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(TriggerTargetPanel)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1053327"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1053240">Returns the index and the object name of the target </a><span class="g-glosslink"><a href="glossary.html#1028174">tab panel</a></span> or <span class="g-glosslink"><a href="glossary.html#1047051">slide panel</a></span> (the panel to be switched to) when the <span class="zh-hyper"><a href="script_trigg.38.8.html#1034646">OnPanelSwitch</a></span> <span class="g-glosslink"><a href="glossary.html#1033294">script trigger</a></span> is activated.</div>
+      <div class="ffh-funcformathead">Format<a name="1053345"> </a></div>
+      <div class="ff-funcformat"><a name="1053356">Get(TriggerTargetPanel)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1053436"> </a></div>
+      <div class="b-body"><a name="1053443">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1053490"> </a></div>
+      <div class="b-body"><a name="1053491">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1053492"> </a></div>
+      <div class="b-body"><a name="1053493">FileMaker Pro 12.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1054281"> </a></div>
+      <div class="b-body"><a name="1054285">Use with the </a><span class="zh-hyper"><a href="func_ref2.32.90.html#1053173">Get(TriggerCurrentPanel)</a></span> function. Returns an index value, starting from 1, when running a script triggered by the OnPanelSwitch script trigger, and the object name assigned to the tab or slide panel. Returns 0 if the panel is invalid or if Get(TriggerTargetPanel) is not used with the OnPanelSwitch script trigger.</div>
+      <div class="b-body"><a name="1054329">You can use the </a><span class="zh-hyper"><a href="func_ref3.33.62.html#1030565">GetValue</a></span> function to extract the value you want to use from the index value returned by Get(TriggerTargetPanel).</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1074242">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1053646"> </a></div>
+      <div class="b-body"><a name="1075880">When the tab or slide panel to be switched to is number 2, named “Products,” </a><span class="c-code">Get(TriggerTargetPanel)</span> returns:</div>
+      <div class="co-code"><a name="1075881">2</a></div>
+      <div class="co-code"><a name="1075882">Products</a></div>
+      <div class="rh-relatedhead">Related topics<a name="1075883"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1053865">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1053869">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1053873">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1053877">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1053881">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1053885">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

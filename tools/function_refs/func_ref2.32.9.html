@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="Get(ActiveModifierKeys), get active modifier keys, get modifier key, get current modifier keys, get active modifier key, active modifier keys" />
+    <meta name="description" content="Returns a number representing the keyboard modifier keys (for example, Control+Shift) that are being pressed." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(ActiveModifierKeys)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.10.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.8.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028465">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028465">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1028465">Get functions</a> &gt; 
+      <b>Get(ActiveModifierKeys)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(ActiveModifierKeys)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1041213"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1041214">Returns a number representing the keyboard modifier keys (for example, Control+Shift) that are being pressed.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1028466"> </a></div>
+      <div class="ff-funcformat"><a name="1028467">Get(ActiveModifierKeys)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028468"> </a></div>
+      <div class="b-body"><a name="1028469">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028470"> </a></div>
+      <div class="b-body"><a name="1028471">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1050590"> </a></div>
+      <div class="or-origin"><a name="1050591">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028472"> </a></div>
+      <div class="b-body"><a name="1028473">The number returned is calculated by summing numbers representing each modifier key being pressed. The values assigned to the keys are:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028474">Shift = 1</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028475">Caps Lock = 2</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028476">Ctrl (Windows) and Control (OS X) = 4</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028477">Alt (Windows) and Option (OS X) = 8</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028478">Command (OS X) = 16</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1028483">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1028484"> </a></div>
+      <div class="b-body"><a name="1028485">Returns the number </a><span class="o-onscreen">9</span> when Shift+Alt is pressed on a computer running Windows.</div>
+      <div class="b-body"><a name="1028486">You could use this function in a script that includes a custom dialog box script step (with an </a><span class="o-onscreen">OK</span> and <span class="o-onscreen">Cancel</span> button) to perform some special action if the user presses the Alt (or Option) key while clicking <span class="o-onscreen">OK</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028487"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028491">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028495">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028499">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1052347">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1052352">Defining calculation fields</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

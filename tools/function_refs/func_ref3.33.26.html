@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the number of ways to uniquely choose numberOfChoices items from a set of size setSize." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Combination</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.27.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.25.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028762">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028762">Functions reference</a> &gt; 
+      <a href="func_ref3.33.23.html#1028762">Number functions</a> &gt; 
+      <b>Combination</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Combination</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1046196"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1046197">Returns the number of ways to uniquely choose </a><span class="c-code">numberOfChoices</span> items from a set of size <span class="c-code">setSize</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1028763"> </a></div>
+      <div class="ff-funcformat"><a name="1028764">Combination(setSize;numberOfChoices) </a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028765"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028768">setSize</a></span> - any numeric <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> or <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> containing a non-negative numeric expression</div>
+      <div class="b-body"><span class="c-code"><a name="1028769">numberOfChoices</a></span> - any numeric expression or field containing a non-negative numeric expression</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028770"> </a></div>
+      <div class="b-body"><a name="1028771">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1056751"> </a></div>
+      <div class="or-origin"><a name="1056752">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028772"> </a></div>
+      <div class="b-body"><a name="1028773">This function is useful in statistics, combinatorics, and polynomial expansions. The values returned by this function are referred to as combination coefficients. They form Pascal’s triangle.</a></div>
+      <div class="gr-graphicanchor"><a name="1028777"><img class="Default" src="../images/func_ref3.33.26.1.png" width="354" height="35.5" style="float: none; left: 0.0; top: 0.0;" alt="Equation" /></a></div>
+      <div class="feh-funcexamhead">Examples<a name="1028778"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028779">Combination(5;2)</a></span> returns <span class="o-onscreen">10</span> for a set consisting of {a, b, c, d, e} because the unique choices when choosing two at a time are {ab, ac, ad, ae, bc, bd, be, cd, ce, de}. </div>
+      <div class="b-body"><span class="c-code"><a name="1028780">(13 * 12 * Combination(4;2) * Combination(4;3)) / Combination(52;5)</a></span> returns <span class="o-onscreen">0.00144057...</span>, which is the probability of being dealt a full-house in 5-card poker (less than a 1% chance).</div>
+      <div class="rh-relatedhead">Related topics<a name="1028781"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028785">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028789">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028793">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028797">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028801">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028805">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

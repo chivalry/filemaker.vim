@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(lasterror), get last error, get error, get recent error" />
+    <meta name="description" content="Returns a number representing the error, if any, in the execution of the most recently executed script step." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(LastError)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.47.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.45.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029752">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029752">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1029752">Get functions</a> &gt; 
+      <b>Get(LastError)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(LastError)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1041269"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1041270">Returns a number representing the error, if any, in the execution of the most recently executed </a><span class="g-glosslink"><a href="glossary.html#1028078">script step</a></span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1029753"> </a></div>
+      <div class="ff-funcformat"><a name="1029754">Get(LastError)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029755"> </a></div>
+      <div class="b-body"><a name="1029756">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029757"> </a></div>
+      <div class="b-body"><a name="1029758">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1050701"> </a></div>
+      <div class="or-origin"><a name="1050702">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029759"> </a></div>
+      <div class="b-body"><a name="1029761">Use this function to detect and control the outcome of errors. See </a><span class="zh-hyper"><a href="error_codes.html#1030072">FileMaker Pro error codes</a></span>.</div>
+      <div class="hs1-headsub1"><a name="1029765">Notes </a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029767">OS X: In FileMaker Pro, if an error occurs while performing an </a><span class="g-glosslink"><a href="glossary.html#1027516">AppleScript</a></span> from the Manage Scripts feature, the AppleScript error code will be returned.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029769">For ODBC imports and Execute SQL script steps, if an error occurs while performing a </a><span class="g-glosslink"><a href="glossary.html#1028126">SQL</a></span> query, returns FileMaker error 1408. For detailed information about the error, use the <span class="zh-hyper"><a href="func_ref2.32.48.html#1029861">Get(LastODBCError) function</a></span>. If there is no information about the error, returns FileMaker error 1409.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029772">For working with ODBC data sources in the relationships graph, returns FileMaker error 1408.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1048999">Some </a><span class="g-glosslink"><a href="glossary.html#1033294">script triggers</a></span> allow for the activating command or event to be canceled if the script executed by the script trigger returns a False value. When a command or event is canceled this way, the error code is set to 20.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1045683">When you perform a script that uses this function with control script steps, the control script steps do not clear the last error condition reported by FileMaker Pro.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1048981">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="nt-notetip">
+        <span class="zan-autonum">Tip  </span><a name="1029780">To create a script that responds to errors without displaying alerts, use this function with the </a><span class="zh-hyper"><a href="scripts_ref1.36.15.html#1028105">Set Error Capture script step</a></span> with the <span class="o-onscreen">On</span> option.</div>
+      <div class="feh-funcexamhead">Examples<a name="1029782"> </a></div>
+      <div class="b-body"><a name="1029783">Returns </a><span class="o-onscreen">0</span> when the most recent script step executed successfully.</div>
+      <div class="b-body"><a name="1029787">Returns </a><span class="o-onscreen">401</span> when no records are found after the <span class="zh-hyper"><a href="scripts_ref1.36.79.html#1030378">Perform Find script step</a></span> has been executed.</div>
+      <div class="rh-relatedhead">Related topics<a name="1029788"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1029792">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029796">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029800">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029804">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029808">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029812">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

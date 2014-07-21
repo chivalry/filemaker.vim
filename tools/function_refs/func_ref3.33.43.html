@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Allows a value in non-repeatingField to be used with every repetition in a repeating field." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Extend</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.44.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.42.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029496">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029496">Functions reference</a> &gt; 
+      <a href="func_ref3.33.42.html#1029496">Repeating functions</a> &gt; 
+      <b>Extend</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Extend</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047799"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047800">Allows a value in </a><span class="c-code">non-repeatingField</span> to be used with every repetition in a repeating field.</div>
+      <div class="ffh-funcformathead">Format<a name="1029497"> </a></div>
+      <div class="ff-funcformat"><a name="1029498">Extend(non-repeatingField)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029499"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029502">non-repeatingField</a></span> - any non-<span class="g-glosslink"><a href="glossary.html#1028056">repeating field</a></span> (a <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> defined to contain only one value), or an <span class="g-glosslink">expression</span> that returns a reference to one</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029503"> </a></div>
+      <div class="b-body"><a name="1029504">text, number, date, time, timestamp, container</a></div>
+      <div class="orh-originhead">Originated in<a name="1057942"> </a></div>
+      <div class="or-origin"><a name="1057943">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029505"> </a></div>
+      <div class="b-body"><a name="1029506">Use the </a><span class="c-code">Extend</span> function with calculations involving both repeating and non-repeating fields. Without the <span class="c-code">Extend</span> function, the value in <span class="c-code">non-repeatingField</span> is used only with the first repetition in the repeating field.</div>
+      <div class="feh-funcexamhead">Examples<a name="1029507"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029508">Extend(TaxRate) * Quantity * ItemPrice</a></span> returns <span class="o-onscreen">1.197</span>, <span class="o-onscreen">.6606</span>, and <span class="o-onscreen">1.497</span> when <span class="c-code">TaxRate</span> contains <span class="o-onscreen">.06</span>; the repeating field Quantity contains <span class="o-onscreen">1</span>, <span class="o-onscreen">3</span>, and <span class="o-onscreen">5</span>; and the repeating field ItemPrice contains <span class="o-onscreen">19.95</span>, <span class="o-onscreen">3.67</span>, and <span class="o-onscreen">4.99</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1029509">Item Count * Extend(if(Company Size &gt; 100; Reduced Price; Price)) </a></span>returns <span class="o-onscreen">$1250</span>, <span class="o-onscreen">$500</span>, and <span class="o-onscreen">$750</span> when <span class="c-code">Reduced Price</span> contains $50; the repeating field <span class="c-code">Item Count</span> contains 25, 10, and 15; and <span class="c-code">Company Size</span> is greater than 100. If <span class="c-code">Company Size</span> is less than 100 and <span class="c-code">Price</span> contains $100, this calculation returns <span class="o-onscreen">$2500</span>, <span class="o-onscreen">$1000</span>, and <span class="o-onscreen">$1500</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1029510"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1029514">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029518">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029522">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029526">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029530">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029534">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

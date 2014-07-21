@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the last valid, non-blank value in field." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Last</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.46.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.44.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029583">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029583">Functions reference</a> &gt; 
+      <a href="func_ref3.33.42.html#1029583">Repeating functions</a> &gt; 
+      <b>Last</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Last</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047823"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047824">Returns the last valid, non-blank value in </a><span class="c-code">field</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1029584"> </a></div>
+      <div class="ff-funcformat"><a name="1029585">Last(field)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029586"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029590">field</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028056">repeating field</a></span> or <span class="g-glosslink"><a href="glossary.html#1028036">related field</a></span>, or an <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> that returns a reference to a repeating <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> or related field</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029592"> </a></div>
+      <div class="b-body"><a name="1029593">text, number, date, time, timestamp, container</a></div>
+      <div class="orh-originhead">Originated in<a name="1057958"> </a></div>
+      <div class="or-origin"><a name="1057959">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029594"> </a></div>
+      <div class="b-body"><a name="1029595">If </a><span class="c-code">field</span> specifies a repeating field then it returns the last non-blank repetition. If <span class="c-code">field</span> specifies a related field, then it returns the last non-blank value in the related set.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1029598">The last related value will depend on the way </a><span class="g-glosslink"><a href="glossary.html#1028039">related records</a></span> are <span class="g-glosslink"><a href="glossary.html#1028117">sorted</a></span>. If the related records are not sorted, then the <span class="c-code">Last</span> function returns a value based on the creation order of the <span class="g-glosslink"><a href="glossary.html#1028030">records</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1029600"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029601">Last(ParcelBids)</a></span> returns <span class="o-onscreen">1500</span> if ParcelBids is a number field defined to repeat with ten values and contains the values 2500, 1200, and 1500.</div>
+      <div class="b-body"><span class="c-code"><a name="1029602">Last(Payments::PaymentDate)</a></span> returns the payment date in the last matching record in the Payments table.</div>
+      <div class="b-body"><span class="c-code"><a name="1029603">Last(if(IsEmpty(Company);PersonalPhone;WorkPhone))</a></span> returns the last non-empty phone number from the repeating field PersonalPhone when the Company field is empty. If the Company field is not empty, the function returns the last non-empty phone number from the repeating field WorkPhone.</div>
+      <div class="rh-relatedhead">Related topics<a name="1029604"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1029608">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029612">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029616">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029620">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029624">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029628">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

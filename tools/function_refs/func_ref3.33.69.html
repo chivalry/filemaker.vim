@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a text result containing numberOfValues from the list of values in text, counting from the left." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>LeftValues</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.70.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.68.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1030877">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1030877">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1030877">Text functions</a> &gt; 
+      <b>LeftValues</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">LeftValues</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1048655"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048656">Returns a text result containing </a><span class="c-code">numberOfValues</span> from the list of values in <span class="c-code">text</span>, counting from the left.</div>
+      <div class="ffh-funcformathead">Format<a name="1030878"> </a></div>
+      <div class="ff-funcformat"><a name="1030879">LeftValues(text;numberOfValues)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1030880"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030883">text</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span> or text <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span></div>
+      <div class="b-body"><span class="c-code"><a name="1030884">numberOfValues</a></span> - any numeric expression or field containing a number</div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1030888">See </a><span class="zh-hyper"><a href="func_ref1.31.34.html#1028995">Design functions</a></span> for information about literal text parameters.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030889"> </a></div>
+      <div class="b-body"><a name="1030890">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1057156"> </a></div>
+      <div class="or-origin"><a name="1057157">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1030891"> </a></div>
+      <div class="b-body"><a name="1030893">Values are text items separated by carriage returns. A value can be empty, a single character, a word, a sentence, or a paragraph. When you press Return you start creating a new value. The last value will be recognized with or without a carriage return.</a></div>
+      <div class="b-body"><a name="1030894">Each returned value ends with a carriage return, allowing lists to be easily concatenated.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1030895"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030896">LeftValues(“Plaid¶Canvas¶Suitcase”;2)</a></span> returns</div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030897">Plaid</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030898">Canvas</a></span></div>
+      <div class="b-body"><span class="c-code"><a name="1030899">LeftValues(list;1)</a></span> returns </div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030900">Sophie</a></span></div>
+      <div class="b-body"><a name="1030901">when the text being evaluated contains</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1030902">Sophie</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1030903">Bill</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="rh-relatedhead">Related topics<a name="1030904"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030908">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030912">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030916">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030920">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030924">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030928">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

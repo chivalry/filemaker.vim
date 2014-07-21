@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the file metadata of the specified container field." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>GetContainerAttribute</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.16.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.14.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1063605">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1063605">Functions reference</a> &gt; 
+      <a href="func_ref1.31.12.html#1063605">Container functions</a> &gt; 
+      <b>GetContainerAttribute</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">GetContainerAttribute</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1063606"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1063607">Returns the file metadata of the specified container field.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1050786"> </a></div>
+      <div class="ff-funcformat"><a name="1050793">GetContainerAttribute(sourceField;attributeName)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1050800"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1050819">sourceField</a></span> - the name of a container field.</div>
+      <div class="b-body"><span class="c-code"><a name="1050843">attributeName </a></span>- the name of a supported attribute (see below).</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1050859"> </a></div>
+      <div class="b-body"><a name="1050870">text, number, date, time, timestamp, container</a></div>
+      <div class="orh-originhead">Originated in<a name="1050883"> </a></div>
+      <div class="or-origin"><a name="1050898">FileMaker Pro 13.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1063362"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1063363">Some attributes may not return a result. For example, the values for the latitude and longitude of a photo may not be available, or some audio metadata like album art may not be available because the metadata is stored outside the audio file. Some individual attributes in the group attribute </a><span class="c-code">all</span> may not be applicable in some circumstances.</div>
+      <div class="hs1-headsub1"><a name="1053728">Attributes</a></div>
+      <div class="ta-tableanchor"><a name="1058970"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1058709">Attribute</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1058711">Returns</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1058713">Data type returned</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1058715">General</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058717"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058719"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058721">filename</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058723">The name of the file inserted into the container field.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058725">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058727">MD5</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058729">The result of applying the cryptographic hash function MD5 to a file inserted into the container field or a file referenced by a container field.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058731">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058733">storageType</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058735">The method used to store the data in the container field: </a><span class="o-onscreen">Embedded</span>,<span class="o-onscreen"> External (Secure)</span>,<span class="o-onscreen"> External (Open)</span>,<span class="o-onscreen"> File Reference</span>,<span class="o-onscreen"> Text</span>. </div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058737">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058739">fileSize</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058741">The size (in bytes) of the file inserted into the container field.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058743">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058745">internalSize</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058747">The amount (in bytes) of the space inside the database file that is occupied by the container field. </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058749">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058751">externalSize</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058753">The amount (in bytes) of the space that is stored externally by the container field. This is either the size of the referenced file or the total size of all files in the container field (set up for open or secure storage).</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058755">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058757">externalFiles</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058759">A list of the external files associated with the container field (either files using open or secure storage or a file reference).</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058761">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1061231"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1061233"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1061235"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1058775">Images</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058777"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058779"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058781">width</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058783">A number representing the width of the image in pixels.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058785">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058787">height</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058789">A number representing the height of the image in pixels. </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058791">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058793">dpiWidth</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058795">A number representing the horizontal DPI of the image. </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058797">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058799">dpiHeight</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058801">A number representing the vertical DPI of the image. </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058803">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058805">transparency</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1063758">1</a></span> if the image has an <span class="g-glosslink"><a href="glossary.html#1050983">alpha channel</a></span>, otherwise returns <span class="o-onscreen">0</span>.</div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058809">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064086"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064088"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064090"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1058811">Photos</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058813"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058815"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058817">orientation</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058819">A number representing the orientation of the photo: <br /></a><span class="o-onscreen">1</span> <span class="o-onscreen">(Normal)</span> <br /><span class="o-onscreen">2</span> <span class="o-onscreen">(Flipped horizontally)</span> <br /><span class="o-onscreen">3</span> <span class="o-onscreen">(Rotated 180 degrees)</span> <br /><span class="o-onscreen">4</span> <span class="o-onscreen">(Flipped vertically)<br />5</span> <span class="o-onscreen">(Rotated 90 degrees counterclockwise and flipped vertically)</span> <br /><span class="o-onscreen">6</span> <span class="o-onscreen">(Rotated 90 degrees counterclockwise)<br />7</span> <span class="o-onscreen">(Rotated 90 degrees clockwise and flipped vertically)</span> <br /><span class="o-onscreen">8</span> <span class="o-onscreen">(Rotated 90 degrees clockwise)</span></div>
+            <div class="td-tabledata"><a name="1059279">Note: </a>Photos that were inserted using earlier versions of FileMaker Pro are not automatically oriented; for such photos, <span class="o-onscreen">not applied </span>is appended to the result. For example, <span class="o-onscreen">3</span> <span class="o-onscreen">(Rotated 180 degrees), not applied</span>.</div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058821">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058823">created</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058825">The earliest available timestamp for the photo.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058827">timestamp</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1059226">modified</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059228">The latest available timestamp for the photo. If the photo has never been modified, an empty string is returned.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059230">timestamp</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058829">latitude</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="b-body"><a name="1058831">The latitude of the location of the photo.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058833">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058835">longitude</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058837">The longitude of the location of the photo.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058839">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058841">make</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058843">The manufacturer of the camera used for the photo.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058845">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058847">model</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058849">The camera model used for the photo.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058851">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064092"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064094"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064096"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1058853">Audio</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058855"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058857"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059596"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="n-note">
+              <span class="zan-autonum">Note  </span><a name="1059598">Only MP3 and M4A files return results.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059600"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058859">title</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058861">The title of the audio.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058863">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058865">artist</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058867">The name of the performer of the audio.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058869">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058871">album</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058873">The name of the album containing the audio. </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058875">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058877">year</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058879">The year the audio was released.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058881">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058883">track</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058885">The track number and count of the audio. For example, </a><span class="o-onscreen">3/12</span>, or <span class="o-onscreen">3</span> if the track count is not available.</div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058887">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058889">genre</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058891">The genre of the audio.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058893">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058895">composer</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058897">The composer of the audio.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058899">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058901">coverArt</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058903">An image of the album cover.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058905">container</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058907">duration</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058909">The duration of the audio. For example, </a><span class="o-onscreen">0:03:16</span>. </div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058911">time</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058913">bitRate</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058915">The number of kilobits per second (kbps) used in the audio. </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058917">number</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064098"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064100"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064102"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1059700">Bar Codes</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059702"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059704"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1059694">barcodeText</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059696">The content of the bar code.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059698">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1059688">barcodeType</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059690">The type of the bar code.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059692">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064104"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064106"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064108"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1059755">Signatures</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059757"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059759"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1059779">signed</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059801">The timestamp when the signature was inserted.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059783">timestamp</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064110"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064112"> </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1064114"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1058931">Groups</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058933"> </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058935"> </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058947">general</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058949">Attributes listed in the General category above pertaining to the container field.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058951">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058953">audio</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058955">Attributes listed in the Audio category above pertaining to the container field.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058957">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058959">image</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058961">Attributes listed in the Images category above pertaining to the container field.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058963">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1058965">photo</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058967">Attributes listed in the Photos category above pertaining to the container field.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1058969">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1060483">barcode</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1060485">Attributes listed in the Bar Codes category above pertaining to the container field.</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1060487">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1060489">signature</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1060728">Attributes listed in the Signatures category above pertaining to the container field.</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1060493">text</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="c-code"><a name="1059374">all</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059376">Attributes in all the categories listed above pertaining to the container field. </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1059372">text</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="hs1-headsub1"><a name="1058574">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1058576">The </a><span class="c-code">internalSize</span> can be much smaller than the <span class="c-code">fileSize</span> (for example, container fields set up for open or secure storage, file references, or compressed files) or much larger than the <span class="c-code">fileSize</span> (for example, container fields created by plug-ins). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1059616">Using the attribute </a><span class="c-code">MD5 </span>allows you to prevent the insertion of duplicated files into a container field regardless of the filename.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1061652">Bar codes and signatures are not considered images.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1059970">For the group attributes </a><span class="c-code">general</span>, <span class="c-code">audio</span>,<span class="c-code"> image</span>,<span class="c-code"> photo</span>, and <span class="c-code">all</span>, attributes are displayed in the format <span class="c-code">attributeName: attributeValue</span> with one attribute per line. Some attributes are displayed differently in order to fit the attribute on one line:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><span class="c-code"><a name="1059404">externalFiles</a></span>. Displays only the number of external files.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><span class="c-code"><a name="1059405">transparency</a></span>. Displays <span class="o-onscreen">1 (True) </span>or <span class="o-onscreen">0 (False)</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><span class="c-code"><a name="1059406">coverArt</a></span>. Displays <span class="o-onscreen">png </span>or <span class="o-onscreen">jpg </span>depending on the type of image.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><span class="c-code"><a name="1059389">bitRate</a></span>. Displays <span class="o-onscreen">kbps </span>after the number. If an audio uses a variable bit rate, (VBR) is appended to the result. For example: Bit Rate: 247 kbps (VBR).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><span class="c-code"><a name="1063779">year</a></span>.<span class="c-code"> </span>Date information may be returned in parentheses after the year. For example: <span class="o-onscreen">Year: 2014 (11/10/2014)</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1063786"> </a></div>
+      <div class="b-body"><a name="1061514">Notice that the attributes in the following examples are enclosed in quotation marks. </a></div>
+      <div class="b-body"><span class="c-code"><a name="1053260">GetContainerAttribute(Image;</a></span>"<span class="c-code">all</span>"<span class="c-code">)</span> returns: </div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053252">[General] </a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053274">Filename: IMG_003.JPG</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053288">Storage Type: Embedded</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053307">MD5: C35A3F668A1FB3F370969399A1FF04FE</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053314">File Size: 1964978</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053321">Internal Size: 1965064</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053328">External Size: 0</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053335">External Files: 0</a></span></div>
+      <div class="b-body"><a name="1053342"> </a></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1053349">[Image]</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061277">Width: 1936</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061278">Height: 2592</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061279">DPI Width: 72</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061280">DPI Height: 72</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061281">Transparency: 0 (False)</a></span></div>
+      <div class="b-body"><a name="1061162"> </a></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061360">[Photo]</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061361">Orientation: 6 (Rotated 90 degrees counterclockwise)</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061408">Created: 11/14/2014 2:40:31 PM</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061415">Modified:</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061422">Latitude: 37.406167</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061429">Longitude: -121.983333</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061436">Make: Apple</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061443">Model: iPhone 4</a></span></div>
+      <div class="b-body"><a name="1061352"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1061098">GetContainerAttribute(Product;</a></span>"<span class="c-code">barcode</span>"<span class="c-code">)</span> returns: </div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061117">[Bar Code] </a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061139">Bar Code Text: 875720001107</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061140">Bar Code Type: UPC-A</a></span></div>
+      <div class="b-body"><a name="1061172"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1061461">GetContainerAttribute(Package;</a></span>"<span class="c-code">signature</span>"<span class="c-code">)</span> returns: </div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061190">[Signature] </a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1061191">Signed: 11/10/2014 11:41:22 AM</a></span></div>
+      <div class="rh-relatedhead">Related topics<a name="1053431"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1053435">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1053439">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1053443">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1053447">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1053451">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1053455">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

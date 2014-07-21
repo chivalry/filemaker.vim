@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns dates in text as field type date, for use in formulas involving dates or date functions." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>GetAsDate</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.56.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.54.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1030250">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1030250">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1030250">Text functions</a> &gt; 
+      <b>GetAsDate</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">GetAsDate</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1048412"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048413">Returns dates in </a><span class="c-code">text</span> as field type date, for use in <span class="g-glosslink"><a href="glossary.html#1027744">formulas</a></span> involving dates or date functions.</div>
+      <div class="ffh-funcformathead">Format<a name="1054582"> </a></div>
+      <div class="ff-funcformat"><a name="1054583">GetAsDate(text)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1054584"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030256">text</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span> or text <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> containing text in the same format as the date on the system where the file was created</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030257"> </a></div>
+      <div class="b-body"><a name="1030258">date</a></div>
+      <div class="orh-originhead">Originated in<a name="1057982"> </a></div>
+      <div class="or-origin"><a name="1057983">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1030259"> </a></div>
+      <div class="b-body"><a name="1030261">Use the </a><span class="c-code">GetAsDate</span> or <span class="c-code">Date</span> function to enter a date <span class="g-glosslink"><a href="glossary.html#1027606">constant</a></span> into a formula. The format of <span class="c-code">text</span> date must be the same as the date format on the system where the file was created. </div>
+      <div class="b-body"><a name="1054588">You can also use this function to convert the number of days to a date. If you specify a number as the parameter, it has to be between 1 (for 1/1/0001) and 1460970 (for 12/31/4000).</a></div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1030264">If the function returns a number instead of a date, go to the Specify Calculation dialog box and make sure the </a><span class="o-onscreen">Calculation result is</span> date.</div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1030265">To avoid errors when using dates, always use four-digit years. For more information about how FileMaker Pro handles two-digit dates, see </a><span class="zh-hyper"><a href="add_view_data.4.22.html#1028976">Conversion of dates with two-digit years</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1030269"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030270">GetAsDate(“03/03/2014”)</a></span> returns <span class="o-onscreen">3/3/2014</span>. You can perform date operations on this result using the <span class="zh-hyper"><a href="func_ref1.31.21.html#1028390">Date function</a></span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1054596">GetAsDate(735516)</a></span> returns <span class="o-onscreen">10/10/2014</span>. The number 735516 specifies the number of days since 1/1/0001.</div>
+      <div class="b-body"><span class="c-code"><a name="1065801">Use the following formula to determine the number of days elapsed between values in two timestamp fields</a></span>:</div>
+      <div class="b-body"><a name="1065802">GetAsDate(EndDate) - GetAsDate(StartDate) </a>returns <span class="o-onscreen">90</span> if the value in the field<span class="c-code"> </span>EndDate is 4/1/2010 1:00 AM and the value in the field<span class="c-code"> </span>StartDate is 1/1/2010 11:15 PM.</div>
+      <div class="rh-relatedhead">Related topics<a name="1030271"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030275">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030279">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030283">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030287">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030291">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030295">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

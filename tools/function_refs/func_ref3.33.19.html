@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the content of the object in which the calculation is defined." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Self</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.20.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.18.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028498">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028498">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1028498">Logical functions</a> &gt; 
+      <b>Self</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Self</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047379"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047380">Returns the content of the object in which the calculation is defined.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1028499"> </a></div>
+      <div class="ff-funcformat"><a name="1028500">Self</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028501"> </a></div>
+      <div class="co-code"><a name="1028502">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028503"> </a></div>
+      <div class="b-body"><a name="1028504">text, number, date, time, timestamp</a></div>
+      <div class="orh-originhead">Originated in<a name="1056729"> </a></div>
+      <div class="or-origin"><a name="1056730">FileMaker Pro 9.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028505"> </a></div>
+      <div class="b-body"><a name="1028506">The </a><span class="c-code">Self</span> function provides a way for a calculation to reference the object with which it is associated without having to explicitly reference the object.</div>
+      <div class="b-body"><a name="1060343">Use </a><span class="c-code">Self</span> to create a single calculation formula that can be applied to different objects. The <span class="c-code">Self</span> function is helpful for conditional formatting calculations and tooltip calculations because it returns the content of the layout object when that object has a value. You can also use the <span class="c-code">Self</span> function in field definition calculations (including auto-enter and validation calculations) to return the value of the corresponding field.</div>
+      <div class="feh-funcexamhead">Examples<a name="1061024"> </a></div>
+      <div class="b-body"><a name="1061012">This example formula can be used in an object’s conditional formatting panel to set text formatting when the number entered in the field is greater than 10.</a></div>
+      <div class="b-body"><span class="c-code"><a name="1060372">self &gt; 10</a></span> returns <span class="o-onscreen">1</span> (True) when applied to a layout field object whose value is greater than 10.</div>
+      <div class="b-body"><a name="1060763">Use the following example in a layout object’s tooltip calculation to display different tooltip text according to whether or not a value less than zero was entered.</a></div>
+      <div class="b-body"><a name="1060774">if(self &lt; 0; "Value is less than zero"; "Value is zero or greater")</a></div>
+      <div class="rh-relatedhead">Related topics<a name="1060741"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028514">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028518">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028522">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028526">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028530">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028534">Using operators in formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="edit_layout.10.13.html#1066700" name="1066413">Defining conditional formatting for layout objects</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

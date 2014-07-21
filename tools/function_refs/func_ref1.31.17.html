@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a thumbnail image of the content in a container field, according to specified values for width and height." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>GetThumbnail</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.18.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.16.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1042953">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1042953">Functions reference</a> &gt; 
+      <a href="func_ref1.31.12.html#1042953">Container functions</a> &gt; 
+      <b>GetThumbnail</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">GetThumbnail</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1040820"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1040821">Returns a thumbnail image of the content in a container field, according to specified values for width and height.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1040822"> </a></div>
+      <div class="ff-funcformat"><a name="1041632">GetThumbnail(field;width;height)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1041637"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1063908">field</a></span> - any text, number, date, time, timestamp, or container field; or any text expression or numeric expression.</div>
+      <div class="b-body"><span class="c-code"><a name="1063909">width</a></span> - the width for the thumbnail.</div>
+      <div class="b-body"><span class="c-code"><a name="1063910">height</a></span> - the height for the thumbnail.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1040829"> </a></div>
+      <div class="b-body"><a name="1040830">container</a></div>
+      <div class="orh-originhead">Originated in<a name="1040831"> </a></div>
+      <div class="or-origin"><a name="1040832">FileMaker Pro 12.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1040833"> </a></div>
+      <div class="b-body"><a name="1063913">Returns an image that’s stored in a container field according to specified values for width and height. The thumbnail image always maintains the proportions of the original image.</a></div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1063914">If the </a><span class="c-code">field</span> parameter does not specify a field that contains image data, <span class="c-code">field</span> must evaluate to the file path of an image. See <span class="zh-hyper"><a href="create_db.8.42.html#1087742">Creating file paths</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1063918"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1063919">GetThumbnail(Dog;GetLayoutObjectAttribute("rectangle","width"); GetLayoutObjectAttribute("rectangle","height"))</a></span> returns an image stored in the Dog field that fits into the dimensions of the Rectangle layout object.</div>
+      <div class="b-body"><span class="c-code"><a name="1063814">GetThumbnail(Property;GetWidth(Property)/2;GetHeight(Property)/2)</a></span>returns an image that is 50 percent of the size of the original image in the Property field.</div>
+      <div class="b-body"><span class="c-code"><a name="1063824">GetThumbnail ( "image:question.png" ; 50 ; 50 )</a></span> returns a thumbnail of question.png with a maximum height and width of 50 points.</div>
+      <div class="rh-relatedhead">Related topics<a name="1063815"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1063819">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1042969">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1042973">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1042977">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1042981">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1042985">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

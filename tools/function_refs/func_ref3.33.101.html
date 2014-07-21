@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Changes the font size of text to fontSize." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>TextSize</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.102.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.100.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1032503">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1032503">Functions reference</a> &gt; 
+      <a href="func_ref3.33.94.html#1032503">Text formatting functions</a> &gt; 
+      <b>TextSize</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">TextSize</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1048138"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048139">Changes the font size of </a><span class="c-code">text</span> to <span class="c-code">fontSize</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1052496"> </a></div>
+      <div class="ff-funcformat"><a name="1052497">TextSize(text;fontSize)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1052498"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1032509">text</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span> or text or number <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span></div>
+      <div class="b-body"><span class="c-code"><a name="1032510">fontSize</a></span> - any font size expressed as an integer</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1032511"> </a></div>
+      <div class="b-body"><a name="1032512">text, number</a></div>
+      <div class="orh-originhead">Originated in<a name="1057513"> </a></div>
+      <div class="or-origin"><a name="1057514">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1052516"> </a></div>
+      <div class="b-body"><a name="1052517">The font size is described in points (72 points to the inch). Text formatting options will be lost if the data type that is returned is something other than text or number.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1052518"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1049545">TextSize(“Plaid”;18)</a></span> returns the word <span class="o-onscreen">Plaid</span> in 18 point text.</div>
+      <div class="b-body"><span class="c-code"><a name="1049546">TextSize(“Plaid”;24)</a></span> returns the word <span class="o-onscreen">Plaid</span> in 24 point text.</div>
+      <div class="b-body"><span class="c-code"><a name="1054787">TextSize( TextFont( TextColor( MyTable::MyText; RGB( 0 ; 125 ; 125 ) ); "Courier" ) ; 12) </a></span>returns the text contained in <span class="o-onscreen">MyTable::MyText</span> formatted as 12pt. green text with the Courier font.</div>
+      <div class="rh-relatedhead">Related topics<a name="1049547"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1032522">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1032526">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1032530">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1032534">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1032538">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1032542">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

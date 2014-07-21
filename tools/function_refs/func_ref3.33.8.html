@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the contents of fieldName." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>GetField</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.9.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.7.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1027868">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1027868">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1027868">Logical functions</a> &gt; 
+      <b>GetField</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">GetField</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1046797"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1046798">Returns the contents of </a><span class="c-code">fieldName</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1027869"> </a></div>
+      <div class="ff-funcformat"><a name="1027870">GetField(fieldName)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1027871"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1027874">fieldName</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span> or text <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> that refers to a field’s name</div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1027878">See </a><span class="zh-hyper"><a href="func_ref1.31.34.html#1028995">Design functions</a></span> for information about literal text parameters.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1027879"> </a></div>
+      <div class="b-body"><a name="1027880">text, number, date, time, timestamp, container</a></div>
+      <div class="orh-originhead">Originated in<a name="1057609"> </a></div>
+      <div class="or-origin"><a name="1057610">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1027881"> </a></div>
+      <div class="b-body"><a name="1027882">Use this function to get the contents of </a><span class="c-code">fieldName</span>, or in any function that uses a field, such as <span class="c-code">NPV</span>, <span class="c-code">GetSummary</span>, <span class="c-code">GetRepetition</span>, or the aggregate functions.</div>
+      <div class="feh-funcexamhead">Examples<a name="1027883"> </a></div>
+      <div class="b-body"><a name="1027884">Suppose you have the fields Arrow and Target. Arrow contains the text string Target, and Target contains the text string Bullseye.</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="c-code"><a name="1027885">GetField(“Arrow”)</a></span> returns <span class="o-onscreen">Target</span>. Notice the use of quotation marks around Arrow to indicate the literal string is the <span class="c-code">fieldName</span> parameter.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="c-code"><a name="1027886">GetField(Arrow)</a></span> returns <span class="o-onscreen">Bullseye</span>. Notice the absence of quotation marks to indicate the value stored in the Arrow field is the <span class="c-code">fieldName</span> parameter.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><a name="1027887">Suppose you have the fields FirstName and LastName. FirstName contains the text string Jane, and LastName contains the text string Public.</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="c-code"><a name="1027888">GetField(“FirstName”)&amp;“ ”&amp;GetField(“LastName”)</a></span> returns the text string <span class="o-onscreen">Jane Public</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><span class="c-code"><a name="1027889">GetSummary(GetField(“Field1”), GetField(“Field” &amp; “2”))</a></span> performs a summary on the <span class="g-glosslink"><a href="glossary.html#1028154">summary field</a></span> Field1, using a break field of Field2.</div>
+      <div class="rh-relatedhead">Related topics<a name="1027891"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1027895">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1027899">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1027903">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1027907">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1027911">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1027915">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

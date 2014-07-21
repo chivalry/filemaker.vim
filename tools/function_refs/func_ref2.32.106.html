@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(windowname), get window name" />
+    <meta name="description" content="Returns the name of the window on which the script is acting (not necessarily the foreground window)." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(WindowName)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.107.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.105.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1032167">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1032167">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1032167">Get functions</a> &gt; 
+      <b>Get(WindowName)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(WindowName)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1041418"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1041419">Returns the name of the window on which the </a><span class="g-glosslink"><a href="glossary.html#1028072">script</a></span> is acting (not necessarily the foreground window). </div>
+      <div class="ffh-funcformathead">Format<a name="1032168"> </a></div>
+      <div class="ff-funcformat"><a name="1032169">Get(WindowName)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1032170"> </a></div>
+      <div class="b-body"><a name="1032171">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1032172"> </a></div>
+      <div class="b-body"><a name="1032173">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1050517"> </a></div>
+      <div class="or-origin"><a name="1050518">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1032174"> </a></div>
+      <div class="b-body"><a name="1032176">Returns an empty string if there is no window.</a></div>
+      <div class="hs1-headsub1"><a name="1032177">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1032181">You can set the window name with the </a><span class="zh-hyper"><a href="scripts_ref2.37.14.html#1027925">Set Window Title script step</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1032185">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1032186"> </a></div>
+      <div class="b-body"><a name="1032188">There are two windows, Teachers and Students, displaying the same </a><span class="g-glosslink"><a href="glossary.html#1027851">layout</a></span> that includes an <span class="g-glosslink"><a href="glossary.html#1028220">unstored calculation</a></span> Calc containing <span class="c-code">Get(WindowName)</span>. <span class="o-onscreen">Teachers</span> is returned when the Teachers window is refreshed, and <span class="o-onscreen">Students</span> is returned when the Students window is refreshed.</div>
+      <div class="rh-relatedhead">Related topics<a name="1032190"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1032194">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1032198">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1032202">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1032206">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1032210">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1032214">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

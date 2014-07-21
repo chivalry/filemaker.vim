@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the Unicode code points for the characters in the text." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Code</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.51.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.49.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1078847">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1078847">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1078847">Text functions</a> &gt; 
+      <b>Code</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Code</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1051884"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1051885">Returns the Unicode code points for the characters in the text.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1051903"> </a></div>
+      <div class="ff-funcformat"><a name="1051904">Code(text)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1051909"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1051910">text</a></span> - one or more characters</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1051916"> </a></div>
+      <div class="b-body"><a name="1051917">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1056928"> </a></div>
+      <div class="or-origin"><a name="1056929">FileMaker Pro 10.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1051918"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1051949">Returns the Unicode code points for the characters in </a><span class="c-code">text</span>. If zero characters are in <span class="c-code">text</span>, returns an empty string.</div>
+      <div class="b-body"><a name="1051950">If one character is in the text, the function returns the code point for that character. If the text contains multiple characters, the Unicode code point for each character is returned as a group of five digits where the code point for the first character is represented by the low five digits, the code point for the second character in the next higher (to the left) five digits, and so forth. </a></div>
+      <div class="b-body"><a name="1052012">When converting a composite character such as </a><span class="o-onscreen">ä</span>, the function returns the Unicode code point for the composite character.</div>
+      <div class="b-body"><a name="1052437">The following table shows how navigational characters are reported to a script activated by this trigger:</a></div>
+      <div class="ta-tableanchor"><a name="1052387"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1052310">Key Pressed</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1052312">Is reported as</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1052314">Notes</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052316">backspace </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052318">  8 </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052320">Corresponds to Unicode/ASCII code for BS (backspace)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052322">tab </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052324">  9 </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052326">Corresponds to Unicode/ASCII code for HT (horizontal tab)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052328">shift-tab </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052330">  9 </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052332">The shift can be detected using the value returned from the </a><span class="zh-hyper"><a href="func_ref2.32.93.html#1045252">Get(TriggerModifierKeys) function</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052334">enter </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052336"> 10 </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052338">Corresponds to Unicode/ASCII code for LF (linefeed)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052340">return </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052342"> 13 </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052344">Corresponds to Unicode/ASCII code for CR (carriage return)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052346">escape </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052348"> 27 </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052350">Corresponds to Unicode/ASCII code for ESC (escape)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052352">left arrow </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052354"> 28 </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052356">Corresponds to Unicode/ASCII code for FS (file separator)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052358">up arrow </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052360"> 29 </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052362">Corresponds to Unicode/ASCII code for GS (group separator)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052364">right arrow </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052366"> 30 </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052368">Corresponds to Unicode/ASCII code for RS (record separator)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052370">down arrow </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052372"> 31 </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052374">Corresponds to Unicode/ASCII code for US (unit separator)</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052376">space </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052378"> 32 </a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052380">Corresponds to Unicode/ASCII code for Space</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052382">forward delete </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052384">127 </a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1052386">Corresponds to Unicode/ASCII code for Delete</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1051919">If there are too many characters to be represented in the FileMaker number field type, the function returns a NaN (Not a Number) value. </a></div>
+      <div class="feh-funcexamhead">Examples<a name="1081297"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1081298">Code(“”)</a></span> returns an empty string.</div>
+      <div class="b-body"><span class="c-code"><a name="1081299">Code(“a”)</a></span> returns <span class="o-onscreen">97</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1052016">Code(“b”)</a></span> returns <span class="o-onscreen">98</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1052017">Code(“ab”)</a></span> returns <span class="o-onscreen">9800097</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1051914">Code(“ä”)</a></span> returns <span class="o-onscreen">228</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1081293">Code(“ä”)</a></span>(an <span class="o-onscreen">a</span> followed by a dieresis character entered in a separate keystroke) returns <span class="o-onscreen">77600097</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1081294"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1052107">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1052111">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1052115">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1052119">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1052123">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1052127">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

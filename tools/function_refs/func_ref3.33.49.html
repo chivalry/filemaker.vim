@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the characters for the Unicode code points in the number." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Char</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.50.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.48.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1051083">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1051083">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1051083">Text functions</a> &gt; 
+      <b>Char</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Char</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1051123"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1051124">Returns the characters for the Unicode code points in the number.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1051154"> </a></div>
+      <div class="ff-funcformat"><a name="1051155">Char(number)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1051160"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1051161">number</a></span> - a decimal number representing one or more Unicode code points</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1051189"> </a></div>
+      <div class="b-body"><a name="1051190">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1056885"> </a></div>
+      <div class="or-origin"><a name="1056886">FileMaker Pro 10.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1051191"> </a></div>
+      <div class="b-body"><a name="1051209">Each group of five digits in the number is treated as a Unicode code point, and the character for each five-digit group is returned in the text.</a></div>
+      <div class="b-body"><a name="1051211">If the number is 0, the function returns an empty string.</a></div>
+      <div class="b-body"><a name="1051213">If the number is between 1 and 99,999, the function returns a single character.</a></div>
+      <div class="b-body"><a name="1051215">If the number contains more than five digits, the function returns the string of characters represented by those code points.</a></div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1051192">Some Unicode characters can be represented by a single code point or multiple code points. For example, the character </a><span class="e-emphasis">ä</span> can be represented by the letter <span class="o-onscreen">a</span> plus <span class="o-onscreen">¨</span> (dieresis) or by the single character <span class="o-onscreen">ä</span>. The single code point version of this kind of character is called a precomposed character or a composite character.</div>
+      <div class="feh-funcexamhead">Examples<a name="1051195"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1051637">Char(0)</a></span> returns <span class="o-onscreen">an empty string (“”)</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1051638">Char(97)</a></span> returns <span class="o-onscreen">a</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1051639">Char(98)</a></span> returns <span class="o-onscreen">b</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1051640">Char(9800097)</a></span> returns <span class="o-onscreen">ab</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1051641">Char(228)</a></span> returns <span class="o-onscreen">ä</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1051635">Char(77600097)</a></span> returns <span class="o-onscreen">ä</span>. In this case the number represents two Unicode characters: the letter <span class="o-onscreen">a</span> and the dieresis character. When these two characters appear together in a string they are displayed as a single character.</div>
+      <div class="rh-relatedhead">Related topics<a name="1051203"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1052134">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1052138">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1052142">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1052146">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1078841">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1078845">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

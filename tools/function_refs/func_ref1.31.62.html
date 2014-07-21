@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the present value (PV) of a series of equal payments made at regular intervals (periods), assuming a fixed interestRate per interval." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>PV</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.1.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.61.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1030445">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1030445">Functions reference</a> &gt; 
+      <a href="func_ref1.31.58.html#1030445">Financial functions</a> &gt; 
+      <b>PV</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">PV</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1036258"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1036304">Returns the present value (</a><span class="c-code">PV</span>) of a series of equal <span class="c-code">payments</span> made at regular intervals (<span class="c-code">periods</span>), assuming a fixed <span class="c-code">interestRate</span> per interval.</div>
+      <div class="ffh-funcformathead">Format<a name="1030446"> </a></div>
+      <div class="ff-funcformat"><a name="1030447">PV(payment;interestRate;periods)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1030448"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030449">payment</a></span> - payment amount to be made per period. Type a negative number for money you pay and a positive number for money you receive.</div>
+      <div class="b-body"><span class="c-code"><a name="1030450">interestRate</a></span> - interest rate per period.</div>
+      <div class="b-body"><span class="c-code"><a name="1030451">periods</a></span> - number of periods (intervals between payments).</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030452"> </a></div>
+      <div class="b-body"><a name="1030453">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1039719"> </a></div>
+      <div class="or-origin"><a name="1039720">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1036290"> </a></div>
+      <div class="b-body"><a name="1036291">Use this function to calculate </a><span class="c-code">PV</span>.</div>
+      <div class="gr-graphicanchor"><a name="1036295"><img class="Default" src="../images/func_ref1.31.62.1.png" width="294.5" height="37.5" style="float: none; left: 0.0; top: 0.0;" alt="Equation" /></a></div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1030460">When </a><span class="c-code">interestRate</span> is 0, this function returns the result of <span class="c-code">payment * periods</span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1030461"> </a></div>
+      <div class="b-body"><a name="1030462">Your cousin borrowed $2,000 from you, offering to pay you back $500 a year for five years, for a total of $2,500 at the end of five years. If inflation was 5 percent annually, with the following entry you could find out what those payments are worth with the </a><span class="c-code">PV</span> function.</div>
+      <div class="b-body"><span class="c-code"><a name="1030463">PV(500;.05;5)</a></span> returns <span class="o-onscreen">2164.73833531...</span>.</div>
+      <div class="b-body"><a name="1030464">If you want the return value to return two decimal places, enclose the formula with the correct </a><span class="c-code">Round </span>function: <span class="c-code">Round(Current Formula;2)</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1030465"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030469">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030473">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030477">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030481">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030485">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030489">Using operators in formulas</a></span></div>
+      <div class="b-body"><a name="1026683"> </a></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

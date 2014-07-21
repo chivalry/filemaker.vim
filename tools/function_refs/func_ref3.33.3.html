@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns one result value, according to the integer value of test." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Choose</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.4.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.2.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1027677">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1027677">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1027677">Logical functions</a> &gt; 
+      <b>Choose</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Choose</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1046725"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1046726">Returns one </a><span class="c-code">result</span> value, according to the integer value of <span class="c-code">test</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1027678"> </a></div>
+      <div class="ff-funcformat"><a name="1027679">Choose(test;result0{;result1;result2...})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1027680"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1027682">test</a></span> - Any integer calculation. The calculation result of test must be a number that <span class="g-glosslink"><a href="glossary.html#1027810">indexes</a></span> into the list that follows. Because the index is a 0-based index, the test result must be 0 to access the first result.</div>
+      <div class="b-body"><span class="c-code"><a name="1027683">result</a></span> - one or more results.</div>
+      <div class="b-body"><a name="1027684">Parameters in curly braces { } are optional.</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1027685"> </a></div>
+      <div class="b-body"><a name="1027686">text, number, date, time, timestamp, container</a></div>
+      <div class="orh-originhead">Originated in<a name="1057601"> </a></div>
+      <div class="or-origin"><a name="1057602">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1027687"> </a></div>
+      <div class="b-body"><a name="1027688">FileMaker Pro evaluates </a><span class="c-code">test</span> to obtain an index number, which is used to choose the corresponding ordinal result. </div>
+      <div class="b-body"><a name="1027689">Because </a><span class="c-code">Choose</span> is a 0-based list, the first item on the list is indexed 0 and the second item on the list is indexed 1. For example, if test evaluates to 2, then result2 is chosen.</div>
+      <div class="feh-funcexamhead">Examples<a name="1027690"> </a></div>
+      <div class="co-code"><a name="1027691">Choose(Rating;“Not Applicable”;“Good”;“Fair”;“Poor”)</a></div>
+      <div class="b-body"><a name="1027692">Rating is a number field that is empty or holds a value. If Rating is empty or 0, the </a><span class="c-code">Choose</span> function returns <span class="o-onscreen">Not Applicable</span>. If Rating is 1, the result is <span class="o-onscreen">Good</span>. If Rating is 2, the result is <span class="o-onscreen">Fair</span>, and if it is 3, the result is <span class="o-onscreen">Poor</span>. If Rating contains a value that does not map to one of the result parameters, the <span class="c-code">Choose</span> function returns nothing.</div>
+      <div class="rh-relatedhead">Related topics<a name="1027693"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1027697">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1027701">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1027705">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1027709">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1027713">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1027717">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

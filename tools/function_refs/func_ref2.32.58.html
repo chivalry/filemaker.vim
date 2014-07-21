@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(networktype), get network type" />
+    <meta name="description" content="In FileMaker Go, returns a number indicating the type of network being used to access the current file." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(NetworkType)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.59.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.57.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1082024">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1082024">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1082024">Get functions</a> &gt; 
+      <b>Get(NetworkType)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(NetworkType)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1082045"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1082052">In FileMaker Go, returns a number indicating the type of network being used to access the current file.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1082059"> </a></div>
+      <div class="ff-funcformat"><a name="1082066">Get(NetworkType)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1082073"> </a></div>
+      <div class="b-body"><a name="1082080">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1082087"> </a></div>
+      <div class="b-body"><a name="1082097">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1082104"> </a></div>
+      <div class="or-origin"><a name="1082114">FileMaker Pro 13.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1082137"> </a></div>
+      <div class="b-body"><a name="1082195">In FileMaker Go, returns:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1082196">0</a></span> if the current file is a local file on an iOS device</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1082198">1</a></span> if the network type is unknown</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1082200">2</a></span> for a cellular network</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1082229">3</a></span> for a Wi-Fi network</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1082301">In other products in the FileMaker product line, this function is not supported and returns an empty string.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1082158"> </a></div>
+      <div class="b-body"><a name="1082168">Returns </a><span class="o-onscreen">3</span> when the file is being accessed from a Wi-Fi network.</div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a list of four values for each relationship directly related to tableName." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>RelationInfo</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.48.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.46.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029770">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029770">Functions reference</a> &gt; 
+      <a href="func_ref1.31.34.html#1029770">Design functions</a> &gt; 
+      <b>RelationInfo</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">RelationInfo</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1037373"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1037374">Returns a list of four values for each </a><span class="g-glosslink"><a href="glossary.html#1028048">relationship</a></span> directly related to <span class="c-code">tableName</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1029771"> </a></div>
+      <div class="ff-funcformat"><a name="1029772">RelationInfo(fileName;tableName)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029773"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029775">fileName</a></span> - the name of an open <span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span> (local or remote).</div>
+      <div class="b-body"><span class="c-code"><a name="1029777">tableName</a></span> - the name of a <span class="g-glosslink"><a href="glossary.html#1045562">table</a></span> in the specified database file.</div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1029781">See </a><span class="zh-hyper"><a href="func_ref1.31.34.html#1028995">Design functions</a></span> for information about literal text parameters.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029782"> </a></div>
+      <div class="b-body"><a name="1029783">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1039599"> </a></div>
+      <div class="or-origin"><a name="1039600">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029784"> </a></div>
+      <div class="b-body"><a name="1029786">Values in a list are separated by carriage returns, and lists are separated by two carriage returns. For each additional relationship connected to </a><span class="c-code">tableName</span>, an additional list of four values is output.</div>
+      <div class="b-body"><a name="1029787">The four values are:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="c-code"><a name="1029788">Source:</a></span> Data Source Name of the database table connected to <span class="c-code">tableName</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="c-code"><a name="1029789">Table:</a></span> the name of the table connected to <span class="c-code">tableName</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="c-code"><a name="1029790">Options:</a></span> the options that were set in the right side of the Edit Relationship dialog box when the relationship was defined. This line is blank if the following options are not set; otherwise these options are separated by spaces.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1029791">Delete, if </a><span class="o-onscreen">Delete related records in this table when a record is deleted in the other table</span> is selected in the right side of the Edit Relationship dialog box.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1029792">Create, if </a><span class="o-onscreen">Allow creation of records in this table via this relationship </span>is selected in the right side of the Edit Relationship dialog box.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1029793">Sorted, if </a><span class="o-onscreen">Sort records</span> is selected in the right side of the Edit Relationship dialog box.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="c-code"><a name="1029794">Relationships:</a></span> a list of the defined relationships, one per line. Field names are fully qualified, for example, <span class="c-code">TableName::Field Name</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1029795"> </a></div>
+      <div class="b-body"><a name="1029796">A database file called Human Resources has three tables: Company, Employees, and Addresses. </a><span class="c-code">Company::Company ID</span> is connected to <span class="c-code">Employees::Company ID</span>, <span class="c-code">Employees::Employee ID </span>is connected to <span class="c-code">Addresses::Employee ID </span>and<span class="c-code"> Employees::DateOfHire</span> is connected to <span class="c-code">Addresses::DateMovedIn</span>. </div>
+      <div class="b-body"><a name="1029797">The relationships have the following criteria:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029798">You can create records in all tables.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029799">You cannot delete records in all tables.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029800">A sort was specified for the Addresses table for the Employees&lt;--&gt;Addresses relationship.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><span class="c-code"><a name="1029801">RelationInfo(“Human Resources”;“Employees”)</a></span> returns:</div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029802">Source: Human Resources</a></span></div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029803">Table: Company</a></span></div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029804">Options: Create</a></span></div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029805">Company::Company ID = Employees::Company ID</a></span></div>
+      <div class="b1-body1"><a name="1029806"> </a></div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029807">Source: Human Resources</a></span></div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029808">Table: Addresses</a></span></div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029809">Options: Create Sorted</a></span></div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029810">Addresses::Employee ID = Employees::Employee ID</a></span></div>
+      <div class="b1-body1"><span class="o-onscreen"><a name="1029811">Addresses::DateMovedIn &gt;= Employees::DateOfHire</a></span></div>
+      <div class="rh-relatedhead">Related topics<a name="1029812"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1029816">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029820">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029824">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029828">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029832">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029836">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

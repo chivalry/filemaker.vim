@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a number in the range 1 through 31, representing the day of the month on which date occurs." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Day</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.23.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.21.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028441">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028441">Functions reference</a> &gt; 
+      <a href="func_ref1.31.20.html#1028441">Date functions</a> &gt; 
+      <b>Day</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Day</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1036847"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1036848">Returns a number in the range 1 through 31, representing the day of the month on which </a><span class="c-code">date</span> occurs.</div>
+      <div class="ffh-funcformathead">Format<a name="1028442"> </a></div>
+      <div class="ff-funcformat"><a name="1028443">Day(date)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028444"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028445">date</a></span> - any calendar date</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028446"> </a></div>
+      <div class="b-body"><a name="1028447">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1039357"> </a></div>
+      <div class="or-origin"><a name="1039358">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028448"> </a></div>
+      <div class="b-body"><a name="1028449">Use </a><span class="c-code">Day</span>, for example, to identify the day of the month on which payments are due.</div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1028450">To avoid errors when using dates, always use four-digit years. For more information about how FileMaker Pro handles two-digit dates, see </a><span class="zh-hyper"><a href="add_view_data.4.22.html#1028976">Conversion of dates with two-digit years</a></span>.</div>
+      <div class="feh-funcexamhead">Examples<a name="1028454"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028455">Day(“5/15/2014”)</a></span> returns <span class="o-onscreen">15</span>. This example assumes that the system date format is MM/DD/YYYY.</div>
+      <div class="b-body"><span class="c-code"><a name="1028456">Day(DateSold)</a></span> returns the day of the month stored in DateSold.</div>
+      <div class="b-body"><span class="c-code"><a name="1028457">If(Day(Get(CurrentDate))= 15 and Month(Get(CurrentDate))=3;“Beware the Ides of March”;””)</a></span> displays the text <span class="o-onscreen">Beware the Ides of March</span> only when the day of the month returned by <span class="c-code">Get(CurrentDate)</span> is 15 and the month returned by <span class="c-code">Get(CurrentDate)</span> is 3; otherwise it displays nothing.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028458"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028462">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028466">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028470">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028474">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028478">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028482">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

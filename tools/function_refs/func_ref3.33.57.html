@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns text converted to the SVG (Scalable Vector Graphics) format." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>GetAsSVG</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.58.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.56.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1030340">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1030340">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1030340">Text functions</a> &gt; 
+      <b>GetAsSVG</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">GetAsSVG</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1048451"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048452">Returns </a><span class="c-code">text</span> converted to the SVG (Scalable Vector Graphics) format.</div>
+      <div class="ffh-funcformathead">Format<a name="1030341"> </a></div>
+      <div class="ff-funcformat"><a name="1030342">GetAsSVG(text)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1030343"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030346">text</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span> or text <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030347"> </a></div>
+      <div class="b-body"><a name="1030348">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1057026"> </a></div>
+      <div class="or-origin"><a name="1057027">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1030349"> </a></div>
+      <div class="b-body"><a name="1030350">SVG is an internet text format similar to </a><span class="g-glosslink"><a href="glossary.html#1027800">HTML</a></span> or CSS. SVG supports more text formats than HTML, so SVG will represent what you have typed more accurately.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1030352">The GetAsSVG function does not return formats that are set in the Conditional Formatting dialog box.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1030353"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030354">GetAsSVG(text)</a></span> returns the example result (below) when the field text contains the word “Frank” and the word Frank has the following text attributes: Font = Helvetica, Font Size = 12 points, Font Color = red, Font Style = bold.</div>
+      <div class="b-body"><a name="1030355">Example result:</a></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030356">&lt;StyleList&gt;</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030357">&lt;Style#0&gt;”font-family: 'Helvetica';font-size: 12px;color:</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030358"> #FF0000;font-weight: bold;text-align: left;”,</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030359"> Begin: 1, End: 5&lt;/Style&gt; </a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030360">&lt;/StyleList&gt;</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1030361">&lt;Data&gt;</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1054994">&lt;Span style=”0”&gt;Frank&lt;/Span&gt;</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1055091">&lt;/Data&gt;</a></span></div>
+      <div class="rh-relatedhead">Related topics<a name="1055853"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030368">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030372">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030376">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030380">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030384">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030388">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

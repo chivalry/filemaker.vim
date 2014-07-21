@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(triggerkeystroke), get trigger keystroke, get script trigger key, script trigger key" />
+    <meta name="description" content="Returns a string containing the characters that activated an OnObjectKeystroke or OnLayoutKeystroke script trigger. Multiple characters may be returned when the input comes from an input method editor (IME)." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(TriggerKeystroke)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.93.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.91.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1045003">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1045003">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1045003">Get functions</a> &gt; 
+      <b>Get(TriggerKeystroke)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(TriggerKeystroke)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1045025"> </a></div>
+      <div class="sspu-scriptpurpose"><a name="1045671">Returns a string containing the characters that activated an </a><span class="zh-hyper"><a href="script_trigg.38.3.html#1028479">OnObjectKeystroke</a></span> or <span class="zh-hyper"><a href="script_trigg.38.12.html#1028792">OnLayoutKeystroke</a></span> <span class="g-glosslink"><a href="glossary.html#1033294">script trigger</a></span>. Multiple characters may be returned when the input comes from an input method editor (IME).</div>
+      <div class="ffh-funcformathead">Format<a name="1045050"> </a></div>
+      <div class="ff-funcformat"><a name="1045051">Get(TriggerKeystroke)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1045059"> </a></div>
+      <div class="b-body"><a name="1045062">None </a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1045097"> </a></div>
+      <div class="b-body"><a name="1045098">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1050413"> </a></div>
+      <div class="or-origin"><a name="1050414">FileMaker Pro 10.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1045099"> </a></div>
+      <div class="b-body"><a name="1045265">Returns a value when running a script triggered by an </a><span class="zh-hyper"><a href="script_trigg.38.3.html#1028479">OnObjectKeystroke</a></span> or <span class="zh-hyper"><a href="script_trigg.38.12.html#1028792">OnLayoutKeystroke</a></span> script trigger or running a script called from the triggered script; otherwise returns an empty string.</div>
+      <div class="feh-funcexamhead">Examples<a name="1045270"> </a></div>
+      <div class="b-body"><a name="1045130">The following code displays the text </a><span class="o-onscreen">Processing input...</span> when a carriage return is entered:</div>
+      <div class="co-code"><a name="1045131">If [ Code ( Get(TriggerKeystroke) ) = 13 ]</a></div>
+      <div class="co-code"><a name="1045132">	Show Custom Dialog [“Processing input...”]</a></div>
+      <div class="co-code"><a name="1045248">End If</a></div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1045640">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1045250"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1045305">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1045284">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1045288">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1045292">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1045296">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1045300">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns an error code, if any, from expression." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>EvaluationError</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.6.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.4.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1027784">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1027784">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1027784">Logical functions</a> &gt; 
+      <b>EvaluationError</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">EvaluationError</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1046759"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1046760">Returns an error code, if any, from </a><span class="c-code">expression</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1027785"> </a></div>
+      <div class="ff-funcformat"><a name="1027786">EvaluationError(expression)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1027787"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1027789">expression</a></span> - any calculation <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1027790"> </a></div>
+      <div class="b-body"><a name="1027791">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1056456"> </a></div>
+      <div class="or-origin"><a name="1056457">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1027792"> </a></div>
+      <div class="b-body"><a name="1027793">There are two types of errors: syntax and runtime. A syntax error indicates an invalid calculation. A runtime error, such as Field missing or Record missing, occurs when the calculation currently being run is valid but cannot properly execute. See </a><span class="zh-hyper"><a href="error_codes.html#1030072">FileMaker Pro error codes</a></span> for a list of error codes and messages.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1027797">The </a><span class="c-code">EvaluationError</span> function must enclose the <span class="c-code">Evaluate</span> function to return any syntax errors.</div>
+      <div class="feh-funcexamhead">Examples<a name="1027798"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1027799">EvaluationError(calculationField)</a></span> returns <span class="o-onscreen">102</span> (Field Missing) when <span class="c-code">calculationField</span> contains <span class="c-code">total + 1</span> and the field total has been deleted or renamed.</div>
+      <div class="b-body"><span class="c-code"><a name="1027800">EvaluationError(Evaluate(calculationField))</a></span> returns <span class="o-onscreen">1207</span> (Unbalanced Parenthesis) when <span class="c-code">calculationField</span> contains <span class="c-code">abs(-1</span> with no closing parenthesis.</div>
+      <div class="rh-relatedhead">Related topics<a name="1027801"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1027805">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1027809">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1027813">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1027817">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1027821">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1027825">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

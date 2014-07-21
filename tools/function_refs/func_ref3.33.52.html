@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns from textToFilter only those characters specified in filterText, in the order they were originally entered in textToFilter." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Filter</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.53.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.51.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1030109">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1030109">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1030109">Text functions</a> &gt; 
+      <b>Filter</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Filter</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1048231"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048232">Returns from </a><span class="c-code">textToFilter</span> only those characters specified in <span class="c-code">filterText</span>, in the order they were originally entered in <span class="c-code">textToFilter</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1030110"> </a></div>
+      <div class="ff-funcformat"><a name="1030111">Filter(textToFilter;filterText)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1030112"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030115">textToFilter</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span> or text <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span></div>
+      <div class="b-body"><span class="c-code"><a name="1030116">filterText</a></span> - the characters to preserve in the specified text</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030117"> </a></div>
+      <div class="b-body"><a name="1030118">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1056939"> </a></div>
+      <div class="or-origin"><a name="1056940">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1030119"> </a></div>
+      <div class="b-body"><a name="1061532">If </a><span class="c-code">filterText</span> doesn’t have any characters, an empty string is returned. The <span class="c-code">Filter</span> function is case-sensitive.</div>
+      <div class="feh-funcexamhead">Examples<a name="1030121"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030122">Filter(“(408)555-1212”;“0123456789”)</a></span> returns <span class="o-onscreen">4085551212</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1030123">Filter(“AaBb”;“AB”)</a></span> returns <span class="o-onscreen">AB</span>.</div>
+      <div class="b-body"><a name="1030124">The following example removes all text from the provided data, then formats the remaining numbers in the preferred phone number formatting:</a></div>
+      <div class="co-code"><a name="1030125">Let(phone = filter(theField;“0123456789”);“(“ &amp; left(phone;3) &amp; “)” &amp; middle(phone;4;3) &amp; “-” &amp; middle(phone;7;4))</a></div>
+      <div class="b-body"><a name="1030126">If </a><span class="c-code">theField</span> contains <span class="o-onscreen">Work: 408.555.1212</span> this calculation returns <span class="o-onscreen">(408)555-1212</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1030127"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030131">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030135">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030139">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030143">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030147">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030151">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the variance of a sample represented by a series of non-blank values in field." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Variance</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.11.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.9.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028141">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028141">Functions reference</a> &gt; 
+      <a href="func_ref1.31.1.html#1028141">Aggregate functions</a> &gt; 
+      <b>Variance</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Variance</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1036649"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1036650">Returns the variance of a sample represented by a series of non-blank values in </a><span class="c-code">field</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1028142"> </a></div>
+      <div class="ff-funcformat"><a name="1028143">Variance(field{;field...})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028144"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028149">field</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028036">related field</a></span>, <span class="g-glosslink"><a href="glossary.html#1028056">repeating field</a></span>, or set of non-repeating <span class="g-glosslink"><a href="glossary.html#1027703">fields</a></span>; or an <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> that returns a field, repeating field, or set of non-repeating fields.</div>
+      <div class="b-body"><a name="1028150">Parameters in curly braces { } are optional.</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028151"> </a></div>
+      <div class="b-body"><a name="1028152">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1039229"> </a></div>
+      <div class="or-origin"><a name="1039230">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028153"> </a></div>
+      <div class="b-body"><a name="1028154">The variance of a distribution is a measure of how spread out the distribution is. </a><span class="c-code">Field</span> can be any of the following:</div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028155">a repeating field </a><span class="c-code">(repeatingField)</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028157">a field in matching </a><span class="g-glosslink"><a href="glossary.html#1028039">related records</a></span> specified by <span class="c-code">(table::field)</span>, whether or not these records appear in a <span class="g-glosslink"><a href="glossary.html#1028003">portal.</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028159">several non-repeating fields in a record </a><span class="c-code">(field1;field2;field3...)</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028161">corresponding repetitions of repeating fields in a </a><span class="g-glosslink"><a href="glossary.html#1028030">record</a></span> <span class="c-code">(repeatingField1;repeatingField2;repeatingField3)</span>, if the result is returned in a repeating field with at least the same number of repeats.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028162">several fields in the first matching record specified by </a><span class="c-code">(table::field1;table::field2;...)</span>. You can include fields from different <span class="g-glosslink"><a href="glossary.html#1045562">tables</a></span> <span class="c-code">(table 1::field A;table 2::field B...)</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="gr-graphicanchor"><a name="1028167"><img class="Default" src="../images/func_ref1.31.10.1.png" width="319" height="41" style="float: none; left: 0.0; top: 0.0;" alt="Equation" /></a></div>
+      <div class="feh-funcexamhead">Examples<a name="1028168"> </a></div>
+      <div class="b-body"><a name="1028169">A portal displays the related values 5, 6, 7, and 8 in </a><span class="c-code">Scores</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1028170">Variance(table::Scores)</a></span> returns <span class="o-onscreen">1.66666666...</span>.</div>
+      <div class="b-body"><a name="1028171">In the following examples:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028172">Field1 contains two repetitions with values of 1 and 2. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028173">Field2 contains four repetitions with values of 5, 6, 7, and 8. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028174">Field3 contains four repetitions with values of 6, 0, 4,and 4. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028175">Field4 contains one repetition with a value of 3.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><span class="c-code"><a name="1028176">Variance(Field4)</a></span> results in an error since the variance of a single value is not defined.</div>
+      <div class="b-body"><span class="c-code"><a name="1028177">Variance(Field1;Field2;Field3)</a></span> returns <span class="o-onscreen">7, 9.33333333...</span>, <span class="o-onscreen">4.5</span>, <span class="o-onscreen">8</span> if the calculation is a repeating field.</div>
+      <div class="hs2-headsub2"><a name="1028178">Student example</a></div>
+      <div class="b2-body2"><a name="1028179">Two classes of students take an exam. Class 1 has scores of 70, 71, 70, 74, 75, 73, 72 and Class 2 has scores of 55, 80, 75, 40, 65, 50, 95. The variance for each class is:</a></div>
+      <div class="b2-body2"><a name="1028180">Class 1: </a><span class="o-onscreen">3.80952380...</span></div>
+      <div class="b2-body2"><a name="1028181">Class 2: </a><span class="o-onscreen">361.90476190...</span></div>
+      <div class="b2-body2"><a name="1028182">The variance for Class 1 is much lower than the variance for Class 2, because the scores for Class 2 are more spread out.</a></div>
+      <div class="rh-relatedhead">Related topics<a name="1028183"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028187">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028191">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028195">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028199">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028203">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028207">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

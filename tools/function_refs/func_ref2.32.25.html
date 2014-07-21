@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="Get(CurrentTime), get current time, get time, get system time, get system clock, current time" />
+    <meta name="description" content="Returns CurrentTime (to the nearest second) according to the system clock." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(CurrentTime)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.26.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.24.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1052625">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1052625">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1052625">Get functions</a> &gt; 
+      <b>Get(CurrentTime)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(CurrentTime)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1041235"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1041236">Returns </a><span class="c-code">CurrentTime</span> (to the nearest second) according to the system clock.</div>
+      <div class="ffh-funcformathead">Format<a name="1028977"> </a></div>
+      <div class="ff-funcformat"><a name="1028978">Get(CurrentTime)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028979"> </a></div>
+      <div class="b-body"><a name="1028980">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028981"> </a></div>
+      <div class="b-body"><a name="1028982">time</a></div>
+      <div class="orh-originhead">Originated in<a name="1050622"> </a></div>
+      <div class="or-origin"><a name="1050623">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028983"> </a></div>
+      <div class="b-body"><a name="1053085">The format of the value returned is determined by the operating system settings.</a></div>
+      <div class="hs1-headsub1"><a name="1053086">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1056169">If the calculation result for this script step is set to integer format, it will return the total number of seconds elapsed since the start of the current day.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1053087">In client/server and peer-to-peer environments, </a><span class="c-code">Get(CurrentTimestamp)</span> evaluates the status of the client machine running the <span class="g-glosslink"><a href="glossary.html#1028072">script</a></span> (not the host machine). For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at <span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1028990"> </a></div>
+      <div class="b-body"><a name="1028991">Returns </a><span class="o-onscreen">11:30:00 AM </span>when the function result is in text format and the system clock shows 11:30:00 AM.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028992"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028996">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029000">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029004">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029008">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029012">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029016">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

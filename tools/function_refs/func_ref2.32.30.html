@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(device), get device" />
+    <meta name="description" content="Returns a number indicating the type of computer that is currently running FileMaker Pro or FileMaker WebDirect, or the type of iOS device that is currently running FileMaker Go." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(Device)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.31.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.29.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1078430">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1078430">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1078430">Get functions</a> &gt; 
+      <b>Get(Device)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(Device)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1078453"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1078468">Returns a number indicating the type of computer that is currently running FileMaker Pro or FileMaker WebDirect, or the type of iOS device that is currently running FileMaker Go. </a></div>
+      <div class="ffh-funcformathead">Format<a name="1078484"> </a></div>
+      <div class="ff-funcformat"><a name="1078497">Get(Device)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1078504"> </a></div>
+      <div class="b-body"><a name="1078511">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1078518"> </a></div>
+      <div class="b-body"><a name="1078525">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1078535"> </a></div>
+      <div class="or-origin"><a name="1078555">FileMaker Pro 13.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1078566"> </a></div>
+      <div class="b-body"><a name="1079629">Returns:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1079687">0</a></span> if the device is unknown</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1079679">1</a></span> if the device is a Mac</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1079631">2</a></span> if the device is a PC running Windows</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1079632">3</a></span> if the device is an iPad</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1079660">4</a></span> if the device is an iPhone or iPod touch</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1078587"> </a></div>
+      <div class="b-body"><a name="1078597">Returns </a><span class="o-onscreen">2</span> if FileMaker Pro or FileMaker WebDirect is currently running on a PC with Windows.</div>
+      <div class="b-body"><a name="1078667">Returns </a><span class="o-onscreen">3</span> if FileMaker Go or FileMaker WebDirect is currently running on an iPad.</div>
+      <div class="rh-relatedhead">Related topics<a name="1078547"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1078629">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1078633">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1078637">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1078641">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1078645">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1078649">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

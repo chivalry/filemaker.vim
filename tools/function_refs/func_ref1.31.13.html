@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns container content from text encoded in Base64 format." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Base64Decode</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.14.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.12.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1050721">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1050721">Functions reference</a> &gt; 
+      <a href="func_ref1.31.12.html#1050721">Container functions</a> &gt; 
+      <b>Base64Decode</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Base64Decode</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1061914"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1061921">Returns container content from text encoded in Base64 format.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1061928"> </a></div>
+      <div class="ff-funcformat"><a name="1061935">Base64Decode(text{;fileNameWithExtension})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1061942"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1061949">text</a></span> - Base64 text to decode.</div>
+      <div class="b-body"><span class="c-code"><a name="1061957">fileNameWithExtension</a></span> - the filename and extension for the file created from the decoded Base64 text.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1061970"> </a></div>
+      <div class="b-body"><a name="1061980">container</a></div>
+      <div class="orh-originhead">Originated in<a name="1061987"> </a></div>
+      <div class="or-origin"><a name="1061997">FileMaker Pro 13.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1063079"> </a></div>
+      <div class="b-body"><a name="1063136">Base64 encoding does not retain the filename or extension of encoded content.</a></div>
+      <div class="b-body"><a name="1063727">If a filename and extension are not specified in the </a><span class="c-code">fileNameWithExtension</span> parameter, Base64Decode returns the container content with a generic filename and extension but does not change the content’s data format.</div>
+      <div class="feh-funcexamhead">Examples<a name="1062803"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1062804">Base64Decode(Products::Base64;"question.png")</a></span> returns <img class="Default" src="../images/Button_Help_win.PNG" width="31" height="16" style="float: none; left: 0.0; top: 0.0;" alt="Help button" /> when Products::Base64 is set to a string that begins with "iVBORw0KGgoAAAANSUhEUgAAAB8". The Base64 string in this example was shortened for readability.</div>
+      <div class="rh-relatedhead">Related topics<a name="1062021"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="func_ref1.31.14.html#1062038" name="1062031">Base64Encode</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1062547">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1062551">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1062555">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1062559">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1062563">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1062567">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

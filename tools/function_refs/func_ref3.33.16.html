@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Sets varX to the result of expressionX for the duration of calculation, until the script exits (local variables), or until the file is closed (global variables)." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Let</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.17.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.15.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028226">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028226">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1028226">Logical functions</a> &gt; 
+      <b>Let</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Let</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047630"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047631">Sets </a><span class="c-code">varX</span> to the result of <span class="c-code">expressionX</span> for the duration of calculation, until the script exits (local variables), or until the file is closed (global variables).</div>
+      <div class="ffh-funcformathead">Format<a name="1047632"> </a></div>
+      <div class="ff-funcformat"><a name="1028228">Let({[}var1=expression1{;var2=expression2...]};calculation)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028229"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028232">var</a></span> - any variable name, local variable name, or global variable name (see <span class="zh-hyper"><a href="create_db.8.12.html#1081048">About naming fields</a></span> for guidelines on naming variables).</div>
+      <div class="b-body"><span class="c-code"><a name="1028237">expression</a></span> - any calculation <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span>, <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span>, or <span class="g-glosslink"><a href="glossary.html#1027606">constant</a></span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1028238">calculation</a></span> - any calculation expression, field, or constant.</div>
+      <div class="b-body"><a name="1028239">Parameters in curly braces { } are optional.</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028240"> </a></div>
+      <div class="b-body"><a name="1028241">text, number, date, time, timestamp, container</a></div>
+      <div class="orh-originhead">Originated in<a name="1056692"> </a></div>
+      <div class="or-origin"><a name="1056693">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028242"> </a></div>
+      <div class="b-body"><a name="1028243">Multiple variables are allowed when using a list syntax that is enclosed in square brackets [ ] and is separated by semicolons. For example:</a></div>
+      <div class="co-code"><a name="1028244">Let([variable=value;variable2=value2];calculation)</a></div>
+      <div class="b-body"><a name="1028245">The $ symbol references a local variable and two $$ symbols reference a global variable. An optional repetition number appears in square brackets [ ] immediately after the variable name. For example:</a></div>
+      <div class="co-code"><a name="1028246">Let([$variable[repetition]=value;$$variable2=value2]{;calculation} )</a></div>
+      <div class="b-body"><a name="1028247">The </a><span class="c-code">Let</span> function sets the variables from left to right. You can use previously defined variables (for example, variables that you defined with the Set Variable script step) to define new variable values, and you can nest one <span class="c-code">Let</span> function within another. If you use a previously defined variable within a nested <span class="c-code">Let</span> function, the variable has scope only within the nested function (as if you had defined a completely unique variable). See the City example shown below.</div>
+      <div class="b-body"><a name="1028248">Once defined, local and global variables can be referenced in any calculation within their scope. The scope of global variables is limited to the current file. The scope of local variables is the current script. Local variables defined in a calculation are scoped to the file but are only available when scripts are not running. A local and global variable (or even two local variables in different scripts) can have the same name but they are treated as different variables and store different values.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1028249"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028250">Let(x=5;x*x)</a></span> returns <span class="o-onscreen">25</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1028251">Let([x=5;squared=x*x;cubed=squared*x];cubed)</a></span> returns <span class="o-onscreen">125</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1028252">Let(City=“Paris”;Let(City=“San Francisco”;City&amp;“-“)&amp;City)</a></span> returns <span class="o-onscreen">San Francisco </span><span class="o-onscreen">-</span><span class="o-onscreen"> Paris</span>.</div>
+      <div class="b-body"><a name="1028253">The following example sets a local variable </a><span class="c-code">counter</span> at repetition <span class="c-code">50</span> with a value of <span class="c-code">120</span>:</div>
+      <div class="b-body"><span class="c-code"><a name="1028254">Let($counter[50]=120;$counter[50]*2)</a></span> returns <span class="o-onscreen">240</span>.</div>
+      <div class="b-body"><a name="1028255">The following example shows how to pass named parameters using the </a><span class="c-code">Evaluate</span>, <span class="c-code">Let</span>, and <span class="c-code">Get(ScriptParameter)</span> functions, allowing access only to variable <span class="c-code">“a”</span> (the example returns <span class="o-onscreen">6</span>):</div>
+      <div class="co-code"><a name="1028256">ScriptParameter = "a = 5; b = 10"<br />Evaluate("Let([" &amp; Get(ScriptParameter) &amp; "]; a+1 )" )</a></div>
+      <div class="b-body"><a name="1028257">The following example shows how to pass named parameters, allowing access to both variable </a><span class="c-code">“a”</span> and variable <span class="c-code">“b”</span>. The simplified first parameter makes the second parameter more complex (the example returns <span class="o-onscreen">6,</span> <span class="o-onscreen">12</span>):</div>
+      <div class="co-code"><a name="1028258">ScriptParameter = "a = 5; b = 10"<br />Evaluate("Let( [" &amp; Get(ScriptParameter) &amp; "]; a+1 &amp; \", \" &amp; b+2 )" )</a></div>
+      <div class="b-body"><a name="1028259">The following example shows how to pass named parameters, while keeping the ability to check the syntax of the second parameter of the </a><span class="c-code">Let</span> function (the example returns <span class="o-onscreen">6,</span> <span class="o-onscreen">12</span>):</div>
+      <div class="co-code"><a name="1028260">ScriptParameter = "a = 5; b = 10"<br />Let([a = Evaluate("Let( [" &amp; Get(ScriptParameter) &amp; "]; a )"),b = Evaluate("Let( [" &amp; Get(ScriptParameter) &amp; "]; b )")]; a+1 &amp; ", " &amp; b+2 )</a></div>
+      <div class="rh-relatedhead">Related topics<a name="1028261"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028265">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028269">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028273">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028277">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028281">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028285">Using operators in formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.43.html#1030458" name="1028289">Using variables</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

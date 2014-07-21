@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the Japanese year name of date, provided in the specified format." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>YearName</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.34.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.32.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028920">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028920">Functions reference</a> &gt; 
+      <a href="func_ref1.31.20.html#1028920">Date functions</a> &gt; 
+      <b>YearName</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">YearName</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1037140"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1037141">Returns the Japanese year name of </a><span class="c-code">date</span>, provided in the specified format. </div>
+      <div class="ffh-funcformathead">Format<a name="1028921"> </a></div>
+      <div class="ff-funcformat"><a name="1028922">YearName(date;format)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028923"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028924">date</a></span> - any calendar date</div>
+      <div class="b-body"><span class="c-code"><a name="1028925">format</a></span> - a number (0, 1, or 2) that describes the display format</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028926"> </a></div>
+      <div class="b-body"><a name="1028927">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1039480"> </a></div>
+      <div class="or-origin"><a name="1039481">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028928"> </a></div>
+      <div class="b-body"><a name="1028929">If the value for </a><span class="c-code">format</span> is blank or other than 0, 1, or 2, then 0 is used.</div>
+      <div class="b-body"><a name="1050670">0 - <img class="Default" src="../images/yearname01.png" width="31" height="18" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Meiji in long format" />8 (Meiji 8), <img class="Default" src="../images/yearname02.png" width="30" height="16" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Taisho in long format" />8 (Taisho 8), <img class="Default" src="../images/yearname03.png" width="30" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Showa in long format" />8 (Showa 8), <img class="Default" src="../images/yearname04.png" width="30" height="18" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Showa in long format" />8 (Heisei 8), <img class="Default" src="../images/yearname05.png" width="56" height="16" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Seireki in long format" /> (Seireki xxxx [before 1868.9.8])</a></div>
+      <div class="b-body"><a name="1050686">1 - <img class="Default" src="../images/yearname06.png" width="15" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Meiji in abbreviated format" />8 (Mei 8), <img class="Default" src="../images/yearname07.png" width="16" height="16" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Taisho in abbreviated format" />8 (Tai 8), <img class="Default" src="../images/yearname08.png" width="15" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Showa in abbreviated format" />8 (Sho 8), <img class="Default" src="../images/yearname09.png" width="14" height="16" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Heisei in abbreviated format" />8 (Hei 8), <img class="Default" src="../images/yearname11.png" width="25" height="19" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for Emperor Seireki in abbreviated format" />xxxx (Sei xxxx [before 1868.9.8])</a></div>
+      <div class="b-body"><a name="1050687">2 - M8, T8, S8, H8, A.D.xxxx (before 1868.9.8)</a></div>
+      <div class="b-body"><a name="1028963">Name of Emperor in 0 = Long, 1 = Abbreviated, 2 = 2 byte Roman. Seireki is returned when date is before listed emperors.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1028964"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028968">YearName(DateField;0)</a></span> Returns<img class="Default" src="../images/yearname10.png" width="44" height="15" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for the year name occurring on July 17, 2002" /> when DateField contains 7/15/2008. </div>
+      <div class="rh-relatedhead">Related topics<a name="1028969"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028973">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028977">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028981">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028985">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028989">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028993">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

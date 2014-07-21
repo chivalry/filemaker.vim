@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the value specified in sourceField using the relationships in the relationships graph. The result of the optional failExpression will be returned if the lookup fails." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Lookup</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.18.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.16.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028291">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028291">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1028291">Logical functions</a> &gt; 
+      <b>Lookup</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Lookup</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047673"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047676">Returns the value specified in </a><span class="c-code">sourceField</span> using the <span class="g-glosslink"><a href="glossary.html#1028048">relationships</a></span> in the <span class="g-glosslink"><a href="glossary.html#1028051">relationships graph</a></span>. The result of the optional <span class="c-code">failExpression</span> will be returned if the lookup fails.</div>
+      <div class="ffh-funcformathead">Format<a name="1047677"> </a></div>
+      <div class="ff-funcformat"><a name="1028293">Lookup(sourceField{;failExpression})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028294"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028297">sourceField</a></span> - the <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> from which the <span class="g-glosslink"><a href="glossary.html#1027894">lookup</a></span> value is taken.</div>
+      <div class="b-body"><span class="c-code"><a name="1028299">failExpression</a></span> - any <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span>.</div>
+      <div class="b-body"><a name="1028300">Parameters in curly braces { } are optional.</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028301"> </a></div>
+      <div class="b-body"><a name="1028302">text, number, date, time, timestamp, container</a></div>
+      <div class="orh-originhead">Originated in<a name="1056703"> </a></div>
+      <div class="or-origin"><a name="1056704">FileMaker Pro 7.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028303"> </a></div>
+      <div class="b-body"><a name="1028306">For this function to access the contents of the source field, the </a><span class="g-glosslink"><a href="glossary.html#1045562">tables</a></span> containing the source field and <span class="g-glosslink"><a href="glossary.html#1027566">calculation field</a></span> need to be related. Calculations using the <span class="c-code">Lookup</span> function won’t be forced to be <span class="g-glosslink"><a href="glossary.html#1028220">unstored calculations</a></span>.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><span class="c-code"><a name="1047645">Lookup</a></span> returns <span class="c-code">?</span> when the related table is an ODBC data source.</div>
+      <div class="feh-funcexamhead">Examples<a name="1028310"> </a></div>
+      <div class="b-body"><a name="1028312">There are two tables, People and Company, in a </a><span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span> containing the data shown below.</div>
+      <div class="b-body"><span class="e-emphasis"><a name="1028313">People table</a></span></div>
+      <div class="ta-tableanchor"><a name="1028331"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1028316">CompanyID</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1028318">Employee</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028320">100</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028322">John Smith</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028324">200</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028326">Peter Wong</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028328">300</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028330">Sally Anderson</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="b-body"><span class="e-emphasis"><a name="1028332">Company table</a></span></div>
+      <div class="ta-tableanchor"><a name="1028358"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1028335">CompanyID</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1028337">CompanyName</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1028339">Code</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028341">100</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028343">Apple</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028345">91234</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028347">100</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028349">Apple</a></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028351">82345</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028353">200</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028355">FileMaker</a></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1028357">95054</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="b-body"><a name="1028359">The People and Company tables are related using the number field CompanyID. The calculation </a><span class="c-code">CompanyName = Lookup(Company::CompanyName;“Not found”)</span> defined in the People table will return <span class="o-onscreen">Apple</span> for the first <span class="g-glosslink"><a href="glossary.html#1028030">record</a></span>, <span class="o-onscreen">FileMaker</span> for the second record, and <span class="o-onscreen">Not found</span> for the third record.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028361"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028365">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028369">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028373">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028377">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028381">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028385">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

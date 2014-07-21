@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(triggermodifierkeys), get trigger modifier keys, get modifier keys, get script trigger" />
+    <meta name="description" content="Returns the state of the keyboard modifier keys as they were when a script trigger was activated." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(TriggerModifierKeys)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.94.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.92.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1045252">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1045252">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1045252">Get functions</a> &gt; 
+      <b>Get(TriggerModifierKeys)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(TriggerModifierKeys)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1048736"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048737">Returns the state of the keyboard modifier keys as they were when a </a><span class="g-glosslink"><a href="glossary.html#1033294">script trigger</a></span> was activated.</div>
+      <div class="ffh-funcformathead">Format<a name="1048738"> </a></div>
+      <div class="ff-funcformat"><a name="1045058">Get(TriggerModifierKeys)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1045336"> </a></div>
+      <div class="b-body"><a name="1045337">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1045340"> </a></div>
+      <div class="b-body"><a name="1045341">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1050424"> </a></div>
+      <div class="or-origin"><a name="1050425">FileMaker Pro 10.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1045342"> </a></div>
+      <div class="b-body"><a name="1048761">Returns a value only when called from a script activated by a script trigger or from a sub-script called from the triggered script; otherwise returns an empty string. </a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1048772">See </a><span class="zh-hyper"><a href="func_ref2.32.9.html#1028465">Get(ActiveModifierKeys)</a></span> for a description of the values assigned to the keyboard modifier keys. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1048776">See the </a><span class="zh-hyper"><a href="func_ref3.33.50.html#1078847">Code function</a></span> for a list of navigational keys and the codes returned to a script activated by this trigger.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><a name="1048959">Time might elapse between when the keys that activated a script trigger are pressed and the script asks for information on the modifier keys. Use Get(TriggerKeystroke) and Get(TriggerModifierKeys) to capture the keys that were active when the script trigger was activated. Use Get(ActiveModifierKeys) to capture any current keys being pressed.</a></div>
+      <div class="hs1-headsub1"><a name="1052685">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1052935">Windows: Alt and Ctrl key combinations do not activate script triggers.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1052936">OS X: Command key combinations do not activate script triggers.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1056916">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1045525"> </a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1045526">The following example will only display a custom dialog box when lowercase </a><span class="c-code">“a”</span> is entered:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="co1-code1"><a name="1045530">If [Get(TriggerKeystroke)=“a” and Get(TriggerModifierKeys)=0]</a></div>
+      <div class="co1-code1"><a name="1045547">		Show Custom Dialog [“You entered \”a\”.”]</a></div>
+      <div class="co1-code1"><a name="1048932">End If</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1048933">The value </a><span class="o-onscreen">9</span> is returned when Shift-Option is pressed on a computer running OS X. If the Option and Shift keys are pressed on a Mac when a script is triggered, Get(TriggerModifierKeys) returns <span class="o-onscreen">9</span>, regardless of which modifier keys have been pressed between when the trigger was activated and when the script runs.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="rh-relatedhead">Related topics<a name="1045362"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1045370">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1045374">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1045378">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1045382">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1045386">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1053324">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

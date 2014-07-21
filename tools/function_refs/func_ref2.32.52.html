@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(layoutnumber), get layout number, get current layout" />
+    <meta name="description" content="Returns the number of the layout currently displayed, according to the list in the Manage Layouts dialog box." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(LayoutNumber)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.53.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.51.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1030064">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1030064">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1030064">Get functions</a> &gt; 
+      <b>Get(LayoutNumber)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(LayoutNumber)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1041288"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1041289">Returns the number of the </a><span class="g-glosslink"><a href="glossary.html#1027851">layout</a></span> currently displayed, according to the list in the Manage Layouts dialog box.</div>
+      <div class="ffh-funcformathead">Format<a name="1030065"> </a></div>
+      <div class="ff-funcformat"><a name="1030066">Get(LayoutNumber)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1030067"> </a></div>
+      <div class="b-body"><a name="1030068">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030069"> </a></div>
+      <div class="b-body"><a name="1030070">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1050749"> </a></div>
+      <div class="or-origin"><a name="1050750">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1030071"> </a></div>
+      <div class="b-body"><a name="1030075">If there are multiple windows open in the current </a><span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span>, each window can have its own layout number value, but results are returned for only the foreground window.</div>
+      <div class="hs1-headsub1"><a name="1030080">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1076884">You can use Get(LayoutNumber) as an alternative to the </a><span class="zh-hyper"><a href="func_ref2.32.51.html#1030018">Get(LayoutName) function</a></span> if there are multiple layouts with the same name.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1076874">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1030081"> </a></div>
+      <div class="b-body"><a name="1030082">Returns </a><span class="o-onscreen">3</span> when the current layout is third in the list of layouts in Manage Layouts.</div>
+      <div class="rh-relatedhead">Related topics<a name="1030083"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030087">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030091">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030095">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030099">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030103">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030107">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

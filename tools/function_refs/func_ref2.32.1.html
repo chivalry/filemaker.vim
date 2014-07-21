@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="FileMaker Go,get functions, get function, getfunctions, get(),get" />
+    <meta name="description" content="Use Get functions in scripts for error checking and prevention, or to capture information about the status of a database file or elements in it, or an action being performed." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get functions</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="appleanchors">
+      <a name="14059" class="applehelp-cs"></a>
+      <a name="GLMB_HELPID_LAYSYMBOLS" class="applehelp-cs"></a>
+    </div>
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.2.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.62.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1082345">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1082345">Functions reference</a> &gt; 
+      <b>Get functions</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fch-funccatgryhead">Get functions</div>
+      <div class="b-body"><a name="1048026">Use Get </a><span class="g-glosslink"><a href="glossary.html#1027756">functions</a></span> in scripts for error checking and prevention, or to capture information about the status of a <span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span> or elements in it, or an action being performed.</div>
+      <div class="b-body"><a name="1075828">Many Get functions return information that changes on a regular basis. For example, when the Get(CurrentTime) function is placed in a stored </a><span class="g-glosslink"><a href="glossary.html#1027566">calculation field</a></span>, the time will only update when a new record is created. If the calculation has other fields in it, but the calculation result still returns the current time, then the stored calculation result will only update when those other fields have been modified in the current record. If either of these calculations are <span class="g-glosslink"><a href="glossary.html#1028220">unstored</a></span>, the time will update as needed. For performance reasons, making a calculation field unstored is not always the best idea. Get functions are best used in a script where the status information from a Get function is up-to-date at the moment that the calculation is run.</div>
+      <div class="b-body"><a name="1075831">To access the list of Get functions, in the Specify Calculation dialog box, choose </a><span class="o-onscreen">View all functions by type</span> or <span class="o-onscreen">View Get functions</span>. When you choose <span class="o-onscreen">View all functions by name</span>, you see only Get(flag).</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1027516">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+      <div class="b-body"><a name="1076009">Click a function name for details.</a></div>
+      <div class="ta-tableanchor"><a name="1076792"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1078804">This function</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1078806">Returns</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.2.html#1051834" name="1078811">Get(AccountExtendedPrivileges)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078814">A list of keywords for the enabled </a><span class="g-glosslink"><a href="glossary.html#1027693">extended privileges</a></span>, separated by carriage returns. The list that is returned is based on the account used to open the database file.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.3.html#1052203" name="1078819">Get(AccountName)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078821">The authenticated account name being used for the active database file.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.4.html#1051898" name="1078826">Get(AccountPrivilegeSetName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078829">The name of the </a><span class="g-glosslink"><a href="glossary.html#1028013">privilege set</a></span> that is being used by the account used to open the database file.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.5.html#1041454" name="1078834">Get(ActiveFieldContents)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078837">The contents of the </a><span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> that has the focus.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.6.html#1028330" name="1078842">Get(ActiveFieldName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078844">The name of the field that has the focus.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.7.html#1028373" name="1078849">Get(ActiveFieldTableName)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078852">The name of the </a><span class="g-glosslink"><a href="glossary.html#1045562">table</a></span> that contains the active field (the field that has the focus).</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.8.html#1054669" name="1078857">Get(ActiveLayoutObjectName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078859">The name of the active layout object in the calculation's active window.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.9.html#1028465" name="1078864">Get(ActiveModifierKeys)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078866">A number representing the keyboard modifier keys (for example, Shift) that are being pressed.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.10.html#1052357" name="1078871">Get(ActivePortalRowNumber)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078874">The number of the </a><span class="g-glosslink"><a href="glossary.html#1028003">portal</a></span> row containing the focus.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.11.html#1028513" name="1078879">Get(ActiveRepetitionNumber)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078882">A number representing the active repetition of a </a><span class="g-glosslink"><a href="glossary.html#1028056">repeating field</a></span> (the repetition that has the focus).</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.12.html#1028557" name="1078887">Get(ActiveSelectionSize)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078889">A number representing how many characters are selected.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.13.html#1028599" name="1078894">Get(ActiveSelectionStart)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078896">A number representing the starting character of the selected text.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.14.html#1028643" name="1078901">Get(AllowAbortState)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078904">A </a><span class="g-glosslink"><a href="glossary.html#1038496">Boolean</a></span> value representing the current state of <span class="c-code">Allow user abort</span> script step.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.15.html#1028685" name="1078909">Get(AllowFormattingBarState)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078911">A Boolean value representing whether the formatting bar is allowed to be visible.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.16.html#1028732" name="1078916">Get(ApplicationLanguage)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078918">Text representing the current application language (for example, English).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.17.html#1028783" name="1078923">Get(ApplicationVersion)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078925">Text representing the FileMaker application version.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.18.html#1028830" name="1078930">Get(CalculationRepetitionNumber)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078932">A number representing the repetition of the calculation field that is currently being calculated.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.19.html#1090570" name="1090830">Get(ConnectionAttributes)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1090832">The name of the current file’s host and the name of the certificate authority that issued the SSL certificate used to secure the connection.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.20.html#1073099" name="1078937">Get(ConnectionState)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078939">A number representing the security state of the network connection for the current file.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.21.html#1028875" name="1078944">Get(CurrentDate)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078946">The current date according to the system calendar.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.22.html#1052478" name="1078951">Get(CurrentExtendedPrivileges)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078953">A list of keywords for the enabled extended privileges of the account that is being used to evaluate the calculation.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.23.html#1052472" name="1078958">Get(CurrentHostTimestamp)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078960">The host's current date and time (to the nearest second) according to the system clock.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.24.html#1052560" name="1078965">Get(CurrentPrivilegeSetName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078967">The name of the privilege set that is being used to evaluate this calculation in the database.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.25.html#1052625" name="1078972">Get(CurrentTime)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078974">The current time (to the nearest second) according to the system clock.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.26.html#1029018" name="1078979">Get(CurrentTimestamp)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078981">The current date and time (to the nearest second) according to the system clock.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.27.html#1078158" name="1078986">Get(CurrentTimeUTCMilliseconds)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="fpu-funcpurpose"><a name="1078988">The current time in Coordinated Universal Time to the nearest millisecond.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.28.html#1029060" name="1078993">Get(CustomMenuSetName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1078995">The name of the active custom menu set.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.29.html#1041647" name="1079000">Get(DesktopPath)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079002">The path to the desktop folder for the current user.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.30.html#1078430" name="1079598">Get(Device)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079600">A number indicating the type of computer or iOS device currently running a FileMaker product.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.31.html#1029146" name="1079007">Get(DocumentsPath)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079009">The path to the Documents folder for the current user.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.32.html#1029190" name="1079014">Get(DocumentsPathListing)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079016">A list of all the files and folders in the Documents folder returned by the Get(DocumentsPath) function.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.33.html#1081434" name="1081416">Get(EncryptionState)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1081418">A value representing the current encryption state.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.34.html#1081593" name="1079021">Get(ErrorCaptureState)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079023">A Boolean value representing the state of </a><span class="c-code">Error capture</span> script step.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.35.html#1029294" name="1079028">Get(FileMakerPath)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079030">The path to the folder of the currently running copy of FileMaker Pro.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.36.html#1029337" name="1079035">Get(FileName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079037">The name of the currently active database file.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.37.html#1029383" name="1079042">Get(FilePath)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079044">The full path indicating the location of the file.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.38.html#1041754" name="1079049">Get(FileSize)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079051">The size (in bytes) of the currently active database file.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.39.html#1029478" name="1079056">Get(FoundCount)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079058">A number that represents the number of records in the current </a><span class="g-glosslink"><a href="glossary.html#1027747">found set</a></span>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.40.html#1029527" name="1079064">Get(HighContrastColor)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079066">The name of the current high contrast default color scheme if </a><span class="o-onscreen">Use High Contrast </span>is selected in the Windows operating system Accessibility Options dialog box.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.41.html#1029570" name="1079071">Get(HighContrastState)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079073">A Boolean value representing the state of the </a><span class="o-onscreen">Use High Contrast</span> checkbox on the Accessibility Options dialog box.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.42.html#1029613" name="1079078">Get(HostApplicationVersion)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079080">The version of FileMaker Pro or FileMaker Server running on the computer that is hosting the current database.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.43.html#1029654" name="1079085">Get(HostIPAddress)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079087">The IP address of the host machine for the current database.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.44.html#1029701" name="1079092">Get(HostName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079095">The registered name of the computer that is </a><span class="g-glosslink"><a href="glossary.html#1027797">hosting</a></span> the database file.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.45.html#1060792" name="1079100">Get(InstalledFMPlugins)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079102">The display name, version number (if available), and enabled state of installed </a><span class="g-glosslink"><a href="glossary.html#1027997">plug-ins</a></span>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.46.html#1029752" name="1079108">Get(LastError)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079110">A number representing the error, if any, in the execution of the most recently executed script step.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.47.html#1029814" name="1079115">Get(LastMessageChoice)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079117">A number corresponding to the button clicked in an alert message displayed by the Show Custom Dialog script step.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.48.html#1029861" name="1079122">Get(LastODBCError)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079125">A string that shows the error state published by </a><span class="g-glosslink"><a href="glossary.html#1027961">ODBC</a></span> standards, based on ISO/IEF standards.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.49.html#1029916" name="1079130">Get(LayoutAccess)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079133">A number corresponding to the layout </a><span class="g-glosslink"><a href="glossary.html#1027504">access privileges</a></span> assigned through the Manage Security dialog box.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.50.html#1029974" name="1079138">Get(LayoutCount)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079141">The total number of </a><span class="g-glosslink"><a href="glossary.html#1027851">layouts</a></span> in the database file.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.51.html#1030018" name="1079146">Get(LayoutName)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079148">The name of the layout currently displayed.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.52.html#1030064" name="1079153">Get(LayoutNumber)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079155">The number of the layout currently displayed, according to the list in the Manage Layouts dialog box.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.53.html#1030109" name="1079160">Get(LayoutTableName)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079162">The name of the table that the layout is displaying records from.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.54.html#1030154" name="1079167">Get(LayoutViewState)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079169">Information about how the database file is being viewed.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.55.html#1081625" name="1081619">Get(ModifiedFields)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1081621">A list of fields that have been modified in the current record of the current table.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.56.html#1030199" name="1079174">Get(MultiUserState)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079176">A number representing the current multi-user state of the database file.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.57.html#1030256" name="1079181">Get(NetworkProtocol)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079184">The name of the </a><span class="g-glosslink"><a href="glossary.html#1027944">network protocol</a></span> that FileMaker Pro is using on this machine.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.58.html#1082024" name="1082273">Get(NetworkType)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1082275">A number representing the type of network being used by FileMaker Pro to access the file that is performing the current script.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.59.html#1030299" name="1079189">Get(PageNumber)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079191">A number representing the current page being printed or previewed.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.60.html#1075579" name="1079196">Get(PersistentID)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079198">Text representing a unique identifier of the computer or device on which FileMaker is running.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.61.html#1030386" name="1079203">Get(PreferencesPath)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079205">The path to the preferences folder for the current user.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.62.html#1030429" name="1079210">Get(PrinterName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079212">A string identifying the default printer name.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.63.html#1049223" name="1079217">Get(QuickFindText)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079219">The text that was entered in the Quick Find box.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.64.html#1030540" name="1079224">Get(RecordAccess)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079226">A number indicating the access privileges of the current record.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.65.html#1030601" name="1079231">Get(RecordID)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079234">The unique ID number of the current </a><span class="g-glosslink"><a href="glossary.html#1028030">record</a></span>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.66.html#1030648" name="1079239">Get(RecordModificationCount)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079241">The total number of times changes to the current record have been committed.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.67.html#1030706" name="1079246">Get(RecordNumber)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079248">The number of the current record in the current found set.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.68.html#1030756" name="1079253">Get(RecordOpenCount)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079255">The total number of open records in the current found set that haven’t yet been saved.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.69.html#1030803" name="1079260">Get(RecordOpenState)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079262">A number representing the state of the current record.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.70.html#1030853" name="1079267">Get(RequestCount)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079269">The total number of find requests currently defined for the current table.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.71.html#1030898" name="1079274">Get(RequestOmitState)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079276">A Boolean value representing the state of the </a><span class="o-onscreen">Omit</span> checkbox in Find mode.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.72.html#1030942" name="1079281">Get(ScreenDepth)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079283">The number of bits needed to represent the color or shade of gray of a pixel on the main screen.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.73.html#1030987" name="1079288">Get(ScreenHeight)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079290">The height, in points, of the screen in which the window of the current file is open.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.74.html#1031030" name="1079295">Get(ScreenWidth)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079297">The width, in points, of the screen in which the window of the current file is open.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.75.html#1080355" name="1080349">Get(ScriptAnimationState)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080351">A number indicating whether or not animations are enabled for the currently running script.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.76.html#1085170" name="1079302">Get(ScriptName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079304">The name of the script currently running (or paused).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.77.html#1031116" name="1079309">Get(ScriptParameter)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079311">The script parameter passed into the current script.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.78.html#1031167" name="1079316">Get(ScriptResult)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079318">The script result from a performed subscript.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.79.html#1031209" name="1079323">Get(SortState)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079325">A number value representing the current sort state.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.80.html#1031261" name="1088808">Get(StatusAreaState)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1088810">A number representing whether the </a><span class="g-glosslink"><a href="glossary.html#1028139">status toolbar</a></span> is hidden, visible, visible and locked, or hidden and locked.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.81.html#1031311" name="1088812">Get(SystemDrive)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1088814">The drive letter (Windows) or the volume name (OS X) where the currently running operating system is located.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.82.html#1031354" name="1079365">Get(SystemIPAddress)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079368">The </a><span class="g-glosslink"><a href="glossary.html#1027827">IP addresses</a></span> of all the machines connected to a NIC (Network Interface Controller) card.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.83.html#1031404" name="1079373">Get(SystemLanguage)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079375">The language currently set on the current system.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.84.html#1031446" name="1079380">Get(SystemNICAddress)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079382">The hardware addresses of all the Network Interface Controller cards connected to the machine.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.85.html#1031488" name="1079387">Get(SystemPlatform)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079389">A number indicating the current platform.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.86.html#1031534" name="1079394">Get(SystemVersion)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079396">The version of the operating system of the machine on which the function is executed. </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.87.html#1031578" name="1079401">Get(TemporaryPath)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079403">The path to the current user’s temporary folder used by FileMaker Pro.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.88.html#1031625" name="1079408">Get(TextRulerVisible)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079410">A Boolean value representing whether or not the text ruler is visible.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.89.html#1031667" name="1079415">Get(TotalRecordCount)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079417">The total number of records in the current table.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.90.html#1053173" name="1079422">Get(TriggerCurrentPanel)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079424">The index number and object name of the </a><span class="g-glosslink"><a href="glossary.html#1028174">tab panel</a></span> or <span class="g-glosslink"><a href="glossary.html#1047051">slide panel</a></span> to be switched from when the <span class="zh-hyper"><a href="script_trigg.38.8.html#1034646">OnPanelSwitch</a></span> <span class="g-glosslink"><a href="glossary.html#1033294">script trigger</a></span> is activated.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.91.html#1079871" name="1080268">Get(TriggerGestureInfo)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080270">Details about the gesture that activated an </a><span class="zh-hyper"><a href="script_trigg.38.19.html#1035389">OnGestureTap</a></span> script trigger.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.92.html#1045003" name="1079433">Get(TriggerKeystroke)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079435">A string containing the characters that activated an </a><span class="zh-hyper"><a href="script_trigg.38.3.html#1028479">OnObjectKeystroke</a></span> or <span class="zh-hyper"><a href="script_trigg.38.12.html#1028792">OnLayoutKeystroke</a></span> script trigger.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.93.html#1045252" name="1079446">Get(TriggerModifierKeys)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079448">The state of the keyboard modifier keys as they were when the script trigger was activated.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.94.html#1053326" name="1079453">Get(TriggerTargetPanel)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079455">The index number and object name of the </a><span class="g-glosslink"><a href="glossary.html#1028174">tab panel</a></span> or <span class="g-glosslink"><a href="glossary.html#1047051">slide panel</a></span> to be switched to when the <span class="zh-hyper"><a href="script_trigg.38.8.html#1034646">OnPanelSwitch</a></span> script trigger is activated.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.95.html#1045012" name="1079463">Get(UserCount)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079465">The number of users who are currently accessing the file.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.96.html#1041385" name="1079470">Get(UserName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079472">The name of the FileMaker Pro user, as specified in the </a><span class="o-onscreen">General</span> tab of the Preferences dialog box.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.97.html#1041376" name="1079477">Get(UseSystemFormatsState)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079479">A Boolean value representing the state of the </a><span class="o-onscreen">Use System Formats</span> menu command.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.98.html#1064250" name="1079484">Get(UUID)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079486">Text representing a Universally Unique Identifier (UUID).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.99.html#1064482" name="1079491">Get(WindowContentHeight)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079493">The height, in points, of the FileMaker Pro content area.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.100.html#1041402" name="1079498">Get(WindowContentWidth)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079500">The width, in points, of the FileMaker Pro content area.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.101.html#1031939" name="1079505">Get(WindowDesktopHeight)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079507">The height, in points, of the desktop space.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.102.html#1031984" name="1079512">Get(WindowDesktopWidth)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079514">The width, in points, of the desktop space.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.103.html#1032029" name="1079519">Get(WindowHeight)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079521">The height, in points, of the window on which the script is acting (not necessarily the foreground window).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.104.html#1032071" name="1079526">Get(WindowLeft)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079528">The horizontal distance, in points, of the outer edge of the window on which the script is acting (not necessarily the foreground window) relative to the left-most edge of the screen.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.105.html#1032114" name="1088834">Get(WindowMode)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1088836">A number representing whether FileMaker Pro is in </a><span class="g-glosslink"><a href="glossary.html#1027555">Browse mode</a></span>, <span class="g-glosslink"><a href="glossary.html#1027728">Find mode</a></span>, <span class="g-glosslink"><a href="glossary.html#1028006">Preview mode</a></span>, or printing when the function is evaluated.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.106.html#1032167" name="1088838">Get(WindowName)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1088840">The name of the current window of the file in which the calculation is defined.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.107.html#1080997" name="1080948">Get(WindowOrientation)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1080950">A number indicating the orientation of the window that the current script is acting on.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.108.html#1081126" name="1079566">Get(WindowStyle)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079568">A number indicating whether the top-most open window is a document window, a floating document window, or a dialog window.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.109.html#1054931" name="1079573">Get(WindowTop)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079575">The vertical distance, in points, of the outer edge of the window on which the script is acting (not necessarily the foreground window) relative to the bottom edge of the menu bar.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.110.html#1032259" name="1079580">Get(WindowVisible)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079582">A Boolean value representing whether or not the current window is visible.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.111.html#1085307" name="1079587">Get(WindowWidth)</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079589">The width, in points, of the window on which the script is acting (not necessarily the foreground window).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref2.32.112.html#1032345" name="1079594">Get(WindowZoomLevel)</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1079596">The zoom level of the current window.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="hs1-headsub1"><a name="1076793">Get functions example</a></div>
+      <div class="b-body"><a name="1028204">This script uses the function </a><span class="c-code">Get(CurrentDate)</span> to check each record in the found set to see if an account is past due. If an account is past due, the script shows a message and prompts the user to click a button labeled Ignore, Send Letter, or Send Mail (set up through the Show Custom Dialog script step). The script captures the user's response using <span class="c-code">Get(LastMessageChoice)</span>. Then, based on the user's response, the script performs an action: it cancels the rest of the script, prints a "payment is late" letter, or sends email to the associated account. </div>
+      <div class="co-code"><a name="1028205"> </a></div>
+      <div class="co-code"><a name="1028206">Go to Layout ["LayoutName"]</a></div>
+      <div class="co-code"><a name="1028207">Go to Record/Request/Page [First]</a></div>
+      <div class="co-code"><a name="1028208">Loop</a></div>
+      <div class="co-code"><a name="1028209">  If [DatabaseName::Date &lt; Get(CurrentDate) - 30]</a></div>
+      <div class="co-code"><a name="1028210">    Show Custom Dialog ["30 or more days late"]</a></div>
+      <div class="co-code"><a name="1028211">    If [Get(LastMessageChoice) = 1]</a></div>
+      <div class="co-code"><a name="1028212">      Halt Script</a></div>
+      <div class="co-code"><a name="1028213">    Else If [Get(LastMessageChoice) = 2]</a></div>
+      <div class="co-code"><a name="1028214">      Go to Layout ["Late Notice"]</a></div>
+      <div class="co-code"><a name="1028215">      Print []</a></div>
+      <div class="co-code"><a name="1028216">    Else</a></div>
+      <div class="co-code"><a name="1028217">      Send Mail [To: DatabaseName::Client; Subject: "Late Notice"; Message: "Your account is past due."]</a></div>
+      <div class="co-code"><a name="1028218">    End If</a></div>
+      <div class="co-code"><a name="1028219">  End If</a></div>
+      <div class="co-code"><a name="1028220">  Go to Record/Request/Page [Exit after last, Next]</a></div>
+      <div class="co-code"><a name="1028221">End Loop</a></div>
+      <div class="co-code"><a name="1028222">Go to Layout [original layout]</a></div>
+      <div class="rh-relatedhead">Related topics<a name="1076806"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1076810">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1076814">About formulas</a></span></div>
+    </blockquote>
+    <div class="WebWorks_MiniTOC">
+      <div class="WebWorks_MiniTOCTitle">Topics in this section</div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.2.html#1051834">Get(AccountExtendedPrivileges)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.3.html#1052203">Get(AccountName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.4.html#1051898">Get(AccountPrivilegeSetName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.5.html#1041454">Get(ActiveFieldContents)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.6.html#1028330">Get(ActiveFieldName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.7.html#1028373">Get(ActiveFieldTableName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.8.html#1054669">Get(ActiveLayoutObjectName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.9.html#1028465">Get(ActiveModifierKeys)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.10.html#1052357">Get(ActivePortalRowNumber)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.11.html#1028513">Get(ActiveRepetitionNumber)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.12.html#1028557">Get(ActiveSelectionSize)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.13.html#1028599">Get(ActiveSelectionStart)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.14.html#1028643">Get(AllowAbortState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.15.html#1028685">Get(AllowFormattingBarState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.16.html#1028732">Get(ApplicationLanguage)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.17.html#1028783">Get(ApplicationVersion)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.18.html#1028830">Get(CalculationRepetitionNumber)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.19.html#1090570">Get(ConnectionAttributes)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.20.html#1073099">Get(ConnectionState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.21.html#1028875">Get(CurrentDate)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.22.html#1052478">Get(CurrentExtendedPrivileges)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.23.html#1052472">Get(CurrentHostTimestamp)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.24.html#1052560">Get(CurrentPrivilegeSetName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.25.html#1052625">Get(CurrentTime)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.26.html#1029018">Get(CurrentTimestamp)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.27.html#1078158">Get(CurrentTimeUTCMilliseconds)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.28.html#1029060">Get(CustomMenuSetName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.29.html#1041647">Get(DesktopPath)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.30.html#1078430">Get(Device)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.31.html#1029146">Get(DocumentsPath)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.32.html#1029190">Get(DocumentsPathListing)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.33.html#1081434">Get(EncryptionState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.34.html#1081593">Get(ErrorCaptureState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.35.html#1029294">Get(FileMakerPath)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.36.html#1029337">Get(FileName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.37.html#1029383">Get(FilePath)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.38.html#1041754">Get(FileSize)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.39.html#1029478">Get(FoundCount)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.40.html#1029527">Get(HighContrastColor)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.41.html#1029570">Get(HighContrastState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.42.html#1029613">Get(HostApplicationVersion)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.43.html#1029654">Get(HostIPAddress)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.44.html#1029701">Get(HostName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.45.html#1060792">Get(InstalledFMPlugins)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.46.html#1029752">Get(LastError)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.47.html#1029814">Get(LastMessageChoice)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.48.html#1029861">Get(LastODBCError)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.49.html#1029916">Get(LayoutAccess)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.50.html#1029974">Get(LayoutCount)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.51.html#1030018">Get(LayoutName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.52.html#1030064">Get(LayoutNumber)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.53.html#1030109">Get(LayoutTableName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.54.html#1030154">Get(LayoutViewState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.55.html#1081625">Get(ModifiedFields)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.56.html#1030199">Get(MultiUserState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.57.html#1030256">Get(NetworkProtocol)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.58.html#1082024">Get(NetworkType)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.59.html#1030299">Get(PageNumber)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.60.html#1075579">Get(PersistentID)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.61.html#1030386">Get(PreferencesPath)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.62.html#1030429">Get(PrinterName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.63.html#1049223">Get(QuickFindText)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.64.html#1030540">Get(RecordAccess)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.65.html#1030601">Get(RecordID)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.66.html#1030648">Get(RecordModificationCount)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.67.html#1030706">Get(RecordNumber)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.68.html#1030756">Get(RecordOpenCount)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.69.html#1030803">Get(RecordOpenState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.70.html#1030853">Get(RequestCount)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.71.html#1030898">Get(RequestOmitState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.72.html#1030942">Get(ScreenDepth)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.73.html#1030987">Get(ScreenHeight)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.74.html#1031030">Get(ScreenWidth)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.75.html#1080355">Get(ScriptAnimationState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.76.html#1085170">Get(ScriptName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.77.html#1031116">Get(ScriptParameter)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.78.html#1031167">Get(ScriptResult)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.79.html#1031209">Get(SortState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.80.html#1031261">Get(StatusAreaState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.81.html#1031311">Get(SystemDrive)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.82.html#1031354">Get(SystemIPAddress)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.83.html#1031404">Get(SystemLanguage)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.84.html#1031446">Get(SystemNICAddress)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.85.html#1031488">Get(SystemPlatform)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.86.html#1031534">Get(SystemVersion)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.87.html#1031578">Get(TemporaryPath)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.88.html#1031625">Get(TextRulerVisible)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.89.html#1031667">Get(TotalRecordCount)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.90.html#1053173">Get(TriggerCurrentPanel)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.91.html#1079871">Get(TriggerGestureInfo)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.92.html#1045003">Get(TriggerKeystroke)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.93.html#1045252">Get(TriggerModifierKeys)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.94.html#1053326">Get(TriggerTargetPanel)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.95.html#1045012">Get(UserCount)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.96.html#1041385">Get(UserName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.97.html#1041376">Get(UseSystemFormatsState)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.98.html#1064250">Get(UUID)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.99.html#1064482">Get(WindowContentHeight)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.100.html#1041402">Get(WindowContentWidth)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.101.html#1031939">Get(WindowDesktopHeight)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.102.html#1031984">Get(WindowDesktopWidth)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.103.html#1032029">Get(WindowHeight)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.104.html#1032071">Get(WindowLeft)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.105.html#1032114">Get(WindowMode)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.106.html#1032167">Get(WindowName)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.107.html#1080997">Get(WindowOrientation)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.108.html#1081126">Get(WindowStyle)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.109.html#1054931">Get(WindowTop)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.110.html#1032259">Get(WindowVisible)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.111.html#1085307">Get(WindowWidth)</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref2.32.112.html#1032345">Get(WindowZoomLevel)</a>
+      </div>
+    </div>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

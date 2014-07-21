@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the contents of fieldName from the provided recordNumber." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>GetNthRecord</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.12.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.10.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1027997">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1027997">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1027997">Logical functions</a> &gt; 
+      <b>GetNthRecord</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">GetNthRecord</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047148"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047149">Returns the contents of </a><span class="c-code">fieldName</span> from the provided <span class="c-code">recordNumber</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1027998"> </a></div>
+      <div class="ff-funcformat"><a name="1027999">GetNthRecord(fieldName;recordNumber)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028000"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028004">fieldName</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028036">related field</a></span> or <span class="g-glosslink"><a href="glossary.html#1028056">repeating field</a></span>, or an <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> that returns a field or a repeating field</div>
+      <div class="b-body"><span class="c-code"><a name="1028006">recordNumber</a></span> - the <span class="g-glosslink"><a href="glossary.html#1028030">record</a></span> number from which you want data</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028007"> </a></div>
+      <div class="b-body"><a name="1028008">text, number, date, time, timestamp, container</a></div>
+      <div class="orh-originhead">Originated in<a name="1056500"> </a></div>
+      <div class="or-origin"><a name="1056501">FileMaker Pro 8.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028009"> </a></div>
+      <div class="b-body"><a name="1028011">The result of </a><span class="c-code">GetNthRecord()</span> will not be updated when the record referred to by GetNthRecord() is a record other than the one in which the calculation is currently being evaluated.</div>
+      <div class="b-body"><span class="c-code"><a name="1028012">GetNthRecord</a></span> of the current table returns the Nth record of the found set according to how the current table is sorted.</div>
+      <div class="b-body"><span class="c-code"><a name="1028013">GetNthRecord</a></span> of a related table returns the Nth record of the related set (relative to the current record), regardless of how the related table (or portal) is sorted.</div>
+      <div class="feh-funcexamhead">Examples<a name="1028014"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028015">GetNthRecord(First Name;2)</a></span> returns the contents of the First Name field for record 2 in the current table.</div>
+      <div class="b-body"><span class="c-code"><a name="1028016">GetNthRecord(First Name;Get(RecordNumber)+ 1)</a></span> returns the contents of the First Name field for the next record in the current table.</div>
+      <div class="b-body"><span class="c-code"><a name="1028017">GetNthRecord(Contacts::First Name;2)</a></span> returns the contents of the First Name field for record 2 in the Contacts table.</div>
+      <div class="b-body"><span class="c-code"><a name="1028018">GetNthRecord(Contacts::Has Repetitions[2];2)</a></span> returns the contents of the second repetition of the Has Repetitions field for record 2 in the Contacts table.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028019"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028023">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028027">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028031">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028035">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028039">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028043">Using operators in formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="find_sort.5.22.html#1043585" name="1028047">Sorting records</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

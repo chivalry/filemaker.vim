@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a list of the names of all fields on layoutName, in fileName file, separated by carriage returns." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>FieldNames</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.40.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.38.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029384">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029384">Functions reference</a> &gt; 
+      <a href="func_ref1.31.34.html#1029384">Design functions</a> &gt; 
+      <b>FieldNames</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">FieldNames</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1037202"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1037203">Returns a list of the names of all </a><span class="g-glosslink"><a href="glossary.html#1027703">fields</a></span> on <span class="c-code">layoutName</span>, in <span class="c-code">fileName</span> file, separated by carriage returns.</div>
+      <div class="ffh-funcformathead">Format<a name="1029385"> </a></div>
+      <div class="ff-funcformat"><a name="1029386">FieldNames(fileName;layoutName)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029387"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029389">fileName</a></span> - the name of an open <span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span> (local or remote).</div>
+      <div class="b-body"><span class="c-code"><a name="1029392">layoutName</a></span> - the name of a <span class="g-glosslink"><a href="glossary.html#1027851">layout</a></span> or <span class="g-glosslink"><a href="glossary.html#1045562">table</a></span> in the specified database file.</div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1029396">See </a><span class="zh-hyper"><a href="func_ref1.31.34.html#1028995">Design functions</a></span> for information about literal text parameters.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029397"> </a></div>
+      <div class="b-body"><a name="1029398">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1039522"> </a></div>
+      <div class="or-origin"><a name="1039523">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029399"> </a></div>
+      <div class="b-body"><a name="1029401">Related fields are displayed in </a><span class="c-code">tablename::fieldname</span> format.</div>
+      <div class="b-body"><a name="1049482">If no parameter is specified for </a>fileName, FileMaker returns results for the current file.</div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1029403">If </a><span class="c-code">FieldNames</span> returns a question mark (?) or the name of only one field, go to the Specify Calculation dialog box and make sure <span class="o-onscreen">Calculation result is</span> text. Also, you can increase the size of the field on the layout to show more field names.</div>
+      <div class="feh-funcexamhead">Examples<a name="1029404"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029405">FieldNames(“Customers”;””)</a></span> returns a list of all the fields in the default table of the Customers database file.</div>
+      <div class="b-body"><span class="c-code"><a name="1029406">FieldNames(“Customers”;“Data Entry”)</a></span> returns a list of all the fields, including related fields, in the Customers database file that appear on the Data Entry layout.</div>
+      <div class="rh-relatedhead">Related topics<a name="1029407"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1029411">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029415">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029419">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029423">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029427">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029431">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

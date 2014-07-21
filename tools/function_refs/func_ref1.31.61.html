@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the payment (PMT) required by the term, interestRate, and principal." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>PMT</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.62.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.60.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1030399">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1030399">Functions reference</a> &gt; 
+      <a href="func_ref1.31.58.html#1030399">Financial functions</a> &gt; 
+      <b>PMT</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">PMT</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1036234"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1036237">Returns the payment (</a><span class="c-code">PMT</span>) required by the <span class="c-code">term</span>, <span class="c-code">interestRate</span>, and <span class="c-code">principal</span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1030400"> </a></div>
+      <div class="ff-funcformat"><a name="1030401">PMT(principal;interestRate;term)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1030402"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030403">principal</a></span> - principal amount.</div>
+      <div class="b-body"><span class="c-code"><a name="1030404">interestRate</a></span> - interest rate. If the interest rate is annual, divide the rate by 12.</div>
+      <div class="b-body"><span class="c-code"><a name="1030405">term</a></span> - length of time, expressed in number of months.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030406"> </a></div>
+      <div class="b-body"><a name="1030407">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1039711"> </a></div>
+      <div class="or-origin"><a name="1039712">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1030408"> </a></div>
+      <div class="b-body"><a name="1036254">Use this function to calculate </a><span class="c-code">PMT</span>.</div>
+      <div class="gr-graphicanchor"><a name="1030413"><img class="Default" src="../images/func_ref1.31.61.1.png" width="313" height="40" style="float: none; left: 0.0; top: 0.0;" alt="Equation" /></a></div>
+      <div class="feh-funcexamhead">Examples<a name="1030414"> </a></div>
+      <div class="b-body"><a name="1030415">In the following example, the </a><span class="c-code">PMT</span> function calculates payments for purchasing a sports car costing $21,000, at an annual rate of 6.9% over 48 monthly payments.</div>
+      <div class="b-body"><span class="c-code"><a name="1030416">PMT(21000;.069/12;48)</a></span> returns the payment amount <span class="o-onscreen">$501.90</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1030417">PMT(Cost;.13;Years)</a></span> returns a payment amount, based on the purchase value stored in Cost, at a 13 percent rate, over the duration stored in Years.</div>
+      <div class="b-body"><span class="c-code"><a name="1030418">“Your payment will be ” &amp; PMT(150000;.13/12;Months) &amp; “.”</a></span> returns <span class="o-onscreen">Your payment will be</span>, followed by the payment amount, based on a total cost of $150,000, at a 13 percent annual percentage rate, over the duration stored in Months.</div>
+      <div class="rh-relatedhead">Related topics<a name="1030419"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030423">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030427">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030431">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030435">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030439">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030443">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

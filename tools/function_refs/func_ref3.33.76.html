@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Converts Roman numbers in number to Japanese text." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>NumToJText</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.77.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.75.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1031197">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1031197">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1031197">Text functions</a> &gt; 
+      <b>NumToJText</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">NumToJText</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1048741"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048779">Converts Roman numbers in </a><span class="c-code">number</span> to Japanese text.</div>
+      <div class="ffh-funcformathead">Format<a name="1031198"> </a></div>
+      <div class="ff-funcformat"><a name="1031199">NumToJText(number;separator;characterType)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1031200"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1031203">number</a></span> - any numeric <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> or <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> containing a number</div>
+      <div class="b-body"><span class="c-code"><a name="1031204">separator</a></span> - a number from 0 - 3 representing a separator</div>
+      <div class="b-body"><span class="c-code"><a name="1031205">characterType</a></span> - a number from 0 - 3 representing a type</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1031206"> </a></div>
+      <div class="b-body"><a name="1031207">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1058120"> </a></div>
+      <div class="or-origin"><a name="1058121">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1031208"> </a></div>
+      <div class="b-body"><a name="1031209">If the value for </a><span class="c-code">separator</span> and <span class="c-code">characterType</span> are blank or other than 0 to 3, then 0 is used.</div>
+      <div class="hs2-headsub2"><a name="1031210">Separator:</a></div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1031211">0 - no separator</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1031212">1 - every 3 digits (thousands)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1031219">2 - ten thousands(<img class="Default" src="../images/numtojtext01.png" width="16" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese character for ten thousand" />) and millions(<img class="Default" src="../images/numtojtext02.png" width="18" height="18" style="float: none; left: 0.0; top: 0.0;" alt="Japanese character for one million" />) unit</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1031235">3 - tens(<img class="Default" src="../images/numtojtext03.png" width="15" height="16" style="float: none; left: 0.0; top: 0.0;" alt="Japanese character for ten" />), hundreds(<img class="Default" src="../images/numtojtext04.png" width="16" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese character for one hundred" />), thousands(<img class="Default" src="../images/numtojtext05.png" width="16" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese character for one thousand" />), ten thousands(<img class="Default" src="../images/numtojtext06.png" width="15" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese character for ten thousand" />) and millions(<img class="Default" src="../images/numtojtext07.png" width="16" height="16" style="float: none; left: 0.0; top: 0.0;" alt="Japanese character for one million" />) unit</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hs2-headsub2"><a name="1031236">Type:</a></div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1031237">0 - half width (Hankaku) number</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1031238">1 - full width (Zenkaku) number</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1031242">2 - Kanji character number <img class="Default" src="../images/numtojtext08.png" width="43" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese Kanji character number" /></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1031246">3 - Traditional-old-style Kanji character number <img class="Default" src="../images/numtojtext09.png" width="42" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese traditional old-style Kanji number" /></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1031247"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1031251">NumToJText(123456789;2;0)</a></span> returns <img class="Default" src="../images/numtojtext10.png" width="97" height="16" style="float: none; left: 0.0; top: 0.0;" alt="Arabic numeral &quot;123456789&quot; with half-width hankaku separators between the thousands and ten thousands place, and between the ten millions and hundred millions place" /></div>
+      <div class="b-body"><span class="c-code"><a name="1031255">NumToJText(123456789;3;2)</a></span> returns <img class="Default" src="../images/numtojtext11.png" width="235" height="17" style="float: none; left: 0.0; top: 0.0;" alt="Japanese text for the Arabic numeral &quot;123456789&quot;, using a Kanji number separator between the tens, hundreds, thousands, ten thousands, and millions places" /></div>
+      <div class="rh-relatedhead">Related topics<a name="1031256"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1031260">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1031264">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1031268">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1031272">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1031276">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1031280">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a number in the range 1 through 12, representing the number of the month of the year in which date occurs." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Month</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.28.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.26.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028659">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028659">Functions reference</a> &gt; 
+      <a href="func_ref1.31.20.html#1028659">Date functions</a> &gt; 
+      <b>Month</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Month</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1037005"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1037022">Returns a number in the range 1 through 12, representing the number of the month of the year in which </a><span class="c-code">date</span> occurs.</div>
+      <div class="ffh-funcformathead">Format<a name="1028660"> </a></div>
+      <div class="ff-funcformat"><a name="1028661">Month(date)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028662"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028663">date</a></span> - any calendar date</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028664"> </a></div>
+      <div class="b-body"><a name="1028665">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1039397"> </a></div>
+      <div class="or-origin"><a name="1039398">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1028672"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028673">Month(“3/19/2014”)</a></span> returns <span class="o-onscreen">3</span>. This example assumes that the operating system date format is set to MM/DD/YYYY.</div>
+      <div class="b-body"><span class="c-code"><a name="1028674">Month(Payment)</a></span> returns <span class="o-onscreen">3</span>, where Payment contains March 19, 2014. (The Payment field must be of type date.)</div>
+      <div class="b-body"><span class="c-code"><a name="1028675">“Bill Due by: ” &amp; Date(Month(DateSold) + 1;Day(DateSold);Year(DateSold))</a></span> returns <span class="o-onscreen">Bill Due by:</span> followed by a value that is one month later than DateSold.</div>
+      <div class="ni-noteimportant">
+        <span class="zan-autonum">Important  </span><a name="1037009">To avoid errors when using dates, always use four-digit years. For more information about how FileMaker Pro handles two-digit dates, see </a><span class="zh-hyper"><a href="add_view_data.4.22.html#1028976">Conversion of dates with two-digit years</a></span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028676"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028680">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028684">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028688">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028692">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028696">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028700">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

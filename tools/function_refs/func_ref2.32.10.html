@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="Get(ActivePortalRowNumber), get active portal row number, get portal row number, get row number, get active row number, active portal row number, get current portal row number" />
+    <meta name="description" content="Returns the number of the portal row containing the focus." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(ActivePortalRowNumber)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.11.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.9.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1052357">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1052357">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1052357">Get functions</a> &gt; 
+      <b>Get(ActivePortalRowNumber)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(ActivePortalRowNumber)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1052353"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1052293">Returns the number of the </a><span class="g-glosslink"><a href="glossary.html#1028003">portal</a></span> row containing the focus.</div>
+      <div class="ffh-funcformathead">Format<a name="1052294"> </a></div>
+      <div class="ff-funcformat"><a name="1052295">Get(ActivePortalRowNumber)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1052296"> </a></div>
+      <div class="b-body"><a name="1052297">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1052298"> </a></div>
+      <div class="b-body"><a name="1052299">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1052300"> </a></div>
+      <div class="or-origin"><a name="1052301">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1052302"> </a></div>
+      <div class="b-body"><a name="1052303">When no portal row contains the focus, this function returns </a><span class="o-onscreen">0</span>. If there are multiple windows open in the current <span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span>, each window can have its own portal row number value, but results are returned for only the foreground window. If a user navigates to a portal without selecting a specific portal row and without making an object active within a specific portal row, Get(ActivePortalRowNumber) returns row 0 rather than row 1.</div>
+      <div class="hs1-headsub1"><a name="1074623">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1074684">If a field on a layout is defined as </a><span class="c-code">Get(ActivePortalRowNumber)</span>, the window must be refreshed before the field will display the current portal row number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1074634">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1052307"> </a></div>
+      <div class="b-body"><a name="1052309">Returns </a><span class="o-onscreen">5</span> when the fifth row of a portal has the focus, or when the focus is in a <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> in the fifth portal row.</div>
+      <div class="b-body"><a name="1074673">Returns </a><span class="o-onscreen">1</span> after the <span class="c-code">Go to Portal Row [First]</span> script step runs.</div>
+      <div class="b-body"><a name="1074674">Returns </a><span class="o-onscreen">0</span> when a portal is not selected.</div>
+      <div class="rh-relatedhead">Related topics<a name="1074675"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1052314">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1052318">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1052322">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1052326">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1052330">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1052334">Using operators in formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028511">Using operators in formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="func_ref2.32.93.html#1045252" name="1045561">Get(TriggerModifierKeys)</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

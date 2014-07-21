@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Compares the contents of any two fields. If the fields match, the result is 1 (True); otherwise, the result is 0 (False)." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Exact</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.52.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.50.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1051848">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1051848">Functions reference</a> &gt; 
+      <a href="func_ref3.33.48.html#1051848">Text functions</a> &gt; 
+      <b>Exact</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Exact</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1051084"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1048208">Compares the contents of any two fields. If the fields match, the result is </a><span class="o-onscreen">1</span> (True); otherwise, the result is <span class="o-onscreen">0</span> (False).</div>
+      <div class="ffh-funcformathead">Format<a name="1030061"> </a></div>
+      <div class="ff-funcformat"><a name="1030062">Exact(originalText;comparisonText)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1030063"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030067">originalText</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028197">text expression</a></span>, text <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span>, or <span class="g-glosslink"><a href="glossary.html#1041246">container field</a></span></div>
+      <div class="b-body"><span class="c-code"><a name="1030068">comparisonText</a></span> - any text expression, text field, or container field</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030069"> </a></div>
+      <div class="b-body"><a name="1030070">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1057974"> </a></div>
+      <div class="or-origin"><a name="1057975">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1030071"> </a></div>
+      <div class="b-body"><a name="1030072">For text to match exactly, the uppercase and lowercase usage must be the same. For container fields, the data must be stored in the same manner (either embedded, or stored by reference).</a></div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1030073">When evaluating values, text attributes such as font, styles, and sizes are not considered. </a></div>
+      <div class="nt-notetip">
+        <span class="zan-autonum">Tip  </span><a name="1030074">If case isn't important, use the </a><span class="c-code">Lower</span> or <span class="c-code">Upper </span>function on both parameters to process data before checking for an exact match.</div>
+      <div class="feh-funcexamhead">Examples<a name="1030075"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030076">Exact(“McDonald”;“McDonald”)</a></span> returns <span class="o-onscreen">1</span> (True).</div>
+      <div class="b-body"><span class="c-code"><a name="1030077">Exact(“McDonald”;“MCDONALD”)</a></span> returns <span class="o-onscreen">0</span> (False).</div>
+      <div class="b-body"><span class="c-code"><a name="1030078">Exact(Upper(“McDonald”);Upper(“MCDONALD”))</a></span> returns <span class="o-onscreen">1</span> (True).</div>
+      <div class="b-body"><span class="c-code"><a name="1030079">Exact(“John”;“John ”)</a></span> returns <span class="o-onscreen">0</span> (False).</div>
+      <div class="b-body"><span class="c-code"><a name="1030080">Exact(BillTo;ShipTo)</a></span> returns <span class="o-onscreen">1</span> (True) when the value in BillTo is the same as the value in ShipTo. </div>
+      <div class="b-body"><span class="c-code"><a name="1030081">Exact(Recipient;Upper(Recipient))</a></span> returns <span class="o-onscreen">1</span> (True), when Recipient contains JOHNSON.</div>
+      <div class="b-body"><span class="c-code"><a name="1030082">Exact(Country;“Spain”) </a></span>returns 1 (True) when the Country field contains Spain.</div>
+      <div class="rh-relatedhead">Related topics<a name="1030083"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030087">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030091">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030095">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030099">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030103">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030107">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(layoutaccess), get access, get layout access, get access privileges" />
+    <meta name="description" content="Returns a number based on record access privileges available through the current layout." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(LayoutAccess)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.50.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.48.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029916">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029916">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1029916">Get functions</a> &gt; 
+      <b>Get(LayoutAccess)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(LayoutAccess)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1041275"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1041276">Returns a number based on record </a><span class="g-glosslink"><a href="glossary.html#1027504">access privileges</a></span> available through the current <span class="g-glosslink"><a href="glossary.html#1027851">layout</a></span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1029917"> </a></div>
+      <div class="ff-funcformat"><a name="1029918">Get(LayoutAccess)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029919"> </a></div>
+      <div class="b-body"><a name="1029920">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029921"> </a></div>
+      <div class="b-body"><a name="1029922">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1050725"> </a></div>
+      <div class="or-origin"><a name="1050726">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029923"> </a></div>
+      <div class="b-body"><a name="1029926">You assign the privileges in the Custom Layout Privileges dialog box.</a></div>
+      <div class="b-body"><a name="1029927">Returns:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1029928">0</a></span> if the custom layout privileges of an account’s privilege set allow <span class="o-onscreen">no access</span> to <span class="o-onscreen">Records via this layout</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1029929">1</a></span> if the custom layout privileges of an account’s privilege set allow <span class="o-onscreen">view only </span>access to <span class="o-onscreen">Records via this layout</span>. If the database is opened with read-only access, FileMaker Pro returns <span class="o-onscreen">1</span> even if the layout has read-write access privileges</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1029930">2 </a></span>if the custom layout privileges of an account’s privilege set allow <span class="o-onscreen">modifiable</span> access to <span class="o-onscreen">Records via this layout</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hs1-headsub1"><a name="1029931">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="c-code"><a name="1029932">Get(LayoutAccess)</a></span> returns information about record access privileges defined for only the current layout. It ignores current <span class="g-glosslink"><a href="glossary.html#1028030">record</a></span> access privileges for all other layouts. To fully check access through a layout, consider the return values of <span class="c-code">Get(LayoutAccess)</span> and the <span class="zh-hyper"><a href="func_ref2.32.64.html#1030540">Get(RecordAccess) function</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029940">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1029945">See </a><span class="zh-hyper"><a href="passwords.14.21.html#1050985">Editing layouts privileges</a></span> for more details about limiting access through layouts.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1029946"> </a></div>
+      <div class="b-body"><a name="1029947">Returns </a><span class="o-onscreen">1</span> when the layout allows view-only access to records.</div>
+      <div class="rh-relatedhead">Related topics<a name="1029948"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1029952">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029956">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029960">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029964">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029968">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029972">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

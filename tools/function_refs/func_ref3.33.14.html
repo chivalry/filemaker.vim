@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns 0 (False) if the data is invalid and 1 (True) if the data is valid." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>IsValid</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.15.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.13.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1028140">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1028140">Functions reference</a> &gt; 
+      <a href="func_ref3.33.1.html#1028140">Logical functions</a> &gt; 
+      <b>IsValid</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">IsValid</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1047216"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1047217">Returns </a><span class="o-onscreen">0</span> (False) if the data is invalid and <span class="o-onscreen">1 </span>(True) if the data is valid.</div>
+      <div class="ffh-funcformathead">Format<a name="1028141"> </a></div>
+      <div class="ff-funcformat"><a name="1028142">IsValid(field)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1028143"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028145">field</a></span> - any <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> name</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1028146"> </a></div>
+      <div class="b-body"><a name="1028147">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1057824"> </a></div>
+      <div class="or-origin"><a name="1057825">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1028148"> </a></div>
+      <div class="b-body"><a name="1028149">Returns </a><span class="o-onscreen">0 </span>(False) if:</div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028151">A </a><span class="g-glosslink"><a href="glossary.html#1028030">record</a></span> contains an invalid value because of a field type mismatch (text in a date field, for example)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028153">FileMaker Pro cannot locate (temporarily or permanently) the </a><span class="g-glosslink"><a href="glossary.html#1028042">related table</a></span> in which the referenced field is defined</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1028154">A field has been deleted from a related table, and therefore the references to that field in the source table are invalid</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><a name="1028155">Otherwise, it returns </a><span class="o-onscreen">1</span> (the data is valid).</div>
+      <div class="feh-funcexamhead">Examples<a name="1028156"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1028157">IsValid(Datefield)</a></span> returns <span class="o-onscreen">0</span> if there is non-date data in Datefield, for example if text was <span class="g-glosslink"><a href="glossary.html#1027807">imported</a></span> into it.</div>
+      <div class="b-body"><span class="c-code"><a name="1028159">IsValid(Amount)</a></span> returns <span class="o-onscreen">0</span> if there is only text in the number field Amount.</div>
+      <div class="b-body"><span class="c-code"><a name="1028160">IsValid(table::field)</a></span> returns <span class="o-onscreen">0</span> if the related table was renamed and the relationship isn’t updated with the new filename.</div>
+      <div class="rh-relatedhead">Related topics<a name="1028161"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1028165">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1028169">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1028173">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1028177">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1028181">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1028185">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

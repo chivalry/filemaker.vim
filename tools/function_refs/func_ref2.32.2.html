@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="Get(AccountExtendedPrivileges), get account privileges, get account extended privileges, get extended privileges" />
+    <meta name="description" content="Returns a list of keywords, separated by carriage returns, for the enabled extended privileges. The list that is returned is based on the account used to open the database file. See also Get(CurrentExtendedPrivileges) function." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(AccountExtendedPrivileges)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.3.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.1.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1051834">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1051834">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1051834">Get functions</a> &gt; 
+      <b>Get(AccountExtendedPrivileges)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(AccountExtendedPrivileges)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1051845"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1052097">Returns a list of keywords, separated by carriage returns, for the enabled </a><span class="g-glosslink"><a href="glossary.html#1027693">extended privileges</a></span>. The list that is returned is based on the <span class="g-glosslink"><a href="glossary.html#1027507">account </a></span>used to open the <span class="g-glosslink"><a href="glossary.html#1027641">database file</a></span>. See also <span class="zh-hyper"><a href="func_ref2.32.22.html#1052478">Get(CurrentExtendedPrivileges) function</a></span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1051859"> </a></div>
+      <div class="ff-funcformat"><a name="1051846">Get(AccountExtendedPrivileges)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1051863"> </a></div>
+      <div class="b-body"><a name="1051864">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1051865"> </a></div>
+      <div class="b-body"><a name="1051866">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1051870"> </a></div>
+      <div class="or-origin"><a name="1051874">FileMaker Pro 11.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1051882"> </a></div>
+      <div class="b-body"><a name="1052130">Extended privileges are additional access rights assigned to an account’s </a><span class="g-glosslink"><a href="glossary.html#1028013">privilege set</a></span>. See <span class="zh-hyper"><a href="passwords.14.3.html#1027607">About accounts, privilege sets, and extended privileges</a></span>.</div>
+      <div class="b-body"><a name="1052134">Returns an empty list if a user doesn’t have extended privileges assigned to the account used to open the database file.</a></div>
+      <div class="hs1-headsub1"><a name="1052135">Notes</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1052137">If you specify the </a><span class="g-glosslink"><a href="glossary.html#1041249">context</a></span> for the current calculation, this function will be evaluated based on that context; otherwise, it will be evaluated based on the context of the current window.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1052138">For information on how functions evaluate differently on the host versus the client, search the FileMaker Knowledge Base available at </a><span class="h-hyperlink"><a href="http://help.filemaker.com" target="external_window">http://help.filemaker.com</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1051887"> </a></div>
+      <div class="b-body"><a name="1052155">An account uses a privilege set that includes the extended privilege of Access Via FileMaker WebDirect (keyword "fmwebdirect"): </a></div>
+      <div class="b-body"><span class="c-code"><a name="1060257">Position(Get(AccountExtendedPrivileges); "fmwebdirect"; 1; 1)</a></span> returns a value greater than 0.</div>
+      <div class="b-body"><a name="1061048">If you are logged in and running a script that is set to run with full access privileges, </a><span class="c-code">Get(AccountExtendedPrivileges)</span>returns the extended privileges for your account, but <span class="c-code">Get(CurrentExtendedPrivileges)</span>returns the extended privileges for the Admin account.</div>
+      <div class="rh-relatedhead">Related topics<a name="1056096"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="passwords.14.1.html#1027502" name="1086061">Protecting databases</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="passwords.14.13.html#1028271" name="1086065">Creating accounts that authenticate via an external server</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1086069">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1052223">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1052227">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1052231">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1052235">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1052201">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

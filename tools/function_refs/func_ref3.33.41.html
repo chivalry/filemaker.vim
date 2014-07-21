@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns number truncated to the specified precision (number of decimal places)." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Truncate</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.42.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref3.33.40.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1029417">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1029417">Functions reference</a> &gt; 
+      <a href="func_ref3.33.23.html#1029417">Number functions</a> &gt; 
+      <b>Truncate</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Truncate</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1046673"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1046674">Returns </a><span class="c-code">number</span> truncated to the specified <span class="c-code">precision</span> (number of decimal places).</div>
+      <div class="ffh-funcformathead">Format<a name="1029418"> </a></div>
+      <div class="ff-funcformat"><a name="1029419">Truncate(number;precision)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1029420"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029423">number</a></span> - any numeric <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> or <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span> containing a numeric expression</div>
+      <div class="b-body"><span class="c-code"><a name="1029424">precision</a></span> - any numeric expression or field containing a numeric expression</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1029425"> </a></div>
+      <div class="b-body"><a name="1029426">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1057934"> </a></div>
+      <div class="or-origin"><a name="1057935">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1029427"> </a></div>
+      <div class="b-body"><a name="1029428">This function doesn’t evaluate digits beyond the specified </a><span class="c-code">precision</span>. Use the <span class="c-code">Round</span> function to round up or down to the required precision.</div>
+      <div class="feh-funcexamhead">Examples<a name="1029429"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1029430">Truncate(123.456;2)</a></span> returns <span class="o-onscreen">123.45</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1029431">Truncate(-14.6;0)</a></span> returns <span class="o-onscreen">-14</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1029432">Truncate(29343.98;-3)</a></span> returns <span class="o-onscreen">29000</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1029433">Truncate(123.456;4)</a></span> returns <span class="o-onscreen">123.456</span>.</div>
+      <div class="b-body"><span class="c-code"><a name="1029434">Truncate(29343.98;5)</a></span> returns <span class="o-onscreen">29343.98</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1029435"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1029439">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1029443">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1029447">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1029451">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1029455">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1029459">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

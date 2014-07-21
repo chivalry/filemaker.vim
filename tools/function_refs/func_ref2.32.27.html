@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="keywords" content="get(currenttimeutcmilliseconds), get current time utc milliseconds" />
+    <meta name="description" content="Returns the current time in Coordinated Universal Time (UTC) to the nearest millisecond." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(CurrentTimeUTCMilliseconds)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.28.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.26.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1078158">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1078158">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1078158">Get functions</a> &gt; 
+      <b>Get(CurrentTimeUTCMilliseconds)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(CurrentTimeUTCMilliseconds)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1078179"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1078186">Returns the current time in Coordinated Universal Time (UTC) to the nearest millisecond.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1078193"> </a></div>
+      <div class="ff-funcformat"><a name="1078200">Get(CurrentTimeUTCMilliseconds)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1078207"> </a></div>
+      <div class="b-body"><a name="1078214">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1078228"> </a></div>
+      <div class="b-body"><a name="1078240">number, time</a></div>
+      <div class="orh-originhead">Originated in<a name="1078247"> </a></div>
+      <div class="or-origin"><a name="1078257">FileMaker Pro 13.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1078264"> </a></div>
+      <div class="b-body"><a name="1078274">Returns the current time without time zone adjustments in the form of the number of milliseconds since 1/1/0001. UTC time zone adjustments must be applied to get your local time.</a></div>
+      <div class="feh-funcexamhead">Examples<a name="1078282"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1078292">Get ( CurrentTimeUTCMilliseconds )</a></span> returns <span class="o-onscreen">63568967107528</span> if the time in UTC is 10:25:07.528 PM on 6/3/2015.</div>
+      <div class="b-body"><span class="c-code"><a name="1078299">GetAsTimestamp ( ( Get ( CurrentTimeUTCMilliseconds ) + ( Location::TimeAdjustment * 3600000 ) ) / 1000 )</a></span> returns <span class="o-onscreen">11/10/2015 1:43:55.304 PM</span> if the time in UTC is 8:43:55:.304 PM on 11/10/2015 and the TimeAdjustment field has a value of -7.</div>
+      <div class="rh-relatedhead">Related topics<a name="1089546"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1089550">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1089554">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1089558">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1089562">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1089566">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1089570">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

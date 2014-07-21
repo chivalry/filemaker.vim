@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns a concatenated list of non-blank values (separated by carriage returns) for a field or fields." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>List</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.5.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.3.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1036551">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1036551">Functions reference</a> &gt; 
+      <a href="func_ref1.31.1.html#1036551">Aggregate functions</a> &gt; 
+      <b>List</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">List</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1036556"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1036563">Returns a concatenated list of non-blank values (separated by carriage returns) for a field or fields.</a></div>
+      <div class="ffh-funcformathead">Format<a name="1036558"> </a></div>
+      <div class="ff-funcformat"><a name="1027761">List(field{;field...})</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1027762"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1027767">field</a></span> - any <span class="g-glosslink"><a href="glossary.html#1028036">related field</a></span>, <span class="g-glosslink"><a href="glossary.html#1028056">repeating field</a></span>, or set of non-repeating <span class="g-glosslink"><a href="glossary.html#1027703">fields</a></span>; an <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> that returns a field, repeating field, or set of non-repeating fields, or a <span class="g-glosslink"><a href="glossary.html#1028231">variable</a></span>.</div>
+      <div class="b-body"><a name="1027768">Parameters in curly braces { } are optional.</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1027769"> </a></div>
+      <div class="b-body"><a name="1027770">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1039215"> </a></div>
+      <div class="or-origin"><a name="1039766">FileMaker Pro 8.5</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1027771"> </a></div>
+      <div class="b-body"><a name="1027772">Use this function to return a list of values for:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1027773">a single field </a><span class="c-code">(table::field)</span>, which returns a single result over all repetitions (if any) for this field and over all matching related records, whether or not these records appear in a portal.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1027774">several fields and/or literal values </a><span class="c-code">(table::field1,constant,table::field2...)</span>, which returns a separate result for each repetition of the calculation across each corresponding repetition of the fields. If any fields are related, only the first related record is used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1027775"> </a></div>
+      <div class="b-body"><a name="1027776">In the following examples:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1027777">Field1 contains white.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1027778">Field2 contains black.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1027779">Field3 contains three repetitions with values of red, green, blue.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1027780">Related::Field4 refers to three records that contain 100, 200, 300.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1049179">$f1 contains orange.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="n-note">
+        <span class="zan-autonum">Note  </span><a name="1027781">When referencing multiple repeating fields, </a><span class="c-code">List()</span> returns the list of values across the first repetition in the calculation's first repetition, then the list of values across the second repetition in the second repetition, and so on.</div>
+      <div class="hs2-headsub2"><a name="1027782">Example 1</a></div>
+      <div class="b1-body1"><span class="c-code"><a name="1027783">List (Field1; Field2)</a></span> returns:</div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027784">white</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027785">black</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hs2-headsub2"><a name="1027786">Example 2</a></div>
+      <div class="b1-body1"><span class="c-code"><a name="1027787">List(Field3)</a></span> returns:</div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027788">red</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027789">green</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027790">blue</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hs2-headsub2"><a name="1027791">Example 3</a></div>
+      <div class="b1-body1"><span class="c-code"><a name="1027792">List (Field1; Field2; Field3)</a></span> returns:</div>
+      <div class="b1-body1"><a name="1027793">in calculation repetition 1:</a></div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027794">white</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027795">black</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027796">red</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b1-body1"><a name="1027797">in calculation repetition 2:</a></div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027798">green</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b1-body1"><a name="1027799">in calculation repetition 3:</a></div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027800">blue</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hs2-headsub2"><a name="1027801">Example 4</a></div>
+      <div class="b1-body1"><span class="c-code"><a name="1027802">List(Related::Field4)</a></span> returns:</div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027803">100</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027804">200</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1027805">300</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hs2-headsub2"><a name="1049158">Example 5</a></div>
+      <div class="b1-body1"><span class="c-code"><a name="1049172">List ($f1; Field2)</a></span> returns:</div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1049193">orange</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu2-bullet2_outer" style="margin-left: 1.2000000000000001em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu2-bullet2_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu2-bullet2_inner"><a name="1049200">black</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="rh-relatedhead">Related topics<a name="1027806"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1027810">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1027814">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1027818">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1027822">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1027826">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1027830">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

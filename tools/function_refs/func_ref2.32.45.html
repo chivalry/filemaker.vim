@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the name, version number (if available), and enabled state of installed plug-ins." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Get(InstalledFMPlugins)</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref2.32.46.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.44.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1060792">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1060792">Functions reference</a> &gt; 
+      <a href="func_ref2.32.1.html#1060792">Get functions</a> &gt; 
+      <b>Get(InstalledFMPlugins)</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">Get(InstalledFMPlugins)</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1060793"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1060795">Returns the name, version number (if available), and enabled state of installed </a><span class="g-glosslink"><a href="glossary.html#1027997">plug-ins</a></span>.</div>
+      <div class="ffh-funcformathead">Format<a name="1060796"> </a></div>
+      <div class="ff-funcformat"><a name="1060797">Get(InstalledFMPlugins)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1060798"> </a></div>
+      <div class="b-body"><a name="1060799">None</a></div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1060800"> </a></div>
+      <div class="b-body"><a name="1060801">text</a></div>
+      <div class="orh-originhead">Originated in<a name="1060802"> </a></div>
+      <div class="or-origin"><a name="1060803">FileMaker Pro 12.0</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1060804"> </a></div>
+      <div class="b-body"><a name="1060805">The Get(InstalledFMPlugins) function is useful for determining whether an installed plug-in is newer or older than a plug-in required by a file.</a></div>
+      <div class="b-body"><a name="1060806">If multiple plug-ins are installed, Get(InstalledFMPlugins) returns values for each plug-in on separate lines, separated by carriage returns.</a></div>
+      <div class="b-body"><a name="1064128">Get(InstalledFMPlugins) returns plug-in version information only when plug-in developers have entered version information in the resource file (Windows) or the info.plist file (OS X).</a></div>
+      <div class="b-body"><a name="1064129">OS X: Plug-ins are stored as packages.</a></div>
+      <div class="b-body"><a name="1060809">The enabled state is returned as follows:</a></div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1060810">Enabled</a></span> The plug-in is enabled in the FileMaker Pro preferences and can be loaded.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1060811">Disabled</a></span> The plug-in is disabled in the FileMaker Pro preferences and cannot be loaded.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="o-onscreen"><a name="1060812">Ignored</a></span> The plug-in failed to load, which could be due to software incompatibility.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="feh-funcexamhead">Examples<a name="1060813"> </a></div>
+      <div class="b-body"><a name="1060814">When:</a></div>
+      <div class="b-body"><a name="1060815">MyPlugin1 is installed and is enabled in the Plug-ins tab in the Preferences dialog box.</a></div>
+      <div class="b-body"><a name="1060816">MyPlugin2 is installed and is disabled in the Plug-ins tab in the Preferences dialog box.</a></div>
+      <div class="b-body"><a name="1060817">MyPlugin3 could not be loaded.</a></div>
+      <div class="b-body"><a name="1060818">Get(InstalledFMPlugins) returns:</a></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1060819">MyPlugin1;1.0;Enabled</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1060820">MyPlugin2;1.1;Disabled</a></span></div>
+      <div class="b-body"><span class="o-onscreen"><a name="1060821">MyPlugin3; ;Ignored</a></span></div>
+      <div class="rh-relatedhead">Related topics<a name="1060822"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.55.html#1052437" name="1060826">Installing plug-ins</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="preferences.26.5.html#1027768" name="1060830">Setting plug-in preferences</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.56.html#1053140" name="1060834">Updating plug-ins</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.57.html#1052531" name="1060838">Plug-in update example</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1060842">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1060846">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1060850">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1060854">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1060858">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1060862">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

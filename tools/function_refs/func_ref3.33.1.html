@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Logical functions test for a condition to evaluate it as true or false. This is known as a Boolean value. If the condition is true, FileMaker Pro returns a 1; if the condition is false, FileMaker Pro returns a 0. You can use the keywords True and False wit ..." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Logical functions</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref3.33.2.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref2.32.112.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1027500">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1027500">Functions reference</a> &gt; 
+      <b>Logical functions</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fch-funccatgryhead">Logical functions</div>
+      <div class="b-body"><a name="1027508">Logical </a><span class="g-glosslink"><a href="glossary.html#1027756">functions</a></span> test for a condition to evaluate it as true or false. This is known as a <span class="g-glosslink"><a href="glossary.html#1038496">Boolean</a></span> value. If the condition is true, FileMaker Pro returns a <span class="o-onscreen">1</span>; if the condition is false, FileMaker Pro returns a <span class="o-onscreen">0</span>. You can use the keywords <span class="c-code">True</span> and <span class="c-code">False</span> with logical functions and operators when a Boolean value is needed. Keyword <span class="c-code">True</span> returns <span class="o-onscreen">1</span> and keyword <span class="c-code">False</span> returns <span class="o-onscreen">0</span>.</div>
+      <div class="b-body"><a name="1027509">Logical functions can also evaluate parameters such as text or arithmetic operations that do not make a true or false statement, or in the case of the </a><span class="c-code">GetField</span> function, return the contents of another <span class="g-glosslink"><a href="glossary.html#1027703">field</a></span>.</div>
+      <div class="b-body"><a name="1027511">Click a function name for details.</a></div>
+      <div class="ta-tableanchor"><a name="1027632"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1027514">This function</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1027516">Returns</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.2.html#1027634" name="1027521">Case</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027523">One of several possible results based on a series of tests.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.3.html#1027677" name="1027528">Choose</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027530">One result value, according to the integer value of a specified test.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.4.html#1027719" name="1027535">Evaluate</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027538">Evaluates the specified </a><span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> as a calculation.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.5.html#1027784" name="1027543">EvaluationError</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027545">An error code, if any, from the specified expression.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.6.html#1062707" name="1062860">ExecuteSQL</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1062862">Executes a specified SQL SELECT statement within a FileMaker Pro database.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.7.html#1027827" name="1027550">GetAsBoolean</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1027552">1</a></span> if data converts to a non-zero numeric value; <span class="o-onscreen">0</span> if the specified data has a value of 0 or is empty.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.8.html#1027868" name="1027557">GetField</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027559">The contents of the referenced field.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.9.html#1050332" name="1050486">GetFieldName</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1050488">The fully qualified name of a field reference.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.10.html#1027917" name="1027563">GetLayoutObjectAttribute</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027566">The requested layout object attributes from the calculation's active window.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.11.html#1027997" name="1027571">GetNthRecord</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027573">The contents of the referenced field from the requested record number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.12.html#1047177" name="1027578">If</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027580">One of two possible results depending on the value of the specified test.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.13.html#1028095" name="1027585">IsEmpty</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1027587">1</a></span> if the specified field is empty, if the related field, related table, relationship, or file is missing, or if some other error occurs; otherwise, returns <span class="o-onscreen">0</span>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.14.html#1028140" name="1027592">IsValid</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1027594">0</a></span> when a record contains an invalid value because of a field type mismatch (text in a date field, for example).</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.15.html#1028187" name="1027598">IsValidExpression</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="o-onscreen"><a name="1027601">1</a></span> if the syntax of the specified expression is correct.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.16.html#1028226" name="1027606">Let</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027608">Sets variable to the result of value for the duration of the specified expression.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.17.html#1028291" name="1027613">Lookup</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027616">The value specified in the </a><span class="c-code">sourceField</span> parameter using the <span class="g-glosslink"><a href="glossary.html#1028048">relationships</a></span> in the <span class="g-glosslink"><a href="glossary.html#1028051">relationships graph</a></span>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.18.html#1028387" name="1027622">LookupNext</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027624">The value specified in the </a><span class="c-code">sourceField</span> parameter using the relationships in the relationships graph.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref3.33.19.html#1028498" name="1027629">Self</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1027631">The content of the object in which the calculation is defined; otherwise, returns an empty string.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="rh-relatedhead">Related topics<a name="1081463"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1081467">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1081471">About formulas</a></span></div>
+    </blockquote>
+    <div class="WebWorks_MiniTOC">
+      <div class="WebWorks_MiniTOCTitle">Topics in this section</div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.2.html#1027634">Case</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.3.html#1027677">Choose</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.4.html#1027719">Evaluate</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.5.html#1027784">EvaluationError</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.6.html#1062707">ExecuteSQL</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.7.html#1027827">GetAsBoolean</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.8.html#1027868">GetField</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.9.html#1050332">GetFieldName</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.10.html#1027917">GetLayoutObjectAttribute</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.11.html#1027997">GetNthRecord</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.12.html#1047177">If</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.13.html#1028095">IsEmpty</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.14.html#1028140">IsValid</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.15.html#1028187">IsValidExpression</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.16.html#1028226">Let</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.17.html#1028291">Lookup</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.18.html#1028387">LookupNext</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref3.33.19.html#1028498">Self</a>
+      </div>
+    </div>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>

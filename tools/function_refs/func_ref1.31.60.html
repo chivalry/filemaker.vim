@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Returns the net present value (NPV) of a series of unequal payments made at regular intervals, assuming a fixed interestRate per interval." />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>NPV</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.61.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="func_ref1.31.59.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1030353">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1030353">Functions reference</a> &gt; 
+      <a href="func_ref1.31.58.html#1030353">Financial functions</a> &gt; 
+      <b>NPV</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fh-funchead">NPV</div>
+      <div class="fpuh-funcpurposehead">Purpose<a name="1036207"> </a></div>
+      <div class="fpu-funcpurpose"><a name="1036208">Returns the net present value (</a><span class="c-code">NPV</span>) of a series of unequal <span class="c-code">payments</span> made at regular intervals, assuming a fixed <span class="c-code">interestRate</span> per interval.</div>
+      <div class="ffh-funcformathead">Format<a name="1030354"> </a></div>
+      <div class="ff-funcformat"><a name="1030355">NPV(payment;interestRate)</a></div>
+      <div class="fpah-funcparamhead">Parameters<a name="1030356"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030359">payment</a></span> - a <span class="g-glosslink"><a href="glossary.html#1028056">repeating field</a></span> containing unequal payment amounts, or an <span class="g-glosslink"><a href="glossary.html#1027690">expression</a></span> that returns a reference to one.</div>
+      <div class="b-body"><span class="c-code"><a name="1030360">interestRate</a></span> - interest rate.</div>
+      <div class="frh-funcreturnhead">Data type returned<a name="1030361"> </a></div>
+      <div class="b-body"><a name="1030362">number</a></div>
+      <div class="orh-originhead">Originated in<a name="1039703"> </a></div>
+      <div class="or-origin"><a name="1039704">FileMaker Pro 6.0 or earlier</a></div>
+      <div class="fdh-funcdeschead">Description<a name="1030363"> </a></div>
+      <div class="b-body"><a name="1030364">Use this function to calculate </a><span class="c-code">NPV</span>. For example, if someone borrows money from you and pays you back in unequal amounts over a period of several years, you can use the <span class="c-code">NPV</span> function to calculate the result.</div>
+      <div class="gr-graphicanchor"><a name="1030368"><img class="Default" src="../images/func_ref1.31.60.1.png" width="606.5" height="39.5" style="float: none; left: 0.0; top: 0.0;" alt="Equation" /></a></div>
+      <div class="feh-funcexamhead">Examples<a name="1030369"> </a></div>
+      <div class="b-body"><span class="c-code"><a name="1030370">NPV(Loan;.05)</a></span> returns <span class="o-onscreen">156.91277445...</span>, when the repeating field, Loan, contains -2000 (the initial payment), 600, 300, 500, 700, and 400. The result (156.91277445...) is the actual profit in today’s dollars that will be realized from this transaction.</div>
+      <div class="b-body"><span class="c-code"><a name="1030371">NPV(Amounts;.10)</a></span> returns <span class="o-onscreen">16758.35604870...</span>, when the repeating field, Amounts, contains -5000 (the initial investment), 10,000, 0, 10,000, and 10,000.</div>
+      <div class="b-body"><a name="1030372">If you want each return value to return 2 decimal places, surround the current formulas with the correct </a><span class="c-code">Round </span>function: <span class="c-code">Round(Current Formula;2)</span>.</div>
+      <div class="rh-relatedhead">Related topics<a name="1030373"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_cat.29.2.html#707904" name="1030377">Functions reference (category list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="help_func_alpha.html#47874" name="1030381">Functions reference (alphabetical list)</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1030385">About formulas</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1030389">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.20.html#1029046" name="1030393">Defining calculation fields</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.47.html#1030789" name="1030397">Using operators in formulas</a></span></div>
+    </blockquote>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>
