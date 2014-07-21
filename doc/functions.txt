@@ -3,4 +3,24 @@
 ===============================================================================
                                                        *filemakervim-functions*
                                                                 *fmv-functions*
+Contents ~
+
+ 1.  Aggregate Functions |filemakervim-aggregate|
+ 2.  Container Functions |filemakervim-container|
+ 3.  Date Functions |filemakervim-date|
+ 4.  Design Functions |filemakervim-design|
+ 5.  External Functions |filemakervim-external|
+ 6.  Financial Functions |filemakervim-financial|
+ 7.  Get Functions |filemakervim-get|
+ 8.  Logical Functions |filemakervim-logical|
+ 9.  Mobile Functions |filemakervim-mobile|
+ 10. Number Functions |filemakervim-number|
+ 11. Repeating Functions |filemakervim-repeating|
+ 12. Summary Functions |filemakervim-summary|
+ 13. Text Functions |filemakervim-text|
+ 14. Text Formatting Functions |filemakervim-text-formatting|
+ 15. Time Functions |filemakervim-time|
+ 16. Timestamp Functions |filemakervim-timestamp|
+ 17. Trigonometric Functions |filemakervim-trigonometric|
+
 vim: ft=help:tw=78:ts=2
