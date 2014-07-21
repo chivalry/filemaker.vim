@@ -148,6 +148,10 @@ Peter Odding (https://github.com/xolox) made things much easier by publishing
 his vim-tools software (https://github.com/xolox/vim-tools), allowing the
 plugin help files to be written almost entirely in Markdown.
 
+I doubt I ever would have gotten the embedded language syntax highlight
+correct if not for Junegunn Cho's (https://github.com/junegunn) kind
+assistance.
+
 ===============================================================================
                                                          *filemakervim-install*
                                                                   *fmv-install*
