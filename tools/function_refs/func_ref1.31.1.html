@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="Aggregate functions perform statistical analysis on numbers (and also dates or times for some functions) in:" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Aggregate functions</title>
+    <!-- MLP 012913 remove chapter specific css
+    <link wwpage:condition="catalog-css" rel="StyleSheet" href="css/catalog.css" wwpage:attribute-href="catalog-css" type="text/css" media="all" />
+	 -->
+    <link rel="StyleSheet" href="../css/webworks.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="../css/print.css" type="text/css" media="print" />
+    <!--[if lt IE 7]>
+     <link rel="StyleSheet" href="../css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "../";
+      // -->
+    </script>
+  </head>
+  <body class="" style="">
+    <div id="navbar">
+      <a class="navleft" href="../index.html"><span class="navimg">FileMaker Pro 13 Help</span></a>
+      <div class="navmarginright"></div>
+      <a class="navright" href="toc.html">Contents</a>
+      <a class="navright" href="func_ref1.31.2.html"><span>Next</span> &gt;</a>
+      <a class="navright" href="help_func_alpha.html">&lt; <span>Previous</span></a>
+    </div>
+    <p id="breadcrumb">
+      <a href="../index.html">Home</a> &gt; 
+      <a href="part5.html#1027500">Reference</a> &gt; 
+      <a href="help_func_cat.29.1.html#1027500">Functions reference</a> &gt; 
+      <b>Aggregate functions</b>
+    </p>
+    <blockquote class="content-fmi">
+      <div class="fch-funccatgryhead">Aggregate functions</div>
+      <div class="b-body"><a name="1027509">Aggregate </a><span class="g-glosslink"><a href="glossary.html#1027756">functions</a></span> perform statistical analysis on numbers (and also dates or times for some functions) in: </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><a name="1027512">several </a><span class="g-glosslink"><a href="glossary.html#1027703">fields</a></span> in a <span class="g-glosslink"><a href="glossary.html#1028030">record</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="g-glosslink"><a href="glossary.html#1028036" name="1027515">related fields</a></span> whether displayed in a <span class="g-glosslink"><a href="glossary.html#1028003">portal</a></span> or not.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bu1-bullet1_outer" style="margin-left: 0em;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="bu1-bullet1_inner" style="width: 1.5em; white-space: nowrap;">
+                <span style="color: Black; font-weight: bold;"> •</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="bu1-bullet1_inner"><span class="g-glosslink"><a href="glossary.html#1028056" name="1027517">repeating fields</a></span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="b-body"><a name="1027518">For example, you can use the </a><span class="c-code">Sum</span> function to add the values listed in a portal, as an alternative to creating a <span class="g-glosslink"><a href="glossary.html#1028059">report with grouped data</a></span> and subtotals.</div>
+      <div class="b-body"><a name="1027520">The parameter values can include a numeric constant (for example, 10) or any valid expression. A constant parameter in a formula for a repeating field affects the result for every repetition.</a></div>
+      <div class="b-body"><a name="1027521">When repeating field parameters (field1; field2;...) include a non-repeating field, that value is used in the result for only the first repetition unless you use the </a><span class="zh-hyper"><a href="func_ref3.33.43.html#1029496">Extend function</a></span>.</div>
+      <div class="b-body"><a name="1027525">Values in repetitions that exceed the number of repetitions in the calculated field are ignored. For example, a calculated field with three repetitions holds only three results, even when one field referenced in the calculation has five repetitions.</a></div>
+      <div class="b-body"><a name="1027526">Click a function name for details.</a></div>
+      <div class="ta-tableanchor"><a name="1036803"> </a></div>
+      <table class="t-table" style="text-align: left;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1036694">This function</a></div>
+          </td>
+          <td style="background-color: #666666; background-image: url(&quot;images\tablebg.gif&quot;); background-repeat: repeat-x; padding-left: .4em; padding-right: .4em; vertical-align: bottom;">
+            <div class="th-tablehead"><a name="1036696">Returns</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.2.html#1036818" name="1036700">Average</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1036703">The average of all valid, non-blank values in the specified field.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.3.html#1027699" name="1036708">Count</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1036710">The number of valid, non-blank values in the specified field.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.4.html#1036551" name="1036715">List</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1036717">The concatenation of all non-blank values in list form, separated by carriage returns.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;" rowspan="4">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.5.html#1027832" name="1036722">Max</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;" rowspan="4">
+            <div class="td-tabledata"><a name="1036724">The highest valid value in a field or fields.</a></div>
+          </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;" rowspan="4">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.6.html#1027892" name="1036741">Min</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;" rowspan="4">
+            <div class="td-tabledata"><a name="1036743">The smallest valid non-blank value in a field or fields.</a></div>
+          </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.7.html#1027951" name="1036760">StDev</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1036762">The standard deviation of a series of valid non-blank values in a field or fields.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;" rowspan="4">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.8.html#1028013" name="1036766">StDevP</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;" rowspan="4">
+            <div class="td-tabledata"><a name="1036769">The standard deviation of a population represented by a series of valid non-blank values in a field or fields.</a></div>
+          </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.9.html#1028076" name="1036786">Sum</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1036788">The total of all valid, non-blank values in the specified fields.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.10.html#1028141" name="1036792">Variance</a></span></div>
+          </td>
+          <td style="background-color: #E6EDFF; padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1036795">The variance of a series of valid non-blank values in a field or fields.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><span class="zh-hyper"><a href="func_ref1.31.11.html#1028209" name="1036799">VarianceP</a></span></div>
+          </td>
+          <td style="padding-left: .4em; padding-right: .4em; vertical-align: top;">
+            <div class="td-tabledata"><a name="1036802">The variance of a population in a series of valid non-blank values in a field or fields. </a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="rh-relatedhead">Related topics<a name="1049901"> </a></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.45.html#1030581" name="1049905">About functions</a></span></div>
+      <div class="rt-relatedtopic"><span class="zh-hyper"><a href="create_db.8.46.html#1030710" name="1049921">About formulas</a></span></div>
+    </blockquote>
+    <div class="WebWorks_MiniTOC">
+      <div class="WebWorks_MiniTOCTitle">Topics in this section</div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.2.html#1036818">Average</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.3.html#1027699">Count</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.4.html#1036551">List</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.5.html#1027832">Max</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.6.html#1027892">Min</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.7.html#1027951">StDev</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.8.html#1028013">StDevP</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.9.html#1028076">Sum</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.10.html#1028141">Variance</a>
+      </div>
+      <div class="WebWorks_MiniTOC_Level1">
+        <a class="WebWorks_MiniTOC_Link" href="func_ref1.31.11.html#1028209">VarianceP</a>
+      </div>
+    </div>
+    <div class="feedbacklink">Was this topic helpful? <a href="http://www.filemaker.com/redirects/fmp13_admin.html?page=feedback&amp;lang=en" target="external_window">Send feedback.</a></div>
+  </body>
+</html>
