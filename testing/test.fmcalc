@@ -7,47 +7,75 @@
 
 // comment = + operators and a $var
 Let(
-  [
-  ~filemakerstandards.org = "foobar";
-    _a = +123 < 3; // comment
-    $$b = "abc"≤1<=3.1 + -23 - +1.234 / -1.234 ^ -.321;
-    _foo = TableOccurrence::field_name;
+	[
+	~filemakerstandards.org = "foobar";
+		_a = +123 < 3; // comment
+		$$b = "abc"≤1<=3.1 + -23 - +1.234 / -1.234 ^ -.321;
+		_foo = TableOccurrence::field_name;
 
-    nonconventionvar = _a & ~filemakerstandards.org;
-    _? = Case( $test; $result; $$default_result );
+		nonconventionvar = _a & ~filemakerstandards.org;
+		_? = Case( $test; $result; $$default_result );
 
-    xyz = TO::field;
+		xyz = TO::field;
 /* multi
 line
 comment Let keyword
 */
-    $c = True;
+		$c = True;
 $d.with.multiple.dots =
 "string with \"quotes\"";
 $$e =
 1.02
 * 3;
 $var_atstart = "catch_this_one"
-  ];
-  Case(
-    Get( LastError ) > 7 ≥ 0 >= "qerty";
-    TextStyleAdd( "Some text"; Bold );
+	];
+	Case(
+		Get( LastError ) > 7 ≥ 0 >= "qerty";
+		TextStyleAdd( "Some text"; Bold );
 custom.function;
-    custom.function;
+		custom.function;
 _a
-  )
+	)
 ) & ¶ & "¶"
 &
 ""
 & Lower( Get( AccountName ) ) + // This Lower should be a function
-                                // like `Get`.
+																// like `Get`.
 LookupNext(
-  TO2::field;
-  Lower                         // This Lower should be a constant
-                                // like `AccountName`.
+	TO2::field;
+	Lower													// This Lower should be a constant
+																// like `AccountName`.
 )
 & Lowerxyz
 & Lower ( Get( AccountName ) )
 & non_conventioncustomfunction( $parameter )
 & non_conventioncustomfunction ( $parameter )
-& ExecuteSQL( "/*language=sql*/ SELECT * FROM Table WHERE id = ?"; ""; ""; 456 );
+& ExecuteSQL( "/*lang=sql*/ SELECT * 
+														FROM Table 
+														WHERE id = ?";
+														""; ""; 456 );
+& RegisterGroovy(
+	"GetURLasText( url )";
+	"/*lang=groovy*/ new URL(url).getText();"
+)
+& PHP_Execute( "/*lang=php*/ <?php
+function getAdder($x)
+{
+    return function($y) use ($x)
+    {
+        return $x + $y;
+    };
+}
+ 
+$adder = getAdder(8);
+echo $adder(2); // prints "10"
+?>" )
+& "/*lang=javascript*/
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+alert('Hello, World!')"

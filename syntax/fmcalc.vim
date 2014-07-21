@@ -280,3 +280,34 @@ highlight link fm_line_comment  Comment
 highlight link fm_block_comment Comment
 
 let b:current_syntax = "fmcalc"
+
+" ---------------------------------------------------
+" Embedded Syntax Highlighting
+
+let csyn = b:current_syntax
+unlet b:current_syntax
+syntax include @sql syntax/sql.vim
+syntax region fm_sql start='\(\)\(/\* *lang=sql *\*/\)\@=' end='\(\)"\@='
+      \ contains=@sql containedin=ALL
+let b:current_syntax = csyn
+
+let csyn = b:current_syntax
+unlet b:current_syntax
+syntax include @groovy syntax/groovy.vim
+syntax region fm_groovy start='\(\)\(/\* *lang=groovy *\*/\)\@=' end='\(\)"\@='
+      \ contains=@groovy containedin=ALL
+let b:current_syntax = csyn
+
+let csyn = b:current_syntax
+unlet b:current_syntax
+syntax include @php syntax/php.vim
+syntax region fm_php start='\(\)\(/\* *lang=php *\*/\)\@=' end='\(\)"\@='
+      \ contains=@php containedin=ALL
+let b:current_syntax = csyn
+
+let csyn = b:current_syntax
+unlet b:current_syntax
+syntax include @javascript syntax/javascript.vim
+syntax region fm_javascript start='\(\)\(/\* *lang=javascript *\*/\)\@=' end='\(\)"\@='
+      \ contains=@javascript containedin=ALL
+let b:current_syntax = csyn
