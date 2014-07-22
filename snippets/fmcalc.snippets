@@ -1,0 +1,1493 @@
+# NeoSnippet file for filemaker calculations
+# License: The MIT License
+# by Matt Petrowsky
+# Portions generated using the Snippets.fmp12 generator
+
+# ---------------------------------------------------
+# Aggregate functions
+# ---------------------------------------------------
+
+snippet average
+abbr Average ( field { ; field... } )
+alias Average
+	Average ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet count
+abbr Count ( field { ; field... } )
+alias Count
+	Count ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet list
+abbr List ( field { ; field... } )
+alias List
+	List ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet max
+abbr Max ( field { ; field... } )
+alias Max
+	Max ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet min
+abbr Min ( field { ; field... } )
+alias Min
+	Min ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet stdev
+abbr StDev ( field { ; field... } )
+alias StDev
+	StDev ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet stdevp
+abbr StDevP ( field { ; field... } )
+alias StDevP
+	StDevP ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet sum
+abbr Sum ( field { ; field... } )
+alias Sum
+	Sum ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet variance
+abbr Variance ( field { ; field... } )
+alias Variance
+	Variance ( ${1:field} \{ ; ${2:field...} \} )
+
+snippet variancep
+abbr VarianceP ( field { ; field... } )
+alias VarianceP
+	VarianceP ( ${1:field} \{ ; ${2:field...} \} )
+
+# ---------------------------------------------------
+# Comment functions
+# ---------------------------------------------------
+
+snippet commentblock
+abbr Comment block
+alias Comment
+	/*
+	${0:comment here}
+	*/
+
+snippet commentline
+abbr Comment line
+alias Comment
+	// ${0:comment here}
+
+# ---------------------------------------------------
+# Container functions
+# ---------------------------------------------------
+
+snippet base64decode
+abbr Base64Decode ( text { ; fileNameWithExtension } )
+alias Base64Decode
+	Base64Decode ( ${1:text} \{ ; ${2:fileNameWithExtension} \} )
+
+snippet base64encode
+abbr Base64Encode ( sourceField )
+alias Base64Encode
+	Base64Encode ( ${1:sourceField} )
+
+snippet getcontainerattribute
+abbr GetContainerAttribute ( sourceField ; attributeName )
+alias GetContainerAttribute
+	GetContainerAttribute ( ${1:sourceField} ; ${2:attributeName} )
+
+snippet getheight
+abbr GetHeight ( field )
+alias GetHeight
+	GetHeight ( ${1:field} )
+
+snippet getthumbnail
+abbr GetThumbnail ( field ; width ; height )
+alias GetThumbnail
+	GetThumbnail ( ${1:field} ; ${2:width} ; ${3:height} )
+
+snippet getwidth
+abbr GetWidth ( field )
+alias GetWidth
+	GetWidth ( ${1:field} )
+
+snippet verifycontainer
+abbr VerifyContainer ( field )
+alias VerifyContainer
+	VerifyContainer ( ${1:field} )
+
+# ---------------------------------------------------
+# Date functions
+# ---------------------------------------------------
+
+snippet date
+abbr Date ( month ; day ; year )
+alias Date
+	Date ( ${1:month} ; ${2:day} ; ${3:year} )
+
+snippet day
+abbr Day ( date )
+alias Day
+	Day ( ${1:date} )
+
+snippet dayname
+abbr DayName ( date )
+alias DayName
+	DayName ( ${1:date} )
+
+snippet daynamej
+abbr DayNameJ ( date )
+alias DayNameJ
+	DayNameJ ( ${1:date} )
+
+snippet dayofweek
+abbr DayOfWeek ( date )
+alias DayOfWeek
+	DayOfWeek ( ${1:date} )
+
+snippet dayofyear
+abbr DayOfYear ( date )
+alias DayOfYear
+	DayOfYear ( ${1:date} )
+
+snippet month
+abbr Month ( date )
+alias Month
+	Month ( ${1:date} )
+
+snippet monthname
+abbr MonthName ( date )
+alias MonthName
+	MonthName ( ${1:date} )
+
+snippet monthnamej
+abbr MonthNameJ ( date )
+alias MonthNameJ
+	MonthNameJ ( ${1:date} )
+
+snippet weekofyear
+abbr WeekOfYear ( date )
+alias WeekOfYear
+	WeekOfYear ( ${1:date} )
+
+snippet weekofyearfiscal
+abbr WeekOfYearFiscal ( date ; startingDay )
+alias WeekOfYearFiscal
+	WeekOfYearFiscal ( ${1:date} ; ${2:startingDay} )
+
+snippet year
+abbr Year ( date )
+alias Year
+	Year ( ${1:date} )
+
+snippet yearname
+abbr YearName ( date ; format )
+alias YearName
+	YearName ( ${1:date} ; ${2:format} )
+
+# ---------------------------------------------------
+# Design functions
+# ---------------------------------------------------
+
+snippet databasenames
+abbr DatabaseNames
+alias DatabaseNames
+	DatabaseNames
+
+snippet fieldbounds
+abbr FieldBounds ( fileName ; layoutName ; fieldName )
+alias FieldBounds
+	FieldBounds ( ${1:fileName} ; ${2:layoutName} ; ${3:fieldName} )
+
+snippet fieldcomment
+abbr FieldComment ( fileName ; fieldName )
+alias FieldComment
+	FieldComment ( ${1:fileName} ; ${2:fieldName} )
+
+snippet fieldids
+abbr FieldIDs ( fileName ; layoutName )
+alias FieldIDs
+	FieldIDs ( ${1:fileName} ; ${2:layoutName} )
+
+snippet fieldnames
+abbr FieldNames ( fileName ; layoutName )
+alias FieldNames
+	FieldNames ( ${1:fileName} ; ${2:layoutName} )
+
+snippet fieldrepetitions
+abbr FieldRepetitions ( fileName ; layoutName ; fieldName )
+alias FieldRepetitions
+	FieldRepetitions ( ${1:fileName} ; ${2:layoutName} ; ${3:fieldName} )
+
+snippet fieldstyle
+abbr FieldStyle ( fileName ; layoutName ; fieldName )
+alias FieldStyle
+	FieldStyle ( ${1:fileName} ; ${2:layoutName} ; ${3:fieldName} )
+
+snippet fieldtype
+abbr FieldType ( fileName ; fieldName )
+alias FieldType
+	FieldType ( ${1:fileName} ; ${2:fieldName} )
+
+snippet getnextserialvalue
+abbr GetNextSerialValue ( fileName ; fieldName )
+alias GetNextSerialValue
+	GetNextSerialValue ( ${1:fileName} ; ${2:fieldName} )
+
+snippet layoutids
+abbr LayoutIDs ( fileName )
+alias LayoutIDs
+	LayoutIDs ( ${1:fileName} )
+
+snippet layoutnames
+abbr LayoutNames ( fileName )
+alias LayoutNames
+	LayoutNames ( ${1:fileName} )
+
+snippet layoutobjectnames
+abbr LayoutObjectNames ( fileName ; layoutName )
+alias LayoutObjectNames
+	LayoutObjectNames ( ${1:fileName} ; ${2:layoutName} )
+
+snippet relationinfo
+abbr RelationInfo ( fileName ; tableName )
+alias RelationInfo
+	RelationInfo ( ${1:fileName} ; ${2:tableName} )
+
+snippet scriptids
+abbr ScriptIDs ( fileName )
+alias ScriptIDs
+	ScriptIDs ( ${1:fileName} )
+
+snippet scriptnames
+abbr ScriptNames ( fileName )
+alias ScriptNames
+	ScriptNames ( ${1:fileName} )
+
+snippet tableids
+abbr TableIDs ( fileName )
+alias TableIDs
+	TableIDs ( ${1:fileName} )
+
+snippet tablenames
+abbr TableNames ( fileName )
+alias TableNames
+	TableNames ( ${1:fileName} )
+
+snippet valuelistids
+abbr ValueListIDs ( fileName )
+alias ValueListIDs
+	ValueListIDs ( ${1:fileName} )
+
+snippet valuelistitems
+abbr ValueListItems ( fileName ; valuelist )
+alias ValueListItems
+	ValueListItems ( ${1:fileName} ; ${2:valuelist} )
+
+snippet valuelistnames
+abbr ValueListNames ( fileName )
+alias ValueListNames
+	ValueListNames ( ${1:fileName} )
+
+snippet windownames
+abbr WindowNames { ( fileName ) }
+alias WindowNames
+	WindowNames \{ ( ${1:fileName} ) \}
+
+# ---------------------------------------------------
+# External functions
+# ---------------------------------------------------
+
+snippet external
+abbr External ( nameOfFunction ; parameter )
+alias External
+	External ( ${1:nameOfFunction} ; ${2:parameter} )
+
+# ---------------------------------------------------
+# Financial functions
+# ---------------------------------------------------
+
+snippet fv
+abbr FV ( payment ; interestRate ; periods )
+alias FV
+	FV ( ${1:payment} ; ${2:interestRate} ; ${3:periods} )
+
+snippet npv
+abbr NPV ( payment ; interestRate )
+alias NPV
+	NPV ( ${1:payment} ; ${2:interestRate} )
+
+snippet pmt
+abbr PMT ( principal ; interestRate ; term )
+alias PMT
+	PMT ( ${1:principal} ; ${2:interestRate} ; ${3:term} )
+
+snippet pv
+abbr PV ( payment ; interestRate ; periods )
+alias PV
+	PV ( ${1:payment} ; ${2:interestRate} ; ${3:periods} )
+
+# ---------------------------------------------------
+# Formatting functions
+# ---------------------------------------------------
+
+snippet rgb
+abbr RGB ( red ; green ; blue )
+alias RGB
+	RGB ( ${1:red} ; ${2:green} ; ${3:blue} )
+
+snippet textcolor
+abbr TextColor ( text ; RGB ( red ; green ; blue ) )
+alias TextColor
+	TextColor ( ${1:text} ; ${2:RGB} ( red ; green ; blue ) )
+
+snippet textcolorremove
+abbr TextColorRemove ( text { ; RGB ( red ; green ; blue ) } )
+alias TextColorRemove
+	TextColorRemove ( ${1:text} \{ ; ${2:RGB} ( ${3:red} ; ${4:green} ; ${5:blue} ) \} )
+
+snippet textfont
+abbr TextFont ( text ; fontName { ; fontScript } )
+alias TextFont
+	TextFont ( ${1:text} ; ${2:fontName} \{ ; ${3:fontScript} \} )
+
+snippet textfontremove
+abbr TextFontRemove ( text { ; fontToRemove ; fontScript } )
+alias TextFontRemove
+	TextFontRemove ( ${1:text} \{ ; ${2:fontToRemove} ; ${3:fontScript} \} )
+
+snippet textformatremove
+abbr TextFormatRemove ( text )
+alias TextFormatRemove
+	TextFormatRemove ( ${1:text} )
+
+snippet textsize
+abbr TextSize ( text ; fontSize )
+alias TextSize
+	TextSize ( ${1:text} ; ${2:fontSize} )
+
+snippet textsizeremove
+abbr TextSizeRemove ( text { ; sizeToRemove } )
+alias TextSizeRemove
+	TextSizeRemove ( ${1:text} \{ ; ${2:sizeToRemove} \} )
+
+snippet textstyleadd
+abbr TextStyleAdd ( text ; styles )
+alias TextStyleAdd
+	TextStyleAdd ( ${1:text} ; ${2:styles} )
+
+snippet textstyleremove
+abbr TextStyleRemove ( text ; styles )
+alias TextStyleRemove
+	TextStyleRemove ( ${1:text} ; ${2:styles} )
+
+# ---------------------------------------------------
+# Get functions
+# ---------------------------------------------------
+
+snippet get_accountextendedprivileges
+abbr Get ( AccountExtendedPrivileges )
+alias GetAccountExtendedPrivileges
+	Get ( AccountExtendedPrivileges )
+
+snippet get_accountname
+abbr Get ( AccountName )
+alias GetAccountName
+	Get ( AccountName )
+
+snippet get_accountprivilegesetname
+abbr Get ( AccountPrivilegeSetName )
+alias GetAccountPrivilegeSetName
+	Get ( AccountPrivilegeSetName )
+
+snippet get_activefieldcontents
+abbr Get ( ActiveFieldContents )
+alias GetActiveFieldContents
+	Get ( ActiveFieldContents )
+
+snippet get_activefieldname
+abbr Get ( ActiveFieldName )
+alias GetActiveFieldName
+	Get ( ActiveFieldName )
+
+snippet get_activefieldtablename
+abbr Get ( ActiveFieldTableName )
+alias GetActiveFieldTableName
+	Get ( ActiveFieldTableName )
+
+snippet get_activelayoutobjectname
+abbr Get ( ActiveLayoutObjectName )
+alias GetActiveLayoutObjectName
+	Get ( ActiveLayoutObjectName )
+
+snippet get_activemodifierkeys
+abbr Get ( ActiveModifierKeys )
+alias GetActiveModifierKeys
+	Get ( ActiveModifierKeys )
+
+snippet get_activeportalrownumber
+abbr Get ( ActivePortalRowNumber )
+alias GetActivePortalRowNumber
+	Get ( ActivePortalRowNumber )
+
+snippet get_activerepetitionnumber
+abbr Get ( ActiveRepetitionNumber )
+alias GetActiveRepetitionNumber
+	Get ( ActiveRepetitionNumber )
+
+snippet get_activeselectionsize
+abbr Get ( ActiveSelectionSize )
+alias GetActiveSelectionSize
+	Get ( ActiveSelectionSize )
+
+snippet get_activeselectionstart
+abbr Get ( ActiveSelectionStart )
+alias GetActiveSelectionStart
+	Get ( ActiveSelectionStart )
+
+snippet get_allowabortstate
+abbr Get ( AllowAbortState )
+alias GetAllowAbortState
+	Get ( AllowAbortState )
+
+snippet get_allowformattingbarstate
+abbr Get ( AllowFormattingBarState )
+alias GetAllowFormattingBarState
+	Get ( AllowFormattingBarState )
+
+snippet get_applicationlanguage
+abbr Get ( ApplicationLanguage )
+alias GetApplicationLanguage
+	Get ( ApplicationLanguage )
+
+snippet get_applicationversion
+abbr Get ( ApplicationVersion )
+alias GetApplicationVersion
+	Get ( ApplicationVersion )
+
+snippet get_calculationrepetitionnumber
+abbr Get ( CalculationRepetitionNumber )
+alias GetCalculationRepetitionNumber
+	Get ( CalculationRepetitionNumber )
+
+snippet get_connectionattributes
+abbr Get ( ConnectionAttributes )
+alias GetConnectionAttributes
+	Get ( ConnectionAttributes )
+
+snippet get_connectionstate
+abbr Get ( ConnectionState )
+alias GetConnectionState
+	Get ( ConnectionState )
+
+snippet get_currentdate
+abbr Get ( CurrentDate )
+alias GetCurrentDate
+	Get ( CurrentDate )
+
+snippet get_currentextendedprivileges
+abbr Get ( CurrentExtendedPrivileges )
+alias GetCurrentExtendedPrivileges
+	Get ( CurrentExtendedPrivileges )
+
+snippet get_currenthosttimestamp
+abbr Get ( CurrentHostTimestamp )
+alias GetCurrentHostTimestamp
+	Get ( CurrentHostTimestamp )
+
+snippet get_currentprivilegesetname
+abbr Get ( CurrentPrivilegeSetName )
+alias GetCurrentPrivilegeSetName
+	Get ( CurrentPrivilegeSetName )
+
+snippet get_currenttime
+abbr Get ( CurrentTime )
+alias GetCurrentTime
+	Get ( CurrentTime )
+
+snippet get_currenttimestamp
+abbr Get ( CurrentTimestamp )
+alias GetCurrentTimestamp
+	Get ( CurrentTimestamp )
+
+snippet get_currenttimeutcmilliseconds
+abbr Get ( CurrentTimeUTCMilliseconds )
+alias GetCurrentTimeUTCMilliseconds
+	Get ( CurrentTimeUTCMilliseconds )
+
+snippet get_custommenusetname
+abbr Get ( CustomMenuSetName )
+alias GetCustomMenuSetName
+	Get ( CustomMenuSetName )
+
+snippet get_desktoppath
+abbr Get ( DesktopPath )
+alias GetDesktopPath
+	Get ( DesktopPath )
+
+snippet get_device
+abbr Get ( Device )
+alias GetDevice
+	Get ( Device )
+
+snippet get_documentspath
+abbr Get ( DocumentsPath )
+alias GetDocumentsPath
+	Get ( DocumentsPath )
+
+snippet get_documentspathlisting
+abbr Get ( DocumentsPathListing )
+alias GetDocumentsPathListing
+	Get ( DocumentsPathListing )
+
+snippet get_encryptionstate
+abbr Get ( EncryptionState )
+alias GetEncryptionState
+	Get ( EncryptionState )
+
+snippet get_errorcapturestate
+abbr Get ( ErrorCaptureState )
+alias GetErrorCaptureState
+	Get ( ErrorCaptureState )
+
+snippet get_filemakerpath
+abbr Get ( FileMakerPath )
+alias GetFileMakerPath
+	Get ( FileMakerPath )
+
+snippet get_filename
+abbr Get ( FileName )
+alias GetFileName
+	Get ( FileName )
+
+snippet get_filepath
+abbr Get ( FilePath )
+alias GetFilePath
+	Get ( FilePath )
+
+snippet get_filesize
+abbr Get ( FileSize )
+alias GetFileSize
+	Get ( FileSize )
+
+snippet get_foundcount
+abbr Get ( FoundCount )
+alias GetFoundCount
+	Get ( FoundCount )
+
+snippet get_highcontrastcolor
+abbr Get ( HighContrastColor )
+alias GetHighContrastColor
+	Get ( HighContrastColor )
+
+snippet get_highcontraststate
+abbr Get ( HighContrastState )
+alias GetHighContrastState
+	Get ( HighContrastState )
+
+snippet get_hostapplicationversion
+abbr Get ( HostApplicationVersion )
+alias GetHostApplicationVersion
+	Get ( HostApplicationVersion )
+
+snippet get_hostipaddress
+abbr Get ( HostIPAddress )
+alias GetHostIPAddress
+	Get ( HostIPAddress )
+
+snippet get_hostname
+abbr Get ( HostName )
+alias GetHostName
+	Get ( HostName )
+
+snippet get_installedfmplugins
+abbr Get ( InstalledFMPlugins )
+alias GetInstalledFMPlugins
+	Get ( InstalledFMPlugins )
+
+snippet get_lasterror
+abbr Get ( LastError )
+alias GetLastError
+	Get ( LastError )
+
+snippet get_lastmessagechoice
+abbr Get ( LastMessageChoice )
+alias GetLastMessageChoice
+	Get ( LastMessageChoice )
+
+snippet get_lastodbcerror
+abbr Get ( LastODBCError )
+alias GetLastODBCError
+	Get ( LastODBCError )
+
+snippet get_layoutaccess
+abbr Get ( LayoutAccess )
+alias GetLayoutAccess
+	Get ( LayoutAccess )
+
+snippet get_layoutcount
+abbr Get ( LayoutCount )
+alias GetLayoutCount
+	Get ( LayoutCount )
+
+snippet get_layoutname
+abbr Get ( LayoutName )
+alias GetLayoutName
+	Get ( LayoutName )
+
+snippet get_layoutnumber
+abbr Get ( LayoutNumber )
+alias GetLayoutNumber
+	Get ( LayoutNumber )
+
+snippet get_layouttablename
+abbr Get ( LayoutTableName )
+alias GetLayoutTableName
+	Get ( LayoutTableName )
+
+snippet get_layoutviewstate
+abbr Get ( LayoutViewState )
+alias GetLayoutViewState
+	Get ( LayoutViewState )
+
+snippet get_modifiedfields
+abbr Get ( ModifiedFields )
+alias GetModifiedFields
+	Get ( ModifiedFields )
+
+snippet get_multiuserstate
+abbr Get ( MultiUserState )
+alias GetMultiUserState
+	Get ( MultiUserState )
+
+snippet get_networkprotocol
+abbr Get ( NetworkProtocol )
+alias GetNetworkProtocol
+	Get ( NetworkProtocol )
+
+snippet get_networktype
+abbr Get ( NetworkType )
+alias GetNetworkType
+	Get ( NetworkType )
+
+snippet get_pagenumber
+abbr Get ( PageNumber )
+alias GetPageNumber
+	Get ( PageNumber )
+
+snippet get_persistentid
+abbr Get ( PersistentID )
+alias GetPersistentID
+	Get ( PersistentID )
+
+snippet get_preferencespath
+abbr Get ( PreferencesPath )
+alias GetPreferencesPath
+	Get ( PreferencesPath )
+
+snippet get_printername
+abbr Get ( PrinterName )
+alias GetPrinterName
+	Get ( PrinterName )
+
+snippet get_quickfindtext
+abbr Get ( QuickFindText )
+alias GetQuickFindText
+	Get ( QuickFindText )
+
+snippet get_recordaccess
+abbr Get ( RecordAccess )
+alias GetRecordAccess
+	Get ( RecordAccess )
+
+snippet get_recordid
+abbr Get ( RecordID )
+alias GetRecordID
+	Get ( RecordID )
+
+snippet get_recordmodificationcount
+abbr Get ( RecordModificationCount )
+alias GetRecordModificationCount
+	Get ( RecordModificationCount )
+
+snippet get_recordnumber
+abbr Get ( RecordNumber )
+alias GetRecordNumber
+	Get ( RecordNumber )
+
+snippet get_recordopencount
+abbr Get ( RecordOpenCount )
+alias GetRecordOpenCount
+	Get ( RecordOpenCount )
+
+snippet get_recordopenstate
+abbr Get ( RecordOpenState )
+alias GetRecordOpenState
+	Get ( RecordOpenState )
+
+snippet get_requestcount
+abbr Get ( RequestCount )
+alias GetRequestCount
+	Get ( RequestCount )
+
+snippet get_requestomitstate
+abbr Get ( RequestOmitState )
+alias GetRequestOmitState
+	Get ( RequestOmitState )
+
+snippet get_screendepth
+abbr Get ( ScreenDepth )
+alias GetScreenDepth
+	Get ( ScreenDepth )
+
+snippet get_screenheight
+abbr Get ( ScreenHeight )
+alias GetScreenHeight
+	Get ( ScreenHeight )
+
+snippet get_screenwidth
+abbr Get ( ScreenWidth )
+alias GetScreenWidth
+	Get ( ScreenWidth )
+
+snippet get_scriptanimationstate
+abbr Get ( ScriptAnimationState )
+alias GetScriptAnimationState
+	Get ( ScriptAnimationState )
+
+snippet get_scriptname
+abbr Get ( ScriptName )
+alias GetScriptName
+	Get ( ScriptName )
+
+snippet get_scriptparameter
+abbr Get ( ScriptParameter )
+alias GetScriptParameter
+	Get ( ScriptParameter )
+
+snippet get_scriptresult
+abbr Get ( ScriptResult )
+alias GetScriptResult
+	Get ( ScriptResult )
+
+snippet get_sortstate
+abbr Get ( SortState )
+alias GetSortState
+	Get ( SortState )
+
+snippet get_statusareastate
+abbr Get ( StatusAreaState )
+alias GetStatusAreaState
+	Get ( StatusAreaState )
+
+snippet get_systemdrive
+abbr Get ( SystemDrive )
+alias GetSystemDrive
+	Get ( SystemDrive )
+
+snippet get_systemipaddress
+abbr Get ( SystemIPAddress )
+alias GetSystemIPAddress
+	Get ( SystemIPAddress )
+
+snippet get_systemlanguage
+abbr Get ( SystemLanguage )
+alias GetSystemLanguage
+	Get ( SystemLanguage )
+
+snippet get_systemnicaddress
+abbr Get ( SystemNICAddress )
+alias GetSystemNICAddress
+	Get ( SystemNICAddress )
+
+snippet get_systemplatform
+abbr Get ( SystemPlatform )
+alias GetSystemPlatform
+	Get ( SystemPlatform )
+
+snippet get_systemversion
+abbr Get ( SystemVersion )
+alias GetSystemVersion
+	Get ( SystemVersion )
+
+snippet get_temporarypath
+abbr Get ( TemporaryPath )
+alias GetTemporaryPath
+	Get ( TemporaryPath )
+
+snippet get_textrulervisible
+abbr Get ( TextRulerVisible )
+alias GetTextRulerVisible
+	Get ( TextRulerVisible )
+
+snippet get_totalrecordcount
+abbr Get ( TotalRecordCount )
+alias GetTotalRecordCount
+	Get ( TotalRecordCount )
+
+snippet get_triggercurrentpanel
+abbr Get ( TriggerCurrentPanel )
+alias GetTriggerCurrentPanel
+	Get ( TriggerCurrentPanel )
+
+snippet get_triggergestureinfo
+abbr Get ( TriggerGestureInfo )
+alias GetTriggerGestureInfo
+	Get ( TriggerGestureInfo )
+
+snippet get_triggerkeystroke
+abbr Get ( TriggerKeystroke )
+alias GetTriggerKeystroke
+	Get ( TriggerKeystroke )
+
+snippet get_triggermodifierkeys
+abbr Get ( TriggerModifierKeys )
+alias GetTriggerModifierKeys
+	Get ( TriggerModifierKeys )
+
+snippet get_triggertargetpanel
+abbr Get ( TriggerTargetPanel )
+alias GetTriggerTargetPanel
+	Get ( TriggerTargetPanel )
+
+snippet get_usercount
+abbr Get ( UserCount )
+alias GetUserCount
+	Get ( UserCount )
+
+snippet get_username
+abbr Get ( UserName )
+alias GetUserName
+	Get ( UserName )
+
+snippet get_usesystemformatsstate
+abbr Get ( UseSystemFormatsState )
+alias GetUseSystemFormatsState
+	Get ( UseSystemFormatsState )
+
+snippet get_uuid
+abbr Get ( UUID )
+alias GetUUID
+	Get ( UUID )
+
+snippet get_windowcontentheight
+abbr Get ( WindowContentHeight )
+alias GetWindowContentHeight
+	Get ( WindowContentHeight )
+
+snippet get_windowcontentwidth
+abbr Get ( WindowContentWidth )
+alias GetWindowContentWidth
+	Get ( WindowContentWidth )
+
+snippet get_windowdesktopheight
+abbr Get ( WindowDesktopHeight )
+alias GetWindowDesktopHeight
+	Get ( WindowDesktopHeight )
+
+snippet get_windowdesktopwidth
+abbr Get ( WindowDesktopWidth )
+alias GetWindowDesktopWidth
+	Get ( WindowDesktopWidth )
+
+snippet get_windowheight
+abbr Get ( WindowHeight )
+alias GetWindowHeight
+	Get ( WindowHeight )
+
+snippet get_windowleft
+abbr Get ( WindowLeft )
+alias GetWindowLeft
+	Get ( WindowLeft )
+
+snippet get_windowmode
+abbr Get ( WindowMode )
+alias GetWindowMode
+	Get ( WindowMode )
+
+snippet get_windowname
+abbr Get ( WindowName )
+alias GetWindowName
+	Get ( WindowName )
+
+snippet get_windoworientation
+abbr Get ( WindowOrientation )
+alias GetWindowOrientation
+	Get ( WindowOrientation )
+
+snippet get_windowstyle
+abbr Get ( WindowStyle )
+alias GetWindowStyle
+	Get ( WindowStyle )
+
+snippet get_windowtop
+abbr Get ( WindowTop )
+alias GetWindowTop
+	Get ( WindowTop )
+
+snippet get_windowvisible
+abbr Get ( WindowVisible )
+alias GetWindowVisible
+	Get ( WindowVisible )
+
+snippet get_windowwidth
+abbr Get ( WindowWidth )
+alias GetWindowWidth
+	Get ( WindowWidth )
+
+snippet get_windowzoomlevel
+abbr Get ( WindowZoomLevel )
+alias GetWindowZoomLevel
+	Get ( WindowZoomLevel )
+
+# ---------------------------------------------------
+# Logical functions
+# ---------------------------------------------------
+
+snippet case
+abbr Case ( test1 ; result1 { ; test2 ; result2 ; ... ; defaultResult } )
+alias Case
+	Case (
+		${1:test1};
+			${2:result1};
+
+		${3:#:test2};
+			${4:#:test2};
+
+		${5:defaultResult}
+	)
+
+snippet choose
+abbr Choose ( test ; result0 { ; result1 ; result2... } )
+alias Choose
+	Choose ( ${1:test} ; ${2:result0} \{ ; ${3:result1} ; ${4:result2}... \} )
+
+snippet evaluate
+abbr Evaluate ( expression { ; [field1 ; field2 ; field3 ; ...] } )
+alias Evaluate
+	Evaluate ( ${1:expression} \{ ; [${2:field1} ; ${3:field2} ; ${4:field3} ; ...] \} )
+
+snippet evaluationerror
+abbr EvaluationError ( expression )
+alias EvaluationError
+	EvaluationError ( ${1:expression} )
+
+snippet executesql
+abbr ExecuteSQL ( sqlQuery ; fieldSeparator ; rowSeparator { ; arguments... } )
+alias ExecuteSQL
+	ExecuteSQL ( ${1:sqlQuery} ; ${2:fieldSeparator} ; ${3:rowSeparator} \{ ; ${4:arguments}... \} )
+
+snippet getasboolean
+abbr GetAsBoolean ( data )
+alias GetAsBoolean
+	GetAsBoolean ( ${1:data} )
+
+snippet getfield
+abbr GetField ( fieldName )
+alias GetField
+	GetField ( ${1:fieldName} )
+
+snippet getfieldname
+abbr GetFieldName ( fieldName )
+alias GetFieldName
+	GetFieldName ( ${1:fieldName} )
+
+snippet getlayoutobjectattribute
+abbr GetLayoutObjectAttribute ( objectName ; attributeName { ; repetitionNumber ; portalRowNumber } )
+alias GetLayoutObjectAttribute
+	GetLayoutObjectAttribute ( ${1:objectName} ; ${2:attributeName} \{ ; ${3:repetitionNumber} ; ${4:portalRowNumber} \} )
+
+snippet getnthrecord
+abbr GetNthRecord ( fieldName ; recordNumber )
+alias GetNthRecord
+	GetNthRecord ( ${1:fieldName} ; ${2:recordNumber} )
+
+snippet if
+abbr If ( test ; result1 ; result2 )
+alias If
+	If ( ${1:test} ;
+		${2:result1} ;
+		${3:#:result2}
+	)
+
+snippet isempty
+abbr IsEmpty ( field )
+alias IsEmpty
+	IsEmpty ( ${1:field} )
+
+snippet isvalid
+abbr IsValid ( field )
+alias IsValid
+	IsValid ( ${1:field} )
+
+snippet isvalidexpression
+abbr IsValidExpression ( expression )
+alias IsValidExpression
+	IsValidExpression ( ${1:expression} )
+
+snippet let
+abbr Let ( { [ } var1=expression1 { ; var2=expression2...] } ; calculation )
+alias Let
+	Let ( [
+		~${1:var1} = ${2:expression1}
+	];
+		${3:calculation}
+	)
+
+snippet lookup
+abbr Lookup ( sourceField { ; failExpression } )
+alias Lookup
+	Lookup ( ${1:sourceField} \{ ; ${2:failExpression} \} )
+
+snippet lookupnext
+abbr LookupNext ( sourceField ; lower/higherFlag )
+alias LookupNext
+	LookupNext ( ${1:sourceField} ; ${2:lower}/${3:higherFlag} )
+
+snippet self
+abbr Self
+alias Self
+	Self
+
+# ---------------------------------------------------
+# Mobile functions
+# ---------------------------------------------------
+
+snippet location
+abbr Location ( accuracy { ; timeout } )
+alias Location
+	Location ( ${1:accuracy} \{ ; ${2:timeout} \} )
+
+snippet locationvalues
+abbr LocationValues ( accuracy { ; timeout } )
+alias LocationValues
+	LocationValues ( ${1:accuracy} \{ ; ${2:timeout} \} )
+
+# ---------------------------------------------------
+# Number functions
+# ---------------------------------------------------
+
+snippet abs
+abbr Abs ( number )
+alias Abs
+	Abs ( ${1:number} )
+
+snippet ceiling
+abbr Ceiling ( number )
+alias Ceiling
+	Ceiling ( ${1:number} )
+
+snippet combination
+abbr Combination ( setSize ; numberOfChoices )
+alias Combination
+	Combination ( ${1:setSize} ; ${2:numberOfChoices} )
+
+snippet div
+abbr Div ( number ; divisor )
+alias Div
+	Div ( ${1:number} ; ${2:divisor} )
+
+snippet exp
+abbr Exp ( number )
+alias Exp
+	Exp ( ${1:number} )
+
+snippet factorial
+abbr Factorial ( number { ; numberOfFactors } )
+alias Factorial
+	Factorial ( ${1:number} \{ ; ${2:numberOfFactors} \} )
+
+snippet floor
+abbr Floor ( number )
+alias Floor
+	Floor ( ${1:number} )
+
+snippet int
+abbr Int ( number )
+alias Int
+	Int ( ${1:number} )
+
+snippet lg
+abbr Lg ( number )
+alias Lg
+	Lg ( ${1:number} )
+
+snippet ln
+abbr Ln ( number )
+alias Ln
+	Ln ( ${1:number} )
+
+snippet log
+abbr Log ( number )
+alias Log
+	Log ( ${1:number} )
+
+snippet mod
+abbr Mod ( number ; divisor )
+alias Mod
+	Mod ( ${1:number} ; ${2:divisor} )
+
+snippet random
+abbr Random
+alias Random
+	Random
+
+snippet round
+abbr Round ( number ; precision )
+alias Round
+	Round ( ${1:number} ; ${2:precision} )
+
+snippet setprecision
+abbr SetPrecision ( expression ; precision )
+alias SetPrecision
+	SetPrecision ( ${1:expression} ; ${2:precision} )
+
+snippet sign
+abbr Sign ( number )
+alias Sign
+	Sign ( ${1:number} )
+
+snippet sqrt
+abbr Sqrt ( number )
+alias Sqrt
+	Sqrt ( ${1:number} )
+
+snippet truncate
+abbr Truncate ( number ; precision )
+alias Truncate
+	Truncate ( ${1:number} ; ${2:precision} )
+
+# ---------------------------------------------------
+# Repeating functions
+# ---------------------------------------------------
+
+nippet extend
+abbr Extend ( non-repeatingField )
+alias Extend
+	Extend ( ${1:non}-${2:repeatingField} )
+
+snippet getrepetition
+abbr GetRepetition ( repeatingField ; number )
+alias GetRepetition
+	GetRepetition ( ${1:repeatingField} ; ${2:number} )
+
+snippet last
+abbr Last ( field )
+alias Last
+	Last ( ${1:field} )
+
+# ---------------------------------------------------
+# Summary functions
+# ---------------------------------------------------
+
+snippet getsummary
+abbr GetSummary ( summaryField ; breakField )
+alias GetSummary
+	GetSummary ( ${1:summaryField} ; ${2:breakField} )
+
+# ---------------------------------------------------
+# Text functions
+# ---------------------------------------------------
+
+snippet char
+abbr Char ( number )
+alias Char
+	Char ( ${1:number} )
+
+snippet code
+abbr Code ( text )
+alias Code
+	Code ( ${1:text} )
+
+snippet exact
+abbr Exact ( originalText ; comparisonText )
+alias Exact
+	Exact ( ${1:originalText} ; ${2:comparisonText} )
+
+snippet filter
+abbr Filter ( textToFilter ; filterText )
+alias Filter
+	Filter ( ${1:textToFilter} ; ${2:filterText} )
+
+snippet filtervalues
+abbr FilterValues ( textToFilter ; filterValues )
+alias FilterValues
+	FilterValues ( ${1:textToFilter} ; ${2:filterValues} )
+
+snippet getascss
+abbr GetAsCSS ( text )
+alias GetAsCSS
+	GetAsCSS ( ${1:text} )
+
+snippet getasdate
+abbr GetAsDate ( text )
+alias GetAsDate
+	GetAsDate ( ${1:text} )
+
+snippet getasnumber
+abbr GetAsNumber ( text )
+alias GetAsNumber
+	GetAsNumber ( ${1:text} )
+
+snippet getassvg
+abbr GetAsSVG ( text )
+alias GetAsSVG
+	GetAsSVG ( ${1:text} )
+
+snippet getastext
+abbr GetAsText ( data )
+alias GetAsText
+	GetAsText ( ${1:data} )
+
+snippet getastime
+abbr GetAsTime ( text )
+alias GetAsTime
+	GetAsTime ( ${1:text} )
+
+snippet getastimestamp
+abbr GetAsTimestamp ( text )
+alias GetAsTimestamp
+	GetAsTimestamp ( ${1:text} )
+
+snippet getasurlencoded
+abbr GetAsURLEncoded ( text )
+alias GetAsURLEncoded
+	GetAsURLEncoded ( ${1:text} )
+
+snippet getvalue
+abbr GetValue ( listOfValues ; valueNumber )
+alias GetValue
+	GetValue ( ${1:listOfValues} ; ${2:valueNumber} )
+
+snippet hiragana
+abbr Hiragana ( text )
+alias Hiragana
+	Hiragana ( ${1:text} )
+
+snippet kanahankaku
+abbr KanaHankaku ( text )
+alias KanaHankaku
+	KanaHankaku ( ${1:text} )
+
+snippet kanazenkaku
+abbr KanaZenkaku ( text )
+alias KanaZenkaku
+	KanaZenkaku ( ${1:text} )
+
+snippet kanjinumeral
+abbr KanjiNumeral ( text )
+alias KanjiNumeral
+	KanjiNumeral ( ${1:text} )
+
+snippet katakana
+abbr Katakana ( text )
+alias Katakana
+	Katakana ( ${1:text} )
+
+snippet left
+abbr Left ( text ; numberOfCharacters )
+alias Left
+	Left ( ${1:text} ; ${2:numberOfCharacters} )
+
+snippet leftvalues
+abbr LeftValues ( text ; numberOfValues )
+alias LeftValues
+	LeftValues ( ${1:text} ; ${2:numberOfValues} )
+
+snippet leftwords
+abbr LeftWords ( text ; numberOfWords )
+alias LeftWords
+	LeftWords ( ${1:text} ; ${2:numberOfWords} )
+
+snippet length
+abbr Length ( field )
+alias Length
+	Length ( ${1:field} )
+
+snippet lower
+abbr Lower ( text )
+alias Lower
+	Lower ( ${1:text} )
+
+snippet middle
+abbr Middle ( text ; start ; numberOfCharacters )
+alias Middle
+	Middle ( ${1:text} ; ${2:start} ; ${3:numberOfCharacters} )
+
+snippet middlevalues
+abbr MiddleValues ( text ; startingValue ; numberOfValues )
+alias MiddleValues
+	MiddleValues ( ${1:text} ; ${2:startingValue} ; ${3:numberOfValues} )
+
+snippet middlewords
+abbr MiddleWords ( text ; startingWord ; numberOfWords )
+alias MiddleWords
+	MiddleWords ( ${1:text} ; ${2:startingWord} ; ${3:numberOfWords} )
+
+snippet numtojtext
+abbr NumToJText ( number ; separator ; characterType )
+alias NumToJText
+	NumToJText ( ${1:number} ; ${2:separator} ; ${3:characterType} )
+
+snippet patterncount
+abbr PatternCount ( text ; searchString )
+alias PatternCount
+	PatternCount ( ${1:text} ; ${2:searchString} )
+
+snippet position
+abbr Position ( text ; searchString ; start ; occurrence )
+alias Position
+	Position ( ${1:text} ; ${2:searchString} ; ${3:start} ; ${4:occurrence} )
+
+snippet proper
+abbr Proper ( text )
+alias Proper
+	Proper ( ${1:text} )
+
+snippet quote
+abbr Quote ( text )
+alias Quote
+	Quote ( ${1:text} )
+
+snippet replace
+abbr Replace ( text ; start ; numberOfCharacters ; replacementText )
+alias Replace
+	Replace ( ${1:text} ; ${2:start} ; ${3:numberOfCharacters} ; ${4:replacementText} )
+
+snippet right
+abbr Right ( text ; numberOfCharacters )
+alias Right
+	Right ( ${1:text} ; ${2:numberOfCharacters} )
+
+snippet rightvalues
+abbr RightValues ( text ; numberOfValues )
+alias RightValues
+	RightValues ( ${1:text} ; ${2:numberOfValues} )
+
+snippet rightwords
+abbr RightWords ( text ; numberOfWords )
+alias RightWords
+	RightWords ( ${1:text} ; ${2:numberOfWords} )
+
+snippet romanhankaku
+abbr RomanHankaku ( text )
+alias RomanHankaku
+	RomanHankaku ( ${1:text} )
+
+snippet romanzenkaku
+abbr RomanZenkaku ( text )
+alias RomanZenkaku
+	RomanZenkaku ( ${1:text} )
+
+snippet serialincrement
+abbr SerialIncrement ( text ; incrementBy )
+alias SerialIncrement
+	SerialIncrement ( ${1:text} ; ${2:incrementBy} )
+
+snippet substitute
+abbr Substitute ( text ; searchString ; replaceString )
+alias Substitute
+	Substitute ( ${1:text} ; ${2:searchString} ; ${3:replaceString} )
+
+snippet trim
+abbr Trim ( text )
+alias Trim
+	Trim ( ${1:text} )
+
+snippet trimall
+abbr TrimAll ( text ; trimSpaces ; trimType )
+alias TrimAll
+	TrimAll ( ${1:text} ; ${2:trimSpaces} ; ${3:trimType} )
+
+snippet upper
+abbr Upper ( text )
+alias Upper
+	Upper ( ${1:text} )
+
+snippet valuecount
+abbr ValueCount ( text )
+alias ValueCount
+	ValueCount ( ${1:text} )
+
+snippet wordcount
+abbr WordCount ( text )
+alias WordCount
+	WordCount ( ${1:text} )
+
+# ---------------------------------------------------
+# Time functions
+# ---------------------------------------------------
+
+snippet hour
+abbr Hour ( time )
+alias Hour
+	Hour ( ${1:time} )
+
+snippet minute
+abbr Minute ( time )
+alias Minute
+	Minute ( ${1:time} )
+
+snippet seconds
+abbr Seconds ( time )
+alias Seconds
+	Seconds ( ${1:time} )
+
+snippet time
+abbr Time ( hours ; minutes ; seconds )
+alias Time
+	Time ( ${1:hours} ; ${2:minutes} ; ${3:seconds} )
+
+# ---------------------------------------------------
+# Timestamp functions
+# ---------------------------------------------------
+
+snippet timestamp
+abbr Timestamp ( date ; time )
+alias Timestamp
+	Timestamp ( ${1:date} ; ${2:time} )
+
+# ---------------------------------------------------
+# Trigonometric functions
+# ---------------------------------------------------
+
+snippet acos
+abbr Acos ( number )
+alias Acos
+	Acos ( ${1:number} )
+
+snippet asin
+abbr Asin ( number )
+alias Asin
+	Asin ( ${1:number} )
+
+snippet atan
+abbr Atan ( number )
+alias Atan
+	Atan ( ${1:number} )
+
+snippet cos
+abbr Cos ( angleInRadians )
+alias Cos
+	Cos ( ${1:angleInRadians} )
+
+snippet degrees
+abbr Degrees ( angleInRadians )
+alias Degrees
+	Degrees ( ${1:angleInRadians} )
+
+snippet pi
+abbr Pi
+alias Pi
+	Pi
+
+snippet radians
+abbr Radians ( angleInDegrees )
+alias Radians
+	Radians ( ${1:angleInDegrees} )
+
+snippet sin
+abbr Sin ( angleInRadians )
+alias Sin
+	Sin ( ${1:angleInRadians} )
+
+snippet tan
+abbr Tan ( angleInRadians )
+alias Tan
+	Tan ( ${1:angleInRadians} )
