@@ -17,7 +17,7 @@ Contents ~
   3.1. Default Conventions                   |filemakervim-default-conventions|
   3.2. Overriding Conventions             |filemakervim-overriding-conventions|
   3.3. Other Settings                             |filemakervim-other-settings|
-	3.4. Other Features                             |filemakervim-other-features|
+  3.4. Other Features                             |filemakervim-other-features|
  4. Triggers                                            |filemakervim-triggers|
   4.1. Trigger Standards                       |filemakervim-trigger-standards|
   4.2. Optional Parameters                   |filemakervim-optional-parameters|
@@ -67,8 +67,8 @@ The following features are supported:
   o or '~bar')
   o Custom functions that begin with a prepended code and dot (i.e.,
     'code.CustomFunction')
-	o Embedded source code within FileMaker strings for SQL, JavaScript, Groovy
-		and PHP
+  o Embedded source code within FileMaker strings for SQL, JavaScript, Groovy
+    and PHP
 - With the installation of UltiSnips, intelligent snippet insertion for all
   of the built-in FileMaker functions
 - Function completion using <c-x><c-u> (mapped by default to <c-tab>, see
@@ -383,11 +383,10 @@ the string that specifies the language with the format 'lang=<languagename>'.
 For example:
 >
   ExecuteSQL( "/*lang=sql*/
-              SELECT * FROM table WHERE id = 1;
+              SELECT * FROM table WHERE id = 1";
               ""; ""
   )
 <
-
 ===============================================================================
                                                         *filemakervim-triggers*
                                                                  *fmv-triggers*
