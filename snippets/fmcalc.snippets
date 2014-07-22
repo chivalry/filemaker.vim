@@ -1385,6 +1385,14 @@ abbr Substitute ( text ; searchString ; replaceString )
 alias Substitute
 	Substitute ( ${1:text} ; ${2:searchString} ; ${3:replaceString} )
 
+snippet substitute[
+abbr Substitute Multiple
+alias sub
+	Substitute ( ${1:text} ;
+		[ ${2:searchString} ; ${3:replaceString} ];
+		[ ${4:searchString} ; ${5:replaceString} ]
+	)
+
 snippet trim
 abbr Trim ( text )
 alias Trim
