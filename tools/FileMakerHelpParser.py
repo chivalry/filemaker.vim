@@ -145,6 +145,64 @@ class FileMakerHelpParser:
 
 # ==============================================================================
 
+    def build_tag(self, type_):
+        if type_ == 'long':
+            prefix = 'filemaker'
+        else:
+            prefix = 'fmv'
+
+        tag = '*' + prefix + '-func-' + self.name.lower() + '*'
+        justified = tag.rjust(79) + '\n'
+        return justified
+
+# ==============================================================================
+
+    def build_subheading(self, name):
+        return name + '\n' + ('-' * len(name)) + '\n'
+
+# ==============================================================================
+
+    def output(self):
+        output = ('-' * 79) + '\n'
+        
+        output += self.build_tag('long')
+        output += self.build_tag('short')
+
+        output += self.name + ' ~\n\n'
+
+        output += self.build_subheading('Purpose')
+        output += self.purpose + '\n\n'
+
+        output += self.build_subheading('Format')
+        output += self.format + '\n\n'
+
+        output += self.build_subheading('Parameters')
+        for param in self.params:
+            output += param + '\n'
+        output += '\n'
+
+        output += self.build_subheading('Data type returned')
+        output += self.datatype + '\n\n'
+
+        output += self.build_subheading('Originated in')
+        output += self.origin + '\n\n'
+
+        output += self.build_subheading('Description')
+        for desc in self.desc:
+            output += desc + '\n'
+        output += '\n'
+
+        output += self.build_subheading('Examples')
+        for examp in self.examp:
+            output += examp + '\n'
+        output += '\n'
+
+        output += self.note + '\n\n'
+
+        return output
+
+# ==============================================================================
+
     def __init__(self, filepath=''):
         if filepath == '':
             filepath = 'function_refs/func_ref1.31.2.html'
