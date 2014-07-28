@@ -3,7 +3,7 @@
 """
 Extracts the information in a FileMaker HTML help file into instance
   variables that can be accessed by the calling script.
-Last Change: 2014 Jul 27
+Last Change: 2014 Jul 28
 Version 1.0
 Language: Python
 Maintainer: Charles Ross <chivalry@mac.com>
@@ -17,6 +17,10 @@ from bs4 import BeautifulSoup, Tag, NavigableString
 from cStringIO import StringIO
 
 class FileMakerHelpParser:
+
+# ==============================================================================
+    def find_div(self, class_):
+        return self.content.find('div', class_=class_)
 
 # ==============================================================================
 
@@ -52,13 +56,13 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def get_purpose(self):
-        purpose_div = self.content.find('div', class_='fpu-funcpurpose')
+        purpose_div = self.find_div('fpu-funcpurpose')
         return self.format_div(purpose_div)
 
 # ==============================================================================
 
     def get_params(self):
-        param_head = self.content.find('div', class_='fpah-funcparamhead')
+        param_head = self.find_div('fpah-funcparamhead')
         params = []
 
         for sibling in param_head.next_siblings:
@@ -74,7 +78,7 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def get_datatype(self):
-        type_head = self.content.find('div', class_='frh-funcreturnhead')
+        type_head = self.find_div('frh-funcreturnhead')
 
         for sibling in type_head.next_siblings:
 
@@ -84,7 +88,7 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def get_origin(self):
-        result = self.content.find('div', class_='or-origin').string
+        result = self.find_div('or-origin').string
         result = result.replace(u"\u00A0", ' ')
 
         return result
@@ -92,7 +96,7 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def get_desc(self):
-        desc_head = self.content.find('div', class_='fdh-funcdeschead')
+        desc_head = self.find_div('fdh-funcdeschead')
         result = []
 
         for sibling in desc_head.next_siblings:
@@ -113,7 +117,7 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def get_examp(self):
-        examp_head = self.content.find('div', class_='feh-funcexamhead')
+        examp_head = self.find_div('feh-funcexamhead')
         result = []
 
         for sibling in examp_head.next_siblings:
@@ -125,10 +129,6 @@ class FileMakerHelpParser:
                     break
 
         return result
-
-# ==============================================================================
-    def find_div(self, class_):
-        return self.content.find('div', class_=class_)
 
 # ==============================================================================
 
