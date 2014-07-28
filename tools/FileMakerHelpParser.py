@@ -18,6 +18,9 @@ from cStringIO import StringIO
 
 class FileMakerHelpParser:
 
+    hierarchy = {'desc':  ['fdh-funcdeschead', 'feh-funcexamhead'],
+                 'examp': ['feh-funcexamhead', 'n-note']}
+
 # ==============================================================================
     def find_div(self, class_):
         return self.content.find('div', class_=class_)
@@ -95,34 +98,16 @@ class FileMakerHelpParser:
 
 # ==============================================================================
 
-    def get_desc(self):
-        desc_head = self.find_div('fdh-funcdeschead')
+    def get_hierarchy(self, type_):
+        class_      = FileMakerHelpParser.hierarchy[type_][0]
+        break_class = FileMakerHelpParser.hierarchy[type_][1]
+
+        head = self.find_div(class_)
         result = []
 
-        for sibling in desc_head.next_siblings:
+        for sibling in head.next_siblings:
             if type(sibling) is Tag:
-                if 'feh-funcexamhead' in sibling['class']:
-                    break
-
-                elif 'b-body' in sibling['class']:
-                    result.append(self.format_div(sibling))
-
-                elif 'bu1-bullet1_outer' in sibling['class']:
-                    tds = sibling.find_all('div', class_='bu1-bullet1_inner')
-                    line = tds[1]
-                    result.append('- ' + self.format_div(line))
-
-        return result
-
-# ==============================================================================
-
-    def get_examp(self):
-        examp_head = self.find_div('feh-funcexamhead')
-        result = []
-
-        for sibling in examp_head.next_siblings:
-            if type(sibling) is Tag:
-                if 'n-note' in sibling['class']:
+                if break_class in sibling['class']:
                     break
 
                 elif 'b-body' in sibling['class']:
@@ -139,15 +124,15 @@ class FileMakerHelpParser:
 
     def description(self):
         result = {}
-        result['name'] = self.name
-        result['purpose'] = self.purpose
-        result['format'] = self.format
-        result['params'] = self.params
+        result['name']     = self.name
+        result['purpose']  = self.purpose
+        result['format']   = self.format
+        result['params']   = self.params
         result['datatype'] = self.datatype
-        result['origin'] = self.origin
-        result['desc'] = self.desc
-        result['examp'] = self.examp
-        result['note'] = self.note
+        result['origin']   = self.origin
+        result['desc']     = self.desc
+        result['examp']    = self.examp
+        result['note']     = self.note
 
         pp = pprint.PrettyPrinter(indent=2)
 
@@ -173,7 +158,7 @@ class FileMakerHelpParser:
         self.params   = self.get_params()
         self.datatype = self.get_datatype()
         self.origin   = self.get_origin()
-        self.desc     = self.get_desc()
-        self.examp    = self.get_examp()
+        self.desc     = self.get_hierarchy('desc')
+        self.examp    = self.get_hierarchy('examp')
         self.note     = self.format_div(self.content.find('div', class_ = 'n-note'))
         self.note     = self.format_div(self.find_div('n-note'))
