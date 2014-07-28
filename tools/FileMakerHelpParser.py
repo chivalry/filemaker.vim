@@ -197,7 +197,7 @@ class FileMakerHelpParser:
         output += self.name + ' ~\n\n'
 
         output += self.build_subheading('Purpose')
-        output += self.purpose + '\n\n'
+        output += textwrap.fill(self.purpose, 79) + '\n\n'
 
         output += self.build_subheading('Format')
         output += self.format + '\n\n'
@@ -214,7 +214,7 @@ class FileMakerHelpParser:
 
         output += self.loop_additions('Examples')
 
-        output += self.note + '\n\n'
+        output += textwrap.fill(self.note, 79) + '\n\n'
 
         return output
 
