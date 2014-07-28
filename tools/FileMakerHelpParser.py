@@ -10,9 +10,10 @@ Maintainer: Charles Ross <chivalry@mac.com>
 License: The MIT License
 """
 
-from bs4 import BeautifulSoup, Tag, NavigableString
 import pprint
 import sys
+
+from bs4 import BeautifulSoup, Tag, NavigableString
 from cStringIO import StringIO
 
 class FileMakerHelpParser:
@@ -20,19 +21,6 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def format_div(self, div):
-        """
-        Format a div element for inclusion in vimdoc.
-
-        Loops through the children elements of the div and translates each one
-        based on a combination of the type of element as well as any class
-        information included in the element.
-
-        Args:
-            div: A div element to be parsed.
-
-        Returns:
-            A string translated from FileMaker's HTML format into a vimdoc line.
-        """
         result = ''
 
         for child in div:
@@ -53,7 +41,7 @@ class FileMakerHelpParser:
                     result += 'Note: '
 
             else:
-                result += child.string.replace('\n', '')
+                result += child.string
 
         result = result.replace('\n', '')
         result = result.replace(u"\u2019", "'")
@@ -66,31 +54,6 @@ class FileMakerHelpParser:
     def get_purpose(self):
         purpose_div = self.content.find('div', class_='fpu-funcpurpose')
         return self.format_div(purpose_div)
-
-# ==============================================================================
-
-    def get_params(self, content):
-        """
-        Find the parameter head div and return each of its bodies as a list.
-
-        Args:
-            content: The content that the parameter div should be contained in.
-
-        Returns:
-            A list of the lines within the paramter head div.
-        """
-        param_head = content.find('div', class_='fpah-funcparamhead')
-        params = []
-
-        for sibling in param_head.next_siblings:
-            if type(sibling) is Tag:
-                if 'b-body' in sibling['class']:
-                    params.append(format_div(sibling))
-
-                else:
-                    break
-
-        return params
 
 # ==============================================================================
 

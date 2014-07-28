@@ -10,11 +10,7 @@ Maintainer: Charles Ross <chivalry@mac.com>
 License: The MIT License
 """
 
-from bs4 import BeautifulSoup, Tag, NavigableString
 from FileMakerHelpParser import FileMakerHelpParser
-import pprint
-from cStringIO import StringIO
-import sys
 
 parser = FileMakerHelpParser()
 print parser.description()
