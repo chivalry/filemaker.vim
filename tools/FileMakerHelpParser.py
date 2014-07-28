@@ -122,11 +122,16 @@ class FileMakerHelpParser:
 
         for sibling in examp_head.next_siblings:
             if type(sibling) is Tag:
-                if 'b-body' in sibling['class']:
+                if 'n-note' in sibling['class']:
+                    break
+
+                elif 'b-body' in sibling['class']:
                     result.append(self.format_div(sibling))
 
-                else:
-                    break
+                elif 'bu1-bullet1_outer' in sibling['class']:
+                    tds = sibling.find_all('div', class_='bu1-bullet1_inner')
+                    line = tds[1]
+                    result.append('- ' + self.format_div(line))
 
         return result
 
