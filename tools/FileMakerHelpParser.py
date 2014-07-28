@@ -52,7 +52,7 @@ class FileMakerHelpParser:
 
         result = result.replace('\n', '')
         result = result.replace(u"\u2019", "'")
-        result = result.replace(u"\u2022", "o")
+        result = result.replace(u"\u2022", "  -")
 
         return result
 
@@ -116,7 +116,7 @@ class FileMakerHelpParser:
                 elif 'bu1-bullet1_outer' in sibling['class']:
                     tds = sibling.find_all('div', class_='bu1-bullet1_inner')
                     line = tds[1]
-                    result.append('- ' + self.format_div(line))
+                    result.append('  - ' + self.format_div(line))
 
         return result
 
