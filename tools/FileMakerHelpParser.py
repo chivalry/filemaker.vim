@@ -12,6 +12,7 @@ License: The MIT License
 
 import pprint
 import sys
+import textwrap
 
 from bs4 import BeautifulSoup, Tag, NavigableString
 from cStringIO import StringIO
@@ -162,6 +163,31 @@ class FileMakerHelpParser:
 
 # ==============================================================================
 
+    def loop_additions(self, type_):
+        if type_ == 'Parameters':
+            elements = self.params
+        elif type_ == 'Description':
+            elements = self.desc
+        elif type_ == 'Examples':
+            elements = self.examp
+
+        result = self.build_subheading(type_)
+        for element in elements:
+            if element.startswith('  -'):
+                result = result[:-1]
+                dedented_text = textwrap.dedent(element).strip()
+                lines = textwrap.fill(dedented_text, initial_indent='  ', \
+                                      subsequent_indent='    ')
+            else:
+                lines = textwrap.fill(element, 79)
+            for line in lines:
+                result += line
+            result += '\n\n'
+
+        return result
+
+# ==============================================================================
+
     def output(self):
         output = ('-' * 79) + '\n'
         
@@ -176,10 +202,7 @@ class FileMakerHelpParser:
         output += self.build_subheading('Format')
         output += self.format + '\n\n'
 
-        output += self.build_subheading('Parameters')
-        for param in self.params:
-            output += param + '\n'
-        output += '\n'
+        output += self.loop_additions('Parameters')
 
         output += self.build_subheading('Data type returned')
         output += self.datatype + '\n\n'
@@ -187,15 +210,9 @@ class FileMakerHelpParser:
         output += self.build_subheading('Originated in')
         output += self.origin + '\n\n'
 
-        output += self.build_subheading('Description')
-        for desc in self.desc:
-            output += desc + '\n'
-        output += '\n'
+        output += self.loop_additions('Description')
 
-        output += self.build_subheading('Examples')
-        for examp in self.examp:
-            output += examp + '\n'
-        output += '\n'
+        output += self.loop_additions('Examples')
 
         output += self.note + '\n\n'
 
