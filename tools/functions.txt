@@ -1,0 +1,1043 @@
+*functions.txt*  For Vim version 7.4 or later
+
+===============================================================================
+                                                       *filemakervim-functions*
+                                                                *fmv-functions*
+Contents ~
+
+ 1.  Aggregate Functions                          |filemakervim-func-aggregate|
+ 2.  Container Functions                          |filemakervim-func-container|
+ 3.  Date Functions                                    |filemakervim-func-date|
+ 4.  Design Functions                                |filemakervim-func-design|
+ 5.  External Functions                            |filemakervim-func-external|
+ 6.  Financial Functions                          |filemakervim-func-financial|
+ 7.  Get Functions                                      |filemakervim-func-get|
+ 8.  Logical Functions                              |filemakervim-func-logical|
+ 9.  Mobile Functions                                |filemakervim-func-mobile|
+ 10. Number Functions                                |filemakervim-func-number|
+ 11. Repeating Functions                          |filemakervim-func-repeating|
+ 12. Summary Functions                              |filemakervim-func-summary|
+ 13. Text Functions                                    |filemakervim-func-text|
+ 14. Text Formatting Functions              |filemakervim-func-text-formatting|
+ 15. Time Functions                                    |filemakervim-func-time|
+ 16. Timestamp Functions                          |filemakervim-func-timestamp|
+ 17. Trigonometric Functions                  |filemakervim-func-trigonometric|
+
+===============================================================================
+                                                  *filemakervim-func-aggregate*
+                                                           *fmv-func-aggregate*
+Aggregate Functions ~
+
+-------------------------------------------------------------------------------
+                                                       *filemaker-func-average*
+                                                             *fmv-func-average*
+Average ~
+
+Purpose
+-------
+Returns a value that is the average of all valid, non-blank values in `field`.
+
+Format
+------
+Average(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 6.0 or earlier
+
+Description
+-----------
+`Field` can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a
+    record`(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from
+    different tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+A Student table has a portal showing scores for all exams a student has taken.
+The exam scores are in a table called Exams.
+
+`Average(Exams::Score)` returns the student's average score for all exams she
+has taken.
+
+In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains 6.
+
+`Average(Field2)` returns 6.5 when the calculation isn't a repeating field.
+
+`Average(Field1;Field2;Field3)` returns 4, 4, 7, 8 when the calculation is a
+repeating field.
+
+Note: When a referenced field is a repeating field, the `Average` function
+returns the average of the values in the first repetition field, then the
+average of the values in the second repetition field, and so on. Therefore,
+(1+5+6)/3=4;(2+6)/2=4;7/1=7;8/1=8.
+
+-------------------------------------------------------------------------------
+                                                         *filemaker-func-count*
+                                                               *fmv-func-count*
+Count ~
+
+Purpose
+-------
+Returns the number of valid, non-blank values in `field`.
+
+Format
+------
+Count(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 6.0 or earlier
+
+Description
+-----------
+`Field` can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a record
+    `(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from
+    different tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+The Accounts layout has a portal showing installment payments made.
+
+`Count(Payments::Payment)` returns the number of payments made on an account.
+
+In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains 6.
+
+`Count(Field2)` returns 4 when the calculation isn't a repeating field.
+
+`Count(Field1;Field2;Field3)` returns 3, 2, 1, 1 when the calculation is a
+repeating field.
+
+Note: When a referenced field is a repeating field, the `Count` function
+returns the total number of valid, non-blank values in the first repetition
+field, then the number of valid, non-blank values in the second repetition
+field, and so on.
+
+-------------------------------------------------------------------------------
+                                                          *filemaker-func-list*
+                                                                *fmv-func-list*
+List ~
+
+Purpose
+-------
+Returns a concatenated list of non-blank values (separated by carriage returns)
+for a field or fields.
+
+Format
+------
+List(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+an expression that returns a field, repeating field, or set of non-repeating
+fields, or a variable.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+text
+
+Originated in
+-------------
+FileMaker Pro 8.5
+
+Description
+-----------
+Use this function to return a list of values for:
+  - a single field `(table::field)`, which returns a single result
+    over all repetitions (if any) for this field and over all matching
+    related records, whether or not these records appear in a portal.
+  - several fields and/or literal values
+    `(table::field1,constant,table::field2...)`, which returns a
+    separate result for each repetition of the calculation across each
+    corresponding repetition of the fields. If any fields are related,
+    only the first related record is used.
+
+Examples
+--------
+In the following examples:
+  - Field1 contains white.
+  - Field2 contains black.
+  - Field3 contains three repetitions with values of red, green, blue.
+  - Related::Field4 refers to three records that contain 100, 200,
+    300.
+  - $f1 contains orange.
+
+Note: When referencing multiple repeating fields, `List()` returns the list of
+values across the first repetition in the calculation's first repetition, then
+the list of values across the second repetition in the second repetition, and
+so on.
+
+-------------------------------------------------------------------------------
+                                                           *filemaker-func-max*
+                                                                 *fmv-func-max*
+Max ~
+
+Purpose
+-------
+Returns the highest valid value in `field`.
+
+Format
+------
+Max(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+text, number, date, time, timestamp
+
+Originated in
+-------------
+FileMaker Pro 6.0 or earlier
+
+Description
+-----------
+`Field `can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a record
+    `(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from
+    different tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+The Accounts layout has a portal showing installment payments made.
+
+`Max(Payments::PaymentDate)` returns the most recent date a payment was made on
+an account.
+
+In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains 6.
+
+`Max(Field2)` returns 8 when the calculation isn't a repeating field.
+
+`Max(Field1;Field2;Field3)` returns 6, 6, 7, 8 when the calculation is a
+repeating field.
+
+Notes
+-----
+  - When a referenced field is a repeating field, the `Max` function
+    returns the maximum value in the first repetition field, then the
+    maximum value in the second repetition field, and so on.
+  - Aggregate functions such as `Min` or `Max `use the data type of
+    the first parameter to perform all comparisons. For example, if
+    the first parameter's data type is text, all other parameters are
+    converted to text and then compared.
+
+-------------------------------------------------------------------------------
+                                                           *filemaker-func-min*
+                                                                 *fmv-func-min*
+Min ~
+
+Purpose
+-------
+Returns the smallest valid non-blank value in `field`.
+
+Format
+------
+Min(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+text, number, date, time, timestamp
+
+Originated in
+-------------
+FileMaker Pro 6.0 or earlier
+
+Description
+-----------
+`Field` can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a record
+    `(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from
+    different tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+A Contracts table has a portal showing bids submitted for each contract.
+
+`Min(Bids::Price)` returns the lowest bid submitted for a contract.
+
+ In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains 6.
+
+`Min(Field2)` returns 5 when the calculation isn't a repeating field.
+
+`Min(Field1;Field2;Field3)` returns 1, 2, 7, 8 when the calculation is a
+repeating field.
+
+Notes
+-----
+  - When a referenced field is a repeating field, the `Min` function
+    returns the minimum value in the first repetition field, then the
+    minimum value in the second repetition field, and so on.
+  - Aggregate functions such as `Min` or `Max `use the data type of
+    the first parameter to perform all comparisons. For example, if
+    the first parameter's data type is text, all other parameters are
+    converted to text and then compared.
+
+-------------------------------------------------------------------------------
+                                                         *filemaker-func-stdev*
+                                                               *fmv-func-stdev*
+StDev ~
+
+Purpose
+-------
+Returns the standard deviation of the sample represented by a series of non-
+blank values in `field`.
+
+Format
+------
+StDev(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 6.0 or earlier
+
+Description
+-----------
+`Field` can be any of the following:
+  - a repeating field `(repeatingField).`
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a record `(field1;field2;field3)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by `(table
+    1::field A, table 2::field B,...)`. You can name a different table
+    for each field` (table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+A portal displays the related values 5, 6, 7, and 8 in a field called `Scores`.
+`StDev(table::Scores)` returns 1.29099444....
+
+In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains four repetitions with values of 6, 0, 4, and 4.
+  - Field4 contains one repetition with a value of 3.
+
+`StDev(Field4)` results in an error because standard deviation of a single
+number is not defined.
+
+`StDev(Field1;Field2;Field3)` returns 2.64575131..., 3.05505046...,
+2.12132034..., 2.82842712... for a repeating field.
+
+Note: When a referenced field is a repeating field, the `StDev` function
+returns the standard deviation in the first repetition fields, then the
+standard deviation in the second repetition fields, and so on.
+
+-------------------------------------------------------------------------------
+                                                        *filemaker-func-stdevp*
+                                                              *fmv-func-stdevp*
+StDevP ~
+
+Purpose
+-------
+Returns the standard deviation of a population represented by a series of non-
+blank values in `field`.
+
+Format
+------
+StDevP(field{;field... })
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 6.0 or earlier
+
+Description
+-----------
+`Field` can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a record
+    `(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from
+    different tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+A portal displays the related values 5, 6, 7, and 8 in the field `Scores`.
+`StDevP(table::Scores)` returns 1.11803398....
+
+ In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains four repetitions with values of 6, 0, 4, and 4.
+  - Field4 contains one repetition with a value of 3.
+
+`StDevP(Field4)` results in an error because the population standard deviation
+of a single number is not defined`.`
+
+`StDevP(Field2)` returns 1.11803398... for a non-repeating field.
+
+`StDevP(Field1;Field2;Field3)` returns 2.16024689..., 2.49443825..., 1.5, 2 for
+repeating fields.
+
+Note: When a referenced field is a repeating field, the `StDevP` function
+returns the standard deviation of a population in the first repetition fields,
+then the standard deviation of a population in the second repetition fields,
+and so on.
+
+-------------------------------------------------------------------------------
+                                                           *filemaker-func-sum*
+                                                                 *fmv-func-sum*
+Sum ~
+
+Purpose
+-------
+Returns the total of all valid, non-blank values in `field`.
+
+Format
+------
+Sum(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 6.0 or earlier
+
+Description
+-----------
+`Field` can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a record
+    `(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from
+    different tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+An Invoice table has a portal showing line items.
+
+`Sum(LineItems::ExtendedPrice)` totals the amounts for all items on the
+invoice.
+
+A TimeBilling table has a portal showing time worked on a project. Hours is a
+time field.
+
+`Sum(Hours::BillableHours)` returns the total number of billable hours on a
+project. Thus, if the portal shows 40 hours and 15:30 hours, the total billable
+hours are 55:30, or 55 1/2 hours.
+
+ In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains 6.
+
+If the calculation result isn't a repeating field:
+  - `Sum(Field2)` returns 26.
+  - `Sum(Field1;Field2;Field3)` returns 12.
+
+If the calculation result is a repeating field:
+  - `Sum(Field2)` returns a repeating field with 26 in the first
+    repetition.
+  - `Sum(Field1;Field2;Field3)` returns a repeating field with 12, 8,
+    7, 8.
+
+Note: When a referenced field is a repeating field, the `Sum` function returns
+the sum of the first repetition field, then the sum of the second repetition
+field, and so on.
+
+-------------------------------------------------------------------------------
+                                                      *filemaker-func-variance*
+                                                            *fmv-func-variance*
+Variance ~
+
+Purpose
+-------
+Returns the variance of a sample represented by a series of non-blank values in
+`field`.
+
+Format
+------
+Variance(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 7.0
+
+Description
+-----------
+The variance of a distribution is a measure of how spread out the distribution
+is. `Field` can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a record
+    `(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from
+    different tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+A portal displays the related values 5, 6, 7, and 8 in `Scores`.
+
+`Variance(table::Scores)` returns 1.66666666....
+
+In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains four repetitions with values of 6, 0, 4,and 4.
+  - Field4 contains one repetition with a value of 3.
+
+`Variance(Field4)` results in an error since the variance of a single value is
+not defined.
+
+`Variance(Field1;Field2;Field3)` returns 7, 9.33333333..., 4.5, 8 if the
+calculation is a repeating field.
+
+Notes
+-----
+
+-------------------------------------------------------------------------------
+                                                     *filemaker-func-variancep*
+                                                           *fmv-func-variancep*
+VarianceP ~
+
+Purpose
+-------
+Returns the variance of a population represented by a series of non-blank
+values in `field`.
+
+Format
+------
+VarianceP(field{;field...})
+
+Parameters
+----------
+`field` - any related field, repeating field, or set of non-repeating fields;
+or an expression that returns a field, repeating field, or set of non-repeating
+fields.
+
+Parameters in curly braces { } are optional.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 7.0
+
+Description
+-----------
+The variance of a population distribution is a measure of how spread out the
+distribution is. `Field` can be any of the following:
+  - a repeating field `(repeatingField)`.
+  - a field in matching related records specified by `(table::field)`,
+    whether or not these records appear in a portal.
+  - several non-repeating fields in a record
+    `(field1;field2;field3...)`.
+  - corresponding repetitions of repeating fields in a record
+    `(repeatingField1;repeatingField2;repeatingField3)`, if the result
+    is returned in a repeating field with at least the same number of
+    repeats.
+  - several fields in the first matching record specified by
+    `(table::field1;table::field2;...)`. You can include fields from
+    different tables `(table 1::field A;table 2::field B...)`.
+
+Examples
+--------
+A portal displays the related values 5, 6, 7, and 8 in Scores.
+
+`VarianceP(table::Scores)` returns 1.25.
+
+In the following examples:
+  - Field1 contains two repetitions with values of 1 and 2.
+  - Field2 contains four repetitions with values of 5, 6, 7, and 8.
+  - Field3 contains four repetitions with values of 6, 0, 4, and 4.
+  - Field4 contains one repetition with a value of 3.
+
+`VarianceP(Field4)` results in an error since the variance of a single value is
+not defined.
+
+`VarianceP(Field1;Field2;Field3)` returns 4.66666666..., 6.22222222..., 2.25, 4
+if the calculation is a repeating field.
+
+Notes
+-----
+
+-------------------------------------------------------------------------------
+                                                  *filemaker-func-base64decode*
+                                                        *fmv-func-base64decode*
+Base64Decode ~
+
+Purpose
+-------
+Returns container content from text encoded in Base64 format.
+
+Format
+------
+Base64Decode(text{;fileNameWithExtension})
+
+Parameters
+----------
+`text` - Base64 text to decode.
+
+`fileNameWithExtension` - the filename and extension for the file created from
+the decoded Base64 text.
+
+Data type returned
+------------------
+container
+
+Originated in
+-------------
+FileMaker Pro 13.0
+
+Description
+-----------
+Base64 encoding does not retain the filename or extension of encoded content.
+
+If a filename and extension are not specified in the `fileNameWithExtension`
+parameter, Base64Decode returns the container content with a generic filename
+and extension but does not change the content's data format.
+
+Examples
+--------
+`Base64Decode(Products::Base64;"question.png")` returns  when Products::Base64
+is set to a string that begins with "iVBORw0KGgoAAAANSUhEUgAAAB8". The Base64
+string in this example was shortened for readability.
+
+Notes
+-----
+
+-------------------------------------------------------------------------------
+                                                  *filemaker-func-base64encode*
+                                                        *fmv-func-base64encode*
+Base64Encode ~
+
+Purpose
+-------
+Returns the contents of the specified container field as text in Base64 format.
+
+Format
+------
+Base64Encode(sourceField)
+
+Parameters
+----------
+`sourceField` - the name of a container field.
+
+Data type returned
+------------------
+text
+
+Originated in
+-------------
+FileMaker Pro 13.0
+
+Description
+-----------
+Base64 encoding does not retain the filename or extension of encoded content.
+
+Base64Encode adds a line break after every 76 characters.
+
+Examples
+--------
+`Base64Encode(Products::Container)` returns a string that begins with
+iVBORw0KGgoAAAANSUhEUgAAAB8 when Products::Container is set to . The Base64
+string in this example was shortened for readability.
+
+Notes
+-----
+
+-------------------------------------------------------------------------------
+                                         *filemaker-func-getcontainerattribute*
+                                               *fmv-func-getcontainerattribute*
+GetContainerAttribute ~
+
+Purpose
+-------
+Returns the file metadata of the specified container field.
+
+Format
+------
+GetContainerAttribute(sourceField;attributeName)
+
+Parameters
+----------
+`sourceField` - the name of a container field.
+
+`attributeName `- the name of a supported attribute (see below).
+
+Data type returned
+------------------
+text, number, date, time, timestamp, container
+
+Originated in
+-------------
+FileMaker Pro 13.0
+
+Description
+-----------  - The `internalSize` can be much smaller than the `fileSize` (for
+    example, container fields set up for open or secure storage, file
+    references, or compressed files) or much larger than the
+    `fileSize` (for example, container fields created by plug-ins).
+  - Using the attribute `MD5 `allows you to prevent the insertion of
+    duplicated files into a container field regardless of the
+    filename.
+  - Bar codes and signatures are not considered images.
+  - For the group attributes `general`, `audio`,` image`,` photo`, and
+    `all`, attributes are displayed in the format `attributeName:
+    attributeValue` with one attribute per line. Some attributes are
+    displayed differently in order to fit the attribute on one line:
+
+Examples
+--------
+Notice that the attributes in the following examples are enclosed in quotation
+marks.
+
+`GetContainerAttribute(Image;`"`all`"`)` returns:
+
+[General]
+
+Filename: IMG_003.JPG
+
+Storage Type: Embedded
+
+MD5: C35A3F668A1FB3F370969399A1FF04FE
+
+File Size: 1964978
+
+Internal Size: 1965064
+
+External Size: 0
+
+External Files: 0
+
+
+
+[Image]
+
+Width: 1936
+
+Height: 2592
+
+DPI Width: 72
+
+DPI Height: 72
+
+Transparency: 0 (False)
+
+
+
+[Photo]
+
+Orientation: 6 (Rotated 90 degrees counterclockwise)
+
+Created: 11/14/2014 2:40:31 PM
+
+Modified:
+
+Latitude: 37.406167
+
+Longitude: -121.983333
+
+Make: Apple
+
+Model: iPhone 4
+
+
+
+`GetContainerAttribute(Product;`"`barcode`"`)` returns:
+
+[Bar Code]
+
+Bar Code Text: 875720001107
+
+Bar Code Type: UPC-A
+
+
+
+`GetContainerAttribute(Package;`"`signature`"`)` returns:
+
+[Signature]
+
+Signed: 11/10/2014 11:41:22 AM
+
+Note: Only MP3 and M4A files return results.
+
+-------------------------------------------------------------------------------
+                                                     *filemaker-func-getheight*
+                                                           *fmv-func-getheight*
+GetHeight ~
+
+Purpose
+-------
+Returns the height in pixels of the content in a container field that holds
+images.
+
+Format
+------
+GetHeight(field)
+
+Parameters
+----------
+`field` - any text, number, date, time, timestamp, or container field; or any
+text expression or numeric expression.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 12.0
+
+Description
+-----------
+Examples
+--------
+`GetHeight(product)` returns 768.
+
+Notes
+-----
+
+-------------------------------------------------------------------------------
+                                                  *filemaker-func-getthumbnail*
+                                                        *fmv-func-getthumbnail*
+GetThumbnail ~
+
+Purpose
+-------
+Returns a thumbnail image of the content in a container field, according to
+specified values for width and height.
+
+Format
+------
+GetThumbnail(field;width;height)
+
+Parameters
+----------
+`field` - any text, number, date, time, timestamp, or container field; or any
+text expression or numeric expression.
+
+`width` - the width for the thumbnail.
+
+`height` - the height for the thumbnail.
+
+Data type returned
+------------------
+container
+
+Originated in
+-------------
+FileMaker Pro 12.0
+
+Description
+-----------
+Returns an image that's stored in a container field according to specified
+values for width and height. The thumbnail image always maintains the
+proportions of the original image.
+
+Examples
+--------
+`GetThumbnail(Dog;GetLayoutObjectAttribute("rectangle","width");
+GetLayoutObjectAttribute("rectangle","height"))` returns an image stored in the
+Dog field that fits into the dimensions of the Rectangle layout object.
+
+`GetThumbnail(Property;GetWidth(Property)/2;GetHeight(Property)/2)`returns an
+image that is 50 percent of the size of the original image in the Property
+field.
+
+`GetThumbnail ( "image:question.png" ; 50 ; 50 )` returns a thumbnail of
+question.png with a maximum height and width of 50 points.
+
+Note: If the `field` parameter does not specify a field that contains image
+data, `field` must evaluate to the file path of an image. See .
+
+-------------------------------------------------------------------------------
+                                                      *filemaker-func-getwidth*
+                                                            *fmv-func-getwidth*
+GetWidth ~
+
+Purpose
+-------
+Returns the width in pixels of the content in a container field that holds
+images.
+
+Format
+------
+GetWidth(field)
+
+Parameters
+----------
+`field` - any text, number, date, time, timestamp, or container field; or any
+text expression or numeric expression.
+
+Data type returned
+------------------
+number
+
+Originated in
+-------------
+FileMaker Pro 12.0
+
+Description
+-----------
+Returns the width in pixels of images in a container field that holds images.
+Otherwise, `GetWidth` returns 0.
+
+Examples
+--------
+`GetWidth(Product)` returns 1024.
+
+Notes
+-----
+

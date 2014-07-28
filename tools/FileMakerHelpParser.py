@@ -20,7 +20,8 @@ from cStringIO import StringIO
 class FileMakerHelpParser:
 
     hierarchy = {'desc':  ['fdh-funcdeschead', 'feh-funcexamhead'],
-                 'examp': ['feh-funcexamhead', 'n-note']}
+                 'examp': ['feh-funcexamhead', 'n-note', 'hs1-headsub1'],
+                 'note':  ['hs1-headsub1', 'rh-relatedhead']}
 
 # ==============================================================================
     def find_div(self, class_):
@@ -100,15 +101,19 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def get_hierarchy(self, type_):
-        class_      = FileMakerHelpParser.hierarchy[type_][0]
-        break_class = FileMakerHelpParser.hierarchy[type_][1]
+        class_        = FileMakerHelpParser.hierarchy[type_][0]
+        break_classes = FileMakerHelpParser.hierarchy[type_][1:]
 
         head = self.find_div(class_)
         result = []
 
+        if head is None:
+            return ''
+
         for sibling in head.next_siblings:
             if type(sibling) is Tag:
-                if break_class in sibling['class']:
+                intersection = list(set(break_classes) & set(sibling['class']))
+                if len(intersection) != 0:
                     break
 
                 elif 'b-body' in sibling['class']:
@@ -120,6 +125,14 @@ class FileMakerHelpParser:
                     result.append('  - ' + self.format_div(line))
 
         return result
+
+# ==============================================================================
+
+    def get_notes(self):
+        single_note = self.find_div('n-note')
+        if not single_note is None:
+            return self.format_div(single_note)
+        return self.get_hierarchy('note')
 
 # ==============================================================================
 
@@ -159,7 +172,12 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def build_subheading(self, name):
-        return name + '\n' + ('-' * len(name)) + '\n'
+        if name == 'Notes':
+            addition = '\n'
+        else:
+            addition = ''
+
+        return name + '\n' + ('-' * len(name)) + '\n' + addition
 
 # ==============================================================================
 
@@ -170,6 +188,8 @@ class FileMakerHelpParser:
             elements = self.desc
         elif type_ == 'Examples':
             elements = self.examp
+        elif type_ == 'Notes':
+            elements = self.note
 
         result = self.build_subheading(type_)
         for element in elements:
@@ -189,6 +209,9 @@ class FileMakerHelpParser:
 # ==============================================================================
 
     def output(self):
+        if self.is_cat:
+            return ''
+
         output = ('-' * 79) + '\n'
         
         output += self.build_tag('long')
@@ -214,18 +237,25 @@ class FileMakerHelpParser:
 
         output += self.loop_additions('Examples')
 
-        output += textwrap.fill(self.note, 79) + '\n\n'
+        if type(self.note) is unicode:
+            output += textwrap.fill(self.note, 79) + '\n\n'
+        else:
+            output += self.loop_additions('Notes')
+
+
+        output = output.replace(u"\u00A0", ' ')
 
         return output
 
 # ==============================================================================
 
     def __init__(self, filepath=''):
-        if filepath == '':
-            filepath = 'function_refs/func_ref1.31.2.html'
-
         soup = BeautifulSoup(open(filepath))
         self.content = soup.body.blockquote
+
+        self.is_cat = not self.find_div('fch-funccatgryhead') is None
+        if self.is_cat:
+            return
 
         self.name     = self.find_div('fh-funchead').string
         self.purpose  = self.get_purpose()
@@ -235,5 +265,4 @@ class FileMakerHelpParser:
         self.origin   = self.get_origin()
         self.desc     = self.get_hierarchy('desc')
         self.examp    = self.get_hierarchy('examp')
-        self.note     = self.format_div(self.content.find('div', class_ = 'n-note'))
-        self.note     = self.format_div(self.find_div('n-note'))
+        self.note     = self.get_notes()

@@ -1,0 +1,30 @@
+*functions.txt*  For Vim version 7.4 or later
+
+===============================================================================
+                                                       *filemakervim-functions*
+                                                                *fmv-functions*
+Contents ~
+
+ 1.  Aggregate Functions                          |filemakervim-func-aggregate|
+ 2.  Container Functions                          |filemakervim-func-container|
+ 3.  Date Functions                                    |filemakervim-func-date|
+ 4.  Design Functions                                |filemakervim-func-design|
+ 5.  External Functions                            |filemakervim-func-external|
+ 6.  Financial Functions                          |filemakervim-func-financial|
+ 7.  Get Functions                                      |filemakervim-func-get|
+ 8.  Logical Functions                              |filemakervim-func-logical|
+ 9.  Mobile Functions                                |filemakervim-func-mobile|
+ 10. Number Functions                                |filemakervim-func-number|
+ 11. Repeating Functions                          |filemakervim-func-repeating|
+ 12. Summary Functions                              |filemakervim-func-summary|
+ 13. Text Functions                                    |filemakervim-func-text|
+ 14. Text Formatting Functions              |filemakervim-func-text-formatting|
+ 15. Time Functions                                    |filemakervim-func-time|
+ 16. Timestamp Functions                          |filemakervim-func-timestamp|
+ 17. Trigonometric Functions                  |filemakervim-func-trigonometric|
+
+===============================================================================
+                                                  *filemakervim-func-aggregate*
+                                                           *fmv-func-aggregate*
+Aggregate Functions ~
+
